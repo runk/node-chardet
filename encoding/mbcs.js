@@ -193,8 +193,12 @@ mbcs.prototype.nextChar = function(iter, det) {};
  * Shift-JIS charset recognizer.
  */
 module.exports.sjis = function() {
-    this.name = "Shift_JIS";
-    this.language = "ja";
+    this.name = function() {
+        return "Shift_JIS";
+    };
+    this.language = function() {
+        return "ja";
+    };
 
     // TODO:  This set of data comes from the character frequency-
     //        of-occurence analysis tool.  The data needs to be moved
@@ -243,8 +247,12 @@ util.inherits(module.exports.sjis, mbcs);
  *   Big5 charset recognizer.
  */
 module.exports.big5 = function() {
-    this.name = "Big5";
-    this.language = "zh";
+    this.name = function() {
+        return "Big5";
+    };
+    this.language = function() {
+        return "zh";
+    };
     // TODO:  This set of data comes from the character frequency-
     //        of-occurence analysis tool.  The data needs to be moved
     //        into a resource and loaded from there.
@@ -363,8 +371,12 @@ util.inherits(module.exports.euc, mbcs);
  *    is created and kept by the public CharsetDetector class
  */
 module.exports.euc_jp = function() {
-    this.name = "EUC-JP";
-    this.language = "ja";
+    this.name = function() {
+        return "EUC-JP";
+    };
+    this.language = function() {
+        return "ja";
+    };
 
     // TODO:  This set of data comes from the character frequency-
     //        of-occurence analysis tool.  The data needs to be moved
@@ -391,8 +403,12 @@ util.inherits(module.exports.euc_jp, module.exports.euc);
  *    is created and kept by the public CharsetDetector class
  */
 module.exports.euc_kr = function() {
-    this.name = "EUC-KR";
-    this.language = "ko";
+    this.name = function() {
+        return "EUC-KR";
+    };
+    this.language = function() {
+        return "ko";
+    };
 
     // TODO:  This set of data comes from the character frequency-
     //        of-occurence analysis tool.  The data needs to be moved
@@ -418,8 +434,12 @@ util.inherits(module.exports.euc_kr, module.exports.euc);
  *   GB-18030 recognizer. Uses simplified Chinese statistics.
  */
 module.exports.gb_18030 = function() {
-    this.name = "GB18030";
-    this.language = "zh";
+    this.name = function() {
+        return "GB18030";
+    };
+    this.language = function() {
+        return "zh";
+    };
     /*
      *  (non-Javadoc)
      *  Get the next character value for EUC based encodings.

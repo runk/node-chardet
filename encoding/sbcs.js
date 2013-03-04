@@ -151,7 +151,7 @@ sbcs.prototype.match = function(det) {
             }
         }
 
-        var name = this.getName(det);
+        var name = this.name(det);
         return bestConfidenceSoFar <= 0 ? null : new Match(det, this, bestConfidenceSoFar, name, lang);
     }
 
@@ -260,7 +260,7 @@ module.exports.ISO_8859_1 = function() {
         ])
     ];
 
-    this.getName = function(det) {
+    this.name = function(det) {
         if (typeof det == 'undefined')
             return "ISO-8859-1";
         return det.fC1Bytes ? "windows-1252" : "ISO-8859-1";
@@ -332,7 +332,7 @@ module.exports.ISO_8859_2 = function() {
         ])
     ];
 
-    this.getName = function(det) {
+    this.name = function(det) {
         if (typeof det == 'undefined')
             return "ISO-8859-2";
         return det.fC1Bytes ? "windows-1250" : "ISO-8859-2";
@@ -384,11 +384,11 @@ module.exports.ISO_8859_5 = function() {
         0xDFDEDB, 0xDFE0D5, 0xDFE0D8, 0xDFE0DE, 0xE0D0D2, 0xE0D5D4, 0xE1E2D0, 0xE1E2D2, 0xE1E2D8, 0xE1EF20, 0xE2D5DB, 0xE2DE20, 0xE2DEE0, 0xE2EC20, 0xE7E2DE, 0xEBE520
     ];
 
-    this.getName = function(det) {
+    this.name = function(det) {
         return "ISO-8859-5";
     };
 
-    this.getLanguage = function() {
+    this.language = function() {
         return "ru";
     };
 };
@@ -438,11 +438,11 @@ module.exports.ISO_8859_6 = function() {
         0xE520C7, 0xE5C720, 0xE5C920, 0xE5E620, 0xE620C7, 0xE720C7, 0xE7C720, 0xE8C7E4, 0xE8E620, 0xE920C7, 0xEA20C7, 0xEA20E5, 0xEA20E8, 0xEAC920, 0xEAD120, 0xEAE620
     ];
 
-    this.getName = function(det) {
+    this.name = function(det) {
         return "ISO-8859-6";
     };
 
-    this.getLanguage = function() {
+    this.language = function() {
         return "ar";
     };
 };
@@ -492,13 +492,13 @@ module.exports.ISO_8859_7 = function() {
         0xF220EA, 0xF220F0, 0xF220F4, 0xF3E520, 0xF3E720, 0xF3F4EF, 0xF4E120, 0xF4E1E9, 0xF4E7ED, 0xF4E7F2, 0xF4E9EA, 0xF4EF20, 0xF4EFF5, 0xF4F9ED, 0xF9ED20, 0xFEED20
     ];
 
-    this.getName = function(det) {
+    this.name = function(det) {
         if (typeof det == 'undefined')
             return "ISO-8859-7";
         return det.fC1Bytes ? "windows-1253" : "ISO-8859-7";
     };
 
-    this.getLanguage = function() {
+    this.language = function() {
         return "el";
     };
 };

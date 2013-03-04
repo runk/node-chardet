@@ -7,7 +7,9 @@ var util = require('util'),
  */
 
 module.exports.UTF_16BE = function() {
-    this.name = "UTF-16BE";
+    this.name = function() {
+        return "UTF-16BE";
+    };
     this.match = function(det) {
         var input = det.fRawInput;
 
@@ -22,7 +24,9 @@ module.exports.UTF_16BE = function() {
 };
 
 module.exports.UTF_16LE = function() {
-    this.name = "UTF-16LE";
+    this.name = function() {
+        return "UTF-16LE";
+    };
     this.match = function(det) {
         var input = det.fRawInput;
 
@@ -88,7 +92,9 @@ UTF_32.prototype.match = function(det) {
 };
 
 module.exports.UTF_32BE = function() {
-    this.name = "UTF_32BE";
+    this.name = function() {
+        return "UTF_32BE";
+    };
     this.getChar = function(input, index) {
         return (input[index + 0] & 0xFF) << 24 | (input[index + 1] & 0xFF) << 16 |
                (input[index + 2] & 0xFF) <<  8 | (input[index + 3] & 0xFF);
@@ -97,7 +103,9 @@ module.exports.UTF_32BE = function() {
 util.inherits(module.exports.UTF_32BE, UTF_32);
 
 module.exports.UTF_32LE = function() {
-    this.name = "UTF_32LE";
+    this.name = function() {
+        return "UTF_32LE";
+    };
     this.getChar = function(input, index) {
         return (input[index + 3] & 0xFF) << 24 | (input[index + 2] & 0xFF) << 16 |
                (input[index + 1] & 0xFF) <<  8 | (input[index + 0] & 0xFF);

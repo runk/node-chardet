@@ -5,7 +5,9 @@ var Match = require ('../match');
  * Charset recognizer for UTF-8
  */
 module.exports = function() {
-    this.name = "UTF-8";
+    this.name = function() {
+        return "UTF-8";
+    };
     this.match = function(det) {
 
         var hasBOM = false,
