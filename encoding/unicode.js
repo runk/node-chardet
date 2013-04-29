@@ -93,7 +93,7 @@ UTF_32.prototype.match = function(det) {
 
 module.exports.UTF_32BE = function() {
     this.name = function() {
-        return "UTF_32BE";
+        return "UTF-32BE";
     };
     this.getChar = function(input, index) {
         return (input[index + 0] & 0xFF) << 24 | (input[index + 1] & 0xFF) << 16 |
@@ -104,7 +104,7 @@ util.inherits(module.exports.UTF_32BE, UTF_32);
 
 module.exports.UTF_32LE = function() {
     this.name = function() {
-        return "UTF_32LE";
+        return "UTF-32LE";
     };
     this.getChar = function(input, index) {
         return (input[index + 3] & 0xFF) << 24 | (input[index + 2] & 0xFF) << 16 |

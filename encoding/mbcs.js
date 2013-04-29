@@ -119,7 +119,7 @@ mbcs.prototype.match = function(det) {
                 }
             }
             if (badCharCount >= 2 && badCharCount*5 >= doubleByteCharCount) {
-                console.log(1)
+                // console.log('its here!')
                 // Bail out early if the byte data is not matching the encoding scheme.
                 break detectBlock;
             }

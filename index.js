@@ -1,9 +1,12 @@
 
+var fs = require('fs');
 
 var UTF_8 = require('./encoding/utf8');
 var unicode = require('./encoding/unicode');
 var mbcs = require('./encoding/mbcs');
 var iso2022 = require('./encoding/iso2022');
+
+var self = this;
 
 var recognisers = [
     new UTF_8,
@@ -23,22 +26,36 @@ var recognisers = [
 
 module.exports.detect = function(buffer) {
 
-    var det = {
+    var context = {
         fRawInput:   buffer,
         fRawLength:  buffer.length,
         fInputBytes: buffer,
         fInputLen:   buffer.length
     };
 
-    var matches = [];
-    for (var i = recognisers.length - 1; i >= 0; i--) {
-        var recogniser = recognisers[i];
-        matches.push(rec.match(det));
-    };
+    var matches = recognisers.map(function(rec) {
+        return rec.match(context);
+    }).filter(function(match) {
+        return !!match;
+    });
 
     matches.sort(function(a, b) {
         return a.confidence - b.confidence;
     });
 
-    return matches.pop().name;
+    console.log(matches);
+
+    return matches.length ? matches.pop().name : null;
+};
+
+module.exports.detectFile = function(filepath, fn) {
+    fs.readFile(filepath, function(err, res) {
+        if (err)
+            return fn(err, null);
+        fn(null, self.detect(res));
+    });
+};
+
+module.exports.detectFileSync = function(filepath) {
+    return self.detect(fs.readFileSync(filepath));
 };

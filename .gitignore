@@ -1,2 +1,4 @@
 testing.js
-java
+ignore
+test/data/collation
+test/data/conversion
