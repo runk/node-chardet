@@ -43,8 +43,7 @@ module.exports.detect = function(buffer) {
         return a.confidence - b.confidence;
     });
 
-    console.log(matches);
-
+    // console.log(matches);
     return matches.length ? matches.pop().name : null;
 };
 

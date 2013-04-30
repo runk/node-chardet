@@ -194,7 +194,7 @@ mbcs.prototype.nextChar = function(iter, det) {};
  */
 module.exports.sjis = function() {
     this.name = function() {
-        return "Shift_JIS";
+        return "Shift-JIS";
     };
     this.language = function() {
         return "ja";
@@ -298,71 +298,65 @@ util.inherits(module.exports.big5, mbcs);
 
 
 /**
- *   EUC charset recognizers.  One abstract class that provides the common function
- *             for getting the next character according to the EUC encoding scheme,
- *             and nested derived classes for EUC_KR, EUC_JP, EUC_CN.
+ *  EUC charset recognizers.  One abstract class that provides the common function
+ *  for getting the next character according to the EUC encoding scheme,
+ *  and nested derived classes for EUC_KR, EUC_JP, EUC_CN.
  *
+ *  Get the next character value for EUC based encodings.
+ *  Character "value" is simply the raw bytes that make up the character
+ *     packed into an int.
  */
-module.exports.euc = function() {
-
-    /*
-     *  Get the next character value for EUC based encodings.
-     *  Character "value" is simply the raw bytes that make up the character
-     *     packed into an int.
-     */
-    this.nextChar = function(iter, det) {
-        it.index = it.nextIndex;
-        iter.error = false;
-        var firstByte  = 0;
-        var secondByte = 0;
-        var thirdByte  = 0;
-        //int fourthByte = 0;
-        buildChar: {
-            firstByte = iter.charValue = iter.nextByte(det);
-            if (firstByte < 0) {
-                // Ran off the end of the input data
-                iter.done = true;
-                break buildChar;
+function eucNextChar(iter, det) {
+    it.index = it.nextIndex;
+    iter.error = false;
+    var firstByte  = 0;
+    var secondByte = 0;
+    var thirdByte  = 0;
+    //int fourthByte = 0;
+    buildChar: {
+        firstByte = iter.charValue = iter.nextByte(det);
+        if (firstByte < 0) {
+            // Ran off the end of the input data
+            iter.done = true;
+            break buildChar;
+        }
+        if (firstByte <= 0x8d) {
+            // single byte char
+            break buildChar;
+        }
+        secondByte = iter.nextByte(det);
+        iter.charValue = (iter.charValue << 8) | secondByte;
+        if (firstByte >= 0xA1 && firstByte <= 0xfe) {
+            // Two byte Char
+            if (secondByte < 0xa1) {
+                iter.error = true;
             }
-            if (firstByte <= 0x8d) {
-                // single byte char
-                break buildChar;
+            break buildChar;
+        }
+        if (firstByte == 0x8e) {
+            // Code Set 2.
+            //   In EUC-JP, total char size is 2 bytes, only one byte of actual char value.
+            //   In EUC-TW, total char size is 4 bytes, three bytes contribute to char value.
+            // We don't know which we've got.
+            // Treat it like EUC-JP.  If the data really was EUC-TW, the following two
+            //   bytes will look like a well formed 2 byte char.
+            if (secondByte < 0xa1) {
+                iter.error = true;
             }
-            secondByte = iter.nextByte(det);
-            iter.charValue = (iter.charValue << 8) | secondByte;
-            if (firstByte >= 0xA1 && firstByte <= 0xfe) {
-                // Two byte Char
-                if (secondByte < 0xa1) {
-                    iter.error = true;
-                }
-                break buildChar;
-            }
-            if (firstByte == 0x8e) {
-                // Code Set 2.
-                //   In EUC-JP, total char size is 2 bytes, only one byte of actual char value.
-                //   In EUC-TW, total char size is 4 bytes, three bytes contribute to char value.
-                // We don't know which we've got.
-                // Treat it like EUC-JP.  If the data really was EUC-TW, the following two
-                //   bytes will look like a well formed 2 byte char.
-                if (secondByte < 0xa1) {
-                    iter.error = true;
-                }
-                break buildChar;
-            }
-            if (firstByte == 0x8f) {
-                // Code set 3.
-                // Three byte total char size, two bytes of actual char value.
-                thirdByte    = iter.nextByte(det);
-                iter.charValue = (iter.charValue << 8) | thirdByte;
-                if (thirdByte < 0xa1) {
-                    iter.error = true;
-                }
+            break buildChar;
+        }
+        if (firstByte == 0x8f) {
+            // Code set 3.
+            // Three byte total char size, two bytes of actual char value.
+            thirdByte    = iter.nextByte(det);
+            iter.charValue = (iter.charValue << 8) | thirdByte;
+            if (thirdByte < 0xa1) {
+                iter.error = true;
             }
         }
-        return (iter.done == false);
-    };
+    }
+    return (iter.done == false);
 };
-util.inherits(module.exports.euc, mbcs);
 
 
 
@@ -393,8 +387,10 @@ module.exports.euc_jp = function() {
         0xa5e5, 0xa5e9, 0xa5ea, 0xa5eb, 0xa5ec, 0xa5ed, 0xa5f3, 0xb8a9, 0xb9d4, 0xbaee,
         0xbbc8, 0xbef0, 0xbfb7, 0xc4ea, 0xc6fc, 0xc7bd, 0xcab8, 0xcaf3, 0xcbdc, 0xcdd1
     ];
+
+    this.nextChar = eucNextChar;
 };
-util.inherits(module.exports.euc_jp, module.exports.euc);
+util.inherits(module.exports.euc_jp, mbcs);
 
 
 
@@ -425,8 +421,10 @@ module.exports.euc_kr = function() {
         0xc0da, 0xc0e5, 0xc0fb, 0xc0fc, 0xc1a4, 0xc1a6, 0xc1b6, 0xc1d6, 0xc1df, 0xc1f6,
         0xc1f8, 0xc4a1, 0xc5cd, 0xc6ae, 0xc7cf, 0xc7d1, 0xc7d2, 0xc7d8, 0xc7e5, 0xc8ad
     ];
+
+    this.nextChar = eucNextChar;
 };
-util.inherits(module.exports.euc_kr, module.exports.euc);
+util.inherits(module.exports.euc_kr, mbcs);
 
 
 

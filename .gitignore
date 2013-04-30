@@ -2,3 +2,4 @@ testing.js
 ignore
 test/data/collation
 test/data/conversion
+.DS_Store

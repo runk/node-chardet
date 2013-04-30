@@ -1,32 +1,35 @@
 
 var assert = require('assert'),
-    chardet = require('../');
+    chardet = require('../../');
 
-describe('unicode', function() {
+describe('Unicode', function() {
+
+    var base = __dirname + '/../data/encodings';
+
     it('should return UTF-16LE', function() {
         assert.equal(
-            chardet.detectFileSync(__dirname + '/data/encodings/utf16le'),
+            chardet.detectFileSync(base + '/utf16le'),
             'UTF-16LE'
         );
     });
 
     it('should return UTF-16BE', function() {
         assert.equal(
-            chardet.detectFileSync(__dirname + '/data/encodings/utf16be'),
+            chardet.detectFileSync(base + '/utf16be'),
             'UTF-16BE'
         );
     });
 
     it('should return UTF-32LE', function() {
         assert.equal(
-            chardet.detectFileSync(__dirname + '/data/encodings/utf32le'),
+            chardet.detectFileSync(base + '/utf32le'),
             'UTF-32LE'
         );
     });
 
     it('should return UTF-32BE', function() {
         assert.equal(
-            chardet.detectFileSync(__dirname + '/data/encodings/utf32be'),
+            chardet.detectFileSync(base + '/utf32be'),
             'UTF-32BE'
         );
     });

@@ -1,0 +1,30 @@
+{
+    "name": "chardet",
+    "version": "0.0.3",
+    "homepage": "https://github.com/runk/node-chardet",
+    "description": "Character detector",
+    "keywords": ["encoding", "character", "utf8", "detector"],
+    "author": "Shirokov Dmitry <deadrunk@gmail.com>",
+    "dependencies": {
+
+    },
+    "repository": {
+        "type":"git",
+        "url":"git@github.com:runk/node-chardet.git"
+    },
+    "bugs": {
+        "mail":"deadrunk@gmail.com",
+        "url":"http://github.com/runk/node-chardet/issues"
+    },
+    "scripts": {
+        "test": "mocha -R spec --recursive"
+    },
+    "main": "index.js",
+    "engine": {
+        "node": ">=0.8.0", "npm": "1"
+    },
+    "licences": [{
+        "type":"LGPL2.1",
+        "url": "http://www.gnu.org/licenses/lgpl-2.1.txt"
+    }]
+}
