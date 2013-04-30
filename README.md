@@ -1,12 +1,15 @@
 
-chardet - nodejs characted detection module, written in pure Javascript
-======
+# chardet - characted detection module, pure Javascript
 
-# Installation
+Chardet is a character detection module for NodeJS written in pure Javascript.
+Module is based on ICU project http://site.icu-project.org/, which uses character
+occurency analysis to determine the most probable encoding.
+
+## Installation
 
     npm install chardet
 
-# Usage
+## Usage
 
     var chardet = require('chardet');
     chardet.detect(new Buffer('hello there!'));
@@ -15,7 +18,7 @@ chardet - nodejs characted detection module, written in pure Javascript
     // or
     chardet.detectFileSync('/path/to/file');
 
-# Supported Encodings:
+## Supported Encodings:
 
 * UTF-8
 * UTF-16 LE
