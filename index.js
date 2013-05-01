@@ -1,15 +1,16 @@
 
 var fs = require('fs');
 
-var UTF_8 = require('./encoding/utf8');
-var unicode = require('./encoding/unicode');
-var mbcs = require('./encoding/mbcs');
-var iso2022 = require('./encoding/iso2022');
+var utf8    = require('./encoding/utf8'),
+    unicode = require('./encoding/unicode'),
+    mbcs    = require('./encoding/mbcs'),
+    sbcs    = require('./encoding/sbcs'),
+    iso2022 = require('./encoding/iso2022');
 
 var self = this;
 
 var recognisers = [
-    new UTF_8,
+    new utf8,
     new unicode.UTF_16BE,
     new unicode.UTF_16LE,
     new unicode.UTF_32BE,
@@ -21,7 +22,12 @@ var recognisers = [
     new mbcs.gb_18030,
     new iso2022.ISO_2022_JP,
     new iso2022.ISO_2022_KR,
-    new iso2022.ISO_2022_CN
+    new iso2022.ISO_2022_CN,
+    new sbcs.ISO_8859_1,
+    new sbcs.ISO_8859_2,
+    new sbcs.ISO_8859_5,
+    new sbcs.ISO_8859_6,
+    new sbcs.ISO_8859_7,
 ];
 
 module.exports.detect = function(buffer) {

@@ -33,5 +33,10 @@ occurency analysis to determine the most probable encoding.
 * EUC-JP
 * EUC-KR
 * GB18030
+* ISO-8859-1
+* ISO-8859-2
+* ISO-8859-5
+* ISO-8859-6
+* ISO-8859-7
 
 Currently only these encodings are supported, more will be added soon.
