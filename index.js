@@ -28,6 +28,8 @@ var recognisers = [
     new sbcs.ISO_8859_5,
     new sbcs.ISO_8859_6,
     new sbcs.ISO_8859_7,
+    new sbcs.ISO_8859_8
+
 ];
 
 module.exports.detect = function(buffer) {
