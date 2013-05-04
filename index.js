@@ -29,13 +29,33 @@ var recognisers = [
     new sbcs.ISO_8859_6,
     new sbcs.ISO_8859_7,
     new sbcs.ISO_8859_8,
-    new sbcs.ISO_8859_9
-
+    new sbcs.ISO_8859_9,
+    new sbcs.windows_1251,
+    new sbcs.windows_1256,
+    new sbcs.KOI8_R
 ];
 
 module.exports.detect = function(buffer) {
 
+    // Tally up the byte occurence statistics.
+    var fByteStats = [];
+    for (var i = 0; i < 256; i++)
+        fByteStats[i] = 0;
+
+    for (var i = buffer.length - 1; i >= 0; i--)
+        fByteStats[buffer[i] & 0x00ff]++;
+
+    var fC1Bytes = false;
+    for (var i = 0x80; i <= 0x9F; i += 1) {
+        if (fByteStats[i] != 0) {
+            fC1Bytes = true;
+            break;
+        }
+    }
+
     var context = {
+        fByteStats:  fByteStats,
+        fC1Bytes:    fC1Bytes,
         fRawInput:   buffer,
         fRawLength:  buffer.length,
         fInputBytes: buffer,
@@ -52,7 +72,6 @@ module.exports.detect = function(buffer) {
         return a.confidence - b.confidence;
     });
 
-    // console.log(matches);
     return matches.length ? matches.pop().name : null;
 };
 
