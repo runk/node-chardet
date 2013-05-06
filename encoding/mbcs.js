@@ -307,7 +307,7 @@ util.inherits(module.exports.big5, mbcs);
  *     packed into an int.
  */
 function eucNextChar(iter, det) {
-    it.index = it.nextIndex;
+    iter.index = iter.nextIndex;
     iter.error = false;
     var firstByte  = 0;
     var secondByte = 0;
