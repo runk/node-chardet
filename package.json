@@ -12,7 +12,9 @@
     "icu"
   ],
   "author": "Dmitry Shirokov <deadrunk@gmail.com>",
-  "dependencies": {},
+  "dependencies": {
+    "mocha": ">= 1.8"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:runk/node-chardet.git"
