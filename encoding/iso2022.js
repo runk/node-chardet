@@ -33,8 +33,6 @@ ISO_2022.prototype.match = function(det) {
     var quality;
 
     // TODO: refactor me
-    // int   match(byte [] text, int textLen, byte [][] escapeSequences) {
-    // det.fInputBytes, det.fInputLen
     var text = det.fInputBytes;
     var textLen = det.fInputLen;
 

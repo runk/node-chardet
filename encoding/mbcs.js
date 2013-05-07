@@ -82,9 +82,7 @@ function mbcs() {};
  * @param det  The CharsetDetector, which contains the input text
  *             to be checked for being in this charset.
  * @return     Two values packed into one int  (Damn java, anyhow)
- *             <br/>
  *             bits 0-7:  the match confidence, ranging from 0-100
- *             <br/>
  *             bits 8-15: The match reason, an enum-like value.
  */
 mbcs.prototype.match = function(det) {
@@ -218,7 +216,6 @@ module.exports.sjis = function() {
 
         var firstByte;
         firstByte = iter.charValue = iter.nextByte(det);
-        // console.log('fb', firstByte)
         if (firstByte < 0) {
             return false;
         }
@@ -438,8 +435,8 @@ module.exports.gb_18030 = function() {
     this.language = function() {
         return "zh";
     };
+
     /*
-     *  (non-Javadoc)
      *  Get the next character value for EUC based encodings.
      *  Character "value" is simply the raw bytes that make up the character
      *     packed into an int.
