@@ -1,7 +1,7 @@
 
 
-# chardet - characted detection module, pure javascript
-[![Build Status](https://travis-ci.org/runk/node-chardet.png)](https://travis-ci.org/runk/node-chardet)
+chardet [![Build Status](https://travis-ci.org/runk/node-chardet.png)](https://travis-ci.org/runk/node-chardet)
+=====
 
 Chardet is a character detection module for NodeJS written in pure Javascript.
 Module is based on ICU project http://site.icu-project.org/, which uses character
