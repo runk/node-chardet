@@ -1,6 +1,6 @@
 {
   "name": "chardet",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "homepage": "https://github.com/runk/node-chardet",
   "description": "Character detector",
   "keywords": [
@@ -34,5 +34,6 @@
   "readmeFilename": "README.md",
   "directories": {
     "test": "test"
-  }
+  },
+  "license" : "MIT"
 }

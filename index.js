@@ -62,23 +62,20 @@ module.exports.detect = function(buffer) {
         fInputLen:   buffer.length
     };
 
-    var matches = recognisers.map(function(rec) {
+    var match = recognisers.map(function(rec) {
         return rec.match(context);
     }).filter(function(match) {
         return !!match;
-    });
-
-    matches.sort(function(a, b) {
+    }).sort(function(a, b) {
         return a.confidence - b.confidence;
-    });
+    }).pop();
 
-    return matches.length ? matches.pop().name : null;
+    return match ? match.name : null;
 };
 
 module.exports.detectFile = function(filepath, fn) {
     fs.readFile(filepath, function(err, res) {
-        if (err)
-            return fn(err, null);
+        if (err) return fn(err, null);
         fn(null, self.detect(res));
     });
 };

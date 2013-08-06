@@ -8,12 +8,12 @@ var util = require('util'),
 
 module.exports.UTF_16BE = function() {
     this.name = function() {
-        return "UTF-16BE";
+        return 'UTF-16BE';
     };
     this.match = function(det) {
         var input = det.fRawInput;
 
-        if (input.length>=2 && ((input[0] & 0xFF) == 0xFE && (input[1] & 0xFF) == 0xFF)) {
+        if (input.length >= 2 && ((input[0] & 0xFF) == 0xFE && (input[1] & 0xFF) == 0xFF)) {
             var confidence = 100;
             return new Match(det, this, confidence);
         }
@@ -25,14 +25,14 @@ module.exports.UTF_16BE = function() {
 
 module.exports.UTF_16LE = function() {
     this.name = function() {
-        return "UTF-16LE";
+        return 'UTF-16LE';
     };
     this.match = function(det) {
         var input = det.fRawInput;
 
         if (input.length >= 2 && ((input[0] & 0xFF) == 0xFF && (input[1] & 0xFF) == 0xFE)) {
            // An LE BOM is present.
-           if (input.length>=4 && input[2] == 0x00 && input[3] == 0x00) {
+           if (input.length >= 4 && input[2] == 0x00 && input[3] == 0x00) {
                // It is probably UTF-32 LE, not UTF-16
                return null;
            }
@@ -74,9 +74,9 @@ UTF_32.prototype.match = function(det) {
 
     // Cook up some sort of confidence score, based on presence of a BOM
     //    and the existence of valid and/or invalid multi-byte sequences.
-    if (hasBOM && numInvalid==0) {
+    if (hasBOM && numInvalid == 0) {
         confidence = 100;
-    } else if (hasBOM && numValid > numInvalid*10) {
+    } else if (hasBOM && numValid > numInvalid * 10) {
         confidence = 80;
     } else if (numValid > 3 && numInvalid == 0) {
         confidence = 100;
@@ -93,7 +93,7 @@ UTF_32.prototype.match = function(det) {
 
 module.exports.UTF_32BE = function() {
     this.name = function() {
-        return "UTF-32BE";
+        return 'UTF-32BE';
     };
     this.getChar = function(input, index) {
         return (input[index + 0] & 0xFF) << 24 | (input[index + 1] & 0xFF) << 16 |
@@ -104,7 +104,7 @@ util.inherits(module.exports.UTF_32BE, UTF_32);
 
 module.exports.UTF_32LE = function() {
     this.name = function() {
-        return "UTF-32LE";
+        return 'UTF-32LE';
     };
     this.getChar = function(input, index) {
         return (input[index + 3] & 0xFF) << 24 | (input[index + 2] & 0xFF) << 16 |
