@@ -8,7 +8,7 @@ var util = require('util'),
  * of encodings.
  */
 
-function ISO_2022() {};
+function ISO_2022() {}
 
 ISO_2022.prototype.match = function(det) {
 
@@ -37,39 +37,36 @@ ISO_2022.prototype.match = function(det) {
     var textLen = det.fInputLen;
 
     scanInput:
-        for (i=0; i<textLen; i++) {
+        for (i = 0; i < textLen; i++) {
             if (text[i] == 0x1b) {
                 checkEscapes:
-                    for (escN=0; escN < this.escapeSequences.length; escN++) {
+                    for (escN = 0; escN < this.escapeSequences.length; escN++) {
                         var seq = this.escapeSequences[escN];
 
-                        if ((textLen - i) < seq.length) {
+                        if ((textLen - i) < seq.length)
                             continue checkEscapes;
-                        }
 
-                        for (j=1; j<seq.length; j++) {
-                            if (seq[j] != text[i+j])  {
+                        for (j = 1; j < seq.length; j++)
+                            if (seq[j] != text[i + j])
                                 continue checkEscapes;
-                            }
-                        }
+
 
                         hits++;
-                        i += seq.length-1;
+                        i += seq.length - 1;
                         continue scanInput;
                     }
 
                     misses++;
             }
 
-            if (text[i] == 0x0e || text[i] == 0x0f) {
-                // Shift in/out
+            // Shift in/out
+            if (text[i] == 0x0e || text[i] == 0x0f)
                 shifts++;
-            }
+
         }
 
-    if (hits == 0) {
+    if (hits == 0)
         return null;
-    }
 
     //
     // Initial quality is based on relative proportion of recongized vs.
@@ -77,27 +74,20 @@ ISO_2022.prototype.match = function(det) {
     //   All good:  quality = 100;
     //   half or less good: quality = 0;
     //   linear inbetween.
-    quality = (100*hits - 100*misses) / (hits + misses);
+    quality = (100 * hits - 100 * misses) / (hits + misses);
 
     // Back off quality if there were too few escape sequences seen.
     //   Include shifts in this computation, so that KR does not get penalized
     //   for having only a single Escape sequence, but many shifts.
-    if (hits+shifts < 5) {
-        quality -= (5-(hits+shifts))*10;
-    }
+    if (hits + shifts < 5)
+        quality -= (5 - (hits + shifts)) * 10;
 
-    if (quality < 0) {
-        quality = 0;
-    }
-
-    // return quality;
-
-    return quality == 0 ? null : new Match(det, this, quality);
+    return quality <= 0 ? null : new Match(det, this, quality);
 };
 
 module.exports.ISO_2022_JP = function() {
     this.name = function() {
-        return "ISO-2022-JP";
+        return 'ISO-2022-JP';
     };
     this.escapeSequences = [
         [ 0x1b, 0x24, 0x28, 0x43 ],   // KS X 1001:1992
@@ -120,7 +110,7 @@ util.inherits(module.exports.ISO_2022_JP, ISO_2022);
 
 module.exports.ISO_2022_KR = function() {
     this.name = function() {
-        return "ISO-2022-KR";
+        return 'ISO-2022-KR';
     };
     this.escapeSequences = [
         [ 0x1b, 0x24, 0x29, 0x43 ]
@@ -132,7 +122,7 @@ util.inherits(module.exports.ISO_2022_KR, ISO_2022);
 
 module.exports.ISO_2022_CN = function() {
     this.name = function() {
-        return "ISO-2022-CN";
+        return 'ISO-2022-CN';
     };
     this.escapeSequences = [
         [ 0x1b, 0x24, 0x29, 0x41 ],   // GB 2312-80
@@ -149,4 +139,3 @@ module.exports.ISO_2022_CN = function() {
     ];
 };
 util.inherits(module.exports.ISO_2022_CN, ISO_2022);
-
