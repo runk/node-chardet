@@ -266,25 +266,26 @@ module.exports.big5 = function() {
     this.nextChar = function(iter, det) {
         iter.index = iter.nextIndex;
         iter.error = false;
-        var firstByte;
-        firstByte = iter.charValue = iter.nextByte(det);
-        if (firstByte < 0) {
+
+        var firstByte = iter.charValue = iter.nextByte(det);
+
+        if (firstByte < 0)
             return false;
-        }
-        if (firstByte <= 0x7f || firstByte == 0xff) {
-            // single byte character.
+
+        // single byte character.
+        if (firstByte <= 0x7f || firstByte == 0xff)
             return true;
-        }
+
         var secondByte = iter.nextByte(det);
-        if (secondByte < 0)  {
+
+        if (secondByte < 0)
             return false;
-        }
+
         iter.charValue = (iter.charValue << 8) | secondByte;
-        if (secondByte < 0x40 ||
-            secondByte == 0x7f ||
-            secondByte == 0xff) {
-                iter.error = true;
-        }
+
+        if (secondByte < 0x40 || secondByte == 0x7f || secondByte == 0xff)
+            iter.error = true;
+
         return true;
     };
 };
@@ -343,14 +344,14 @@ function eucNextChar(iter, det) {
         if (firstByte == 0x8f) {
             // Code set 3.
             // Three byte total char size, two bytes of actual char value.
-            thirdByte    = iter.nextByte(det);
+            thirdByte = iter.nextByte(det);
             iter.charValue = (iter.charValue << 8) | thirdByte;
             if (thirdByte < 0xa1) {
                 iter.error = true;
             }
         }
     }
-    return (iter.done == false);
+    return iter.done == false;
 };
 
 
@@ -479,7 +480,7 @@ module.exports.gb_18030 = function() {
                 break buildChar;
             }
         }
-        return (iter.done == false);
+        return iter.done == false;
     };
 
     // TODO:  This set of data comes from the character frequency-
