@@ -27,8 +27,8 @@ function binarySearch(arr, searchValue) {
     return find(arr, searchValue, 0, arr.length - 1);
 };
 
-// "Character"  iterated character class.
-//    Recognizers for specific mbcs encodings make their "characters" available
+// 'Character'  iterated character class.
+//    Recognizers for specific mbcs encodings make their 'characters' available
 //    by providing a nextChar() function that fills in an instance of iteratedChar
 //    with the next char from the input.
 //    The returned characters are not converted to Unicode, but remain as the raw
@@ -116,7 +116,7 @@ mbcs.prototype.match = function(det) {
                     }
                 }
             }
-            if (badCharCount >= 2 && badCharCount*5 >= doubleByteCharCount) {
+            if (badCharCount >= 2 && badCharCount * 5 >= doubleByteCharCount) {
                 // console.log('its here!')
                 // Bail out early if the byte data is not matching the encoding scheme.
                 break detectBlock;
@@ -143,7 +143,7 @@ mbcs.prototype.match = function(det) {
         //  No match if there are too many characters that don't fit the encoding scheme.
         //    (should we have zero tolerance for these?)
         //
-        if (doubleByteCharCount < 20*badCharCount) {
+        if (doubleByteCharCount < 20 * badCharCount) {
             confidence = 0;
             break detectBlock;
         }
@@ -152,7 +152,7 @@ mbcs.prototype.match = function(det) {
             // We have no statistics on frequently occuring characters.
             //  Assess confidence purely on having a reasonable number of
             //  multi-byte characters (the more the better
-            confidence = 30 + doubleByteCharCount - 20*badCharCount;
+            confidence = 30 + doubleByteCharCount - 20 * badCharCount;
             if (confidence > 100) {
                 confidence = 100;
             }
@@ -162,7 +162,7 @@ mbcs.prototype.match = function(det) {
             //
             var maxVal = Math.log(parseFloat(doubleByteCharCount) / 4);
             var scaleFactor = 90.0 / maxVal;
-            confidence = Math.floor(Math.log(commonCharCount+1) * scaleFactor + 10);
+            confidence = Math.floor(Math.log(commonCharCount + 1) * scaleFactor + 10);
             confidence = Math.min(confidence, 100);
         }
     }   // end of detectBlock:
@@ -177,7 +177,7 @@ mbcs.prototype.match = function(det) {
  *
  *  This function is not a method of class iteratedChar only because
  *   that would require a lot of extra derived classes, which is awkward.
- * @param it  The iteratedChar "struct" into which the returned char is placed.
+ * @param it  The iteratedChar 'struct' into which the returned char is placed.
  * @param det The charset detector, which is needed to get at the input byte data
  *            being iterated over.
  * @return    True if a character was returned, false at end of input.
@@ -192,10 +192,10 @@ mbcs.prototype.nextChar = function(iter, det) {};
  */
 module.exports.sjis = function() {
     this.name = function() {
-        return "Shift-JIS";
+        return 'Shift-JIS';
     };
     this.language = function() {
-        return "ja";
+        return 'ja';
     };
 
     // TODO:  This set of data comes from the character frequency-
@@ -216,20 +216,18 @@ module.exports.sjis = function() {
 
         var firstByte;
         firstByte = iter.charValue = iter.nextByte(det);
-        if (firstByte < 0) {
+        if (firstByte < 0)
             return false;
-        }
 
-        if (firstByte <= 0x7f || (firstByte>0xa0 && firstByte<=0xdf)) {
+        if (firstByte <= 0x7f || (firstByte > 0xa0 && firstByte <= 0xdf))
             return true;
-        }
 
         var secondByte = iter.nextByte(det);
-        if (secondByte < 0)  {
+        if (secondByte < 0)
             return false;
-        }
+
         iter.charValue = (firstByte << 8) | secondByte;
-        if (! ((secondByte>=0x40 && secondByte<=0x7f) || (secondByte>=0x80 && secondByte<=0xff))) {
+        if (! ((secondByte >= 0x40 && secondByte <= 0x7f) || (secondByte >= 0x80 && secondByte <= 0xff))) {
             // Illegal second byte value.
             iter.error = true;
         }
@@ -245,10 +243,10 @@ util.inherits(module.exports.sjis, mbcs);
  */
 module.exports.big5 = function() {
     this.name = function() {
-        return "Big5";
+        return 'Big5';
     };
     this.language = function() {
-        return "zh";
+        return 'zh';
     };
     // TODO:  This set of data comes from the character frequency-
     //        of-occurence analysis tool.  The data needs to be moved
@@ -300,7 +298,7 @@ util.inherits(module.exports.big5, mbcs);
  *  and nested derived classes for EUC_KR, EUC_JP, EUC_CN.
  *
  *  Get the next character value for EUC based encodings.
- *  Character "value" is simply the raw bytes that make up the character
+ *  Character 'value' is simply the raw bytes that make up the character
  *     packed into an int.
  */
 function eucNextChar(iter, det) {
@@ -363,10 +361,10 @@ function eucNextChar(iter, det) {
  */
 module.exports.euc_jp = function() {
     this.name = function() {
-        return "EUC-JP";
+        return 'EUC-JP';
     };
     this.language = function() {
-        return "ja";
+        return 'ja';
     };
 
     // TODO:  This set of data comes from the character frequency-
@@ -397,10 +395,10 @@ util.inherits(module.exports.euc_jp, mbcs);
  */
 module.exports.euc_kr = function() {
     this.name = function() {
-        return "EUC-KR";
+        return 'EUC-KR';
     };
     this.language = function() {
-        return "ko";
+        return 'ko';
     };
 
     // TODO:  This set of data comes from the character frequency-
@@ -430,15 +428,15 @@ util.inherits(module.exports.euc_kr, mbcs);
  */
 module.exports.gb_18030 = function() {
     this.name = function() {
-        return "GB18030";
+        return 'GB18030';
     };
     this.language = function() {
-        return "zh";
+        return 'zh';
     };
 
     /*
      *  Get the next character value for EUC based encodings.
-     *  Character "value" is simply the raw bytes that make up the character
+     *  Character 'value' is simply the raw bytes that make up the character
      *     packed into an int.
      */
     this.nextChar = function(iter, det) {
@@ -463,7 +461,7 @@ module.exports.gb_18030 = function() {
             iter.charValue = (iter.charValue << 8) | secondByte;
             if (firstByte >= 0x81 && firstByte <= 0xFE) {
                 // Two byte Char
-                if ((secondByte >= 0x40 && secondByte <= 0x7E) || (secondByte >=80 && secondByte <=0xFE)) {
+                if ((secondByte >= 0x40 && secondByte <= 0x7E) || (secondByte >=80 && secondByte <= 0xFE)) {
                     break buildChar;
                 }
                 // Four byte char
