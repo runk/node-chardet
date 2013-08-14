@@ -365,9 +365,7 @@ module.exports.ISO_8859_2 = function() {
     };
 
     this.name = function(det) {
-        if (typeof det == 'undefined')
-            return 'ISO-8859-2';
-        return det.fC1Bytes ? 'windows-1250' : 'ISO-8859-2';
+        return (det && det.fC1Bytes) ? 'windows-1250' : 'ISO-8859-2';
     };
 };
 util.inherits(module.exports.ISO_8859_2, sbcs);
@@ -413,7 +411,6 @@ module.exports.ISO_8859_5 = function() {
 
     this.ngrams = function() {
         return [
-    // 1,2,3
             0x20D220, 0x20D2DE, 0x20D4DE, 0x20D7D0, 0x20D820, 0x20DAD0, 0x20DADE, 0x20DDD0,
             0x20DDD5, 0x20DED1, 0x20DFDE, 0x20DFE0, 0x20E0D0, 0x20E1DE, 0x20E1E2, 0x20E2DE,
             0x20E7E2, 0x20EDE2, 0xD0DDD8, 0xD0E2EC, 0xD3DE20, 0xD5DBEC, 0xD5DDD8, 0xD5E1E2,
@@ -550,9 +547,7 @@ module.exports.ISO_8859_7 = function() {
     };
 
     this.name = function(det) {
-        if (typeof det == 'undefined')
-            return 'ISO-8859-7';
-        return det.fC1Bytes ? 'windows-1253' : 'ISO-8859-7';
+        return (det && det.fC1Bytes) ? 'windows-1253' : 'ISO-8859-7';
     };
 
     this.language = function() {
@@ -626,9 +621,7 @@ module.exports.ISO_8859_8 = function() {
     };
 
     this.name = function(det) {
-        if (typeof det == 'undefined')
-            return 'ISO-8859-8';
-        return det.fC1Bytes ? 'windows-1255' : 'ISO-8859-8';
+        return (det && det.fC1Bytes) ? 'windows-1255' : 'ISO-8859-8';
     };
 
     this.language = function() {
@@ -691,9 +684,7 @@ module.exports.ISO_8859_9 = function() {
     };
 
     this.name = function(det) {
-        if (typeof det == 'undefined')
-            return 'ISO-8859-9';
-        return det.fC1Bytes ? 'windows-1254' : 'ISO-8859-9';
+        return (det && det.fC1Bytes) ? 'windows-1254' : 'ISO-8859-9';
     };
 
     this.language = function() {
