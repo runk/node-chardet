@@ -6,22 +6,22 @@ var util = require('util'),
  */
 function binarySearch(arr, searchValue) {
     function find(arr, searchValue, left, right) {
-        if (right < left) {
+        if (right < left)
             return -1;
-        }
+
         /*
         int mid = mid = (left + right) / 2;
         There is a bug in the above line;
         Joshua Bloch suggests the following replacement:
         */
         var mid = Math.floor((left + right) >>> 1);
-        if (searchValue > arr[mid]) {
+        if (searchValue > arr[mid])
             return find(arr, searchValue, mid + 1, right);
-        } else if (searchValue < arr[mid]) {
+
+        if (searchValue < arr[mid])
             return find(arr, searchValue, left, mid - 1);
-        } else {
-            return mid;
-        }
+
+        return mid;
     };
 
     return find(arr, searchValue, 0, arr.length - 1);
