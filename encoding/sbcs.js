@@ -26,37 +26,16 @@ function NGramParser(theNgramList, theByteMap) {
     this.search = function(table, value) {
         var index = 0;
 
-        if (table[index + 32] <= value) {
-            index += 32;
-        }
+        if (table[index + 32] <= value) index += 32;
+        if (table[index + 16] <= value) index += 16;
+        if (table[index + 8]  <= value) index += 8;
+        if (table[index + 4]  <= value) index += 4;
+        if (table[index + 2]  <= value) index += 2;
+        if (table[index + 1]  <= value) index += 1;
+        if (table[index]      > value)  index -= 1;
 
-        if (table[index + 16] <= value) {
-            index += 16;
-        }
-
-        if (table[index + 8] <= value) {
-            index += 8;
-        }
-
-        if (table[index + 4] <= value) {
-            index += 4;
-        }
-
-        if (table[index + 2] <= value) {
-            index += 2;
-        }
-
-        if (table[index + 1] <= value) {
-            index += 1;
-        }
-
-        if (table[index] > value) {
-            index -= 1;
-        }
-
-        if (index < 0 || table[index] != value) {
+        if (index < 0 || table[index] != value)
             return -1;
-        }
 
         return index;
     };
@@ -73,23 +52,15 @@ function NGramParser(theNgramList, theByteMap) {
         this.lookup(this.ngram);
     }
 
-    this.nextByte = function(det)
-    {
-        if (this.byteIndex >= det.fInputLen) {
+    this.nextByte = function(det) {
+        if (this.byteIndex >= det.fInputLen)
             return -1;
-        }
 
         return det.fInputBytes[this.byteIndex++] & 0xFF;
     }
 
-    // public int parse(CharsetDetector det)
-    // {
-    //     return parse (det, (byte)0x20);
-    // }
-
     this.parse = function(det, spaceCh) {
-        var b;
-        var ignoreSpace = false;
+        var b, ignoreSpace = false;
         this.spaceChar = spaceCh;
 
         while ((b = this.nextByte(det)) >= 0) {
@@ -110,15 +81,10 @@ function NGramParser(theNgramList, theByteMap) {
 
         var rawPercent = this.hitCount / this.ngramCount;
 
-//                if (rawPercent <= 2.0) {
-//                    return 0;
-//                }
-
         // TODO - This is a bit of a hack to take care of a case
         // were we were getting a confidence of 135...
-        if (rawPercent > 0.33) {
+        if (rawPercent > 0.33)
             return 98;
-        }
 
         return Math.floor(rawPercent * 300.0);
     };
@@ -136,30 +102,30 @@ sbcs.prototype.byteMap = function() {};
 sbcs.prototype.match = function(det) {
 
     var ngrams = this.ngrams();
-    var multiple = (ngrams instanceof Array && ngrams[0] instanceof NGramsPlusLang);
+    var multiple = (Array.isArray(ngrams) && ngrams[0] instanceof NGramsPlusLang);
 
-    if (multiple) {
-        var bestConfidenceSoFar = -1;
-        var lang = null;
-
-        for (var i = ngrams.length - 1; i >= 0; i--) {
-            var ngl = ngrams[i];
-
-            var parser = new NGramParser(ngl.fNGrams, this.byteMap());
-            var confidence = parser.parse(det, this.spaceChar);
-            if (confidence > bestConfidenceSoFar) {
-                bestConfidenceSoFar = confidence;
-                lang = ngl.fLang;
-            }
-        }
-
-        var name = this.name(det);
-        return bestConfidenceSoFar <= 0 ? null : new Match(det, this, bestConfidenceSoFar, name, lang);
+    if (!multiple) {
+        var parser = new NGramParser(ngrams, this.byteMap());
+        var confidence = parser.parse(det, this.spaceChar);
+        return confidence <= 0 ? null : new Match(det, this, confidence);
     }
 
-    var parser = new NGramParser(ngrams, this.byteMap());
-    var confidence = parser.parse(det, this.spaceChar);
-    return confidence <= 0 ? null : new Match(det, this, confidence);
+    var bestConfidenceSoFar = -1;
+    var lang = null;
+
+    for (var i = ngrams.length - 1; i >= 0; i--) {
+        var ngl = ngrams[i];
+
+        var parser = new NGramParser(ngl.fNGrams, this.byteMap());
+        var confidence = parser.parse(det, this.spaceChar);
+        if (confidence > bestConfidenceSoFar) {
+            bestConfidenceSoFar = confidence;
+            lang = ngl.fLang;
+        }
+    }
+
+    var name = this.name(det);
+    return bestConfidenceSoFar <= 0 ? null : new Match(det, this, bestConfidenceSoFar, name, lang);
 };
 
 
@@ -203,7 +169,7 @@ module.exports.ISO_8859_1 = function() {
 
     this.ngrams = function() {
         return [
-            new NGramsPlusLang("da", [
+            new NGramsPlusLang('da', [
                 0x206166, 0x206174, 0x206465, 0x20656E, 0x206572, 0x20666F, 0x206861, 0x206920,
                 0x206D65, 0x206F67, 0x2070E5, 0x207369, 0x207374, 0x207469, 0x207669, 0x616620,
                 0x616E20, 0x616E64, 0x617220, 0x617420, 0x646520, 0x64656E, 0x646572, 0x646574,
@@ -213,7 +179,7 @@ module.exports.ISO_8859_1 = function() {
                 0x6E6720, 0x6E6765, 0x6F6720, 0x6F6D20, 0x6F7220, 0x70E520, 0x722064, 0x722065,
                 0x722073, 0x726520, 0x737465, 0x742073, 0x746520, 0x746572, 0x74696C, 0x766572
             ]),
-            new NGramsPlusLang("de", [
+            new NGramsPlusLang('de', [
                 0x20616E, 0x206175, 0x206265, 0x206461, 0x206465, 0x206469, 0x206569, 0x206765,
                 0x206861, 0x20696E, 0x206D69, 0x207363, 0x207365, 0x20756E, 0x207665, 0x20766F,
                 0x207765, 0x207A75, 0x626572, 0x636820, 0x636865, 0x636874, 0x646173, 0x64656E,
@@ -223,7 +189,7 @@ module.exports.ISO_8859_1 = function() {
                 0x6E6520, 0x6E6720, 0x6E6765, 0x6E7465, 0x722064, 0x726465, 0x726569, 0x736368,
                 0x737465, 0x742064, 0x746520, 0x74656E, 0x746572, 0x756E64, 0x756E67, 0x766572
             ]),
-            new NGramsPlusLang("en", [
+            new NGramsPlusLang('en', [
                 0x206120, 0x20616E, 0x206265, 0x20636F, 0x20666F, 0x206861, 0x206865, 0x20696E,
                 0x206D61, 0x206F66, 0x207072, 0x207265, 0x207361, 0x207374, 0x207468, 0x20746F,
                 0x207768, 0x616964, 0x616C20, 0x616E20, 0x616E64, 0x617320, 0x617420, 0x617465,
@@ -233,7 +199,7 @@ module.exports.ISO_8859_1 = function() {
                 0x6F6620, 0x6F6E20, 0x6F7220, 0x726520, 0x727320, 0x732061, 0x732074, 0x736169,
                 0x737420, 0x742074, 0x746572, 0x746861, 0x746865, 0x74696F, 0x746F20, 0x747320
             ]),
-            new NGramsPlusLang("es", [
+            new NGramsPlusLang('es', [
                 0x206120, 0x206361, 0x20636F, 0x206465, 0x20656C, 0x20656E, 0x206573, 0x20696E,
                 0x206C61, 0x206C6F, 0x207061, 0x20706F, 0x207072, 0x207175, 0x207265, 0x207365,
                 0x20756E, 0x207920, 0x612063, 0x612064, 0x612065, 0x61206C, 0x612070, 0x616369,
@@ -243,7 +209,7 @@ module.exports.ISO_8859_1 = function() {
                 0x6F2065, 0x6F6E20, 0x6F7220, 0x6F7320, 0x706172, 0x717565, 0x726120, 0x726573,
                 0x732064, 0x732065, 0x732070, 0x736520, 0x746520, 0x746F20, 0x756520, 0xF36E20
             ]),
-            new NGramsPlusLang("fr", [
+            new NGramsPlusLang('fr', [
                 0x206175, 0x20636F, 0x206461, 0x206465, 0x206475, 0x20656E, 0x206574, 0x206C61,
                 0x206C65, 0x207061, 0x20706F, 0x207072, 0x207175, 0x207365, 0x20736F, 0x20756E,
                 0x20E020, 0x616E74, 0x617469, 0x636520, 0x636F6E, 0x646520, 0x646573, 0x647520,
@@ -253,7 +219,7 @@ module.exports.ISO_8859_1 = function() {
                 0x6F6E20, 0x6F6E74, 0x6F7572, 0x717565, 0x72206C, 0x726520, 0x732061, 0x732064,
                 0x732065, 0x73206C, 0x732070, 0x742064, 0x746520, 0x74696F, 0x756520, 0x757220
             ]),
-            new NGramsPlusLang("it", [
+            new NGramsPlusLang('it', [
                 0x20616C, 0x206368, 0x20636F, 0x206465, 0x206469, 0x206520, 0x20696C, 0x20696E,
                 0x206C61, 0x207065, 0x207072, 0x20756E, 0x612063, 0x612064, 0x612070, 0x612073,
                 0x61746F, 0x636865, 0x636F6E, 0x64656C, 0x646920, 0x652061, 0x652063, 0x652064,
@@ -263,7 +229,7 @@ module.exports.ISO_8859_1 = function() {
                 0x6E7465, 0x6F2061, 0x6F2064, 0x6F2069, 0x6F2073, 0x6F6E20, 0x6F6E65, 0x706572,
                 0x726120, 0x726520, 0x736920, 0x746120, 0x746520, 0x746920, 0x746F20, 0x7A696F
             ]),
-            new NGramsPlusLang("nl", [
+            new NGramsPlusLang('nl', [
                 0x20616C, 0x206265, 0x206461, 0x206465, 0x206469, 0x206565, 0x20656E, 0x206765,
                 0x206865, 0x20696E, 0x206D61, 0x206D65, 0x206F70, 0x207465, 0x207661, 0x207665,
                 0x20766F, 0x207765, 0x207A69, 0x61616E, 0x616172, 0x616E20, 0x616E64, 0x617220,
@@ -273,7 +239,7 @@ module.exports.ISO_8859_1 = function() {
                 0x6E2076, 0x6E6465, 0x6E6720, 0x6F6E64, 0x6F6F72, 0x6F7020, 0x6F7220, 0x736368,
                 0x737465, 0x742064, 0x746520, 0x74656E, 0x746572, 0x76616E, 0x766572, 0x766F6F
             ]),
-            new NGramsPlusLang("no", [
+            new NGramsPlusLang('no', [
                 0x206174, 0x206176, 0x206465, 0x20656E, 0x206572, 0x20666F, 0x206861, 0x206920,
                 0x206D65, 0x206F67, 0x2070E5, 0x207365, 0x20736B, 0x20736F, 0x207374, 0x207469,
                 0x207669, 0x20E520, 0x616E64, 0x617220, 0x617420, 0x646520, 0x64656E, 0x646574,
@@ -283,7 +249,7 @@ module.exports.ISO_8859_1 = function() {
                 0x6F6720, 0x6F6D20, 0x6F7220, 0x70E520, 0x722073, 0x726520, 0x736F6D, 0x737465,
                 0x742073, 0x746520, 0x74656E, 0x746572, 0x74696C, 0x747420, 0x747465, 0x766572
             ]),
-            new NGramsPlusLang("pt", [
+            new NGramsPlusLang('pt', [
                 0x206120, 0x20636F, 0x206461, 0x206465, 0x20646F, 0x206520, 0x206573, 0x206D61,
                 0x206E6F, 0x206F20, 0x207061, 0x20706F, 0x207072, 0x207175, 0x207265, 0x207365,
                 0x20756D, 0x612061, 0x612063, 0x612064, 0x612070, 0x616465, 0x61646F, 0x616C20,
@@ -293,7 +259,7 @@ module.exports.ISO_8859_1 = function() {
                 0x6F2070, 0x6F7320, 0x706172, 0x717565, 0x726120, 0x726573, 0x732061, 0x732064,
                 0x732065, 0x732070, 0x737461, 0x746520, 0x746F20, 0x756520, 0xE36F20, 0xE7E36F
             ]),
-            new NGramsPlusLang("sv", [
+            new NGramsPlusLang('sv', [
                 0x206174, 0x206176, 0x206465, 0x20656E, 0x2066F6, 0x206861, 0x206920, 0x20696E,
                 0x206B6F, 0x206D65, 0x206F63, 0x2070E5, 0x20736B, 0x20736F, 0x207374, 0x207469,
                 0x207661, 0x207669, 0x20E472, 0x616465, 0x616E20, 0x616E64, 0x617220, 0x617474,
@@ -308,8 +274,8 @@ module.exports.ISO_8859_1 = function() {
 
     this.name = function(det) {
         if (typeof det == 'undefined')
-            return "ISO-8859-1";
-        return det.fC1Bytes ? "windows-1252" : "ISO-8859-1";
+            return 'ISO-8859-1';
+        return det.fC1Bytes ? 'windows-1252' : 'ISO-8859-1';
     };
 };
 util.inherits(module.exports.ISO_8859_1, sbcs);
@@ -355,7 +321,7 @@ module.exports.ISO_8859_2 = function() {
 
     this.ngrams = function() {
         return [
-            new NGramsPlusLang("cs", [
+            new NGramsPlusLang('cs', [
                 0x206120, 0x206279, 0x20646F, 0x206A65, 0x206E61, 0x206E65, 0x206F20, 0x206F64,
                 0x20706F, 0x207072, 0x2070F8, 0x20726F, 0x207365, 0x20736F, 0x207374, 0x20746F,
                 0x207620, 0x207679, 0x207A61, 0x612070, 0x636520, 0x636820, 0x652070, 0x652073,
@@ -365,7 +331,7 @@ module.exports.ISO_8859_2 = function() {
                 0x736520, 0x736F75, 0x737461, 0x737469, 0x73746E, 0x746572, 0x746EED, 0x746F20,
                 0x752070, 0xBE6520, 0xE16EED, 0xE9686F, 0xED2070, 0xED2073, 0xED6D20, 0xF86564,
             ]),
-            new NGramsPlusLang("hu", [
+            new NGramsPlusLang('hu', [
                 0x206120, 0x20617A, 0x206265, 0x206567, 0x20656C, 0x206665, 0x206861, 0x20686F,
                 0x206973, 0x206B65, 0x206B69, 0x206BF6, 0x206C65, 0x206D61, 0x206D65, 0x206D69,
                 0x206E65, 0x20737A, 0x207465, 0x20E973, 0x612061, 0x61206B, 0x61206D, 0x612073,
@@ -375,7 +341,7 @@ module.exports.ISO_8859_2 = function() {
                 0x6E616B, 0x6E656B, 0x6E656D, 0x6E7420, 0x6F6779, 0x732061, 0x737A65, 0x737A74,
                 0x737AE1, 0x73E967, 0x742061, 0x747420, 0x74E173, 0x7A6572, 0xE16E20, 0xE97320,
             ]),
-            new NGramsPlusLang("pl", [
+            new NGramsPlusLang('pl', [
                 0x20637A, 0x20646F, 0x206920, 0x206A65, 0x206B6F, 0x206D61, 0x206D69, 0x206E61,
                 0x206E69, 0x206F64, 0x20706F, 0x207072, 0x207369, 0x207720, 0x207769, 0x207779,
                 0x207A20, 0x207A61, 0x612070, 0x612077, 0x616E69, 0x636820, 0x637A65, 0x637A79,
@@ -385,7 +351,7 @@ module.exports.ISO_8859_2 = function() {
                 0x706F6C, 0x707261, 0x70726F, 0x70727A, 0x727A65, 0x727A79, 0x7369EA, 0x736B69,
                 0x737461, 0x776965, 0x796368, 0x796D20, 0x7A6520, 0x7A6965, 0x7A7920, 0xF37720,
             ]),
-            new NGramsPlusLang("ro", [
+            new NGramsPlusLang('ro', [
                 0x206120, 0x206163, 0x206361, 0x206365, 0x20636F, 0x206375, 0x206465, 0x206469,
                 0x206C61, 0x206D61, 0x207065, 0x207072, 0x207365, 0x2073E3, 0x20756E, 0x20BA69,
                 0x20EE6E, 0x612063, 0x612064, 0x617265, 0x617420, 0x617465, 0x617520, 0x636172,
@@ -400,8 +366,8 @@ module.exports.ISO_8859_2 = function() {
 
     this.name = function(det) {
         if (typeof det == 'undefined')
-            return "ISO-8859-2";
-        return det.fC1Bytes ? "windows-1250" : "ISO-8859-2";
+            return 'ISO-8859-2';
+        return det.fC1Bytes ? 'windows-1250' : 'ISO-8859-2';
     };
 };
 util.inherits(module.exports.ISO_8859_2, sbcs);
@@ -460,11 +426,11 @@ module.exports.ISO_8859_5 = function() {
     };
 
     this.name = function(det) {
-        return "ISO-8859-5";
+        return 'ISO-8859-5';
     };
 
     this.language = function() {
-        return "ru";
+        return 'ru';
     };
 };
 util.inherits(module.exports.ISO_8859_5, sbcs);
@@ -522,11 +488,11 @@ module.exports.ISO_8859_6 = function() {
     };
 
     this.name = function(det) {
-        return "ISO-8859-6";
+        return 'ISO-8859-6';
     };
 
     this.language = function() {
-        return "ar";
+        return 'ar';
     };
 };
 util.inherits(module.exports.ISO_8859_6, sbcs);
@@ -585,12 +551,12 @@ module.exports.ISO_8859_7 = function() {
 
     this.name = function(det) {
         if (typeof det == 'undefined')
-            return "ISO-8859-7";
-        return det.fC1Bytes ? "windows-1253" : "ISO-8859-7";
+            return 'ISO-8859-7';
+        return det.fC1Bytes ? 'windows-1253' : 'ISO-8859-7';
     };
 
     this.language = function() {
-        return "el";
+        return 'el';
     };
 };
 util.inherits(module.exports.ISO_8859_7, sbcs);
@@ -636,7 +602,7 @@ module.exports.ISO_8859_8 = function() {
 
     this.ngrams = function() {
         return [
-            new NGramsPlusLang("he", [
+            new NGramsPlusLang('he', [
                 0x20E0E5, 0x20E0E7, 0x20E0E9, 0x20E0FA, 0x20E1E9, 0x20E1EE, 0x20E4E0, 0x20E4E5,
                 0x20E4E9, 0x20E4EE, 0x20E4F2, 0x20E4F9, 0x20E4FA, 0x20ECE0, 0x20ECE4, 0x20EEE0,
                 0x20F2EC, 0x20F9EC, 0xE0FA20, 0xE420E0, 0xE420E1, 0xE420E4, 0xE420EC, 0xE420EE,
@@ -646,7 +612,7 @@ module.exports.ISO_8859_8 = function() {
                 0xED20F9, 0xEEE420, 0xEF20E4, 0xF0E420, 0xF0E920, 0xF0E9ED, 0xF2EC20, 0xF820E4,
                 0xF8E9ED, 0xF9EC20, 0xFA20E0, 0xFA20E1, 0xFA20E4, 0xFA20EC, 0xFA20EE, 0xFA20F9,
             ]),
-            new NGramsPlusLang("he", [
+            new NGramsPlusLang('he', [
                 0x20E0E5, 0x20E0EC, 0x20E4E9, 0x20E4EC, 0x20E4EE, 0x20E4F0, 0x20E9F0, 0x20ECF2,
                 0x20ECF9, 0x20EDE5, 0x20EDE9, 0x20EFE5, 0x20EFE9, 0x20F8E5, 0x20F8E9, 0x20FAE0,
                 0x20FAE5, 0x20FAE9, 0xE020E4, 0xE020EC, 0xE020ED, 0xE020FA, 0xE0E420, 0xE0E5E4,
@@ -661,12 +627,12 @@ module.exports.ISO_8859_8 = function() {
 
     this.name = function(det) {
         if (typeof det == 'undefined')
-            return "ISO-8859-8";
-        return det.fC1Bytes ? "windows-1255" : "ISO-8859-8";
+            return 'ISO-8859-8';
+        return det.fC1Bytes ? 'windows-1255' : 'ISO-8859-8';
     };
 
     this.language = function() {
-        return "he";
+        return 'he';
     };
 
 };
@@ -726,12 +692,12 @@ module.exports.ISO_8859_9 = function() {
 
     this.name = function(det) {
         if (typeof det == 'undefined')
-            return "ISO-8859-9";
-        return det.fC1Bytes ? "windows-1254" : "ISO-8859-9";
+            return 'ISO-8859-9';
+        return det.fC1Bytes ? 'windows-1254' : 'ISO-8859-9';
     };
 
     this.language = function() {
-        return "tr";
+        return 'tr';
     };
 };
 util.inherits(module.exports.ISO_8859_9, sbcs);
@@ -789,11 +755,11 @@ module.exports.windows_1251 = function() {
     };
 
     this.name = function(det) {
-        return "windows-1251";
+        return 'windows-1251';
     };
 
     this.language = function() {
-        return "ru";
+        return 'ru';
     };
 };
 util.inherits(module.exports.windows_1251, sbcs);
@@ -851,11 +817,11 @@ module.exports.windows_1256 = function() {
     };
 
     this.name = function(det) {
-        return "windows-1256";
+        return 'windows-1256';
     };
 
     this.language = function() {
-        return "ar";
+        return 'ar';
     };
 };
 util.inherits(module.exports.windows_1256, sbcs);
@@ -913,16 +879,14 @@ module.exports.KOI8_R = function() {
     };
 
     this.name = function(det) {
-        return "KOI8-R";
+        return 'KOI8-R';
     };
 
     this.language = function() {
-        return "ru";
+        return 'ru';
     };
 };
 util.inherits(module.exports.KOI8_R, sbcs);
-
-
 
 
 /*
@@ -941,12 +905,12 @@ module.exports.ISO_8859_7 = function() {
 
     this.name = function(det) {
         if (typeof det == 'undefined')
-            return "ISO-8859-7";
-        return det.fC1Bytes ? "windows-1253" : "ISO-8859-7";
+            return 'ISO-8859-7';
+        return det.fC1Bytes ? 'windows-1253' : 'ISO-8859-7';
     };
 
     this.language = function() {
-        return "el";
+        return 'el';
     };
 };
 util.inherits(module.exports.ISO_8859_7, sbcs);
