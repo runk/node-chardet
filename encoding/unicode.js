@@ -5,7 +5,6 @@ var util = require('util'),
  * This class matches UTF-16 and UTF-32, both big- and little-endian. The
  * BOM will be used if it is present.
  */
-
 module.exports.UTF_16BE = function() {
     this.name = function() {
         return 'UTF-16BE';
@@ -13,14 +12,12 @@ module.exports.UTF_16BE = function() {
     this.match = function(det) {
         var input = det.fRawInput;
 
-        if (input.length >= 2 && ((input[0] & 0xFF) == 0xFE && (input[1] & 0xFF) == 0xFF)) {
-            var confidence = 100;
-            return new Match(det, this, confidence);
-        }
+        if (input.length >= 2 && ((input[0] & 0xFF) == 0xFE && (input[1] & 0xFF) == 0xFF))
+            return new Match(det, this, confidence = 100);
 
         // TODO: Do some statistics to check for unsigned UTF-16BE
         return null;
-    }
+    };
 };
 
 module.exports.UTF_16LE = function() {
@@ -32,12 +29,11 @@ module.exports.UTF_16LE = function() {
 
         if (input.length >= 2 && ((input[0] & 0xFF) == 0xFF && (input[1] & 0xFF) == 0xFE)) {
            // An LE BOM is present.
-           if (input.length >= 4 && input[2] == 0x00 && input[3] == 0x00) {
+           if (input.length >= 4 && input[2] == 0x00 && input[3] == 0x00)
                // It is probably UTF-32 LE, not UTF-16
                return null;
-           }
-           var confidence = 100;
-           return new Match(det, this, confidence);
+
+           return new Match(det, this, confidence = 100);
         }
 
         // TODO: Do some statistics to check for unsigned UTF-16LE
@@ -54,22 +50,19 @@ UTF_32.prototype.match = function(det) {
         hasBOM     = false,
         confidence = 0;
 
-    if (limit==0) {
+    if (limit == 0)
         return null;
-    }
 
-    if (this.getChar(input, 0) == 0x0000FEFF) {
+    if (this.getChar(input, 0) == 0x0000FEFF)
         hasBOM = true;
-    }
 
-    for(var i = 0; i < limit; i += 4) {
+    for (var i = 0; i < limit; i += 4) {
         var ch = this.getChar(input, i);
 
-        if (ch < 0 || ch >= 0x10FFFF || (ch >= 0xD800 && ch <= 0xDFFF)) {
+        if (ch < 0 || ch >= 0x10FFFF || (ch >= 0xD800 && ch <= 0xDFFF))
             numInvalid += 1;
-        } else {
+        else
             numValid += 1;
-        }
     }
 
     // Cook up some sort of confidence score, based on presence of a BOM
@@ -82,7 +75,7 @@ UTF_32.prototype.match = function(det) {
         confidence = 100;
     } else if (numValid > 0 && numInvalid == 0) {
         confidence = 80;
-    } else if (numValid > numInvalid*10) {
+    } else if (numValid > numInvalid * 10) {
         // Probably corrupt UTF-32BE data.  Valid sequences aren't likely by chance.
         confidence = 25;
     }
