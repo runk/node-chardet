@@ -273,9 +273,7 @@ module.exports.ISO_8859_1 = function() {
     };
 
     this.name = function(det) {
-        if (typeof det == 'undefined')
-            return 'ISO-8859-1';
-        return det.fC1Bytes ? 'windows-1252' : 'ISO-8859-1';
+        return (det && det.fC1Bytes) ? 'windows-1252' : 'ISO-8859-1';
     };
 };
 util.inherits(module.exports.ISO_8859_1, sbcs);
