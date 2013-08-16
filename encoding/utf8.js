@@ -14,7 +14,6 @@ module.exports = function() {
             numValid = 0,
             numInvalid = 0,
             input = det.fRawInput,
-            i,
             trailBytes = 0,
             confidence;
 
@@ -24,11 +23,11 @@ module.exports = function() {
         }
 
         // Scan for multi-byte sequences
-        for (i=0; i<det.fRawLength; i++) {
+        for (var i = 0; i < det.fRawLength; i++) {
             var b = input[i];
-            if ((b & 0x80) == 0) {
-                continue;   // ASCII
-            }
+            if ((b & 0x80) == 0)
+                continue; // ASCII
+
 
             // Hi bit on char found.  Figure out how long the sequence should be
             if ((b & 0x0e0) == 0x0c0) {
@@ -66,21 +65,23 @@ module.exports = function() {
         // Cook up some sort of confidence score, based on presense of a BOM
         //    and the existence of valid and/or invalid multi-byte sequences.
         confidence = 0;
-        if (hasBOM && numInvalid == 0) {
+        if (hasBOM && numInvalid == 0)
             confidence = 100;
-        } else if (hasBOM && numValid > numInvalid * 10) {
+        else if (hasBOM && numValid > numInvalid * 10)
             confidence = 80;
-        } else if (numValid > 3 && numInvalid == 0) {
+        else if (numValid > 3 && numInvalid == 0)
             confidence = 100;
-        } else if (numValid > 0 && numInvalid == 0) {
+        else if (numValid > 0 && numInvalid == 0)
             confidence = 80;
-        } else if (numValid == 0 && numInvalid == 0) {
+        else if (numValid == 0 && numInvalid == 0)
             // Plain ASCII.
             confidence = 10;
-        } else if (numValid > numInvalid * 10) {
+        else if (numValid > numInvalid * 10)
             // Probably corruput utf-8 data.  Valid sequences aren't likely by chance.
             confidence = 25;
-        }
-        return confidence == 0 ? null : new Match(det, this, confidence);
+        else
+            return null
+
+        return new Match(det, this, confidence);
     };
 };
