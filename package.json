@@ -1,6 +1,6 @@
 {
   "name": "chardet",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "homepage": "https://github.com/runk/node-chardet",
   "description": "Character detector",
   "keywords": [
