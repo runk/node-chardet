@@ -12,7 +12,7 @@ module.exports.UTF_16BE = function() {
     this.match = function(det) {
         var input = det.fRawInput;
 
-        if (input.length >= 2 && ((input[0] & 0xFF) == 0xFE && (input[1] & 0xFF) == 0xFF))
+        if (input.length >= 2 && ((input[0] & 0xff) == 0xfe && (input[1] & 0xff) == 0xff))
             return new Match(det, this, confidence = 100);
 
         // TODO: Do some statistics to check for unsigned UTF-16BE
@@ -27,7 +27,7 @@ module.exports.UTF_16LE = function() {
     this.match = function(det) {
         var input = det.fRawInput;
 
-        if (input.length >= 2 && ((input[0] & 0xFF) == 0xFF && (input[1] & 0xFF) == 0xFE)) {
+        if (input.length >= 2 && ((input[0] & 0xff) == 0xff && (input[1] & 0xff) == 0xfe)) {
            // An LE BOM is present.
            if (input.length >= 4 && input[2] == 0x00 && input[3] == 0x00)
                // It is probably UTF-32 LE, not UTF-16
@@ -89,8 +89,8 @@ module.exports.UTF_32BE = function() {
         return 'UTF-32BE';
     };
     this.getChar = function(input, index) {
-        return (input[index + 0] & 0xFF) << 24 | (input[index + 1] & 0xFF) << 16 |
-               (input[index + 2] & 0xFF) <<  8 | (input[index + 3] & 0xFF);
+        return (input[index + 0] & 0xff) << 24 | (input[index + 1] & 0xff) << 16 |
+               (input[index + 2] & 0xff) <<  8 | (input[index + 3] & 0xff);
     };
 };
 util.inherits(module.exports.UTF_32BE, UTF_32);
@@ -100,8 +100,8 @@ module.exports.UTF_32LE = function() {
         return 'UTF-32LE';
     };
     this.getChar = function(input, index) {
-        return (input[index + 3] & 0xFF) << 24 | (input[index + 2] & 0xFF) << 16 |
-               (input[index + 1] & 0xFF) <<  8 | (input[index + 0] & 0xFF);
+        return (input[index + 3] & 0xff) << 24 | (input[index + 2] & 0xff) << 16 |
+               (input[index + 1] & 0xff) <<  8 | (input[index + 0] & 0xff);
     };
 };
 util.inherits(module.exports.UTF_32LE, UTF_32);

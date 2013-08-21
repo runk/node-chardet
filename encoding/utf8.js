@@ -18,7 +18,7 @@ module.exports = function() {
             confidence;
 
         if (det.fRawLength >= 3 &&
-            (input[0] & 0xFF) == 0xef && (input[1] & 0xFF) == 0xbb && (input[2] & 0xFF) == 0xbf) {
+            (input[0] & 0xff) == 0xef && (input[1] & 0xff) == 0xbb && (input[2] & 0xff) == 0xbf) {
             hasBOM = true;
         }
 
@@ -27,7 +27,6 @@ module.exports = function() {
             var b = input[i];
             if ((b & 0x80) == 0)
                 continue; // ASCII
-
 
             // Hi bit on char found.  Figure out how long the sequence should be
             if ((b & 0x0e0) == 0x0c0) {
@@ -38,20 +37,18 @@ module.exports = function() {
                 trailBytes = 3;
             } else {
                 numInvalid++;
-                if (numInvalid > 5) {
+                if (numInvalid > 5)
                     break;
-                }
                 trailBytes = 0;
             }
 
             // Verify that we've got the right number of trail bytes in the sequence
             for (;;) {
                 i++;
-                if (i >= det.fRawLength) {
+                if (i >= det.fRawLength)
                     break;
-                }
-                b = input[i];
-                if ((b & 0xc0) != 0x080) {
+
+                if ((input[i] & 0xc0) != 0x080) {
                     numInvalid++;
                     break;
                 }
