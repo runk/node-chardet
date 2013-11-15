@@ -1,5 +1,4 @@
 
-
 chardet [![Build Status](https://travis-ci.org/runk/node-chardet.png)](https://travis-ci.org/runk/node-chardet)
 =====
 
@@ -9,16 +8,20 @@ occurency analysis to determine the most probable encoding.
 
 ## Installation
 
-    npm install chardet
+```
+npm i chardet
+```
 
 ## Usage
 
-    var chardet = require('chardet');
-    chardet.detect(new Buffer('hello there!'));
-    // or
-    chardet.detectFile('/path/to/file', function(err, encoding) {});
-    // or
-    chardet.detectFileSync('/path/to/file');
+```javascript
+var chardet = require('chardet');
+chardet.detect(new Buffer('hello there!'));
+// or
+chardet.detectFile('/path/to/file', function(err, encoding) {});
+// or
+chardet.detectFileSync('/path/to/file');
+```
 
 ## Supported Encodings:
 
