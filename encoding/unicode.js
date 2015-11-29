@@ -1,3 +1,4 @@
+'use strict';
 var util = require('util'),
   Match = require ('../match');
 
@@ -12,8 +13,10 @@ module.exports.UTF_16BE = function() {
   this.match = function(det) {
     var input = det.fRawInput;
 
-    if (input.length >= 2 && ((input[0] & 0xff) == 0xfe && (input[1] & 0xff) == 0xff))
-      return new Match(det, this, confidence = 100);
+    if (input.length >= 2 && ((input[0] & 0xff) == 0xfe && (input[1] & 0xff) == 0xff)) {
+      var confidence = 100;
+        return new Match(det, this, confidence);
+      }
 
     // TODO: Do some statistics to check for unsigned UTF-16BE
     return null;
@@ -28,12 +31,13 @@ module.exports.UTF_16LE = function() {
     var input = det.fRawInput;
 
     if (input.length >= 2 && ((input[0] & 0xff) == 0xff && (input[1] & 0xff) == 0xfe)) {
-       // An LE BOM is present.
-       if (input.length >= 4 && input[2] == 0x00 && input[3] == 0x00)
-         // It is probably UTF-32 LE, not UTF-16
-         return null;
-
-       return new Match(det, this, confidence = 100);
+      // An LE BOM is present.
+      if (input.length >= 4 && input[2] == 0x00 && input[3] == 0x00) {
+        // It is probably UTF-32 LE, not UTF-16
+        return null;
+      }
+      var confidence = 100;
+      return new Match(det, this, confidence);
     }
 
     // TODO: Do some statistics to check for unsigned UTF-16LE
@@ -50,19 +54,22 @@ UTF_32.prototype.match = function(det) {
     hasBOM     = false,
     confidence = 0;
 
-  if (limit == 0)
+  if (limit == 0) {
     return null;
+  }
 
-  if (this.getChar(input, 0) == 0x0000FEFF)
+  if (this.getChar(input, 0) == 0x0000FEFF) {
     hasBOM = true;
+  }
 
   for (var i = 0; i < limit; i += 4) {
     var ch = this.getChar(input, i);
 
-    if (ch < 0 || ch >= 0x10FFFF || (ch >= 0xD800 && ch <= 0xDFFF))
+    if (ch < 0 || ch >= 0x10FFFF || (ch >= 0xD800 && ch <= 0xDFFF)) {
       numInvalid += 1;
-    else
+    } else {
       numValid += 1;
+    }
   }
 
   // Cook up some sort of confidence score, based on presence of a BOM
