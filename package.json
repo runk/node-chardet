@@ -1,6 +1,6 @@
 {
   "name": "chardet",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "homepage": "https://github.com/runk/node-chardet",
   "description": "Character detector",
   "keywords": [
@@ -12,6 +12,9 @@
     "icu"
   ],
   "author": "Dmitry Shirokov <deadrunk@gmail.com>",
+  "contributors": [
+    "@spikying"
+  ],
   "devDependencies": {
     "mocha": ">= 1.8"
   },
@@ -35,5 +38,5 @@
   "directories": {
     "test": "test"
   },
-  "license" : "MIT"
+  "license": "MIT"
 }

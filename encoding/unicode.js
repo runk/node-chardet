@@ -14,9 +14,8 @@ module.exports.UTF_16BE = function() {
     var input = det.fRawInput;
 
     if (input.length >= 2 && ((input[0] & 0xff) == 0xfe && (input[1] & 0xff) == 0xff)) {
-      var confidence = 100;
-        return new Match(det, this, confidence);
-      }
+      return new Match(det, this, 100); // confidence = 100
+    }
 
     // TODO: Do some statistics to check for unsigned UTF-16BE
     return null;
@@ -31,13 +30,12 @@ module.exports.UTF_16LE = function() {
     var input = det.fRawInput;
 
     if (input.length >= 2 && ((input[0] & 0xff) == 0xff && (input[1] & 0xff) == 0xfe)) {
-      // An LE BOM is present.
+      // LE BOM is present.
       if (input.length >= 4 && input[2] == 0x00 && input[3] == 0x00) {
         // It is probably UTF-32 LE, not UTF-16
         return null;
       }
-      var confidence = 100;
-      return new Match(det, this, confidence);
+      return new Match(det, this, 100); // confidence = 100
     }
 
     // TODO: Do some statistics to check for unsigned UTF-16LE
