@@ -16,7 +16,7 @@
     "@spikying"
   ],
   "devDependencies": {
-    "mocha": ">= 1.8"
+    "mocha": "^4.0.1"
   },
   "repository": {
     "type": "git",
@@ -31,8 +31,7 @@
   },
   "main": "index.js",
   "engine": {
-    "node": ">=0.8.0",
-    "npm": "1"
+    "node": ">=4",
   },
   "readmeFilename": "README.md",
   "directories": {
