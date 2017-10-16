@@ -23,6 +23,15 @@ chardet.detectFile('/path/to/file', function(err, encoding) {});
 chardet.detectFileSync('/path/to/file');
 ```
 
+## Working with large data sets
+
+Sometimes, when data set is huge and you want to optimize performace (in tradeoff of less accuracy), 
+you can sample only first N bytes of the buffer:
+
+```javascript
+chardet.detectFile('/path/to/file', { sampleSize: 32 }, function(err, encoding) {});
+```
+
 ## Supported Encodings:
 
 * UTF-8
