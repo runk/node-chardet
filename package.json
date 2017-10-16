@@ -27,7 +27,8 @@
     "url": "http://github.com/runk/node-chardet/issues"
   },
   "scripts": {
-    "test": "mocha -R spec --recursive"
+    "test": "mocha -R spec --recursive",
+    "release": "scripts/release"
   },
   "main": "index.js",
   "engine": {
