@@ -31,7 +31,7 @@
   },
   "main": "index.js",
   "engine": {
-    "node": ">=4",
+    "node": ">=4"
   },
   "readmeFilename": "README.md",
   "directories": {
