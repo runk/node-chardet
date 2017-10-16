@@ -16,6 +16,7 @@
     "@spikying"
   ],
   "devDependencies": {
+    "github-publish-release": "^4.0.0",
     "mocha": "^4.0.1"
   },
   "repository": {
