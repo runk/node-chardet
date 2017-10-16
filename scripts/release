@@ -4,7 +4,6 @@
 # http://www.gnu.org/software/bash/manual/bashref.html#The-Set-Builtin
 set -e
 
-npm run lint
 npm test
 
 if [ -n "$npm_config_major" ]; then SEMVER="major"
