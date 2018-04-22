@@ -5,7 +5,7 @@ var assert = require('assert'),
 describe('chardet', function() {
 
   var path = __dirname + '/data/encodings/utf8';
-  var expectedEncodingsFromPath = JSON.stringify([
+  var expectedEncodingsFromPath = [
     { 'confidence': 100, 'name': 'UTF-8', 'lang': undefined },
     { 'confidence': 32, 'name': 'windows-1252', 'lang': 'fr' },
     { 'confidence': 19, 'name': 'KOI8-R', 'lang': undefined },
@@ -15,7 +15,7 @@ describe('chardet', function() {
     { 'confidence': 6, 'name': 'windows-1250', 'lang': 'pl' },
     { 'confidence': 4, 'name': 'windows-1254', 'lang': undefined },
     { 'confidence': 2, 'name': 'windows-1251', 'lang': undefined }
-  ]);
+  ];
 
   describe('#detect', function() {
     it('should detect encoding', function() {
@@ -24,7 +24,7 @@ describe('chardet', function() {
 
     it('should return a list of encodings, sorted by confidence level in decending order', function() {
       var matches = chardet.detect(fs.readFileSync(path), { returnAllMatches: true });
-      assert.equal(JSON.stringify(matches), expectedEncodingsFromPath);
+      assert.deepEqual(matches, expectedEncodingsFromPath);
     });
   });
 
@@ -45,18 +45,25 @@ describe('chardet', function() {
       });
     });
 
-    it('should return a list of encodings, sorted by confidence level in decending order', function() {
+    it('should return a list of encodings, sorted by confidence level in decending order', function(done) {
       chardet.detectFile(path, { returnAllMatches: true }, function(err, res) {
         assert.equal(err, null);
-        assert.equal(JSON.stringify(res), expectedEncodingsFromPath);
+        assert.deepEqual(res, expectedEncodingsFromPath);
         done();
       });
     });
 
-    it('should return a list of encodings even with smaller sample size, sorted by confidence level in decending order', function() {
+    it('should return a list of encodings even with smaller sample size, sorted by confidence level in decending order', function(done) {
       chardet.detectFile(path, { sampleSize: 32, returnAllMatches: true }, function(err, res) {
         assert.equal(err, null);
-        assert.equal(JSON.stringify(res), expectedEncodingsFromPath);
+        assert.deepEqual(res, [
+          { confidence: 100, name: 'UTF-8', lang: undefined },
+          { confidence: 10, name: 'Shift-JIS', lang: undefined },
+          { confidence: 10, name: 'windows-1252', lang: 'it' },
+          { confidence: 10, name: 'windows-1250', lang: 'hu' },
+          { confidence: 10, name: 'windows-1253', lang: undefined },
+          { confidence: 10, name: 'windows-1251', lang: undefined }
+        ]);
         done();
       });
     });
@@ -73,19 +80,19 @@ describe('chardet', function() {
 
     it('should return a list of encodings, sorted by confidence level in decending order', function() {
       var matches = chardet.detectFileSync(path, { returnAllMatches: true });
-      assert.equal(JSON.stringify(matches), expectedEncodingsFromPath);
+      assert.deepEqual(matches, expectedEncodingsFromPath);
     });
 
     it('should return a list of encodings even with smaller sample size, sorted by confidence level in decending order', function() {
       var matches = chardet.detectFileSync(path, { sampleSize: 32, returnAllMatches: true });
-      assert.equal(JSON.stringify(matches), JSON.stringify([
+      assert.deepEqual(matches, [
         {'confidence': 100, 'name': 'UTF-8', 'lang': undefined},
         {'confidence': 10, 'name': 'Shift-JIS', 'lang': undefined},
         {'confidence': 10, 'name': 'windows-1252', 'lang': 'it'},
         {'confidence': 10, 'name': 'windows-1250', 'lang': 'hu'},
         {'confidence': 10, 'name': 'windows-1253', 'lang': undefined},
         {'confidence': 10, 'name': 'windows-1251', 'lang': undefined}
-      ]));
+      ]);
     });
   });
 });
