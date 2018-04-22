@@ -32,6 +32,16 @@ you can sample only first N bytes of the buffer:
 chardet.detectFile('/path/to/file', { sampleSize: 32 }, function(err, encoding) {});
 ```
 
+## Returning more detailed results
+
+If you wish to see the full list of possible encodings:
+```javascript
+chardet.detectFile('/path/to/file', { returnAllMatches: true }, function(err, encodings) {
+  //encodings is an array of objects sorted by confidence value in decending order
+  //e.g. [{ confidence: 90, name: 'UTF-8'}, {confidence: 20, name: 'windows-1252', lang: 'fr'}]
+});
+```
+
 ## Supported Encodings:
 
 * UTF-8
