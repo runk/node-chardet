@@ -35,7 +35,7 @@ var recognisers = [
   new sbcs.KOI8_R
 ];
 
-module.exports.detect = function(buffer) {
+module.exports.detect = function(buffer, opts) {
 
   // Tally up the byte occurence statistics.
   var fByteStats = [];
@@ -62,15 +62,20 @@ module.exports.detect = function(buffer) {
     fInputLen:   buffer.length
   };
 
-  var match = recognisers.map(function(rec) {
+  var matches = recognisers.map(function(rec) {
     return rec.match(context);
   }).filter(function(match) {
     return !!match;
   }).sort(function(a, b) {
-    return a.confidence - b.confidence;
-  }).pop();
+    return b.confidence - a.confidence;
+  });
 
-  return match ? match.name : null;
+  if (opts && opts.returnAllMatches === true) {
+    return matches;
+  }
+  else {
+    return matches.length > 0 ? matches[0].name : null;
+  }
 };
 
 module.exports.detectFile = function(filepath, opts, cb) {
@@ -87,7 +92,7 @@ module.exports.detectFile = function(filepath, opts, cb) {
     }
 
     if (err) return cb(err, null);
-    cb(null, self.detect(buffer));
+    cb(null, self.detect(buffer, opts));
   };
 
   if (opts && opts.sampleSize) {
@@ -110,8 +115,8 @@ module.exports.detectFileSync = function(filepath, opts) {
 
     fs.readSync(fd, sample, 0, opts.sampleSize);
     fs.closeSync(fd);
-    return self.detect(sample);
+    return self.detect(sample, opts);
   }
 
-  return self.detect(fs.readFileSync(filepath));
+  return self.detect(fs.readFileSync(filepath), opts);
 };
