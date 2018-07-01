@@ -14,13 +14,28 @@ npm i chardet
 
 ## Usage
 
+To return the encoding with the highest confidence:
 ```javascript
 var chardet = require('chardet');
-chardet.detect(new Buffer('hello there!'));
+chardet.detect(Buffer.from('hello there!'));
 // or
 chardet.detectFile('/path/to/file', function(err, encoding) {});
 // or
 chardet.detectFileSync('/path/to/file');
+```
+
+
+To return the full list of possible encodings:
+```javascript
+var chardet = require('chardet');
+chardet.detectAll(Buffer.from('hello there!'));
+// or
+chardet.detectFileAll('/path/to/file', function(err, encoding) {});
+// or
+chardet.detectFileAllSync('/path/to/file');
+
+//Returned value is an array of objects sorted by confidence value in decending order
+//e.g. [{ confidence: 90, name: 'UTF-8'}, {confidence: 20, name: 'windows-1252', lang: 'fr'}]
 ```
 
 ## Working with large data sets
@@ -30,16 +45,6 @@ you can sample only first N bytes of the buffer:
 
 ```javascript
 chardet.detectFile('/path/to/file', { sampleSize: 32 }, function(err, encoding) {});
-```
-
-## Returning more detailed results
-
-If you wish to see the full list of possible encodings:
-```javascript
-chardet.detectFile('/path/to/file', { returnAllMatches: true }, function(err, encodings) {
-  //encodings is an array of objects sorted by confidence value in decending order
-  //e.g. [{ confidence: 90, name: 'UTF-8'}, {confidence: 20, name: 'windows-1252', lang: 'fr'}]
-});
 ```
 
 ## Supported Encodings:

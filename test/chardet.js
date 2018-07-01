@@ -21,11 +21,6 @@ describe('chardet', function() {
     it('should detect encoding', function() {
       assert.equal(chardet.detect(fs.readFileSync(path)), 'UTF-8');
     });
-
-    it('should return a list of encodings, sorted by confidence level in decending order', function() {
-      var matches = chardet.detect(fs.readFileSync(path), { returnAllMatches: true });
-      assert.deepEqual(matches, expectedEncodingsFromPath);
-    });
   });
 
   describe('#detectFile', function() {
@@ -44,9 +39,28 @@ describe('chardet', function() {
         done();
       });
     });
+  });
 
+  describe('#detectFileSync', function() {
+    it('should detect encoding', function() {
+      assert.equal(chardet.detectFileSync(path), 'UTF-8');
+    });
+
+    it('should detect encoding with smaller sample size', function() {
+      assert.equal(chardet.detectFileSync(path, { sampleSize: 32 }), 'UTF-8');
+    });
+  });
+
+  describe('#detectAll', function() {
+    it('should return a list of encodings, sorted by confidence level in decending order', function() {
+      var matches = chardet.detectAll(fs.readFileSync(path));
+      assert.deepEqual(matches, expectedEncodingsFromPath);
+    });
+  });
+
+  describe('#detectFileAll', function() {
     it('should return a list of encodings, sorted by confidence level in decending order', function(done) {
-      chardet.detectFile(path, { returnAllMatches: true }, function(err, res) {
+      chardet.detectFileAll(path, function(err, res) {
         assert.equal(err, null);
         assert.deepEqual(res, expectedEncodingsFromPath);
         done();
@@ -54,7 +68,7 @@ describe('chardet', function() {
     });
 
     it('should return a list of encodings even with smaller sample size, sorted by confidence level in decending order', function(done) {
-      chardet.detectFile(path, { sampleSize: 32, returnAllMatches: true }, function(err, res) {
+      chardet.detectFileAll(path, { sampleSize: 32 }, function(err, res) {
         assert.equal(err, null);
         assert.deepEqual(res, [
           { confidence: 100, name: 'UTF-8', lang: undefined },
@@ -69,22 +83,14 @@ describe('chardet', function() {
     });
   });
 
-  describe('#detectFileSync', function() {
-    it('should detect encoding', function() {
-      assert.equal(chardet.detectFileSync(path), 'UTF-8');
-    });
-
-    it('should detect encoding with smaller sample size', function() {
-      assert.equal(chardet.detectFileSync(path, { sampleSize: 32 }), 'UTF-8');
-    });
-
+  describe('#detectFileAllSync', function() {
     it('should return a list of encodings, sorted by confidence level in decending order', function() {
-      var matches = chardet.detectFileSync(path, { returnAllMatches: true });
+      var matches = chardet.detectFileAllSync(path);
       assert.deepEqual(matches, expectedEncodingsFromPath);
     });
 
     it('should return a list of encodings even with smaller sample size, sorted by confidence level in decending order', function() {
-      var matches = chardet.detectFileSync(path, { sampleSize: 32, returnAllMatches: true });
+      var matches = chardet.detectFileAllSync(path, { sampleSize: 32 });
       assert.deepEqual(matches, [
         {'confidence': 100, 'name': 'UTF-8', 'lang': undefined},
         {'confidence': 10, 'name': 'Shift-JIS', 'lang': undefined},
