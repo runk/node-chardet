@@ -120,3 +120,32 @@ module.exports.detectFileSync = function(filepath, opts) {
 
   return self.detect(fs.readFileSync(filepath), opts);
 };
+
+// Wrappers for the previous functions to return all encodings
+module.exports.detectAll = function(buffer, opts) {
+  if (typeof opts !== 'object') {
+    opts = {};
+  }
+  opts.returnAllMatches = true;
+  return self.detect(buffer, opts);
+}
+
+module.exports.detectFileAll = function(filepath, opts, cb) {
+  if (typeof opts === 'function') {
+    cb = opts;
+    opts = undefined;
+  }
+  if (typeof opts !== 'object') {
+    opts = {};
+  }
+  opts.returnAllMatches = true;
+  self.detectFile(filepath, opts, cb);
+}
+
+module.exports.detectFileAllSync = function(filepath, opts) {
+  if (typeof opts !== 'object') {
+    opts = {};
+  }
+  opts.returnAllMatches = true;
+  return self.detectFileSync(filepath, opts);
+}
