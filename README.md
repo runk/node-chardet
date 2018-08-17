@@ -17,7 +17,7 @@ npm i chardet
 To return the encoding with the highest confidence:
 ```javascript
 var chardet = require('chardet');
-chardet.detect(Buffer.from('hello there!'));
+chardet.detect(Buffer.alloc('hello there!'));
 // or
 chardet.detectFile('/path/to/file', function(err, encoding) {});
 // or
@@ -28,7 +28,7 @@ chardet.detectFileSync('/path/to/file');
 To return the full list of possible encodings:
 ```javascript
 var chardet = require('chardet');
-chardet.detectAll(Buffer.from('hello there!'));
+chardet.detectAll(Buffer.alloc('hello there!'));
 // or
 chardet.detectFileAll('/path/to/file', function(err, encoding) {});
 // or
@@ -40,7 +40,7 @@ chardet.detectFileAllSync('/path/to/file');
 
 ## Working with large data sets
 
-Sometimes, when data set is huge and you want to optimize performace (in tradeoff of less accuracy), 
+Sometimes, when data set is huge and you want to optimize performace (in tradeoff of less accuracy),
 you can sample only first N bytes of the buffer:
 
 ```javascript
