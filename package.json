@@ -20,8 +20,8 @@
     "@zevanty"
   ],
   "devDependencies": {
-    "github-publish-release": "^4.2.0",
-    "mocha": "^5.1.1"
+    "github-publish-release": "^5.0.0",
+    "mocha": "^5.2.0"
   },
   "repository": {
     "type": "git",
