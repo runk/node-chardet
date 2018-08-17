@@ -97,7 +97,7 @@ module.exports.detectFile = function(filepath, opts, cb) {
 
   if (opts && opts.sampleSize) {
     fd = fs.openSync(filepath, 'r'),
-      sample = new Buffer(opts.sampleSize);
+      sample = Buffer.allocUnsafe(opts.sampleSize);
 
     fs.read(fd, sample, 0, opts.sampleSize, null, function(err) {
       handler(err, sample);
@@ -111,7 +111,7 @@ module.exports.detectFile = function(filepath, opts, cb) {
 module.exports.detectFileSync = function(filepath, opts) {
   if (opts && opts.sampleSize) {
     var fd = fs.openSync(filepath, 'r'),
-      sample = new Buffer(opts.sampleSize);
+      sample = Buffer.allocUnsafe(opts.sampleSize);
 
     fs.readSync(fd, sample, 0, opts.sampleSize);
     fs.closeSync(fd);
