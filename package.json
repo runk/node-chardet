@@ -3,6 +3,44 @@
   "version": "0.0.0-development",
   "homepage": "https://github.com/runk/node-chardet",
   "description": "Character detector",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/runk/node-chardet.git"
+  },
+  "bugs": {
+    "mail": "deadrunk@gmail.com",
+    "url": "http://github.com/runk/node-chardet/issues"
+  },
+  "scripts": {
+    "build": "rm -rf lib/* && tsc",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "lint:types": "tsc --noEmit",
+    "format": "prettier --write ./src/**/*.ts",
+    "format:check": "prettier --list-different ./src/**/*.ts",
+    "test": "jest",
+    "prepublish": "npm run build",
+    "semantic-release": "semantic-release"
+  },
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "engine": {
+    "node": ">=4"
+  },
+  "readmeFilename": "README.md",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.5",
+    "jest": "^25.2.4",
+    "prettier": "^2.0.2",
+    "semantic-release": "^15.14.0",
+    "ts-jest": "^25.2.1",
+    "tslint": "^6.1.0",
+    "typescript": "^3.8.3"
+  },
   "keywords": [
     "encoding",
     "character",
@@ -18,30 +56,5 @@
     "@suisho",
     "@seangarner",
     "@zevanty"
-  ],
-  "devDependencies": {
-    "mocha": "^6.1.4",
-    "semantic-release": "^15.13.18"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/runk/node-chardet.git"
-  },
-  "bugs": {
-    "mail": "deadrunk@gmail.com",
-    "url": "http://github.com/runk/node-chardet/issues"
-  },
-  "scripts": {
-    "test": "mocha -R spec --recursive --bail",
-    "semantic-release": "semantic-release"
-  },
-  "main": "index.js",
-  "engine": {
-    "node": ">=4"
-  },
-  "readmeFilename": "README.md",
-  "directories": {
-    "test": "test"
-  },
-  "license": "MIT"
+  ]
 }
