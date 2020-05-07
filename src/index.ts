@@ -1,17 +1,17 @@
-import { Match } from "./match";
+import { Match } from './match';
 import { Recogniser, Context } from './encoding';
 
-import Utf8 from "./encoding/utf8";
-import * as unicode from "./encoding/unicode";
-import * as mbcs from "./encoding/mbcs";
-import * as sbcs from "./encoding/sbcs";
-import * as iso2022 from "./encoding/iso2022";
+import Utf8 from './encoding/utf8';
+import * as unicode from './encoding/unicode';
+import * as mbcs from './encoding/mbcs';
+import * as sbcs from './encoding/sbcs';
+import * as iso2022 from './encoding/iso2022';
 
-let fs: any;
+let fsModule: any;
 const loadFs = () => {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    fs = fs ? fs : require('fs');
-    return fs;
+    fsModule = fsModule ? fsModule : require('fs');
+    return fsModule;
   }
   throw new Error('File system is not available');
 }
@@ -22,7 +22,7 @@ interface FullOptions {
 
 type Options = Partial<FullOptions>
 
-var recognisers: Recogniser[] = [
+const recognisers: Recogniser[] = [
   new Utf8(),
   new unicode.UTF_16BE(),
   new unicode.UTF_16LE(),
@@ -45,7 +45,7 @@ var recognisers: Recogniser[] = [
   new sbcs.ISO_8859_9(),
   new sbcs.windows_1251(),
   new sbcs.windows_1256(),
-  new sbcs.KOI8_R()
+  new sbcs.KOI8_R(),
 ];
 
 type DetectResult = Match[] | string | null;
@@ -57,29 +57,29 @@ export const detect = (buffer: Buffer): string | null => {
 
 export const analyse = (buffer: Buffer): Match[] => {
   // Tally up the byte occurrence statistics.
-  var fByteStats = [];
-  for (var i = 0; i < 256; i++) fByteStats[i] = 0;
+  const fByteStats = [];
+  for (let i = 0; i < 256; i++) fByteStats[i] = 0;
 
-  for (var i = buffer.length - 1; i >= 0; i--) fByteStats[buffer[i] & 0x00ff]++;
+  for (let i = buffer.length - 1; i >= 0; i--) fByteStats[buffer[i] & 0x00ff]++;
 
-  var fC1Bytes = false;
-  for (var i = 0x80; i <= 0x9f; i += 1) {
-    if (fByteStats[i] != 0) {
+  let fC1Bytes = false;
+  for (let i = 0x80; i <= 0x9f; i += 1) {
+    if (fByteStats[i] !== 0) {
       fC1Bytes = true;
       break;
     }
   }
 
-  var context: Context = {
-    fByteStats: fByteStats,
-    fC1Bytes: fC1Bytes,
+  const context: Context = {
+    fByteStats,
+    fC1Bytes,
     fRawInput: buffer,
     fRawLength: buffer.length,
     fInputBytes: buffer,
-    fInputLen: buffer.length
+    fInputLen: buffer.length,
   };
 
-  var matches = recognisers
+  const matches = recognisers
     .map((rec) => {
       return rec.match(context);
     })
@@ -95,10 +95,10 @@ export const analyse = (buffer: Buffer): Match[] => {
 
 export const detectFile = (filepath: string, opts: Options = {}): Promise<DetectResult> =>
   new Promise((resolve, reject) => {
-    var fd: any;
+    let fd: any;
     const fs = loadFs();
 
-    var handler = (err: Error | null | undefined, buffer: Buffer) => {
+    const handler = (err: Error | null | undefined, buffer: Buffer) => {
       if (fd) {
         fs.closeSync(fd);
       }
@@ -111,7 +111,7 @@ export const detectFile = (filepath: string, opts: Options = {}): Promise<Detect
     };
 
     if (opts && opts.sampleSize) {
-      fd = fs.openSync(filepath, "r");
+      fd = fs.openSync(filepath, 'r');
       const sample: Buffer = Buffer.allocUnsafe(opts.sampleSize);
 
       fs.read(fd, sample, 0, opts.sampleSize, null, (err?: Error) => {
@@ -127,8 +127,8 @@ export const detectFileSync = (filepath: string, opts: Options = {}): DetectResu
   const fs = loadFs();
 
   if (opts && opts.sampleSize) {
-    var fd = fs.openSync(filepath, "r"),
-      sample = Buffer.allocUnsafe(opts.sampleSize);
+    const fd = fs.openSync(filepath, 'r');
+    const sample = Buffer.allocUnsafe(opts.sampleSize);
 
     fs.readSync(fd, sample, 0, opts.sampleSize);
     fs.closeSync(fd);
@@ -136,4 +136,11 @@ export const detectFileSync = (filepath: string, opts: Options = {}): DetectResu
   }
 
   return detect(fs.readFileSync(filepath));
+};
+
+export default {
+  analyse,
+  detect,
+  detectFileSync,
+  detectFile,
 };
