@@ -1,9 +1,11 @@
 import * as chardet from '.';
+import defaultChardet from '.';
 import fs from 'fs';
 
 describe('chardet', () => {
-  var path = __dirname + '/test/data/encodings/utf8';
-  var expectedEncodingsFromPath = [
+
+  const path = __dirname + '/test/data/encodings/utf8';
+  const expectedEncodingsFromPath = [
     { 'confidence': 100, 'name': 'UTF-8', 'lang': undefined },
     { 'confidence': 32, 'name': 'windows-1252', 'lang': 'fr' },
     { 'confidence': 19, 'name': 'KOI8-R', 'lang': undefined },
@@ -12,8 +14,15 @@ describe('chardet', () => {
     { 'confidence': 10, 'name': 'windows-1253', 'lang': undefined },
     { 'confidence': 6, 'name': 'windows-1250', 'lang': 'pl' },
     { 'confidence': 4, 'name': 'windows-1254', 'lang': undefined },
-    { 'confidence': 2, 'name': 'windows-1251', 'lang': undefined }
+    { 'confidence': 2, 'name': 'windows-1251', 'lang': undefined },
   ];
+
+  it('has both named and default exports', () => {
+    expect(defaultChardet.analyse).toBe(chardet.analyse);
+    expect(defaultChardet.detect).toBe(chardet.detect);
+    expect(defaultChardet.detectFile).toBe(chardet.detectFile);
+    expect(defaultChardet.detectFileSync).toBe(chardet.detectFileSync);
+  });
 
   describe('#detect', () => {
     it('should detect encoding', () => {
