@@ -52,7 +52,7 @@ export class UTF_16LE implements Recogniser {
 }
 
 interface WithGetChar {
-  getChar(input: Buffer, index: number): number;
+  getChar(input: Uint8Array, index: number): number;
 }
 
 class UTF_32 implements Recogniser, WithGetChar {
@@ -60,7 +60,7 @@ class UTF_32 implements Recogniser, WithGetChar {
     return 'UTF-32';
   }
 
-  getChar(input: Buffer, index: number): number {
+  getChar(input: Uint8Array, index: number): number {
     return -1;
   }
 
@@ -114,7 +114,7 @@ export class UTF_32BE extends UTF_32 {
   name() {
     return 'UTF-32BE';
   }
-  getChar(input: Buffer, index: number) {
+  getChar(input: Uint8Array, index: number) {
     return (
       ((input[index + 0] & 0xff) << 24) |
       ((input[index + 1] & 0xff) << 16) |
@@ -129,7 +129,7 @@ export class UTF_32LE extends UTF_32 {
     return 'UTF-32LE';
   }
 
-  getChar(input: Buffer, index: number) {
+  getChar(input: Uint8Array, index: number) {
     return (
       ((input[index + 3] & 0xff) << 24) |
       ((input[index + 2] & 0xff) << 16) |
