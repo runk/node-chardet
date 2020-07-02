@@ -9,8 +9,8 @@ export interface Recogniser {
 export interface Context {
   fByteStats: number[];
   fC1Bytes: boolean;
-  fRawInput: Buffer;
+  fRawInput: Uint8Array;
   fRawLength: number;
-  fInputBytes: Buffer;
+  fInputBytes: Uint8Array;
   fInputLen: number;
 }

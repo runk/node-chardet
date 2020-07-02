@@ -50,12 +50,12 @@ const recognisers: Recogniser[] = [
 
 type DetectResult = Match[] | string | null;
 
-export const detect = (buffer: Buffer): string | null => {
+export const detect = (buffer: Uint8Array): string | null => {
   const matches: Match[] = analyse(buffer);
   return matches.length > 0 ? matches[0].name : null;
 };
 
-export const analyse = (buffer: Buffer): Match[] => {
+export const analyse = (buffer: Uint8Array): Match[] => {
   // Tally up the byte occurrence statistics.
   const fByteStats = [];
   for (let i = 0; i < 256; i++) fByteStats[i] = 0;
