@@ -3,8 +3,8 @@ import * as chardet from '..';
 describe('Multibyte Character Sets', () => {
   var base = __dirname + '/../test/data/encodings';
 
-  it('should return SHIFT-JIS', () => {
-    expect(chardet.detectFileSync(base + '/shiftjis')).toBe('Shift-JIS');
+  it('should return Shift_JIS', () => {
+    expect(chardet.detectFileSync(base + '/shiftjis')).toBe('Shift_JIS');
   });
 
   it('should return GB18030', () => {
