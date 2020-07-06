@@ -201,11 +201,11 @@ class mbcs implements Recogniser {
 }
 
 /**
- * Shift-JIS charset recognizer.
+ * Shift_JIS charset recognizer.
  */
 export class sjis extends mbcs {
   name() {
-    return 'Shift-JIS';
+    return 'Shift_JIS';
   }
   language() {
     return 'ja';

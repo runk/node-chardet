@@ -61,7 +61,7 @@ chardet
 - ISO-2022-JP
 - ISO-2022-KR
 - ISO-2022-CN
-- Shift-JIS
+- Shift_JIS
 - Big5
 - EUC-JP
 - EUC-KR
