@@ -1,5 +1,5 @@
 import { Context, Recogniser } from '.';
-var match = require('../match').default;
+import match, { Match } from '../match';
 
 /**
  * Binary search implementation (recursive)
@@ -18,7 +18,7 @@ function binarySearch(arr: number[], searchValue: number) {
     There is a bug in the above line;
     Joshua Bloch suggests the following replacement:
     */
-    var mid = Math.floor((left + right) >>> 1);
+    const mid = Math.floor((left + right) >>> 1);
     if (searchValue > arr[mid]) return find(arr, searchValue, mid + 1, right);
 
     if (searchValue < arr[mid]) return find(arr, searchValue, left, mid - 1);
@@ -68,7 +68,7 @@ class IteratedChar {
       this.done = true;
       return -1;
     }
-    var byteValue = det.fRawInput[this.nextIndex++] & 0x00ff;
+    const byteValue = det.fRawInput[this.nextIndex++] & 0x00ff;
     return byteValue;
   }
 }
@@ -97,15 +97,15 @@ class mbcs implements Recogniser {
    *             bits 0-7:  the match confidence, ranging from 0-100
    *             bits 8-15: The match reason, an enum-like value.
    */
-  match(det: Context) {
-    var singleByteCharCount = 0, //TODO Do we really need this?
+  match(det: Context): Match | null {
+    let singleByteCharCount = 0, //TODO Do we really need this?
       doubleByteCharCount = 0,
       commonCharCount = 0,
       badCharCount = 0,
       totalCharCount = 0,
       confidence = 0;
 
-    var iter = new IteratedChar();
+    const iter = new IteratedChar();
 
     detectBlock: {
       for (iter.reset(); this.nextChar(iter, det); ) {
@@ -113,7 +113,7 @@ class mbcs implements Recogniser {
         if (iter.error) {
           badCharCount++;
         } else {
-          var cv = iter.charValue & 0xffffffff;
+          const cv = iter.charValue & 0xffffffff;
 
           if (cv <= 0xff) {
             singleByteCharCount++;
@@ -159,7 +159,7 @@ class mbcs implements Recogniser {
       }
 
       if (this.commonChars == null) {
-        // We have no statistics on frequently occuring characters.
+        // We have no statistics on frequently occurring characters.
         //  Assess confidence purely on having a reasonable number of
         //  multi-byte characters (the more the better
         confidence = 30 + doubleByteCharCount - 20 * badCharCount;
@@ -167,12 +167,9 @@ class mbcs implements Recogniser {
           confidence = 100;
         }
       } else {
-        //
         // Frequency of occurrence statistics exist.
-        //
-        // @ts-ignore
-        var maxVal = Math.log(parseFloat(doubleByteCharCount) / 4);
-        var scaleFactor = 90.0 / maxVal;
+        const maxVal = Math.log(doubleByteCharCount / 4);
+        const scaleFactor = 90.0 / maxVal;
         confidence = Math.floor(
           Math.log(commonCharCount + 1) * scaleFactor + 10
         );
@@ -278,14 +275,13 @@ export class sjis extends mbcs {
     iter.index = iter.nextIndex;
     iter.error = false;
 
-    var firstByte;
-    firstByte = iter.charValue = iter.nextByte(det);
+    const firstByte = (iter.charValue = iter.nextByte(det));
     if (firstByte < 0) return false;
 
     if (firstByte <= 0x7f || (firstByte > 0xa0 && firstByte <= 0xdf))
       return true;
 
-    var secondByte = iter.nextByte(det);
+    const secondByte = iter.nextByte(det);
     if (secondByte < 0) return false;
 
     iter.charValue = (firstByte << 8) | secondByte;
@@ -418,14 +414,14 @@ export class big5 extends mbcs {
     iter.index = iter.nextIndex;
     iter.error = false;
 
-    var firstByte = (iter.charValue = iter.nextByte(det));
+    const firstByte = (iter.charValue = iter.nextByte(det));
 
     if (firstByte < 0) return false;
 
     // single byte character.
     if (firstByte <= 0x7f || firstByte == 0xff) return true;
 
-    var secondByte = iter.nextByte(det);
+    const secondByte = iter.nextByte(det);
 
     if (secondByte < 0) return false;
 
@@ -450,9 +446,9 @@ export class big5 extends mbcs {
 function eucNextChar(iter: IteratedChar, det: Context) {
   iter.index = iter.nextIndex;
   iter.error = false;
-  var firstByte = 0;
-  var secondByte = 0;
-  var thirdByte = 0;
+  let firstByte = 0;
+  let secondByte = 0;
+  let thirdByte = 0;
   //int fourthByte = 0;
   buildChar: {
     firstByte = iter.charValue = iter.nextByte(det);
@@ -763,10 +759,10 @@ export class gb_18030 extends mbcs {
   nextChar(iter: IteratedChar, det: Context) {
     iter.index = iter.nextIndex;
     iter.error = false;
-    var firstByte = 0;
-    var secondByte = 0;
-    var thirdByte = 0;
-    var fourthByte = 0;
+    let firstByte = 0;
+    let secondByte = 0;
+    let thirdByte = 0;
+    let fourthByte = 0;
     buildChar: {
       firstByte = iter.charValue = iter.nextByte(det);
       if (firstByte < 0) {

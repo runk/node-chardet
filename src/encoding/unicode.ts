@@ -1,5 +1,5 @@
 import { Context, Recogniser } from '.';
-const match = require('../match').default;
+import match, { Match } from '../match';
 
 /**
  * This class matches UTF-16 and UTF-32, both big- and little-endian. The
@@ -10,8 +10,8 @@ export class UTF_16BE implements Recogniser {
     return 'UTF-16BE';
   }
 
-  match(det: Context) {
-    var input = det.fRawInput;
+  match(det: Context): Match | null {
+    const input = det.fRawInput;
 
     if (
       input.length >= 2 &&
@@ -30,8 +30,8 @@ export class UTF_16LE implements Recogniser {
   name() {
     return 'UTF-16LE';
   }
-  match(det: Context) {
-    var input = det.fRawInput;
+  match(det: Context): Match | null {
+    const input = det.fRawInput;
 
     if (
       input.length >= 2 &&
@@ -64,13 +64,13 @@ class UTF_32 implements Recogniser, WithGetChar {
     return -1;
   }
 
-  match(det: Context) {
-    var input = det.fRawInput,
-      limit = (det.fRawLength / 4) * 4,
-      numValid = 0,
+  match(det: Context): Match | null {
+    let numValid = 0,
       numInvalid = 0,
       hasBOM = false,
       confidence = 0;
+    const limit = (det.fRawLength / 4) * 4;
+    const input = det.fRawInput;
 
     if (limit == 0) {
       return null;
@@ -80,8 +80,8 @@ class UTF_32 implements Recogniser, WithGetChar {
       hasBOM = true;
     }
 
-    for (var i = 0; i < limit; i += 4) {
-      var ch = this.getChar(input, i);
+    for (let i = 0; i < limit; i += 4) {
+      const ch = this.getChar(input, i);
 
       if (ch < 0 || ch >= 0x10ffff || (ch >= 0xd800 && ch <= 0xdfff)) {
         numInvalid += 1;

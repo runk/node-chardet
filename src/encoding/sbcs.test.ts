@@ -1,7 +1,7 @@
 import * as chardet from '..';
 
 describe('Singlebyte Character Sets', () => {
-  var base = __dirname + '/../test/data/encodings';
+  const base = __dirname + '/../test/data/encodings';
 
   it('should return ISO-8859-1 (English)', () => {
     expect(chardet.detectFileSync(base + '/iso88591_en')).toBe('ISO-8859-1');

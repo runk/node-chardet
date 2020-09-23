@@ -1,7 +1,7 @@
 import * as chardet from '..';
 
 describe('ISO-2022', () => {
-  var base = __dirname + '/../test/data/encodings';
+  const base = __dirname + '/../test/data/encodings';
 
   it('should return ISO-2022-JP', () => {
     expect(chardet.detectFileSync(base + '/iso2022jp')).toBe('ISO-2022-JP');
