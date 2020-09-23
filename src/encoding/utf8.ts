@@ -12,7 +12,7 @@ export default class Utf8 implements Recogniser {
       numInvalid = 0,
       trailBytes = 0,
       confidence;
-    const input = det.fRawInput
+    const input = det.fRawInput;
 
     if (
       det.fRawLength >= 3 &&
@@ -42,7 +42,7 @@ export default class Utf8 implements Recogniser {
       }
 
       // Verify that we've got the right number of trail bytes in the sequence
-      for (; ;) {
+      for (;;) {
         i++;
         if (i >= det.fRawLength) break;
 

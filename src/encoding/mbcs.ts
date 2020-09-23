@@ -1,5 +1,5 @@
 import { Context, Recogniser } from '.';
-import match, { Match } from '../match'
+import match, { Match } from '../match';
 
 /**
  * Binary search implementation (recursive)
@@ -108,7 +108,7 @@ class mbcs implements Recogniser {
     const iter = new IteratedChar();
 
     detectBlock: {
-      for (iter.reset(); this.nextChar(iter, det);) {
+      for (iter.reset(); this.nextChar(iter, det); ) {
         totalCharCount++;
         if (iter.error) {
           badCharCount++;
@@ -275,7 +275,7 @@ export class sjis extends mbcs {
     iter.index = iter.nextIndex;
     iter.error = false;
 
-    const firstByte = iter.charValue = iter.nextByte(det);
+    const firstByte = (iter.charValue = iter.nextByte(det));
     if (firstByte < 0) return false;
 
     if (firstByte <= 0x7f || (firstByte > 0xa0 && firstByte <= 0xdf))

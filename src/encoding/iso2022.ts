@@ -1,5 +1,5 @@
 import { Context, Recogniser } from '.';
-import match, { Match } from '../match'
+import match, { Match } from '../match';
 
 /**
  * This is a superclass for the individual detectors for

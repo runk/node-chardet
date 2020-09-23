@@ -69,7 +69,7 @@ class UTF_32 implements Recogniser, WithGetChar {
       numInvalid = 0,
       hasBOM = false,
       confidence = 0;
-    const limit = (det.fRawLength / 4) * 4
+    const limit = (det.fRawLength / 4) * 4;
     const input = det.fRawInput;
 
     if (limit == 0) {
