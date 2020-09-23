@@ -1,5 +1,5 @@
 import { Context, Recogniser } from '.';
-const match = require('../match').default;
+import match, { Match } from '../match'
 
 /**
  * Binary search implementation (recursive)
@@ -97,7 +97,7 @@ class mbcs implements Recogniser {
    *             bits 0-7:  the match confidence, ranging from 0-100
    *             bits 8-15: The match reason, an enum-like value.
    */
-  match(det: Context) {
+  match(det: Context): Match | null {
     let singleByteCharCount = 0, //TODO Do we really need this?
       doubleByteCharCount = 0,
       commonCharCount = 0,
@@ -108,7 +108,7 @@ class mbcs implements Recogniser {
     const iter = new IteratedChar();
 
     detectBlock: {
-      for (iter.reset(); this.nextChar(iter, det); ) {
+      for (iter.reset(); this.nextChar(iter, det);) {
         totalCharCount++;
         if (iter.error) {
           badCharCount++;
@@ -159,7 +159,7 @@ class mbcs implements Recogniser {
       }
 
       if (this.commonChars == null) {
-        // We have no statistics on frequently occuring characters.
+        // We have no statistics on frequently occurring characters.
         //  Assess confidence purely on having a reasonable number of
         //  multi-byte characters (the more the better
         confidence = 30 + doubleByteCharCount - 20 * badCharCount;
@@ -167,11 +167,8 @@ class mbcs implements Recogniser {
           confidence = 100;
         }
       } else {
-        //
         // Frequency of occurrence statistics exist.
-        //
-        // @ts-ignore
-        const maxVal = Math.log(parseFloat(doubleByteCharCount) / 4);
+        const maxVal = Math.log(doubleByteCharCount / 4);
         const scaleFactor = 90.0 / maxVal;
         confidence = Math.floor(
           Math.log(commonCharCount + 1) * scaleFactor + 10

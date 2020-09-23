@@ -1,12 +1,12 @@
 import { Context, Recogniser } from '.';
-const match = require('../match').default;
+import match, { Match } from '../match';
 
 export default class Utf8 implements Recogniser {
   name() {
     return 'UTF-8';
   }
 
-  match(det: Context) {
+  match(det: Context): Match | null {
     let hasBOM = false,
       numValid = 0,
       numInvalid = 0,
@@ -42,7 +42,7 @@ export default class Utf8 implements Recogniser {
       }
 
       // Verify that we've got the right number of trail bytes in the sequence
-      for (;;) {
+      for (; ;) {
         i++;
         if (i >= det.fRawLength) break;
 

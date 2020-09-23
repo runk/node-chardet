@@ -1,6 +1,5 @@
 import { Context, Recogniser } from '.';
-
-const match = require('../match').default;
+import match, { Match } from '../match'
 
 /**
  * This is a superclass for the individual detectors for
@@ -15,7 +14,7 @@ class ISO_2022 implements Recogniser {
     return 'ISO_2022';
   }
 
-  match(det: Context) {
+  match(det: Context): Match | null {
     /**
      * Matching function shared among the 2022 detectors JP, CN and KR
      * Counts up the number of legal an unrecognized escape sequences in

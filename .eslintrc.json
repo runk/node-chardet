@@ -5,7 +5,6 @@
   "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
   "rules": {
     "@typescript-eslint/no-unused-vars": ["warn", { "varsIgnorePattern": "_" }],
-    "@typescript-eslint/no-inferrable-types": ["off"],
-    "@typescript-eslint/ban-ts-comment": ["warn"]
+    "@typescript-eslint/no-inferrable-types": ["off"]
   }
 }

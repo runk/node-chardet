@@ -1,6 +1,5 @@
 import { Context, Recogniser } from '../encoding/index';
-
-const match = require('../match').default;
+import match, { Match } from '../match';
 
 /**
  * This class recognizes single-byte encodings. Because the encoding scheme is so
@@ -119,12 +118,11 @@ class sbcs implements Recogniser {
     return [];
   }
 
-  // @ts-ignore
   name(input: Context): string {
     return 'sbcs';
   }
 
-  match(det: Context) {
+  match(det: Context): Match | null {
     const ngrams = this.ngrams();
 
     if (isFlatNgrams(ngrams)) {
@@ -134,7 +132,7 @@ class sbcs implements Recogniser {
     }
 
     let bestConfidenceSoFar = -1;
-    let lang = null;
+    let lang;
 
     for (let i = ngrams.length - 1; i >= 0; i--) {
       const ngl = ngrams[i];

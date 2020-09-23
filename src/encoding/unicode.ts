@@ -1,5 +1,5 @@
 import { Context, Recogniser } from '.';
-const match = require('../match').default;
+import match, { Match } from '../match';
 
 /**
  * This class matches UTF-16 and UTF-32, both big- and little-endian. The
@@ -10,7 +10,7 @@ export class UTF_16BE implements Recogniser {
     return 'UTF-16BE';
   }
 
-  match(det: Context) {
+  match(det: Context): Match | null {
     const input = det.fRawInput;
 
     if (
@@ -30,7 +30,7 @@ export class UTF_16LE implements Recogniser {
   name() {
     return 'UTF-16LE';
   }
-  match(det: Context) {
+  match(det: Context): Match | null {
     const input = det.fRawInput;
 
     if (
@@ -64,7 +64,7 @@ class UTF_32 implements Recogniser, WithGetChar {
     return -1;
   }
 
-  match(det: Context) {
+  match(det: Context): Match | null {
     let numValid = 0,
       numInvalid = 0,
       hasBOM = false,
