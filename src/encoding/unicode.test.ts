@@ -1,7 +1,7 @@
 import * as chardet from '..';
 
 describe('Unicode', () => {
-  var base = __dirname + '/../test/data/encodings';
+  const base = __dirname + '/../test/data/encodings';
 
   it('should return UTF-16LE', () => {
     expect(chardet.detectFileSync(base + '/utf16le')).toBe('UTF-16LE');

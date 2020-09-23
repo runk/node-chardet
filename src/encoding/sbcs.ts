@@ -1,13 +1,13 @@
 import { Context, Recogniser } from '../encoding/index';
 
-var match = require('../match').default;
+const match = require('../match').default;
 
 /**
  * This class recognizes single-byte encodings. Because the encoding scheme is so
  * simple, language statistics are used to do the matching.
  */
 
-var N_GRAM_MASK = 0xffffff;
+const N_GRAM_MASK = 0xffffff;
 
 class NGramParser {
   byteIndex: number = 0;
@@ -31,7 +31,7 @@ class NGramParser {
    * Binary search for value in table, which must have exactly 64 entries.
    */
   search(table: number[], value: number) {
-    var index = 0;
+    let index = 0;
 
     if (table[index + 32] <= value) index += 32;
     if (table[index + 16] <= value) index += 16;
@@ -65,12 +65,12 @@ class NGramParser {
   }
 
   parse(det: Context, spaceCh: number) {
-    var b,
+    let b,
       ignoreSpace = false;
     this.spaceChar = spaceCh;
 
     while ((b = this.nextByte(det)) >= 0) {
-      var mb = this.byteMap[b];
+      const mb = this.byteMap[b];
 
       // TODO: 0x20 might not be a space in all character sets...
       if (mb != 0) {
@@ -85,7 +85,7 @@ class NGramParser {
     // TODO: Is this OK? The buffer could have ended in the middle of a word...
     this.addByte(this.spaceChar);
 
-    var rawPercent = this.hitCount / this.ngramCount;
+    const rawPercent = this.hitCount / this.ngramCount;
 
     // TODO - This is a bit of a hack to take care of a case
     // were we were getting a confidence of 135...
@@ -125,29 +125,29 @@ class sbcs implements Recogniser {
   }
 
   match(det: Context) {
-    var ngrams = this.ngrams();
+    const ngrams = this.ngrams();
 
     if (isFlatNgrams(ngrams)) {
-      var parser = new NGramParser(ngrams, this.byteMap());
-      var confidence = parser.parse(det, this.spaceChar);
+      const parser = new NGramParser(ngrams, this.byteMap());
+      const confidence = parser.parse(det, this.spaceChar);
       return confidence <= 0 ? null : match(det, this, confidence);
     }
 
-    var bestConfidenceSoFar = -1;
-    var lang = null;
+    let bestConfidenceSoFar = -1;
+    let lang = null;
 
-    for (var i = ngrams.length - 1; i >= 0; i--) {
-      var ngl = ngrams[i];
+    for (let i = ngrams.length - 1; i >= 0; i--) {
+      const ngl = ngrams[i];
 
-      var parser = new NGramParser(ngl.fNGrams, this.byteMap());
-      var confidence = parser.parse(det, this.spaceChar);
+      const parser = new NGramParser(ngl.fNGrams, this.byteMap());
+      const confidence = parser.parse(det, this.spaceChar);
       if (confidence > bestConfidenceSoFar) {
         bestConfidenceSoFar = confidence;
         lang = ngl.fLang;
       }
     }
 
-    var name = this.name(det);
+    const name = this.name(det);
     return bestConfidenceSoFar <= 0
       ? null
       : match(det, this, bestConfidenceSoFar, name, lang);

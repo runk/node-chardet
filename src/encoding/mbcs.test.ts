@@ -1,7 +1,7 @@
 import * as chardet from '..';
 
 describe('Multibyte Character Sets', () => {
-  var base = __dirname + '/../test/data/encodings';
+  const base = __dirname + '/../test/data/encodings';
 
   it('should return Shift_JIS', () => {
     expect(chardet.detectFileSync(base + '/shiftjis')).toBe('Shift_JIS');

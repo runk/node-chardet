@@ -1,6 +1,5 @@
 import { Context, Recogniser } from '.';
-
-var match = require('../match').default;
+const match = require('../match').default;
 
 export default class Utf8 implements Recogniser {
   name() {
@@ -8,12 +7,12 @@ export default class Utf8 implements Recogniser {
   }
 
   match(det: Context) {
-    var hasBOM = false,
+    let hasBOM = false,
       numValid = 0,
       numInvalid = 0,
-      input = det.fRawInput,
       trailBytes = 0,
       confidence;
+    const input = det.fRawInput
 
     if (
       det.fRawLength >= 3 &&
@@ -25,8 +24,8 @@ export default class Utf8 implements Recogniser {
     }
 
     // Scan for multi-byte sequences
-    for (var i = 0; i < det.fRawLength; i++) {
-      var b = input[i];
+    for (let i = 0; i < det.fRawLength; i++) {
+      const b = input[i];
       if ((b & 0x80) == 0) continue; // ASCII
 
       // Hi bit on char found.  Figure out how long the sequence should be

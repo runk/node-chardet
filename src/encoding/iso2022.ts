@@ -1,6 +1,6 @@
 import { Context, Recogniser } from '.';
 
-var match = require('../match').default;
+const match = require('../match').default;
 
 /**
  * This is a superclass for the individual detectors for
@@ -29,16 +29,16 @@ class ISO_2022 implements Recogniser {
      * @return match quality, in the range of 0-100.
      */
 
-    var i, j;
-    var escN;
-    var hits = 0;
-    var misses = 0;
-    var shifts = 0;
-    var quality;
+    let i, j;
+    let escN;
+    let hits = 0;
+    let misses = 0;
+    let shifts = 0;
+    let quality;
 
     // TODO: refactor me
-    var text = det.fInputBytes;
-    var textLen = det.fInputLen;
+    const text = det.fInputBytes;
+    const textLen = det.fInputLen;
 
     scanInput: for (i = 0; i < textLen; i++) {
       if (text[i] == 0x1b) {
@@ -47,7 +47,7 @@ class ISO_2022 implements Recogniser {
           escN < this.escapeSequences.length;
           escN++
         ) {
-          var seq = this.escapeSequences[escN];
+          const seq = this.escapeSequences[escN];
 
           if (textLen - i < seq.length) continue checkEscapes;
 
