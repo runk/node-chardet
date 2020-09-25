@@ -5,6 +5,8 @@ import fs from 'fs';
 describe('chardet', () => {
 
   const path = __dirname + '/test/data/encodings/utf8';
+  const getInput = () => fs.readFileSync(path);
+
   const expectedEncodingsFromPath = [
     { 'confidence': 100, 'name': 'UTF-8', 'lang': undefined },
     { 'confidence': 32, 'name': 'windows-1252', 'lang': 'fr' },
@@ -25,8 +27,12 @@ describe('chardet', () => {
   });
 
   describe('#detect', () => {
-    it('should detect encoding', () => {
-      expect(chardet.detect(fs.readFileSync(path))).toBe('UTF-8');
+    it('should detect encoding from a buffer', () => {
+      expect(chardet.detect(getInput())).toBe('UTF-8');
+    });
+
+    it('should detect encoding from a string', () => {
+      expect(chardet.detect(getInput().toString('utf-8'))).toBe('UTF-8');
     });
   });
 
@@ -54,7 +60,12 @@ describe('chardet', () => {
 
   describe('#analyse', () => {
     it('should return a list of encodings, sorted by confidence level in decending order', () => {
-      const matches = chardet.analyse(fs.readFileSync(path));
+      const matches = chardet.analyse(getInput());
+      expect(matches).toEqual(expectedEncodingsFromPath);
+    });
+
+    it('should work for strings as inputs', () => {
+      const matches = chardet.analyse(getInput().toString('utf8'));
       expect(matches).toEqual(expectedEncodingsFromPath);
     });
   });

@@ -2,7 +2,7 @@
   "name": "chardet",
   "version": "0.0.0-development",
   "homepage": "https://github.com/runk/node-chardet",
-  "description": "Character detector",
+  "description": "Character encoding detector",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -50,7 +50,11 @@
     "utf8",
     "detector",
     "chardet",
-    "icu"
+    "icu",
+    "character detection",
+    "character encoding",
+    "iconv",
+    "iconv-light"
   ],
   "author": "Dmitry Shirokov <deadrunk@gmail.com>",
   "contributors": [

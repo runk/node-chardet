@@ -49,13 +49,16 @@ const recognisers: Recogniser[] = [
 ];
 
 type DetectResult = Match[] | string | null;
+type InputData = Uint8Array | string;
 
-export const detect = (buffer: Uint8Array): string | null => {
-  const matches: Match[] = analyse(buffer);
+export const detect = (input: InputData): string | null => {
+  const matches: Match[] = analyse(input);
   return matches.length > 0 ? matches[0].name : null;
 };
 
-export const analyse = (buffer: Uint8Array): Match[] => {
+export const analyse = (input: InputData): Match[] => {
+  const buffer = typeof input === 'string' ? Buffer.from(input) : input;
+
   // Tally up the byte occurrence statistics.
   const fByteStats = [];
   for (let i = 0; i < 256; i++) fByteStats[i] = 0;
