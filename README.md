@@ -1,8 +1,14 @@
 # chardet [![Build Status](https://travis-ci.org/runk/node-chardet.png)](https://travis-ci.org/runk/node-chardet)
 
-Chardet is a character detection module for NodeJS written in pure Javascript.
-Module is based on ICU project http://site.icu-project.org/, which uses character
-occurency analysis to determine the most probable encoding.
+*Chardet* is a character detection module written in pure Javascript (Typescript). Module uses occurrence analysis to determine the most probable encoding.
+
+- Packed size is only **22 KB**
+- Works in all environments: Node / Browser / Native
+- Works on all platforms: Linux / Mac / Windows
+- No dependencies
+- No native code / bindings
+- 100% written in Typescript
+- Extensive code coverage
 
 ## Installation
 
@@ -87,3 +93,7 @@ Currently only these encodings are supported.
 ## Typescript?
 
 Yes. Type definitions are included.
+
+### References
+
+- ICU project http://site.icu-project.org/

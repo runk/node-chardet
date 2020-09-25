@@ -1,20 +1,13 @@
 import { Match } from './match';
 import { Recogniser, Context } from './encoding';
 
+import loadFs from './fs/node';
+
 import Utf8 from './encoding/utf8';
 import * as unicode from './encoding/unicode';
 import * as mbcs from './encoding/mbcs';
 import * as sbcs from './encoding/sbcs';
 import * as iso2022 from './encoding/iso2022';
-
-let fsModule: any;
-const loadFs = () => {
-  if (typeof module === 'object' && typeof module.exports === 'object') {
-    fsModule = fsModule ? fsModule : require('fs');
-    return fsModule;
-  }
-  throw new Error('File system is not available');
-}
 
 interface FullOptions {
   sampleSize: number
