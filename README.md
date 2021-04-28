@@ -1,4 +1,4 @@
-# chardet [![Build Status](https://travis-ci.org/runk/node-chardet.png)](https://travis-ci.org/runk/node-chardet)
+# chardet
 
 *Chardet* is a character detection module written in pure Javascript (Typescript). Module uses occurrence analysis to determine the most probable encoding.
 
