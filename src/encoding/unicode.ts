@@ -11,7 +11,7 @@ export class UTF_16BE implements Recogniser {
   }
 
   match(det: Context): Match | null {
-    const input = det.fRawInput;
+    const input = det.rawInput;
 
     if (
       input.length >= 2 &&
@@ -31,7 +31,7 @@ export class UTF_16LE implements Recogniser {
     return 'UTF-16LE';
   }
   match(det: Context): Match | null {
-    const input = det.fRawInput;
+    const input = det.rawInput;
 
     if (
       input.length >= 2 &&
@@ -69,8 +69,8 @@ class UTF_32 implements Recogniser, WithGetChar {
       numInvalid = 0,
       hasBOM = false,
       confidence = 0;
-    const limit = (det.fRawLength / 4) * 4;
-    const input = det.fRawInput;
+    const limit = (det.rawLen / 4) * 4;
+    const input = det.rawInput;
 
     if (limit == 0) {
       return null;

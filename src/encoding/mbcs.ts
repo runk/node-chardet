@@ -64,11 +64,11 @@ class IteratedChar {
   }
 
   nextByte(det: Context) {
-    if (this.nextIndex >= det.fRawLength) {
+    if (this.nextIndex >= det.rawLen) {
       this.done = true;
       return -1;
     }
-    const byteValue = det.fRawInput[this.nextIndex++] & 0x00ff;
+    const byteValue = det.rawInput[this.nextIndex++] & 0x00ff;
     return byteValue;
   }
 }

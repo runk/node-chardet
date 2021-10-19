@@ -58,9 +58,9 @@ class NGramParser {
   }
 
   nextByte(det: Context) {
-    if (this.byteIndex >= det.fInputLen) return -1;
+    if (this.byteIndex >= det.inputLen) return -1;
 
-    return det.fInputBytes[this.byteIndex++] & 0xff;
+    return det.inputBytes[this.byteIndex++] & 0xff;
   }
 
   parse(det: Context, spaceCh: number) {
@@ -1080,7 +1080,7 @@ export class ISO_8859_1 extends sbcs {
   }
 
   name(input: Context): string {
-    return input && input.fC1Bytes ? 'windows-1252' : 'ISO-8859-1';
+    return input && input.c1Bytes ? 'windows-1252' : 'ISO-8859-1';
   }
 }
 
@@ -1616,7 +1616,7 @@ export class ISO_8859_2 extends sbcs {
   }
 
   name(det: Context): string {
-    return det && det.fC1Bytes ? 'windows-1250' : 'ISO-8859-2';
+    return det && det.c1Bytes ? 'windows-1250' : 'ISO-8859-2';
   }
 }
 
@@ -2632,7 +2632,7 @@ export class ISO_8859_7 extends sbcs {
   }
 
   name(det: Context): string {
-    return det && det.fC1Bytes ? 'windows-1253' : 'ISO-8859-7';
+    return det && det.c1Bytes ? 'windows-1253' : 'ISO-8859-7';
   }
 
   language() {
@@ -3040,7 +3040,7 @@ export class ISO_8859_8 extends sbcs {
   }
 
   name(det: Context): string {
-    return det && det.fC1Bytes ? 'windows-1255' : 'ISO-8859-8';
+    return det && det.c1Bytes ? 'windows-1255' : 'ISO-8859-8';
   }
 
   language() {
@@ -3380,7 +3380,7 @@ export class ISO_8859_9 extends sbcs {
   }
 
   name(det: Context): string {
-    return det && det.fC1Bytes ? 'windows-1254' : 'ISO-8859-9';
+    return det && det.c1Bytes ? 'windows-1254' : 'ISO-8859-9';
   }
 
   language() {
@@ -4425,7 +4425,7 @@ module.exports.ISO_8859_7 = function() {
   this.name = function(det) {
     if (typeof det == 'undefined')
       return 'ISO-8859-7';
-    return det.fC1Bytes ? 'windows-1253' : 'ISO-8859-7';
+    return det.c1Bytes ? 'windows-1253' : 'ISO-8859-7';
   };
 
   language() {
