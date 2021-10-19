@@ -3,7 +3,7 @@ import { Match } from '../match';
 export interface Recogniser {
   match(input: Context): Match | null;
   name(input?: Context): string;
-  language?(): string;
+  language?(): string | undefined;
 }
 
 export interface Context {
