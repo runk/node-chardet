@@ -36,8 +36,8 @@ class ISO_2022 implements Recogniser {
     let quality;
 
     // TODO: refactor me
-    const text = det.fInputBytes;
-    const textLen = det.fInputLen;
+    const text = det.inputBytes;
+    const textLen = det.inputLen;
 
     scanInput: for (i = 0; i < textLen; i++) {
       if (text[i] == 0x1b) {

@@ -12,10 +12,10 @@ export default class Utf8 implements Recogniser {
       numInvalid = 0,
       trailBytes = 0,
       confidence;
-    const input = det.fRawInput;
+    const input = det.rawInput;
 
     if (
-      det.fRawLength >= 3 &&
+      det.rawLen >= 3 &&
       (input[0] & 0xff) == 0xef &&
       (input[1] & 0xff) == 0xbb &&
       (input[2] & 0xff) == 0xbf
@@ -24,7 +24,7 @@ export default class Utf8 implements Recogniser {
     }
 
     // Scan for multi-byte sequences
-    for (let i = 0; i < det.fRawLength; i++) {
+    for (let i = 0; i < det.rawLen; i++) {
       const b = input[i];
       if ((b & 0x80) == 0) continue; // ASCII
 
@@ -44,7 +44,7 @@ export default class Utf8 implements Recogniser {
       // Verify that we've got the right number of trail bytes in the sequence
       for (;;) {
         i++;
-        if (i >= det.fRawLength) break;
+        if (i >= det.rawLen) break;
 
         if ((input[i] & 0xc0) != 0x080) {
           numInvalid++;

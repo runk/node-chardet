@@ -50,26 +50,26 @@ export const detect = (buffer: Uint8Array): string | null => {
 
 export const analyse = (buffer: Uint8Array): Match[] => {
   // Tally up the byte occurrence statistics.
-  const fByteStats = [];
-  for (let i = 0; i < 256; i++) fByteStats[i] = 0;
+  const byteStats = [];
+  for (let i = 0; i < 256; i++) byteStats[i] = 0;
 
-  for (let i = buffer.length - 1; i >= 0; i--) fByteStats[buffer[i] & 0x00ff]++;
+  for (let i = buffer.length - 1; i >= 0; i--) byteStats[buffer[i] & 0x00ff]++;
 
-  let fC1Bytes = false;
+  let c1Bytes = false;
   for (let i = 0x80; i <= 0x9f; i += 1) {
-    if (fByteStats[i] !== 0) {
-      fC1Bytes = true;
+    if (byteStats[i] !== 0) {
+      c1Bytes = true;
       break;
     }
   }
 
   const context: Context = {
-    fByteStats,
-    fC1Bytes,
-    fRawInput: buffer,
-    fRawLength: buffer.length,
-    fInputBytes: buffer,
-    fInputLen: buffer.length,
+    byteStats,
+    c1Bytes,
+    rawInput: buffer,
+    rawLen: buffer.length,
+    inputBytes: buffer,
+    inputLen: buffer.length,
   };
 
   const matches = recognisers
