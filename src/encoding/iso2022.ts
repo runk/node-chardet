@@ -33,7 +33,7 @@ class ISO_2022 implements Recogniser {
     let hits = 0;
     let misses = 0;
     let shifts = 0;
-    let quality;
+    let confidence;
 
     // TODO: refactor me
     const text = det.inputBytes;
@@ -73,14 +73,14 @@ class ISO_2022 implements Recogniser {
     //   All good:  quality = 100;
     //   half or less good: quality = 0;
     //   linear in between.
-    quality = (100 * hits - 100 * misses) / (hits + misses);
+    confidence = (100 * hits - 100 * misses) / (hits + misses);
 
     // Back off quality if there were too few escape sequences seen.
     //   Include shifts in this computation, so that KR does not get penalized
     //   for having only a single Escape sequence, but many shifts.
-    if (hits + shifts < 5) quality -= (5 - (hits + shifts)) * 10;
+    if (hits + shifts < 5) confidence -= (5 - (hits + shifts)) * 10;
 
-    return quality <= 0 ? null : match(det, this, quality);
+    return confidence <= 0 ? null : match(det, this, confidence);
   }
 }
 
@@ -88,6 +88,11 @@ export class ISO_2022_JP extends ISO_2022 {
   name() {
     return 'ISO-2022-JP';
   }
+
+  language() {
+    return 'ja';
+  }
+
   escapeSequences = [
     [0x1b, 0x24, 0x28, 0x43], // KS X 1001:1992
     [0x1b, 0x24, 0x28, 0x44], // JIS X 212-1990
@@ -108,12 +113,18 @@ export class ISO_2022_KR extends ISO_2022 {
   name() {
     return 'ISO-2022-KR';
   }
+  language() {
+    return 'kr';
+  }
   escapeSequences = [[0x1b, 0x24, 0x29, 0x43]];
 }
 
 export class ISO_2022_CN extends ISO_2022 {
   name() {
     return 'ISO-2022-CN';
+  }
+  language() {
+    return 'zh';
   }
   escapeSequences = [
     [0x1b, 0x24, 0x29, 0x41], // GB 2312-80

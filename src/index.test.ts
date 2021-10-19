@@ -8,13 +8,13 @@ describe('chardet', () => {
   const expectedEncodingsFromPath = [
     { 'confidence': 100, 'name': 'UTF-8', 'lang': undefined },
     { 'confidence': 32, 'name': 'windows-1252', 'lang': 'fr' },
-    { 'confidence': 19, 'name': 'KOI8-R', 'lang': undefined },
-    { 'confidence': 10, 'name': 'Big5', 'lang': undefined },
-    { 'confidence': 10, 'name': 'GB18030', 'lang': undefined },
-    { 'confidence': 10, 'name': 'windows-1253', 'lang': undefined },
+    { 'confidence': 19, 'name': 'KOI8-R', 'lang': 'ru' },
+    { 'confidence': 10, 'name': 'Big5', 'lang': 'zh' },
+    { 'confidence': 10, 'name': 'GB18030', 'lang': 'zh' }, // Mandarin
+    { 'confidence': 10, 'name': 'windows-1253', 'lang': 'el' }, // Greek
     { 'confidence': 6, 'name': 'windows-1250', 'lang': 'pl' },
-    { 'confidence': 4, 'name': 'windows-1254', 'lang': undefined },
-    { 'confidence': 2, 'name': 'windows-1251', 'lang': undefined },
+    { 'confidence': 4, 'name': 'windows-1254', 'lang': 'tr' },
+    { 'confidence': 2, 'name': 'windows-1251', 'lang': 'ru' },
   ];
 
   it('has both named and default exports', () => {

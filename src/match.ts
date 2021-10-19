@@ -6,8 +6,8 @@ export interface Match {
   lang?: string;
 }
 
-export default (det: Context, rec: Recogniser, confidence: number, name?: string, lang?: string): Match => ({
+export default (ctx: Context, rec: Recogniser, confidence: number): Match => ({
   confidence,
-  name: name || rec.name(det),
-  lang,
+  name: rec.name(ctx),
+  lang: rec.language ? rec.language() : undefined,
 });

@@ -110,6 +110,8 @@ const isFlatNgrams = (val: NGramsPlusLang[] | number[]): val is number[] =>
 class sbcs implements Recogniser {
   spaceChar = 0x20;
 
+  private nGramLang?: string = undefined;
+
   ngrams(): NGramsPlusLang[] | number[] {
     return [];
   }
@@ -122,7 +124,16 @@ class sbcs implements Recogniser {
     return 'sbcs';
   }
 
+  language(): string | undefined {
+    return this.nGramLang;
+  }
+
   match(det: Context): Match | null {
+    // This feels a bit dirty. Simpler alternative would be
+    // splitting classes ISO_8859_1 etc into language-specific ones
+    // with hardcoded languages like ISO_8859_9.
+    this.nGramLang = undefined;
+
     const ngrams = this.ngrams();
 
     if (isFlatNgrams(ngrams)) {
@@ -131,24 +142,20 @@ class sbcs implements Recogniser {
       return confidence <= 0 ? null : match(det, this, confidence);
     }
 
-    let bestConfidenceSoFar = -1;
-    let lang;
+    let bestConfidence = -1;
 
     for (let i = ngrams.length - 1; i >= 0; i--) {
       const ngl = ngrams[i];
 
       const parser = new NGramParser(ngl.fNGrams, this.byteMap());
       const confidence = parser.parse(det, this.spaceChar);
-      if (confidence > bestConfidenceSoFar) {
-        bestConfidenceSoFar = confidence;
-        lang = ngl.fLang;
+      if (confidence > bestConfidence) {
+        bestConfidence = confidence;
+        this.nGramLang = ngl.fLang;
       }
     }
 
-    const name = this.name(det);
-    return bestConfidenceSoFar <= 0
-      ? null
-      : match(det, this, bestConfidenceSoFar, name, lang);
+    return bestConfidence <= 0 ? null : match(det, this, bestConfidence);
   }
 }
 
