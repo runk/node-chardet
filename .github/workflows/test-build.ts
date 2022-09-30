@@ -1,5 +1,4 @@
 import assert from 'assert';
-import path from 'path';
 
 const main = async () => {
   const chardet = await import(process.cwd());

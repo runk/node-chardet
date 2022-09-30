@@ -21,19 +21,19 @@ npm i chardet
 To return the encoding with the highest confidence:
 
 ```javascript
-const chardet = require('chardet');
+import chardet from 'chardet';
 
-chardet.detect(Buffer.from('hello there!'));
+const encoding = chardet.detect(Buffer.from('hello there!'));
 // or
-chardet.detectFile('/path/to/file').then(encoding => console.log(encoding));
+const encoding = await chardet.detectFile('/path/to/file');
 // or
-chardet.detectFileSync('/path/to/file');
+const encoding = chardet.detectFileSync('/path/to/file');
 ```
 
 To return the full list of possible encodings use `analyse` method.
 
 ```javascript
-const chardet = require('chardet');
+import chardet from 'chardet';
 chardet.analyse(Buffer.from('hello there!'));
 ```
 
@@ -48,7 +48,7 @@ Returned value is an array of objects sorted by confidence value in decending or
 
 ## Working with large data sets
 
-Sometimes, when data set is huge and you want to optimize performace (in tradeoff of less accuracy),
+Sometimes, when data set is huge and you want to optimize performace (with a tradeoff of less accuracy),
 you can sample only first N bytes of the buffer:
 
 ```javascript
