@@ -120,7 +120,7 @@ class sbcs implements Recogniser {
     return [];
   }
 
-  name(input: Context): string {
+  name(_input: Context): string {
     return 'sbcs';
   }
 

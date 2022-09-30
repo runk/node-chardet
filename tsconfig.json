@@ -8,13 +8,15 @@
     "declaration": true,
     "diagnostics": true,
     "esModuleInterop": true,
-    "extendedDiagnostics": true,
+    "extendedDiagnostics": false,
     "listEmittedFiles": true,
     "module": "commonjs",
     "removeComments": true,
     "sourceMap": true,
     "strict": true,
-    "target": "ES2019"
+    "target": "ES2019",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
   },
   "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts", "__mocks__", "lib"]
 }

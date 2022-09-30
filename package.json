@@ -14,15 +14,15 @@
   },
   "scripts": {
     "build": "rm -rf lib/* && tsc",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint:types": "tsc --noEmit",
     "format": "prettier --write ./src/**/*.ts",
     "format:check": "prettier --list-different ./src/**/*.ts",
     "test": "jest",
     "prepublish": "npm run build",
     "semantic-release": "semantic-release"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "engine": {
@@ -35,14 +35,11 @@
   "devDependencies": {
     "@types/jest": "^26.0.14",
     "@types/node": "^14.11.2",
-    "@typescript-eslint/eslint-plugin": "^4.2.0",
-    "@typescript-eslint/parser": "^4.2.0",
-    "eslint": "^7.9.0",
     "jest": "^26.4.2",
     "prettier": "^2.1.2",
     "semantic-release": "^17.1.2",
     "ts-jest": "^26.4.0",
-    "typescript": "^4.0.3"
+    "typescript": "^4.8.4"
   },
   "keywords": [
     "encoding",

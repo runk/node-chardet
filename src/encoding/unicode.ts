@@ -60,7 +60,7 @@ class UTF_32 implements Recogniser, WithGetChar {
     return 'UTF-32';
   }
 
-  getChar(input: Uint8Array, index: number): number {
+  getChar(_input: Uint8Array, _index: number): number {
     return -1;
   }
 
