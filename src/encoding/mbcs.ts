@@ -98,8 +98,7 @@ class mbcs implements Recogniser {
    *             bits 8-15: The match reason, an enum-like value.
    */
   match(det: Context): Match | null {
-    let singleByteCharCount = 0, //TODO Do we really need this?
-      doubleByteCharCount = 0,
+    let doubleByteCharCount = 0,
       commonCharCount = 0,
       badCharCount = 0,
       totalCharCount = 0,
@@ -115,9 +114,7 @@ class mbcs implements Recogniser {
         } else {
           const cv = iter.charValue & 0xffffffff;
 
-          if (cv <= 0xff) {
-            singleByteCharCount++;
-          } else {
+          if (cv > 0xff) {
             doubleByteCharCount++;
             if (this.commonChars != null) {
               // NOTE: This assumes that there are no 4-byte common chars.
@@ -192,7 +189,7 @@ class mbcs implements Recogniser {
    *            being iterated over.
    * @return    True if a character was returned, false at end of input.
    */
-  nextChar(iter: IteratedChar, det: Context): boolean {
+  nextChar(_iter: IteratedChar, _det: Context): boolean {
     return true;
   }
 }
