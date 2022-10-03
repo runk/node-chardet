@@ -23,3 +23,4 @@ jobs:
     - run: npm i
     - run: npm test
     - run: npm run build
+    - run: .github/workflows/test-build.sh
