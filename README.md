@@ -37,7 +37,7 @@ import chardet from 'chardet';
 chardet.analyse(Buffer.from('hello there!'));
 ```
 
-Returned value is an array of objects sorted by confidence value in decending order
+Returned value is an array of objects sorted by confidence value in descending order
 
 ```javascript
 [
@@ -48,12 +48,20 @@ Returned value is an array of objects sorted by confidence value in decending or
 
 ## Working with large data sets
 
-Sometimes, when data set is huge and you want to optimize performace (with a tradeoff of less accuracy),
-you can sample only first N bytes of the buffer:
+Sometimes, when data set is huge and you want to optimize performance (with a tradeoff of less accuracy),
+you can sample only the first N bytes of the buffer:
 
 ```javascript
 chardet
   .detectFile('/path/to/file', { sampleSize: 32 })
+  .then(encoding => console.log(encoding));
+```
+
+You can also specify where to begin reading from in the buffer:
+
+```javascript
+chardet
+  .detectFile('/path/to/file', { sampleSize: 32, offset: 128 })
   .then(encoding => console.log(encoding));
 ```
 
