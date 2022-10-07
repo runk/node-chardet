@@ -11,7 +11,7 @@ import * as iso2022 from './encoding/iso2022';
 
 interface FullOptions {
   sampleSize: number,
-  position: number
+  offset: number
 }
 
 type Options = Partial<FullOptions>
@@ -108,7 +108,7 @@ export const detectFile = (filepath: string, opts: Options = {}): Promise<Detect
       fd = fs.openSync(filepath, 'r');
       const sample: Buffer = Buffer.allocUnsafe(opts.sampleSize);
 
-      fs.read(fd, sample, 0, opts.sampleSize, opts.position, (err?: Error) => {
+      fs.read(fd, sample, 0, opts.sampleSize, opts.offset, (err?: Error) => {
         handler(err, sample);
       });
       return;
@@ -124,7 +124,7 @@ export const detectFileSync = (filepath: string, opts: Options = {}): DetectResu
     const fd = fs.openSync(filepath, 'r');
     const sample = Buffer.allocUnsafe(opts.sampleSize);
 
-    fs.readSync(fd, sample, 0, opts.sampleSize, opts.position);
+    fs.readSync(fd, sample, 0, opts.sampleSize, opts.offset);
     fs.closeSync(fd);
     return detect(sample);
   }

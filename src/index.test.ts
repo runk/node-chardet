@@ -41,8 +41,8 @@ describe('chardet', () => {
       expect(res).toBe('UTF-8');
     });
 
-    it('should detect encoding with smaller sample size and position offset', async () => {
-      const res = await chardet.detectFile(path, { sampleSize: 32, position: 64 });
+    it('should detect encoding with smaller sample size and offset', async () => {
+      const res = await chardet.detectFile(path, { sampleSize: 32, offset: 64 });
       expect(res).toBe('UTF-8');
     });
   });
@@ -56,8 +56,8 @@ describe('chardet', () => {
       expect(chardet.detectFileSync(path, { sampleSize: 32 })).toBe('UTF-8');
     });
 
-    it('should detect encoding with smaller sample size and position offset', () => {
-      expect(chardet.detectFileSync(path, { sampleSize: 32, position: 64 })).toBe('UTF-8');
+    it('should detect encoding with smaller sample size and offset', () => {
+      expect(chardet.detectFileSync(path, { sampleSize: 32, offset: 64 })).toBe('UTF-8');
     });
   });
 
