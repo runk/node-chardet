@@ -10,7 +10,8 @@ import * as sbcs from './encoding/sbcs';
 import * as iso2022 from './encoding/iso2022';
 
 interface FullOptions {
-  sampleSize: number
+  sampleSize: number,
+  offset: number
 }
 
 type Options = Partial<FullOptions>
@@ -107,7 +108,7 @@ export const detectFile = (filepath: string, opts: Options = {}): Promise<Detect
       fd = fs.openSync(filepath, 'r');
       const sample: Buffer = Buffer.allocUnsafe(opts.sampleSize);
 
-      fs.read(fd, sample, 0, opts.sampleSize, null, (err?: Error) => {
+      fs.read(fd, sample, 0, opts.sampleSize, opts.offset, (err?: Error) => {
         handler(err, sample);
       });
       return;
@@ -123,7 +124,7 @@ export const detectFileSync = (filepath: string, opts: Options = {}): DetectResu
     const fd = fs.openSync(filepath, 'r');
     const sample = Buffer.allocUnsafe(opts.sampleSize);
 
-    fs.readSync(fd, sample, 0, opts.sampleSize);
+    fs.readSync(fd, sample, 0, opts.sampleSize, opts.offset);
     fs.closeSync(fd);
     return detect(sample);
   }
