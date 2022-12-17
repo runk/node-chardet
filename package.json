@@ -33,12 +33,12 @@
     "test": "test"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.14",
+    "@types/jest": "^29.0.0",
     "@types/node": "^18.0.0",
-    "jest": "^26.4.2",
+    "jest": "^29.0.0",
     "prettier": "^2.7.1",
     "semantic-release": "^19.0.5",
-    "ts-jest": "^26.4.0",
+    "ts-jest": "^29.0.0",
     "ts-node": "^10.9.1",
     "typescript": "^4.8.4"
   },
