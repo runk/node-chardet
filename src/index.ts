@@ -14,7 +14,7 @@ interface FullOptions {
   offset: number
 }
 
-type Options = Partial<FullOptions>
+export type Options = Partial<FullOptions>
 
 const recognisers: Recogniser[] = [
   new Utf8(),
