@@ -42,14 +42,15 @@ const recognisers: Recogniser[] = [
   new sbcs.KOI8_R(),
 ];
 
-type DetectResult = Match[] | string | null;
+export type AnalyseResult = Match[];
+export type DetectResult = string | null;
 
 export const detect = (buffer: Uint8Array): string | null => {
   const matches: Match[] = analyse(buffer);
   return matches.length > 0 ? matches[0].name : null;
 };
 
-export const analyse = (buffer: Uint8Array): Match[] => {
+export const analyse = (buffer: Uint8Array): AnalyseResult => {
   // Tally up the byte occurrence statistics.
   const byteStats = [];
   for (let i = 0; i < 256; i++) byteStats[i] = 0;
