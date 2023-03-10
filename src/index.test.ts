@@ -15,6 +15,7 @@ describe('chardet', () => {
     { 'confidence': 6, 'name': 'windows-1250', 'lang': 'pl' },
     { 'confidence': 4, 'name': 'windows-1254', 'lang': 'tr' },
     { 'confidence': 2, 'name': 'windows-1251', 'lang': 'ru' },
+    { 'confidence': 0, 'name': 'ASCII', 'lang': undefined },
   ];
 
   it('has both named and default exports', () => {

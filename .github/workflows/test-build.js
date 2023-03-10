@@ -8,6 +8,7 @@ assert(typeof chardet.detectFile, 'function');
 assert(typeof chardet.detectFileSync, 'function');
 
 assert.deepStrictEqual(chardet.analyse(Buffer.from('This is a test')), [
+  { confidence: 100, name: 'ASCII', lang: undefined },
   { confidence: 98, name: 'ISO-8859-1', lang: 'en' },
   { confidence: 98, name: 'ISO-8859-2', lang: 'hu' },
   { confidence: 10, name: 'UTF-8', lang: undefined },
