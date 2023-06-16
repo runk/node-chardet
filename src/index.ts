@@ -3,6 +3,7 @@ import { Recogniser, Context } from './encoding';
 
 import loadFs from './fs/node';
 
+import Ascii from './encoding/ascii';
 import Utf8 from './encoding/utf8';
 import * as unicode from './encoding/unicode';
 import * as mbcs from './encoding/mbcs';
@@ -40,6 +41,7 @@ const recognisers: Recogniser[] = [
   new sbcs.windows_1251(),
   new sbcs.windows_1256(),
   new sbcs.KOI8_R(),
+  new Ascii(),
 ];
 
 export type AnalyseResult = Match[];
