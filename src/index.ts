@@ -9,13 +9,14 @@ import * as unicode from './encoding/unicode';
 import * as mbcs from './encoding/mbcs';
 import * as sbcs from './encoding/sbcs';
 import * as iso2022 from './encoding/iso2022';
+import { isByteArray } from './utils';
 
 interface FullOptions {
-  sampleSize: number,
-  offset: number
+  sampleSize: number;
+  offset: number;
 }
 
-export type Options = Partial<FullOptions>
+export type Options = Partial<FullOptions>;
 
 const recognisers: Recogniser[] = [
   new Utf8(),
@@ -53,6 +54,10 @@ export const detect = (buffer: Uint8Array): string | null => {
 };
 
 export const analyse = (buffer: Uint8Array): AnalyseResult => {
+  if (!isByteArray(buffer)) {
+    throw new Error('Input must be a byte array, e.g. Buffer or Uint8Array');
+  }
+
   // Tally up the byte occurrence statistics.
   const byteStats = [];
   for (let i = 0; i < 256; i++) byteStats[i] = 0;
@@ -88,9 +93,12 @@ export const analyse = (buffer: Uint8Array): AnalyseResult => {
     });
 
   return matches as Match[];
-}
+};
 
-export const detectFile = (filepath: string, opts: Options = {}): Promise<DetectResult> =>
+export const detectFile = (
+  filepath: string,
+  opts: Options = {}
+): Promise<DetectResult> =>
   new Promise((resolve, reject) => {
     let fd: any;
     const fs = loadFs();
@@ -120,7 +128,10 @@ export const detectFile = (filepath: string, opts: Options = {}): Promise<Detect
     fs.readFile(filepath, handler);
   });
 
-export const detectFileSync = (filepath: string, opts: Options = {}): DetectResult => {
+export const detectFileSync = (
+  filepath: string,
+  opts: Options = {}
+): DetectResult => {
   const fs = loadFs();
 
   if (opts && opts.sampleSize) {
