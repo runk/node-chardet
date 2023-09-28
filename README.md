@@ -1,6 +1,6 @@
 # chardet
 
-*Chardet* is a character detection module written in pure JavaScript (TypeScript). Module uses occurrence analysis to determine the most probable encoding.
+_Chardet_ is a character detection module written in pure JavaScript (TypeScript). Module uses occurrence analysis to determine the most probable encoding.
 
 - Packed size is only **22 KB**
 - Works in all environments: Node / Browser / Native
@@ -42,8 +42,15 @@ Returned value is an array of objects sorted by confidence value in descending o
 ```javascript
 [
   { confidence: 90, name: 'UTF-8' },
-  { confidence: 20, name: 'windows-1252', lang: 'fr' }
+  { confidence: 20, name: 'windows-1252', lang: 'fr' },
 ];
+```
+
+In browser, you can use [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) instead of the `Buffer`:
+
+```javascript
+import chardet from 'chardet';
+chardet.analyse(new Uint8Array([0x68, 0x65, 0x6c, 0x6c, 0x6f]));
 ```
 
 ## Working with large data sets
@@ -54,7 +61,7 @@ you can sample only the first N bytes of the buffer:
 ```javascript
 chardet
   .detectFile('/path/to/file', { sampleSize: 32 })
-  .then(encoding => console.log(encoding));
+  .then((encoding) => console.log(encoding));
 ```
 
 You can also specify where to begin reading from in the buffer:
@@ -62,7 +69,7 @@ You can also specify where to begin reading from in the buffer:
 ```javascript
 chardet
   .detectFile('/path/to/file', { sampleSize: 32, offset: 128 })
-  .then(encoding => console.log(encoding));
+  .then((encoding) => console.log(encoding));
 ```
 
 ## Supported Encodings:
