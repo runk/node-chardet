@@ -54,6 +54,10 @@ export const detect = (buffer: Uint8Array): string | null => {
 };
 
 export const analyse = (buffer: Uint8Array): AnalyseResult => {
+  if (!isByteArray(buffer)) {
+    throw new Error('Input must be a byte array, e.g. Buffer or Uint8Array');
+  }
+
   // Tally up the byte occurrence statistics.
   const byteStats = [];
   for (let i = 0; i < 256; i++) byteStats[i] = 0;
