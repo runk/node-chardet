@@ -1,5 +1,7 @@
 {
   "extends": ["config:base"],
+  "dependencyDashboard": false,
+  "schedule": "on the first day of the month",
   "packageRules": [
     {
       "updateTypes": ["minor", "patch", "pin", "digest"],
