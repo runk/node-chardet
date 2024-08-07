@@ -59,17 +59,15 @@ Sometimes, when data set is huge and you want to optimize performance (with a tr
 you can sample only the first N bytes of the buffer:
 
 ```javascript
-chardet
-  .detectFile('/path/to/file', { sampleSize: 32 })
-  .then((encoding) => console.log(encoding));
+const encoding = await chardet
+  .detectFile('/path/to/file', { sampleSize: 32 });
 ```
 
 You can also specify where to begin reading from in the buffer:
 
 ```javascript
-chardet
-  .detectFile('/path/to/file', { sampleSize: 32, offset: 128 })
-  .then((encoding) => console.log(encoding));
+const encoding = await chardet
+  .detectFile('/path/to/file', { sampleSize: 32, offset: 128 });
 ```
 
 ## Supported Encodings:

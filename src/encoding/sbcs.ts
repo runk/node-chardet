@@ -202,7 +202,7 @@ export class ISO_8859_1 extends sbcs {
           0x6e6765, 0x6f6720, 0x6f6d20, 0x6f7220, 0x70e520, 0x722064, 0x722065,
           0x722073, 0x726520, 0x737465, 0x742073, 0x746520, 0x746572, 0x74696c,
           0x766572,
-        ]
+        ],
       ),
       new NGramsPlusLang(
         'de',
@@ -217,7 +217,7 @@ export class ISO_8859_1 extends sbcs {
           0x6e6720, 0x6e6765, 0x6e7465, 0x722064, 0x726465, 0x726569, 0x736368,
           0x737465, 0x742064, 0x746520, 0x74656e, 0x746572, 0x756e64, 0x756e67,
           0x766572,
-        ]
+        ],
       ),
       new NGramsPlusLang(
         'en',
@@ -232,7 +232,7 @@ export class ISO_8859_1 extends sbcs {
           0x6f6e20, 0x6f7220, 0x726520, 0x727320, 0x732061, 0x732074, 0x736169,
           0x737420, 0x742074, 0x746572, 0x746861, 0x746865, 0x74696f, 0x746f20,
           0x747320,
-        ]
+        ],
       ),
       new NGramsPlusLang(
         'es',
@@ -247,7 +247,7 @@ export class ISO_8859_1 extends sbcs {
           0x6f6e20, 0x6f7220, 0x6f7320, 0x706172, 0x717565, 0x726120, 0x726573,
           0x732064, 0x732065, 0x732070, 0x736520, 0x746520, 0x746f20, 0x756520,
           0xf36e20,
-        ]
+        ],
       ),
       new NGramsPlusLang(
         'fr',
@@ -262,7 +262,7 @@ export class ISO_8859_1 extends sbcs {
           0x6f6e74, 0x6f7572, 0x717565, 0x72206c, 0x726520, 0x732061, 0x732064,
           0x732065, 0x73206c, 0x732070, 0x742064, 0x746520, 0x74696f, 0x756520,
           0x757220,
-        ]
+        ],
       ),
       new NGramsPlusLang(
         'it',
@@ -277,7 +277,7 @@ export class ISO_8859_1 extends sbcs {
           0x6f2061, 0x6f2064, 0x6f2069, 0x6f2073, 0x6f6e20, 0x6f6e65, 0x706572,
           0x726120, 0x726520, 0x736920, 0x746120, 0x746520, 0x746920, 0x746f20,
           0x7a696f,
-        ]
+        ],
       ),
       new NGramsPlusLang(
         'nl',
@@ -292,7 +292,7 @@ export class ISO_8859_1 extends sbcs {
           0x6e6465, 0x6e6720, 0x6f6e64, 0x6f6f72, 0x6f7020, 0x6f7220, 0x736368,
           0x737465, 0x742064, 0x746520, 0x74656e, 0x746572, 0x76616e, 0x766572,
           0x766f6f,
-        ]
+        ],
       ),
       new NGramsPlusLang(
         'no',
@@ -307,7 +307,7 @@ export class ISO_8859_1 extends sbcs {
           0x6f6d20, 0x6f7220, 0x70e520, 0x722073, 0x726520, 0x736f6d, 0x737465,
           0x742073, 0x746520, 0x74656e, 0x746572, 0x74696c, 0x747420, 0x747465,
           0x766572,
-        ]
+        ],
       ),
       new NGramsPlusLang(
         'pt',
@@ -322,7 +322,7 @@ export class ISO_8859_1 extends sbcs {
           0x6f7320, 0x706172, 0x717565, 0x726120, 0x726573, 0x732061, 0x732064,
           0x732065, 0x732070, 0x737461, 0x746520, 0x746f20, 0x756520, 0xe36f20,
           0xe7e36f,
-        ]
+        ],
       ),
       new NGramsPlusLang(
         'sv',
@@ -337,7 +337,7 @@ export class ISO_8859_1 extends sbcs {
           0x70e520, 0x722061, 0x722073, 0x726120, 0x736b61, 0x736f6d, 0x742073,
           0x746120, 0x746520, 0x746572, 0x74696c, 0x747420, 0x766172, 0xe47220,
           0xf67220,
-        ]
+        ],
       ),
     ];
   }
@@ -390,7 +390,7 @@ export class ISO_8859_2 extends sbcs {
           0x736f75, 0x737461, 0x737469, 0x73746e, 0x746572, 0x746eed, 0x746f20,
           0x752070, 0xbe6520, 0xe16eed, 0xe9686f, 0xed2070, 0xed2073, 0xed6d20,
           0xf86564,
-        ]
+        ],
       ),
       new NGramsPlusLang(
         'hu',
@@ -405,7 +405,7 @@ export class ISO_8859_2 extends sbcs {
           0x6e656b, 0x6e656d, 0x6e7420, 0x6f6779, 0x732061, 0x737a65, 0x737a74,
           0x737ae1, 0x73e967, 0x742061, 0x747420, 0x74e173, 0x7a6572, 0xe16e20,
           0xe97320,
-        ]
+        ],
       ),
       new NGramsPlusLang(
         'pl',
@@ -420,7 +420,7 @@ export class ISO_8859_2 extends sbcs {
           0x707261, 0x70726f, 0x70727a, 0x727a65, 0x727a79, 0x7369ea, 0x736b69,
           0x737461, 0x776965, 0x796368, 0x796d20, 0x7a6520, 0x7a6965, 0x7a7920,
           0xf37720,
-        ]
+        ],
       ),
       new NGramsPlusLang(
         'ro',
@@ -435,7 +435,7 @@ export class ISO_8859_2 extends sbcs {
           0x6e6520, 0x6e7472, 0x6f7220, 0x70656e, 0x726520, 0x726561, 0x727520,
           0x73e320, 0x746520, 0x747275, 0x74e320, 0x756920, 0x756c20, 0xba6920,
           0xee6e20,
-        ]
+        ],
       ),
     ];
   }
@@ -644,7 +644,7 @@ export class ISO_8859_8 extends sbcs {
           0xeee420, 0xef20e4, 0xf0e420, 0xf0e920, 0xf0e9ed, 0xf2ec20, 0xf820e4,
           0xf8e9ed, 0xf9ec20, 0xfa20e0, 0xfa20e1, 0xfa20e4, 0xfa20ec, 0xfa20ee,
           0xfa20f9,
-        ]
+        ],
       ),
       new NGramsPlusLang(
         'he',
@@ -659,7 +659,7 @@ export class ISO_8859_8 extends sbcs {
           0xede9f0, 0xede9f8, 0xee20e4, 0xee20ed, 0xee20fa, 0xeee120, 0xeee420,
           0xf2e420, 0xf920e4, 0xf920ed, 0xf920fa, 0xf9e420, 0xfae020, 0xfae420,
           0xfae5e9,
-        ]
+        ],
       ),
     ];
   }

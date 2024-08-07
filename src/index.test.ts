@@ -29,6 +29,13 @@ describe('chardet', () => {
     it('should detect encoding', () => {
       expect(chardet.detect(fs.readFileSync(path))).toBe('UTF-8');
     });
+
+    it('should not block when non-buffer supplied', () => {
+      const invalid = [123, '123'];
+      const error = 'Input must be a byte array, e.g. Buffer or Uint8Array';
+      // @ts-expect-error Testing invalid inputs
+      invalid.forEach((input) => expect(() => chardet.detect(input)).toThrow(error));
+    })
   });
 
   describe('#detectFile', () => {
@@ -63,9 +70,11 @@ describe('chardet', () => {
   });
 
   describe('#analyse', () => {
-    it('should return a list of encodings, sorted by confidence level in decending order', () => {
+    it('should return a list of encodings, sorted by confidence level in descending order', () => {
       const matches = chardet.analyse(fs.readFileSync(path));
       expect(matches).toEqual(expectedEncodingsFromPath);
     });
   });
+
+
 });
