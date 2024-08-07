@@ -75,6 +75,4 @@ describe('chardet', () => {
       expect(matches).toEqual(expectedEncodingsFromPath);
     });
   });
-
-
 });

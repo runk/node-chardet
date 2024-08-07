@@ -55,7 +55,7 @@ chardet.analyse(new Uint8Array([0x68, 0x65, 0x6c, 0x6c, 0x6f]));
 
 ## Working with large data sets
 
-Sometimes, when data set is huge and you want to optimize performance (with a tradeoff of less accuracy),
+Sometimes, when data set is huge and you want to optimize performance (with a trade off of less accuracy),
 you can sample only the first N bytes of the buffer:
 
 ```javascript
@@ -69,7 +69,7 @@ You can also specify where to begin reading from in the buffer:
 const encoding = await chardet
   .detectFile('/path/to/file', { sampleSize: 32, offset: 128 });
 ```
-
+g
 ## Supported Encodings:
 
 - UTF-8
