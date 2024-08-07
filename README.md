@@ -69,7 +69,15 @@ You can also specify where to begin reading from in the buffer:
 const encoding = await chardet
   .detectFile('/path/to/file', { sampleSize: 32, offset: 128 });
 ```
-g
+
+## Working with strings
+
+In both Node.js and browsers, all strings in memory are represented in UTF-16 encoding. This is a fundamental aspect of the JavaScript language specification. What it means is you cannot use plain strings directly as input for `chardet.analyse()` or `chardet.detect()`. You need original string data as Buffer/Uint8Array.
+
+In other words, if you receive a piece of data over the network and want to detect its encoding, use the original data payload, not the string representation of it. By the time you get a string it'll be in UTF-16 encoding.
+
+Note on [TextEncoder](https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/TextEncoder): by default it'll return UTF-8 encoded buffer, i.e. not in the original encoding of the string.
+
 ## Supported Encodings:
 
 - UTF-8
