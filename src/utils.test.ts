@@ -14,5 +14,7 @@ describe('isByteArray', () => {
     expect(isByteArray('')).toBe(false);
     expect(isByteArray('hello')).toBe(false);
     expect(isByteArray(123)).toBe(false);
+    expect(isByteArray('123')).toBe(false);
+    expect(isByteArray({})).toBe(false);
   });
 });

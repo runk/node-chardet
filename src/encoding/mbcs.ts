@@ -9,7 +9,7 @@ function binarySearch(arr: number[], searchValue: number) {
     arr: number[],
     searchValue: number,
     left: number,
-    right: number
+    right: number,
   ): number => {
     if (right < left) return -1;
 
@@ -168,7 +168,7 @@ class mbcs implements Recogniser {
         const maxVal = Math.log(doubleByteCharCount / 4);
         const scaleFactor = 90.0 / maxVal;
         confidence = Math.floor(
-          Math.log(commonCharCount + 1) * scaleFactor + 10
+          Math.log(commonCharCount + 1) * scaleFactor + 10,
         );
         confidence = Math.min(confidence, 100);
       }

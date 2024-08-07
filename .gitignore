@@ -6,3 +6,4 @@ npm-debug.log
 lib
 TODO.md
 package-lock.json
+.vscode
