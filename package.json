@@ -18,7 +18,8 @@
     "format:check": "prettier --list-different ./src/**/*.ts",
     "test": "jest",
     "prepublish": "npm run build",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "typecheck": "tsc"
   },
   "files": [
     "lib"

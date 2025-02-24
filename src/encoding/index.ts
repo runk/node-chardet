@@ -1,8 +1,8 @@
-import { Match } from '../match';
+import type { EncodingName, Match } from '../match';
 
 export interface Recogniser {
   match(input: Context): Match | null;
-  name(input?: Context): string;
+  name(input?: Context): EncodingName;
   language?(): string | undefined;
 }
 
