@@ -1,8 +1,8 @@
-import { Context, Recogniser } from '.';
-import match, { Match } from '../match';
+import type { Context, Recogniser } from '.';
+import match, { type EncodingName, type Match } from '../match';
 
 export default class Utf8 implements Recogniser {
-  name() {
+  name(): EncodingName {
     return 'UTF-8';
   }
 
@@ -57,7 +57,7 @@ export default class Utf8 implements Recogniser {
       }
     }
 
-    // Cook up some sort of confidence score, based on presense of a BOM
+    // Cook up some sort of confidence score, based on presence of a BOM
     //    and the existence of valid and/or invalid multi-byte sequences.
     confidence = 0;
     if (hasBOM && numInvalid == 0) confidence = 100;

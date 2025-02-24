@@ -1,5 +1,5 @@
-import { Context, Recogniser } from '../encoding/index';
-import match, { Match } from '../match';
+import type { Context, Recogniser } from '.';
+import match, { type EncodingName, type Match } from '../match';
 
 /**
  * This class recognizes single-byte encodings. Because the encoding scheme is so
@@ -120,7 +120,7 @@ class sbcs implements Recogniser {
     return [];
   }
 
-  name(_input: Context): string {
+  name(_input: Context): EncodingName {
     return 'sbcs';
   }
 
@@ -342,7 +342,7 @@ export class ISO_8859_1 extends sbcs {
     ];
   }
 
-  name(input: Context): string {
+  name(input: Context): EncodingName {
     return input && input.c1Bytes ? 'windows-1252' : 'ISO-8859-1';
   }
 }
@@ -440,7 +440,7 @@ export class ISO_8859_2 extends sbcs {
     ];
   }
 
-  name(det: Context): string {
+  name(det: Context): EncodingName {
     return det && det.c1Bytes ? 'windows-1250' : 'ISO-8859-2';
   }
 }
@@ -488,7 +488,7 @@ export class ISO_8859_5 extends sbcs {
     ];
   }
 
-  name() {
+  name(): EncodingName {
     return 'ISO-8859-5';
   }
 
@@ -540,7 +540,7 @@ export class ISO_8859_6 extends sbcs {
     ];
   }
 
-  name() {
+  name(): EncodingName {
     return 'ISO-8859-6';
   }
 
@@ -592,7 +592,7 @@ export class ISO_8859_7 extends sbcs {
     ];
   }
 
-  name(det: Context): string {
+  name(det: Context): EncodingName {
     return det && det.c1Bytes ? 'windows-1253' : 'ISO-8859-7';
   }
 
@@ -664,7 +664,7 @@ export class ISO_8859_8 extends sbcs {
     ];
   }
 
-  name(det: Context): string {
+  name(det: Context): EncodingName {
     return det && det.c1Bytes ? 'windows-1255' : 'ISO-8859-8';
   }
 
@@ -716,7 +716,7 @@ export class ISO_8859_9 extends sbcs {
     ];
   }
 
-  name(det: Context): string {
+  name(det: Context): EncodingName {
     return det && det.c1Bytes ? 'windows-1254' : 'ISO-8859-9';
   }
 
@@ -768,7 +768,7 @@ export class windows_1251 extends sbcs {
     ];
   }
 
-  name() {
+  name(): EncodingName {
     return 'windows-1251';
   }
 
@@ -820,7 +820,7 @@ export class windows_1256 extends sbcs {
     ];
   }
 
-  name() {
+  name(): EncodingName {
     return 'windows-1256';
   }
 
@@ -872,7 +872,7 @@ export class KOI8_R extends sbcs {
     ];
   }
 
-  name() {
+  name(): EncodingName {
     return 'KOI8-R';
   }
 

@@ -152,3 +152,5 @@ export default {
   detectFileSync,
   detectFile,
 };
+
+export { Match, EncodingName } from './match';

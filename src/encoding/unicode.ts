@@ -1,12 +1,12 @@
-import { Context, Recogniser } from '.';
-import match, { Match } from '../match';
+import type { Context, Recogniser } from '.';
+import match, { type Match, type EncodingName } from '../match';
 
 /**
  * This class matches UTF-16 and UTF-32, both big- and little-endian. The
  * BOM will be used if it is present.
  */
 export class UTF_16BE implements Recogniser {
-  name() {
+  name(): EncodingName {
     return 'UTF-16BE';
   }
 
@@ -27,9 +27,10 @@ export class UTF_16BE implements Recogniser {
 }
 
 export class UTF_16LE implements Recogniser {
-  name() {
+  name(): EncodingName {
     return 'UTF-16LE';
   }
+
   match(det: Context): Match | null {
     const input = det.rawInput;
 
@@ -56,7 +57,7 @@ interface WithGetChar {
 }
 
 class UTF_32 implements Recogniser, WithGetChar {
-  name() {
+  name(): EncodingName {
     return 'UTF-32';
   }
 
@@ -111,7 +112,7 @@ class UTF_32 implements Recogniser, WithGetChar {
 }
 
 export class UTF_32BE extends UTF_32 {
-  name() {
+  name(): EncodingName {
     return 'UTF-32BE';
   }
   getChar(input: Uint8Array, index: number) {
@@ -125,7 +126,7 @@ export class UTF_32BE extends UTF_32 {
 }
 
 export class UTF_32LE extends UTF_32 {
-  name() {
+  name(): EncodingName {
     return 'UTF-32LE';
   }
 

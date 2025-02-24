@@ -1,5 +1,5 @@
-import { Context, Recogniser } from '.';
-import match, { Match } from '../match';
+import type { Context, Recogniser } from '.';
+import match, { type Match, type EncodingName } from '../match';
 
 /**
  * Binary search implementation (recursive)
@@ -83,7 +83,7 @@ class IteratedChar {
 class mbcs implements Recogniser {
   commonChars: number[] = [];
 
-  name() {
+  name(): EncodingName {
     return 'mbcs';
   }
 
@@ -198,9 +198,10 @@ class mbcs implements Recogniser {
  * Shift_JIS charset recognizer.
  */
 export class sjis extends mbcs {
-  name() {
+  name(): EncodingName {
     return 'Shift_JIS';
   }
+
   language() {
     return 'ja';
   }
@@ -249,9 +250,10 @@ export class sjis extends mbcs {
  *   Big5 charset recognizer.
  */
 export class big5 extends mbcs {
-  name() {
+  name(): EncodingName {
     return 'Big5';
   }
+
   language() {
     return 'zh';
   }
@@ -362,9 +364,10 @@ function eucNextChar(iter: IteratedChar, det: Context) {
  *    is created and kept by the public CharsetDetector class
  */
 export class euc_jp extends mbcs {
-  name() {
+  name(): EncodingName {
     return 'EUC-JP';
   }
+
   language() {
     return 'ja';
   }
@@ -395,7 +398,7 @@ export class euc_jp extends mbcs {
  *    is created and kept by the public CharsetDetector class
  */
 export class euc_kr extends mbcs {
-  name() {
+  name(): EncodingName {
     return 'EUC-KR';
   }
 
@@ -428,7 +431,7 @@ export class euc_kr extends mbcs {
  *   GB-18030 recognizer. Uses simplified Chinese statistics.
  */
 export class gb_18030 extends mbcs {
-  name() {
+  name(): EncodingName {
     return 'GB18030';
   }
 

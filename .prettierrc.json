@@ -1,4 +1,4 @@
 {
   "singleQuote": true,
-  "maxLineLength": 80
+  "printWidth": 80
 }

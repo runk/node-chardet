@@ -1,5 +1,5 @@
-import { Context, Recogniser } from '.';
-import match, { Match } from '../match';
+import type { Context, Recogniser } from '.';
+import match, { type Match, type EncodingName } from '../match';
 
 /**
  * This is a superclass for the individual detectors for
@@ -10,7 +10,7 @@ import match, { Match } from '../match';
 class ISO_2022 implements Recogniser {
   escapeSequences: number[][] = [];
 
-  name() {
+  name(): EncodingName {
     return 'ISO_2022';
   }
 
@@ -85,7 +85,7 @@ class ISO_2022 implements Recogniser {
 }
 
 export class ISO_2022_JP extends ISO_2022 {
-  name() {
+  name(): EncodingName {
     return 'ISO-2022-JP';
   }
 
@@ -110,7 +110,7 @@ export class ISO_2022_JP extends ISO_2022 {
 }
 
 export class ISO_2022_KR extends ISO_2022 {
-  name() {
+  name(): EncodingName {
     return 'ISO-2022-KR';
   }
   language() {
@@ -120,7 +120,7 @@ export class ISO_2022_KR extends ISO_2022 {
 }
 
 export class ISO_2022_CN extends ISO_2022 {
-  name() {
+  name(): EncodingName {
     return 'ISO-2022-CN';
   }
   language() {
