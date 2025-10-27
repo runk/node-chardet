@@ -136,9 +136,12 @@ export const detectFileSync = (
 
   if (opts && opts.sampleSize) {
     const fd = fs.openSync(filepath, 'r');
-    const sample = Buffer.allocUnsafe(opts.sampleSize);
+    let sample = Buffer.allocUnsafe(opts.sampleSize);
 
-    fs.readSync(fd, sample, 0, opts.sampleSize, opts.offset);
+    const bytesRead = fs.readSync(fd, sample, 0, opts.sampleSize, opts.offset);
+    if (bytesRead < opts.sampleSize) {
+      sample = sample.subarray(0, bytesRead);
+    }
     fs.closeSync(fd);
     return detect(sample);
   }
