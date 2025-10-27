@@ -117,10 +117,17 @@ export const detectFile = (
 
     if (opts && opts.sampleSize) {
       fd = fs.openSync(filepath, 'r');
-      const sample: Buffer = Buffer.allocUnsafe(opts.sampleSize);
+      let sample = Buffer.allocUnsafe(opts.sampleSize);
 
-      fs.read(fd, sample, 0, opts.sampleSize, opts.offset, (err?: Error) => {
-        handler(err, sample);
+      fs.read(fd, sample, 0, opts.sampleSize, opts.offset, (err: NodeJS.ErrnoException | null, bytesRead: number, buffer: Buffer) => {
+        if (err) {
+          handler(err, buffer);
+        } else {
+          if (bytesRead < opts.sampleSize!) {
+            sample = sample.subarray(0, bytesRead);
+          }
+          handler(null, sample);
+        }
       });
       return;
     }
