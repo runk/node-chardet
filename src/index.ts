@@ -121,7 +121,7 @@ export const detectFile = (
 
       fs.read(fd, sample, 0, opts.sampleSize, opts.offset, (err: NodeJS.ErrnoException | null, bytesRead: number, buffer: Buffer) => {
         if (err) {
-          handler(err, buffer);
+          handler(err);
         } else {
           if (bytesRead < opts.sampleSize!) {
             sample = sample.subarray(0, bytesRead);
