@@ -55,7 +55,7 @@ describe('chardet', () => {
     });
 
     it('should work as expected with sampleSize larger than actual file size (1)', async () => {
-      const res = await chardet.detectFile(path, { sampleSize: 1_000_000 });
+      const res = await chardet.detectFile(path, { sampleSize: 1024 * 1024 });
       expect(res).toBe('UTF-8');
     });
 
