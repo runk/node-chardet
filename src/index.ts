@@ -103,27 +103,30 @@ export const detectFile = (
     let fd: any;
     const fs = loadFs();
 
-    const handler = (err: Error | null | undefined, buffer: Buffer) => {
+    const handler = (err: Error | null, buffer: Buffer | null) => {
       if (fd) {
         fs.closeSync(fd);
       }
 
       if (err) {
         reject(err);
-      } else {
+      } else if (buffer) {
         resolve(detect(buffer));
+      } else {
+        reject(new Error('No error and no buffer received'));
       }
     };
 
-    if (opts && opts.sampleSize) {
+    const sampleSize = opts?.sampleSize || 0;
+    if (sampleSize > 0) {
       fd = fs.openSync(filepath, 'r');
-      let sample = Buffer.allocUnsafe(opts.sampleSize);
+      let sample = Buffer.allocUnsafe(sampleSize);
 
-      fs.read(fd, sample, 0, opts.sampleSize, opts.offset, (err: NodeJS.ErrnoException | null, bytesRead: number, buffer: Buffer) => {
+      fs.read(fd, sample, 0, sampleSize, opts.offset, (err: NodeJS.ErrnoException | null, bytesRead: number) => {
         if (err) {
-          handler(err);
+          handler(err, null);
         } else {
-          if (bytesRead < opts.sampleSize!) {
+          if (bytesRead < sampleSize) {
             sample = sample.subarray(0, bytesRead);
           }
           handler(null, sample);

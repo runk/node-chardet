@@ -53,6 +53,16 @@ describe('chardet', () => {
       const res = await chardet.detectFile(path, { sampleSize: 32, offset: 64 });
       expect(res).toBe('UTF-8');
     });
+
+    it('should work as expected with sampleSize larger than actual file size (1)', async () => {
+      const res = await chardet.detectFile(path, { sampleSize: 1_000_000 });
+      expect(res).toBe('UTF-8');
+    });
+
+    it('should work as expected with sampleSize larger than actual file size (2)', async () => {
+      const res = await chardet.detectFile(__dirname + '/test/data/encodings/koi8r', { sampleSize: 1024 * 1024 });
+      expect(res).toBe('KOI8-R');
+    });
   });
 
   describe('#detectFileSync', () => {
