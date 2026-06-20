@@ -1,4 +1,5 @@
 import * as chardet from '..';
+import { describe, expect, it } from 'vitest';
 
 describe('UTF-8', () => {
   it('should return UTF-8', () => {

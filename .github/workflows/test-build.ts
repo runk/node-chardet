@@ -1,7 +1,9 @@
 import assert from 'assert';
+import { createRequire } from 'module';
 
 const main = async () => {
-  const chardet = await import(process.cwd());
+  const require = createRequire(`${process.cwd()}/package.json`);
+  const chardet = require(process.cwd()) as typeof import('../../lib');
 
   assert(typeof chardet.analyse, 'function');
   assert(typeof chardet.detect, 'function');

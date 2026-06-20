@@ -1,6 +1,7 @@
 import * as chardet from '.';
 import defaultChardet from '.';
 import fs from 'fs';
+import { describe, expect, it } from 'vitest';
 
 describe('chardet', () => {
 
