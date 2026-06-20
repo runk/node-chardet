@@ -35,8 +35,8 @@ describe('chardet', () => {
     it('should not block when non-buffer supplied', () => {
       const invalid = [123, '123'];
       const error = 'Input must be a byte array, e.g. Buffer or Uint8Array';
-      // @ts-expect-error Testing invalid inputs
       invalid.forEach((input) =>
+        // @ts-expect-error Testing invalid inputs
         expect(() => chardet.detect(input)).toThrow(error),
       );
     });

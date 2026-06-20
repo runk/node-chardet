@@ -52,6 +52,31 @@ function topTrigrams(buffers) {
     .map(([trigram]) => trigram);
 }
 
+function javascriptString(value) {
+  return `'${value.replaceAll('\\', '\\\\').replaceAll("'", "\\'")}'`;
+}
+
+function serializeNgrams(models) {
+  const lines = ['export default ['];
+  for (const model of models) {
+    lines.push('  {');
+    lines.push(`    encoding: ${javascriptString(model.encoding)},`);
+    lines.push(`    language: ${javascriptString(model.language)},`);
+    lines.push(`    documents: ${model.documents},`);
+    lines.push('    trigrams: [');
+    for (let i = 0; i < model.trigrams.length; i += 7) {
+      const values = model.trigrams
+        .slice(i, i + 7)
+        .map((value) => `0x${value.toString(16).padStart(6, '0')}`);
+      lines.push(`      ${values.join(', ')},`);
+    }
+    lines.push('    ],');
+    lines.push('  },');
+  }
+  lines.push('];', '');
+  return lines.join('\n');
+}
+
 export function buildCorpus(destination) {
   rmSync(destination, { recursive: true, force: true });
   mkdirSync(destination, { recursive: true });
@@ -158,10 +183,7 @@ export function buildCorpus(destination) {
     join(destination, 'index.json'),
     `${JSON.stringify(index, null, 2)}\n`,
   );
-  writeFileSync(
-    join(destination, 'ngrams.json'),
-    `${JSON.stringify(ngrams, null, 2)}\n`,
-  );
+  writeFileSync(join(destination, 'ngrams.mjs'), serializeNgrams(ngrams));
 }
 
 export function filesBelow(directory) {

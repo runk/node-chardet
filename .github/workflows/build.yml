@@ -4,7 +4,7 @@ on:
   push:
     branches: [master]
   pull_request:
-    branches: ["*"]
+    branches: ['*']
 
 jobs:
   build:
@@ -24,6 +24,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm i
+      - name: Verify generated corpus
+        run: npm run corpus:verify
       - run: npm test
       - run: npm run build
       - run: .github/workflows/test-build.sh

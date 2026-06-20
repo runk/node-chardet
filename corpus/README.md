@@ -22,5 +22,5 @@ calculated from training documents only, preventing direct test leakage.
 
 Each generated encoding directory contains binary documents arranged by
 language and split. `generated/index.json` records hashes and byte coverage;
-`generated/ngrams.json` contains the 128 most frequent raw byte trigrams for
+`generated/ngrams.mjs` contains the 128 most frequent raw byte trigrams for
 each encoding/language model, ordered by frequency and packed as 24-bit integers.
