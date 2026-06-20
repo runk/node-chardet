@@ -143,12 +143,58 @@ function detectorNgrams(buffers, byteMap) {
     .sort((left, right) => left - right);
 }
 
-function confidence(buffer, byteMap, modelNgrams) {
+function highByteDistribution(buffers) {
+  const counts = new Map();
+  let total = 0;
+  for (const buffer of buffers) {
+    for (const byte of buffer) {
+      if (byte >= 0x80) {
+        counts.set(byte, (counts.get(byte) ?? 0) + 1);
+        total += 1;
+      }
+    }
+  }
+  return {
+    total,
+    counts: [...counts].sort(([left], [right]) => left - right),
+  };
+}
+
+function byteLogLikelihood(buffer, distribution) {
+  const counts = new Map(distribution.counts);
+  const denominator = distribution.total + 128;
+  let highBytes = 0;
+  let likelihood = 0;
+  for (const byte of buffer) {
+    if (byte >= 0x80) {
+      likelihood += Math.log(((counts.get(byte) ?? 0) + 1) / denominator);
+      highBytes += 1;
+    }
+  }
+  return highBytes === 0
+    ? Number.NEGATIVE_INFINITY
+    : Number((likelihood / highBytes).toFixed(12));
+}
+
+function ngramScore(buffer, byteMap, modelNgrams) {
   const known = new Set(modelNgrams);
   const values = trigrams(buffer, byteMap);
   const hits = values.filter((trigram) => known.has(trigram)).length;
   const rawPercent = hits / values.length;
-  return rawPercent > 0.33 ? 98 : Math.floor(rawPercent * 300);
+  return {
+    confidence: rawPercent > 0.33 ? 98 : Math.floor(rawPercent * 300),
+    hits,
+    total: values.length,
+    hitRate: rawPercent,
+  };
+}
+
+function statisticallyCompetitive(best, candidate) {
+  const variance =
+    (best.hitRate * (1 - best.hitRate)) / best.total +
+    (candidate.hitRate * (1 - candidate.hitRate)) / candidate.total;
+  const margin = 1.96 * Math.sqrt(variance);
+  return best.hitRate - candidate.hitRate <= margin;
 }
 
 function compileSingleByteModels() {
@@ -171,7 +217,11 @@ function compileSingleByteModels() {
           `Expected four training files for ${encoding.name}/${language}`,
         );
       }
-      return { language, ngrams: detectorNgrams(buffers, byteMap) };
+      return {
+        language,
+        ngrams: detectorNgrams(buffers, byteMap),
+        highBytes: highByteDistribution(buffers),
+      };
     });
     models.push({ encoding: encoding.name, byteMap, languages });
   }
@@ -185,17 +235,53 @@ function evaluate(models) {
   const results = tests.map((test) => {
     const buffer = readFileSync(join(generatedCorpus, test.path));
     const candidates = models.map((model) => {
-      let best = { confidence: -1, language: undefined };
-      for (let index = model.languages.length - 1; index >= 0; index--) {
-        const language = model.languages[index];
-        const score = confidence(buffer, model.byteMap, language.ngrams);
-        if (score > best.confidence) {
-          best = { confidence: score, language: language.language };
-        }
-      }
-      return { encoding: model.encoding, ...best };
+      const languageScores = model.languages.map((language) => ({
+        language: language.language,
+        ...ngramScore(buffer, model.byteMap, language.ngrams),
+        byteLogLikelihood: byteLogLikelihood(buffer, language.highBytes),
+      }));
+      const confidenceScore = Math.max(
+        ...languageScores.map((score) => score.confidence),
+      );
+      const confidenceLanguages = languageScores.filter(
+        (score) => score.confidence === confidenceScore,
+      );
+      confidenceLanguages.sort(
+        (left, right) => right.byteLogLikelihood - left.byteLogLikelihood,
+      );
+      const confidenceLanguage = confidenceLanguages[0];
+      languageScores.sort(
+        (left, right) =>
+          right.byteLogLikelihood - left.byteLogLikelihood ||
+          right.confidence - left.confidence,
+      );
+      return {
+        encoding: model.encoding,
+        confidence: confidenceScore,
+        language: languageScores[0].language,
+        byteLogLikelihood: confidenceLanguage.byteLogLikelihood,
+        hits: confidenceLanguage.hits,
+        total: confidenceLanguage.total,
+        hitRate: confidenceLanguage.hitRate,
+      };
     });
     candidates.sort((left, right) => right.confidence - left.confidence);
+    const strongest = candidates[0];
+    const competitive = candidates.filter((candidate) =>
+      statisticallyCompetitive(strongest, candidate),
+    );
+    const competitiveEncodings = new Set(
+      competitive.map((candidate) => candidate.encoding),
+    );
+    competitive.sort(
+      (left, right) =>
+        right.byteLogLikelihood - left.byteLogLikelihood ||
+        right.confidence - left.confidence,
+    );
+    const remaining = candidates.filter(
+      (candidate) => !competitiveEncodings.has(candidate.encoding),
+    );
+    candidates.splice(0, candidates.length, ...competitive, ...remaining);
     const predicted = candidates[0];
     return {
       expected: { encoding: test.encoding, language: test.language },
@@ -274,6 +360,23 @@ function serializeModels(models) {
         );
       }
       lines.push('        ],');
+      lines.push('        highBytes: {');
+      lines.push(`          total: ${language.highBytes.total},`);
+      lines.push('          counts: [');
+      for (
+        let index = 0;
+        index < language.highBytes.counts.length;
+        index += 1
+      ) {
+        lines.push(
+          `            ${language.highBytes.counts
+            .slice(index, index + 1)
+            .map(([byte, count]) => `[${hex(byte, 2)}, ${count}]`)
+            .join(', ')},`,
+        );
+      }
+      lines.push('          ],');
+      lines.push('        },');
       lines.push('      },');
     }
     lines.push('    ],');

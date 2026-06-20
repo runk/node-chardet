@@ -17,6 +17,9 @@ const manifest = JSON.parse(
   readFileSync(join(corpus, 'manifest.json'), 'utf8'),
 );
 const sources = JSON.parse(readFileSync(join(corpus, 'sources.json'), 'utf8'));
+const testSources = JSON.parse(
+  readFileSync(join(corpus, 'test-sources.json'), 'utf8'),
+);
 
 function iconv(input, from, to) {
   const result = spawnSync('iconv', ['-f', from, '-t', to], {
@@ -82,7 +85,19 @@ export function buildCorpus(destination) {
   mkdirSync(destination, { recursive: true });
 
   const sourceByLanguage = new Map(
-    sources.languages.map((item) => [item.code, item]),
+    sources.languages.map((item) => {
+      const testDocument = testSources.documents.find(
+        (document) => document.language === item.code,
+      );
+      if (!testDocument) throw new Error(`Missing test source: ${item.code}`);
+      return [
+        item.code,
+        {
+          ...item,
+          documents: [...item.documents, { ...testDocument, split: 'test' }],
+        },
+      ];
+    }),
   );
   const index = [];
   const ngrams = [];
@@ -99,9 +114,16 @@ export function buildCorpus(destination) {
       const testDocuments = language.documents.filter(
         (item) => item.split === 'test',
       );
-      if (trainDocuments.length !== 4 || testDocuments.length !== 1) {
+      const validationDocuments = language.documents.filter(
+        (item) => item.split === 'validation',
+      );
+      if (
+        trainDocuments.length !== 4 ||
+        validationDocuments.length !== 1 ||
+        testDocuments.length !== 1
+      ) {
         throw new Error(
-          `${languageCode} must contain four train and one test document`,
+          `${languageCode} must contain four train, one validation, and one test document`,
         );
       }
       if (

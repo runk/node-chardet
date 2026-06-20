@@ -1,0 +1,90 @@
+{
+  "license": "MIT",
+  "provenance": "Synthetic prose authored for the node-chardet seed corpus",
+  "documents": [
+    {
+      "language": "uk",
+      "id": "community-garden",
+      "title": "Громадський сад",
+      "text": "Мешканці разом упорядкували занедбаний двір і висадили квіти, зелень та молоді дерева. Діти зробили яскраві таблички, а сусіди домовилися щотижня поливати рослини."
+    },
+    {
+      "language": "ru",
+      "id": "community-garden",
+      "title": "Общий сад",
+      "text": "Жители вместе привели в порядок старый двор и посадили цветы, зелень и молодые деревья. Дети сделали яркие таблички, а соседи договорились каждую неделю поливать растения."
+    },
+    {
+      "language": "sr",
+      "id": "community-garden",
+      "title": "Заједничка башта",
+      "text": "Комшије су уредиле старо двориште и засадиле цвеће, поврће и младо дрвеће. Ђаци су направили шарене ознаке, а пријатељи ће сваке недеље заливати биљке."
+    },
+    {
+      "language": "fr",
+      "id": "community-garden",
+      "title": "Le jardin partagé",
+      "text": "Les habitants ont transformé une cour oubliée en jardin fleuri. Les enfants ont préparé des étiquettes colorées, tandis que les voisins se réunissent chaque semaine pour arroser les légumes et les jeunes arbres."
+    },
+    {
+      "language": "de",
+      "id": "community-garden",
+      "title": "Der Gemeinschaftsgarten",
+      "text": "Die Nachbarn haben einen leeren Hof begrünt und dort Kräuter, Gemüse und junge Bäume gepflanzt. Die Schüler malten bunte Schilder, während ältere Bewohner regelmäßig gießen und Geräte aufräumen."
+    },
+    {
+      "language": "es",
+      "id": "community-garden",
+      "title": "El jardín comunitario",
+      "text": "Los vecinos convirtieron un patio vacío en un jardín lleno de árboles, hierbas y verduras. Los niños pintaron carteles de colores y cada sábado varias familias riegan las plantas."
+    },
+    {
+      "language": "ko",
+      "id": "community-garden",
+      "title": "마을 공동 정원",
+      "text": "주민들은 비어 있던 마당을 정리하고 꽃과 채소, 어린 나무를 심었다. 아이들은 알록달록한 이름표를 만들었고 이웃들은 매주 모여 물을 주고 도구를 정돈한다."
+    },
+    {
+      "language": "mt",
+      "id": "community-garden",
+      "title": "Il-ġnien tal-komunità",
+      "text": "Il-ġirien biddlu bitħa vojta fi ġnien mimli ħxejjex, fjuri u siġar żgħar. It-tfal għamlu tabelli kkuluriti u l-familji jiltaqgħu kull ġimgħa biex isaqqu l-pjanti."
+    },
+    {
+      "language": "lv",
+      "id": "community-garden",
+      "title": "Kopienas dārzs",
+      "text": "Kaimiņi pārvērta tukšu pagalmu par zaļu dārzu ar puķēm, dārzeņiem un jauniem kokiem. Bērni izgatavoja krāsainas zīmes, bet ģimenes katru nedēļu laista augus."
+    },
+    {
+      "language": "is",
+      "id": "community-garden",
+      "title": "Garður hverfisins",
+      "text": "Nágrannar breyttu auðum garði í grænt svæði með blómum, grænmeti og ungum trjám. Börnin máluðu litrík skilti og fjölskyldur hittast vikulega til að vökva."
+    },
+    {
+      "language": "lt",
+      "id": "community-garden",
+      "title": "Bendruomenės sodas",
+      "text": "Kaimynai tuščią kiemą pavertė žaliu sodu su gėlėmis, daržovėmis ir jaunais medžiais. Vaikai nupiešė spalvingus ženklus, o šeimos kas savaitę laisto augalus."
+    },
+    {
+      "language": "cy",
+      "id": "community-garden",
+      "title": "Gardd y gymuned",
+      "text": "Trodd y cymdogion iard wag ger hen dŷ yn ardd werdd gyda blodau, llysiau a choed ifanc. Peintiodd y plant arwyddion lliwgar, tra oedd cân i'w chlywed a chŵn yn chwarae gerllaw."
+    },
+    {
+      "language": "ro",
+      "id": "community-garden",
+      "title": "Grădina comunității",
+      "text": "Vecinii au transformat o curte goală într-o grădină cu flori, legume și pomi tineri. Copiii au pictat indicatoare colorate, iar familiile se întâlnesc săptămânal pentru a uda plantele."
+    },
+    {
+      "language": "pl",
+      "id": "community-garden",
+      "title": "Ogród sąsiedzki",
+      "text": "Mieszkańcy zmienili pusty dziedziniec w zielony ogród z kwiatami, warzywami i młodymi drzewami. Dzieci zrobiły kolorowe tabliczki, a rodziny co tydzień podlewają rośliny."
+    }
+  ]
+}

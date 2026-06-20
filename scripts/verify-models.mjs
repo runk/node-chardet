@@ -20,6 +20,16 @@ try {
   ) {
     throw new Error('Generated model evaluation is out of date');
   }
+  const evaluation = JSON.parse(readFileSync(rebuiltEvaluation, 'utf8'));
+  if (
+    evaluation.summary.encodingCorrect !== evaluation.summary.tests ||
+    evaluation.summary.languageCorrect !== evaluation.summary.tests
+  ) {
+    throw new Error(
+      `Model evaluation failed: ${evaluation.summary.encodingCorrect}/${evaluation.summary.tests} encodings, ` +
+        `${evaluation.summary.languageCorrect}/${evaluation.summary.tests} languages`,
+    );
+  }
   console.log('Detector models and evaluation are reproducible.');
 } finally {
   rmSync(temporaryRoot, { recursive: true, force: true });

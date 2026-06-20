@@ -32,7 +32,7 @@
         },
         {
           "id": "river-trip",
-          "split": "test",
+          "split": "validation",
           "title": "Подорож до річки",
           "text": "У неділю друзі вирушили до тихої річки за селом. Вони взяли мапу, теплий чай і фотоапарат. Після довгої прогулянки мандрівники відпочивали на березі та слухали вечірніх птахів."
         }
@@ -68,7 +68,7 @@
         },
         {
           "id": "river-trip",
-          "split": "test",
+          "split": "validation",
           "title": "Поездка к реке",
           "text": "В воскресенье друзья отправились к спокойной реке за городом. Они взяли карту, горячий чай и фотоаппарат. После долгой прогулки путешественники отдыхали на берегу и слушали вечерних птиц."
         }
@@ -104,7 +104,7 @@
         },
         {
           "id": "river-trip",
-          "split": "test",
+          "split": "validation",
           "title": "Излет поред реке",
           "text": "У недељу су пријатељи отишли до мирне реке. Понели су мапу, топао чај и фотоапарат. После дуге шетње одмарали су се на обали и слушали вечерње птице."
         }
@@ -140,7 +140,7 @@
         },
         {
           "id": "river-trip",
-          "split": "test",
+          "split": "validation",
           "title": "Une promenade près de la rivière",
           "text": "Dimanche, des amis partent vers une rivière tranquille. Ils emportent une carte, du thé chaud et un appareil photo. Après une longue marche, ils se reposent sur la rive et écoutent les oiseaux."
         }
@@ -176,7 +176,7 @@
         },
         {
           "id": "river-trip",
-          "split": "test",
+          "split": "validation",
           "title": "Ausflug an den Fluss",
           "text": "Am Sonntag wandern Freunde zu einem ruhigen Fluss. Sie nehmen eine Karte, heißen Tee und eine Kamera mit. Nach dem langen Weg sitzen sie am Ufer und hören den Vögeln zu."
         }
@@ -212,7 +212,7 @@
         },
         {
           "id": "river-trip",
-          "split": "test",
+          "split": "validation",
           "title": "Paseo junto al río",
           "text": "El domingo unos amigos caminan hacia un río tranquilo. Llevan un mapa, té caliente y una cámara. Después del paseo descansan en la orilla y escuchan a los pájaros."
         }
@@ -248,7 +248,7 @@
         },
         {
           "id": "river-trip",
-          "split": "test",
+          "split": "validation",
           "title": "강가로 떠난 여행",
           "text": "일요일에 친구들은 도시 밖의 조용한 강으로 걸어갔다. 지도와 따뜻한 차, 사진기를 챙겼다. 긴 산책 뒤에는 강가에 앉아 저녁 새소리를 들었다."
         }
@@ -284,7 +284,7 @@
         },
         {
           "id": "river-trip",
-          "split": "test",
+          "split": "validation",
           "title": "Mixja ħdejn ix-xmara",
           "text": "Nhar il-Ħadd grupp ta' ħbieb mar lejn xmara kwieta. Ħadu mappa, te sħun u kamera. Wara mixja twila qagħdu fuq ix-xatt u semgħu l-għasafar ta' filgħaxija."
         }
@@ -320,7 +320,7 @@
         },
         {
           "id": "river-trip",
-          "split": "test",
+          "split": "validation",
           "title": "Pastaiga gar upi",
           "text": "Svētdien draugi devās uz klusu upi ārpus pilsētas. Viņi paņēma karti, siltu tēju un fotoaparātu. Pēc garās pastaigas visi atpūtās krastā."
         }
@@ -356,7 +356,7 @@
         },
         {
           "id": "river-trip",
-          "split": "test",
+          "split": "validation",
           "title": "Ganga við ána",
           "text": "Á sunnudegi gengu vinir að rólegri á utan við bæinn. Þeir tóku kort, heitt te og myndavél. Eftir langa göngu sátu þeir á bakkanum og hlustuðu á fuglana."
         }
@@ -392,7 +392,7 @@
         },
         {
           "id": "river-trip",
-          "split": "test",
+          "split": "validation",
           "title": "Kelionė prie upės",
           "text": "Sekmadienį draugai išėjo prie ramios upės už miesto. Jie pasiėmė žemėlapį, šiltos arbatos ir fotoaparatą. Po ilgo žygio visi ilsėjosi ant kranto."
         }
@@ -428,7 +428,7 @@
         },
         {
           "id": "river-trip",
-          "split": "test",
+          "split": "validation",
           "title": "Taith ger yr afon",
           "text": "Ddydd Sul aeth ffrindiau at afon dawel y tu allan i'r dref. Aethant â map, te cynnes a chamera. Ar ôl cerdded yn hir, gorffwysasant ar y lan."
         }
@@ -464,7 +464,7 @@
         },
         {
           "id": "river-trip",
-          "split": "test",
+          "split": "validation",
           "title": "Plimbare lângă râu",
           "text": "Duminică, prietenii au mers spre un râu liniștit din afara orașului. Au luat o hartă, ceai cald și un aparat foto. După plimbare s-au odihnit pe mal."
         }
@@ -500,7 +500,7 @@
         },
         {
           "id": "river-trip",
-          "split": "test",
+          "split": "validation",
           "title": "Spacer nad rzeką",
           "text": "W niedzielę przyjaciele poszli nad spokojną rzekę za miastem. Zabrali mapę, ciepłą herbatę i aparat. Po długim spacerze odpoczywali na brzegu."
         }

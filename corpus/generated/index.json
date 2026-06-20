@@ -4,12 +4,12 @@
     "iconv": "CP850",
     "language": "de",
     "split": "test",
-    "document": "river-trip",
-    "path": "CP850/de/test/river-trip.bin",
-    "bytes": 192,
-    "highBytes": 3,
-    "uniqueHighBytes": 2,
-    "sha256": "b7fbf21e555e7286674866b66f7d59e652b6e1f3f23b229663e21c3ec076dd45"
+    "document": "community-garden",
+    "path": "CP850/de/test/community-garden.bin",
+    "bytes": 220,
+    "highBytes": 12,
+    "uniqueHighBytes": 3,
+    "sha256": "5839fb3ac29b2c2290f11e32e60bf354e8fe06b8857c670f9d0c562f1ad206db"
   },
   {
     "encoding": "CP850",
@@ -62,14 +62,26 @@
   {
     "encoding": "CP850",
     "iconv": "CP850",
+    "language": "de",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "CP850/de/validation/river-trip.bin",
+    "bytes": 192,
+    "highBytes": 3,
+    "uniqueHighBytes": 2,
+    "sha256": "b7fbf21e555e7286674866b66f7d59e652b6e1f3f23b229663e21c3ec076dd45"
+  },
+  {
+    "encoding": "CP850",
+    "iconv": "CP850",
     "language": "es",
     "split": "test",
-    "document": "river-trip",
-    "path": "CP850/es/test/river-trip.bin",
-    "bytes": 184,
+    "document": "community-garden",
+    "path": "CP850/es/test/community-garden.bin",
+    "bytes": 203,
     "highBytes": 6,
     "uniqueHighBytes": 3,
-    "sha256": "c2c98634ec2d0e1f255435d70638d0c94fa3687ff0883eaad749b351dc648eb1"
+    "sha256": "f1fbdcd091d2dcca4cec4b985b5285394d13ce658700908f8454f86c149f0975"
   },
   {
     "encoding": "CP850",
@@ -122,14 +134,26 @@
   {
     "encoding": "CP850",
     "iconv": "CP850",
+    "language": "es",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "CP850/es/validation/river-trip.bin",
+    "bytes": 184,
+    "highBytes": 6,
+    "uniqueHighBytes": 3,
+    "sha256": "c2c98634ec2d0e1f255435d70638d0c94fa3687ff0883eaad749b351dc648eb1"
+  },
+  {
+    "encoding": "CP850",
+    "iconv": "CP850",
     "language": "fr",
     "split": "test",
-    "document": "river-trip",
-    "path": "CP850/fr/test/river-trip.bin",
-    "bytes": 228,
-    "highBytes": 6,
-    "uniqueHighBytes": 2,
-    "sha256": "3e4fcf3eff6a33f5eb6825eef7e7c68f4699779b50d7c2468c864dc806799d0a"
+    "document": "community-garden",
+    "path": "CP850/fr/test/community-garden.bin",
+    "bytes": 231,
+    "highBytes": 9,
+    "uniqueHighBytes": 1,
+    "sha256": "68a1a912a6f72f8c3e638ec139de914de8b50c2da87f7887d1ea9e59f84caabf"
   },
   {
     "encoding": "CP850",
@@ -180,16 +204,28 @@
     "sha256": "3f8706a95c0527e3cc25c62a8903f572787bd78f24914cdb6e2cb0ecdc4ddbb8"
   },
   {
+    "encoding": "CP850",
+    "iconv": "CP850",
+    "language": "fr",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "CP850/fr/validation/river-trip.bin",
+    "bytes": 228,
+    "highBytes": 6,
+    "uniqueHighBytes": 2,
+    "sha256": "3e4fcf3eff6a33f5eb6825eef7e7c68f4699779b50d7c2468c864dc806799d0a"
+  },
+  {
     "encoding": "CP852",
     "iconv": "CP852",
     "language": "pl",
     "split": "test",
-    "document": "river-trip",
-    "path": "CP852/pl/test/river-trip.bin",
-    "bytes": 161,
+    "document": "community-garden",
+    "path": "CP852/pl/test/community-garden.bin",
+    "bytes": 188,
     "highBytes": 9,
-    "uniqueHighBytes": 3,
-    "sha256": "9b69f0b191f2c7972b65482a00f80573699e1f4c1d4f68af6e68266eda2be67c"
+    "uniqueHighBytes": 5,
+    "sha256": "f7752fbe0954fe4b59c3aed348981e5431276369c63da6d19ef0657f923ece7d"
   },
   {
     "encoding": "CP852",
@@ -240,16 +276,28 @@
     "sha256": "ac5e51829ea26792320d98542ecc5aebb68c39a9c72e52d2bc5a9099405cafd2"
   },
   {
+    "encoding": "CP852",
+    "iconv": "CP852",
+    "language": "pl",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "CP852/pl/validation/river-trip.bin",
+    "bytes": 161,
+    "highBytes": 9,
+    "uniqueHighBytes": 3,
+    "sha256": "9b69f0b191f2c7972b65482a00f80573699e1f4c1d4f68af6e68266eda2be67c"
+  },
+  {
     "encoding": "CP949",
     "iconv": "CP949",
     "language": "ko",
     "split": "test",
-    "document": "river-trip",
-    "path": "CP949/ko/test/river-trip.bin",
-    "bytes": 154,
-    "highBytes": 126,
-    "uniqueHighBytes": 56,
-    "sha256": "f6399d3705fc3e6c2a6427516ce6c8b9585a0a1e035b53a9efb7ef0811dd6a00"
+    "document": "community-garden",
+    "path": "CP949/ko/test/community-garden.bin",
+    "bytes": 166,
+    "highBytes": 138,
+    "uniqueHighBytes": 49,
+    "sha256": "15d58dc224354498565689b014ef393a0c6d9bcf0d536235997785c0c864e336"
   },
   {
     "encoding": "CP949",
@@ -300,16 +348,28 @@
     "sha256": "35923ad2e148cb55685c1efefbc4c378e850a9ab03df88eff037399da7f9f933"
   },
   {
+    "encoding": "CP949",
+    "iconv": "CP949",
+    "language": "ko",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "CP949/ko/validation/river-trip.bin",
+    "bytes": 154,
+    "highBytes": 126,
+    "uniqueHighBytes": 56,
+    "sha256": "f6399d3705fc3e6c2a6427516ce6c8b9585a0a1e035b53a9efb7ef0811dd6a00"
+  },
+  {
     "encoding": "IBM855",
     "iconv": "CP855",
     "language": "ru",
     "split": "test",
-    "document": "river-trip",
-    "path": "IBM855/ru/test/river-trip.bin",
-    "bytes": 204,
-    "highBytes": 169,
+    "document": "community-garden",
+    "path": "IBM855/ru/test/community-garden.bin",
+    "bytes": 183,
+    "highBytes": 151,
     "uniqueHighBytes": 30,
-    "sha256": "db949dd513c6fb9563a4356cdd74561c3c60137432b3661d5b7dbc0d07293002"
+    "sha256": "cd507631c5ab11f5025455ea3179c5e52196d920b269d1de560e235fff6d79c1"
   },
   {
     "encoding": "IBM855",
@@ -362,14 +422,26 @@
   {
     "encoding": "IBM855",
     "iconv": "CP855",
+    "language": "ru",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "IBM855/ru/validation/river-trip.bin",
+    "bytes": 204,
+    "highBytes": 169,
+    "uniqueHighBytes": 30,
+    "sha256": "db949dd513c6fb9563a4356cdd74561c3c60137432b3661d5b7dbc0d07293002"
+  },
+  {
+    "encoding": "IBM855",
+    "iconv": "CP855",
     "language": "sr",
     "split": "test",
-    "document": "river-trip",
-    "path": "IBM855/sr/test/river-trip.bin",
-    "bytes": 168,
-    "highBytes": 133,
-    "uniqueHighBytes": 28,
-    "sha256": "f02f3e1681f84c541e8fc83c8ab631a49a1bd351a2d5734aec07b72ebcc93f8f"
+    "document": "community-garden",
+    "path": "IBM855/sr/test/community-garden.bin",
+    "bytes": 170,
+    "highBytes": 139,
+    "uniqueHighBytes": 26,
+    "sha256": "ca1228eab3777728969fb7739f53d8491784cec42b94668f753630ba8d443cbe"
   },
   {
     "encoding": "IBM855",
@@ -420,16 +492,28 @@
     "sha256": "b57fcb9ec0f132e6d5f0bb11744eeed1abe13f88714009fdc9ecbb6551527e85"
   },
   {
+    "encoding": "IBM855",
+    "iconv": "CP855",
+    "language": "sr",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "IBM855/sr/validation/river-trip.bin",
+    "bytes": 168,
+    "highBytes": 133,
+    "uniqueHighBytes": 28,
+    "sha256": "f02f3e1681f84c541e8fc83c8ab631a49a1bd351a2d5734aec07b72ebcc93f8f"
+  },
+  {
     "encoding": "IBM866",
     "iconv": "CP866",
     "language": "ru",
     "split": "test",
-    "document": "river-trip",
-    "path": "IBM866/ru/test/river-trip.bin",
-    "bytes": 204,
-    "highBytes": 169,
+    "document": "community-garden",
+    "path": "IBM866/ru/test/community-garden.bin",
+    "bytes": 183,
+    "highBytes": 151,
     "uniqueHighBytes": 30,
-    "sha256": "7f39f7fb36cbabea98997b9c390d71e0742ef2fad5c7deca432ee6444e164c49"
+    "sha256": "973cf8f40b1400bdf2d190bd0fea4f18fb4f2958b54e509939a44efb397f9f53"
   },
   {
     "encoding": "IBM866",
@@ -480,16 +564,28 @@
     "sha256": "f289e51b607034a1bdc153bfd574e06984948a09a9be17686dfe418f835e56a4"
   },
   {
+    "encoding": "IBM866",
+    "iconv": "CP866",
+    "language": "ru",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "IBM866/ru/validation/river-trip.bin",
+    "bytes": 204,
+    "highBytes": 169,
+    "uniqueHighBytes": 30,
+    "sha256": "7f39f7fb36cbabea98997b9c390d71e0742ef2fad5c7deca432ee6444e164c49"
+  },
+  {
     "encoding": "ISO-8859-10",
     "iconv": "ISO-8859-10",
     "language": "is",
     "split": "test",
-    "document": "river-trip",
-    "path": "ISO-8859-10/is/test/river-trip.bin",
-    "bytes": 168,
-    "highBytes": 17,
-    "uniqueHighBytes": 9,
-    "sha256": "ce28fe8d7fe2ee466f03495c48f00a6da6fa7d3df530c7052873c444e1dd6f59"
+    "document": "community-garden",
+    "path": "ISO-8859-10/is/test/community-garden.bin",
+    "bytes": 174,
+    "highBytes": 19,
+    "uniqueHighBytes": 6,
+    "sha256": "11bbdafb4917a3935f98940af20e169c4a7eef5642d4a159297b44cd8b565d78"
   },
   {
     "encoding": "ISO-8859-10",
@@ -540,16 +636,28 @@
     "sha256": "1bdd4e4aa76ecbd47f82533ec096fe3ee5c637debdefad8bc10251e8f3867af0"
   },
   {
+    "encoding": "ISO-8859-10",
+    "iconv": "ISO-8859-10",
+    "language": "is",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "ISO-8859-10/is/validation/river-trip.bin",
+    "bytes": 168,
+    "highBytes": 17,
+    "uniqueHighBytes": 9,
+    "sha256": "ce28fe8d7fe2ee466f03495c48f00a6da6fa7d3df530c7052873c444e1dd6f59"
+  },
+  {
     "encoding": "ISO-8859-13",
     "iconv": "ISO-8859-13",
     "language": "lt",
     "split": "test",
-    "document": "river-trip",
-    "path": "ISO-8859-13/lt/test/river-trip.bin",
-    "bytes": 165,
-    "highBytes": 16,
-    "uniqueHighBytes": 5,
-    "sha256": "71dc9bb4eeeb296c5ac3cc2eb200227e3100abff60cc14087a0a05a33ff0b4dd"
+    "document": "community-garden",
+    "path": "ISO-8859-13/lt/test/community-garden.bin",
+    "bytes": 177,
+    "highBytes": 17,
+    "uniqueHighBytes": 6,
+    "sha256": "80b70659af618020af9f2c1794142df619dbcd227562bedb75d66d470583f714"
   },
   {
     "encoding": "ISO-8859-13",
@@ -600,16 +708,28 @@
     "sha256": "7e8f7590df8128997dba53c2fd357760e6d11685e148612d124d0978f808f264"
   },
   {
+    "encoding": "ISO-8859-13",
+    "iconv": "ISO-8859-13",
+    "language": "lt",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "ISO-8859-13/lt/validation/river-trip.bin",
+    "bytes": 165,
+    "highBytes": 16,
+    "uniqueHighBytes": 5,
+    "sha256": "71dc9bb4eeeb296c5ac3cc2eb200227e3100abff60cc14087a0a05a33ff0b4dd"
+  },
+  {
     "encoding": "ISO-8859-14",
     "iconv": "ISO-8859-14",
     "language": "cy",
     "split": "test",
-    "document": "river-trip",
-    "path": "ISO-8859-14/cy/test/river-trip.bin",
-    "bytes": 161,
-    "highBytes": 2,
-    "uniqueHighBytes": 2,
-    "sha256": "318d863b3f7efa4a716e75ba4cd138fe9b9c337fb6f88eafe7ee1c671629e054"
+    "document": "community-garden",
+    "path": "ISO-8859-14/cy/test/community-garden.bin",
+    "bytes": 194,
+    "highBytes": 3,
+    "uniqueHighBytes": 3,
+    "sha256": "11475514e6d6789bb154d27be8a381507f5c136b1ec88219820a77d3f11a352a"
   },
   {
     "encoding": "ISO-8859-14",
@@ -660,16 +780,28 @@
     "sha256": "2fe7199c4f96f4c5941e8f6b95aa44ae6f8d85863552550993b3b019acdeee6f"
   },
   {
+    "encoding": "ISO-8859-14",
+    "iconv": "ISO-8859-14",
+    "language": "cy",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "ISO-8859-14/cy/validation/river-trip.bin",
+    "bytes": 161,
+    "highBytes": 2,
+    "uniqueHighBytes": 2,
+    "sha256": "318d863b3f7efa4a716e75ba4cd138fe9b9c337fb6f88eafe7ee1c671629e054"
+  },
+  {
     "encoding": "ISO-8859-15",
     "iconv": "ISO-8859-15",
     "language": "de",
     "split": "test",
-    "document": "river-trip",
-    "path": "ISO-8859-15/de/test/river-trip.bin",
-    "bytes": 192,
-    "highBytes": 3,
-    "uniqueHighBytes": 2,
-    "sha256": "3e0bec3503375f52460604a2e116bb52c4513254f2bc90ddfd7a8dbe0bb2d66d"
+    "document": "community-garden",
+    "path": "ISO-8859-15/de/test/community-garden.bin",
+    "bytes": 220,
+    "highBytes": 12,
+    "uniqueHighBytes": 3,
+    "sha256": "93771ce6b07c49e90e7930e9c08952affe7064fa95627b10dffa95c75e632ac8"
   },
   {
     "encoding": "ISO-8859-15",
@@ -722,14 +854,26 @@
   {
     "encoding": "ISO-8859-15",
     "iconv": "ISO-8859-15",
+    "language": "de",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "ISO-8859-15/de/validation/river-trip.bin",
+    "bytes": 192,
+    "highBytes": 3,
+    "uniqueHighBytes": 2,
+    "sha256": "3e0bec3503375f52460604a2e116bb52c4513254f2bc90ddfd7a8dbe0bb2d66d"
+  },
+  {
+    "encoding": "ISO-8859-15",
+    "iconv": "ISO-8859-15",
     "language": "es",
     "split": "test",
-    "document": "river-trip",
-    "path": "ISO-8859-15/es/test/river-trip.bin",
-    "bytes": 184,
+    "document": "community-garden",
+    "path": "ISO-8859-15/es/test/community-garden.bin",
+    "bytes": 203,
     "highBytes": 6,
     "uniqueHighBytes": 3,
-    "sha256": "bd673948b09654c6fc56b3c877db37b1257583d00d73b93521c20d89d9ed808b"
+    "sha256": "323efc9ab1e3d5da572b5ed4268cf3d1cbe7ac3feb83aceb983ac67a57e090cf"
   },
   {
     "encoding": "ISO-8859-15",
@@ -782,14 +926,26 @@
   {
     "encoding": "ISO-8859-15",
     "iconv": "ISO-8859-15",
+    "language": "es",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "ISO-8859-15/es/validation/river-trip.bin",
+    "bytes": 184,
+    "highBytes": 6,
+    "uniqueHighBytes": 3,
+    "sha256": "bd673948b09654c6fc56b3c877db37b1257583d00d73b93521c20d89d9ed808b"
+  },
+  {
+    "encoding": "ISO-8859-15",
+    "iconv": "ISO-8859-15",
     "language": "fr",
     "split": "test",
-    "document": "river-trip",
-    "path": "ISO-8859-15/fr/test/river-trip.bin",
-    "bytes": 228,
-    "highBytes": 6,
-    "uniqueHighBytes": 2,
-    "sha256": "17811916bf5ba155a8fa7f327fb635915e128dacca07dc6c9125ee89ba07b606"
+    "document": "community-garden",
+    "path": "ISO-8859-15/fr/test/community-garden.bin",
+    "bytes": 231,
+    "highBytes": 9,
+    "uniqueHighBytes": 1,
+    "sha256": "dd7571c675bccf0dbeaf92ea945a99093e726495a5145d9a2665a8e9cc429db8"
   },
   {
     "encoding": "ISO-8859-15",
@@ -840,16 +996,28 @@
     "sha256": "489b62ae5920a6d11bc053f0e5e0dccee89f79e38f768e39fe7567b0e84e8f76"
   },
   {
+    "encoding": "ISO-8859-15",
+    "iconv": "ISO-8859-15",
+    "language": "fr",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "ISO-8859-15/fr/validation/river-trip.bin",
+    "bytes": 228,
+    "highBytes": 6,
+    "uniqueHighBytes": 2,
+    "sha256": "17811916bf5ba155a8fa7f327fb635915e128dacca07dc6c9125ee89ba07b606"
+  },
+  {
     "encoding": "ISO-8859-16",
     "iconv": "ISO-8859-16",
     "language": "ro",
     "split": "test",
-    "document": "river-trip",
-    "path": "ISO-8859-16/ro/test/river-trip.bin",
-    "bytes": 170,
-    "highBytes": 10,
-    "uniqueHighBytes": 3,
-    "sha256": "a815d6b249d38b71948eac38e0de8ff5dc4b1be0e04b1c108d75a0d9bba37a99"
+    "document": "community-garden",
+    "path": "ISO-8859-16/ro/test/community-garden.bin",
+    "bytes": 206,
+    "highBytes": 13,
+    "uniqueHighBytes": 5,
+    "sha256": "e4d43eaeb3f3bce0f6df9d5686ab19d34d2a691464c0b3372e95e5c12fd577a8"
   },
   {
     "encoding": "ISO-8859-16",
@@ -900,16 +1068,28 @@
     "sha256": "46e9670deecb580c1738a31a3aab804b6d54ffd3dcfee66eb0adf988e60d7c5f"
   },
   {
+    "encoding": "ISO-8859-16",
+    "iconv": "ISO-8859-16",
+    "language": "ro",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "ISO-8859-16/ro/validation/river-trip.bin",
+    "bytes": 170,
+    "highBytes": 10,
+    "uniqueHighBytes": 3,
+    "sha256": "a815d6b249d38b71948eac38e0de8ff5dc4b1be0e04b1c108d75a0d9bba37a99"
+  },
+  {
     "encoding": "ISO-8859-3",
     "iconv": "ISO-8859-3",
     "language": "mt",
     "split": "test",
-    "document": "river-trip",
-    "path": "ISO-8859-3/mt/test/river-trip.bin",
-    "bytes": 176,
-    "highBytes": 9,
-    "uniqueHighBytes": 2,
-    "sha256": "9c73d965fbad70cf830b5a3db04e12c4f0b3bd50ead049f7d6703b5c19cf4eb1"
+    "document": "community-garden",
+    "path": "ISO-8859-3/mt/test/community-garden.bin",
+    "bytes": 186,
+    "highBytes": 13,
+    "uniqueHighBytes": 4,
+    "sha256": "d6874f4f630507a619f841cad55a2046be0ee930fb9d450e20bcf0e9525759d5"
   },
   {
     "encoding": "ISO-8859-3",
@@ -960,16 +1140,28 @@
     "sha256": "433e386a7ccaeaeef6e9fbd1daf1f586cc61788cd13973523c2d679026964420"
   },
   {
+    "encoding": "ISO-8859-3",
+    "iconv": "ISO-8859-3",
+    "language": "mt",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "ISO-8859-3/mt/validation/river-trip.bin",
+    "bytes": 176,
+    "highBytes": 9,
+    "uniqueHighBytes": 2,
+    "sha256": "9c73d965fbad70cf830b5a3db04e12c4f0b3bd50ead049f7d6703b5c19cf4eb1"
+  },
+  {
     "encoding": "ISO-8859-4",
     "iconv": "ISO-8859-4",
     "language": "lv",
     "split": "test",
-    "document": "river-trip",
-    "path": "ISO-8859-4/lv/test/river-trip.bin",
-    "bytes": 156,
-    "highBytes": 14,
-    "uniqueHighBytes": 4,
-    "sha256": "282b08484ad284a0a069c2d8113e09bc80de8163fee60568042c538b0541fc3f"
+    "document": "community-garden",
+    "path": "ISO-8859-4/lv/test/community-garden.bin",
+    "bytes": 174,
+    "highBytes": 17,
+    "uniqueHighBytes": 8,
+    "sha256": "c0382f3b40081b8a5d30ca7d26699a2f9e9eb2e453edac9beb97b4a4a9c3051b"
   },
   {
     "encoding": "ISO-8859-4",
@@ -1020,16 +1212,28 @@
     "sha256": "1429abf14fb2e4144c64dd59657aec2615da7795c92f4e6f5e5f5534ee4be9a0"
   },
   {
+    "encoding": "ISO-8859-4",
+    "iconv": "ISO-8859-4",
+    "language": "lv",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "ISO-8859-4/lv/validation/river-trip.bin",
+    "bytes": 156,
+    "highBytes": 14,
+    "uniqueHighBytes": 4,
+    "sha256": "282b08484ad284a0a069c2d8113e09bc80de8163fee60568042c538b0541fc3f"
+  },
+  {
     "encoding": "KOI8-U",
     "iconv": "KOI8-U",
     "language": "uk",
     "split": "test",
-    "document": "river-trip",
-    "path": "KOI8-U/uk/test/river-trip.bin",
-    "bytes": 195,
-    "highBytes": 160,
-    "uniqueHighBytes": 31,
-    "sha256": "1b015aa68443a92670b3e73e37fa96d70d1e2dea1a9ed736bebfcf077bde9dfe"
+    "document": "community-garden",
+    "path": "KOI8-U/uk/test/community-garden.bin",
+    "bytes": 181,
+    "highBytes": 152,
+    "uniqueHighBytes": 29,
+    "sha256": "25d71bdf3678270bf3a539771f8e429faaef3157c5649c0f2edc4ec06e0c80fa"
   },
   {
     "encoding": "KOI8-U",
@@ -1080,16 +1284,28 @@
     "sha256": "b4b92fa64c4b9252511ed0240a7e1cb565a0b1158f07b50fefb93fab1bd5f0f7"
   },
   {
+    "encoding": "KOI8-U",
+    "iconv": "KOI8-U",
+    "language": "uk",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "KOI8-U/uk/validation/river-trip.bin",
+    "bytes": 195,
+    "highBytes": 160,
+    "uniqueHighBytes": 31,
+    "sha256": "1b015aa68443a92670b3e73e37fa96d70d1e2dea1a9ed736bebfcf077bde9dfe"
+  },
+  {
     "encoding": "macintosh",
     "iconv": "MACINTOSH",
     "language": "de",
     "split": "test",
-    "document": "river-trip",
-    "path": "macintosh/de/test/river-trip.bin",
-    "bytes": 192,
-    "highBytes": 3,
-    "uniqueHighBytes": 2,
-    "sha256": "b2edf27b09f5aeaf742baed4ebc17e0a890da6a9f0aa52a40adbcb16104e5538"
+    "document": "community-garden",
+    "path": "macintosh/de/test/community-garden.bin",
+    "bytes": 220,
+    "highBytes": 12,
+    "uniqueHighBytes": 3,
+    "sha256": "9a35ac96816b79920d3076818a106719d95169d017b89832ff735652fdbc45d5"
   },
   {
     "encoding": "macintosh",
@@ -1142,14 +1358,26 @@
   {
     "encoding": "macintosh",
     "iconv": "MACINTOSH",
+    "language": "de",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "macintosh/de/validation/river-trip.bin",
+    "bytes": 192,
+    "highBytes": 3,
+    "uniqueHighBytes": 2,
+    "sha256": "b2edf27b09f5aeaf742baed4ebc17e0a890da6a9f0aa52a40adbcb16104e5538"
+  },
+  {
+    "encoding": "macintosh",
+    "iconv": "MACINTOSH",
     "language": "es",
     "split": "test",
-    "document": "river-trip",
-    "path": "macintosh/es/test/river-trip.bin",
-    "bytes": 184,
+    "document": "community-garden",
+    "path": "macintosh/es/test/community-garden.bin",
+    "bytes": 203,
     "highBytes": 6,
     "uniqueHighBytes": 3,
-    "sha256": "d68dda4671b8158cbff67ab7b476d2b819ac45ad00719d4dbe48f22ba1862baa"
+    "sha256": "b675b0218b3db70d7c6f6f43cd7eb00fe7b45713f6e23e3fbac03a176e95935a"
   },
   {
     "encoding": "macintosh",
@@ -1202,14 +1430,26 @@
   {
     "encoding": "macintosh",
     "iconv": "MACINTOSH",
+    "language": "es",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "macintosh/es/validation/river-trip.bin",
+    "bytes": 184,
+    "highBytes": 6,
+    "uniqueHighBytes": 3,
+    "sha256": "d68dda4671b8158cbff67ab7b476d2b819ac45ad00719d4dbe48f22ba1862baa"
+  },
+  {
+    "encoding": "macintosh",
+    "iconv": "MACINTOSH",
     "language": "fr",
     "split": "test",
-    "document": "river-trip",
-    "path": "macintosh/fr/test/river-trip.bin",
-    "bytes": 228,
-    "highBytes": 6,
-    "uniqueHighBytes": 2,
-    "sha256": "f1de58ca10bb5f70ac7da15bf7b8f21d388143fa5cb161d4a76de84cc15939f8"
+    "document": "community-garden",
+    "path": "macintosh/fr/test/community-garden.bin",
+    "bytes": 231,
+    "highBytes": 9,
+    "uniqueHighBytes": 1,
+    "sha256": "50363a67b8df69b6fbdb3b7a5a25c22c40cdac6ccca71d3bfafeff490e122c58"
   },
   {
     "encoding": "macintosh",
@@ -1260,16 +1500,28 @@
     "sha256": "ee23ebed42809949b51365120200f135cb051471430331b7c6ccf8282841075a"
   },
   {
+    "encoding": "macintosh",
+    "iconv": "MACINTOSH",
+    "language": "fr",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "macintosh/fr/validation/river-trip.bin",
+    "bytes": 228,
+    "highBytes": 6,
+    "uniqueHighBytes": 2,
+    "sha256": "f1de58ca10bb5f70ac7da15bf7b8f21d388143fa5cb161d4a76de84cc15939f8"
+  },
+  {
     "encoding": "x-mac-cyrillic",
     "iconv": "MAC-CYRILLIC",
     "language": "ru",
     "split": "test",
-    "document": "river-trip",
-    "path": "x-mac-cyrillic/ru/test/river-trip.bin",
-    "bytes": 204,
-    "highBytes": 169,
+    "document": "community-garden",
+    "path": "x-mac-cyrillic/ru/test/community-garden.bin",
+    "bytes": 183,
+    "highBytes": 151,
     "uniqueHighBytes": 30,
-    "sha256": "c285503baecce051fcc056317a79ad30557f69eaa6fbab171d184a2f0e83a626"
+    "sha256": "5ca4a80c32cff5a48963c243ab099927a0099b60246aecc30f37f89a4a384266"
   },
   {
     "encoding": "x-mac-cyrillic",
@@ -1322,14 +1574,26 @@
   {
     "encoding": "x-mac-cyrillic",
     "iconv": "MAC-CYRILLIC",
+    "language": "ru",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "x-mac-cyrillic/ru/validation/river-trip.bin",
+    "bytes": 204,
+    "highBytes": 169,
+    "uniqueHighBytes": 30,
+    "sha256": "c285503baecce051fcc056317a79ad30557f69eaa6fbab171d184a2f0e83a626"
+  },
+  {
+    "encoding": "x-mac-cyrillic",
+    "iconv": "MAC-CYRILLIC",
     "language": "uk",
     "split": "test",
-    "document": "river-trip",
-    "path": "x-mac-cyrillic/uk/test/river-trip.bin",
-    "bytes": 195,
-    "highBytes": 160,
-    "uniqueHighBytes": 31,
-    "sha256": "b638cc896cb7397c59f781ce066e5601954e49e9c797dd10806a8d6188d31df2"
+    "document": "community-garden",
+    "path": "x-mac-cyrillic/uk/test/community-garden.bin",
+    "bytes": 181,
+    "highBytes": 152,
+    "uniqueHighBytes": 29,
+    "sha256": "83079b4a22effdaec147648b5db62a2fb19e1b49e39a9bed369e7f6dd9d36563"
   },
   {
     "encoding": "x-mac-cyrillic",
@@ -1378,5 +1642,17 @@
     "highBytes": 161,
     "uniqueHighBytes": 30,
     "sha256": "8090323e570069dae5b5e706045ee4a8e87e58059f54a33aeb11977d6a1b0cc3"
+  },
+  {
+    "encoding": "x-mac-cyrillic",
+    "iconv": "MAC-CYRILLIC",
+    "language": "uk",
+    "split": "validation",
+    "document": "river-trip",
+    "path": "x-mac-cyrillic/uk/validation/river-trip.bin",
+    "bytes": 195,
+    "highBytes": 160,
+    "uniqueHighBytes": 31,
+    "sha256": "b638cc896cb7397c59f781ce066e5601954e49e9c797dd10806a8d6188d31df2"
   }
 ]

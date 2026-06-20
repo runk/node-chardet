@@ -20,8 +20,10 @@ npm run models:verify
 The build script generates the corpus and performs an exact iconv round trip for
 every document. The check script independently rebuilds into a temporary
 directory and byte-compares the result with `generated/`. Four documents per
-language are assigned to training and one is held out for testing. Statistics are
-calculated from training documents only, preventing direct test leakage.
+language are assigned to training, one to validation, and one independent
+document to testing. Statistics are calculated from training documents only.
+`test-sources.json` is kept separate so model tuning cannot silently overwrite
+the final evaluation material.
 
 Each generated encoding directory contains binary documents arranged by
 language and split. `generated/index.json` records hashes and byte coverage;
@@ -30,9 +32,11 @@ each encoding/language model, ordered by frequency and packed as 24-bit integers
 
 The model compiler derives each single-byte encoding's case-folding byte map
 through iconv, applies the detector's whitespace normalization, and emits 64
-sorted detector-ready trigrams into `src/encoding/models/generated.ts`. Models
-are trained only on the training split. `models:evaluate` ranks every generated
-recogniser against all held-out single-byte documents, while
-`models:verify` confirms that the generated model and evaluation report are
-current. CP949 is excluded because its multibyte recogniser requires character
-frequency data rather than byte trigrams.
+sorted detector-ready trigrams into `src/encoding/models/generated.ts`. It also
+learns Laplace-smoothed high-byte distributions from the training split. The
+evaluator uses byte likelihood to rank candidates whose trigram hit rates are
+statistically competitive at a 95% margin. `models:evaluate` reports every
+held-out test document, while `models:verify` checks reproducibility and fails if
+any encoding or language result is incorrect. CP949 is excluded because its
+multibyte recogniser requires character frequency data rather than byte
+trigrams.
