@@ -108,6 +108,8 @@ Note on [TextEncoder](https://developer.mozilla.org/en-US/docs/Web/API/TextEncod
 - windows-1254
 - windows-1255
 - windows-1256
+- windows-1257
+- windows-1258
 - windows-874 (TIS-620 / ISO-8859-11)
 - KOI8-R
 
@@ -123,8 +125,6 @@ Yes. Type definitions are included.
 - https://github.com/TypesettingTools/uchardet
 
 ### TODO
-- [ ] windows-1257 for Baltic languages
-- [ ] windows-1258 for Vietnamese
 - [ ] KOI8-U for Ukrainian
 - [ ] IBM866 for DOS Cyrillic
 - [ ] macintosh and x-mac-cyrillic

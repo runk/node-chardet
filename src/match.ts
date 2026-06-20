@@ -36,6 +36,8 @@ export type EncodingName =
   | 'windows-1254'
   | 'windows-1255'
   | 'windows-1256'
+  | 'windows-1257'
+  | 'windows-1258'
   | 'windows-874'
 
 export interface Match {
