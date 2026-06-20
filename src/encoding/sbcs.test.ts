@@ -7,7 +7,7 @@ describe('Singlebyte Character Sets', () => {
 
   const detect = (filename: string) => {
     return chardet.detectFileSync(path.join(base, filename));
-  }
+  };
 
   it('should return ISO-8859-1 (English)', () => {
     expect(detect('iso88591_en')).toBe('ISO-8859-1');
