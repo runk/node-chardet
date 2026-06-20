@@ -1,0 +1,1948 @@
+{
+  "summary": {
+    "tests": 22,
+    "encodingCorrect": 20,
+    "languageCorrect": 19,
+    "topScoreTies": 3
+  },
+  "confusion": {
+    "CP850": {
+      "macintosh": 1,
+      "CP850": 2
+    },
+    "CP852": {
+      "CP852": 1
+    },
+    "IBM855": {
+      "IBM855": 2
+    },
+    "IBM866": {
+      "IBM866": 1
+    },
+    "ISO-8859-10": {
+      "ISO-8859-10": 1
+    },
+    "ISO-8859-13": {
+      "ISO-8859-13": 1
+    },
+    "ISO-8859-14": {
+      "ISO-8859-14": 1
+    },
+    "ISO-8859-15": {
+      "macintosh": 1,
+      "ISO-8859-15": 2
+    },
+    "ISO-8859-16": {
+      "ISO-8859-16": 1
+    },
+    "ISO-8859-3": {
+      "ISO-8859-3": 1
+    },
+    "ISO-8859-4": {
+      "ISO-8859-4": 1
+    },
+    "KOI8-U": {
+      "KOI8-U": 1
+    },
+    "macintosh": {
+      "macintosh": 3
+    },
+    "x-mac-cyrillic": {
+      "x-mac-cyrillic": 2
+    }
+  },
+  "results": [
+    {
+      "expected": {
+        "encoding": "CP850",
+        "language": "de"
+      },
+      "predicted": {
+        "encoding": "macintosh",
+        "confidence": 67,
+        "language": "de"
+      },
+      "encodingCorrect": false,
+      "languageCorrect": false,
+      "tiedAtTop": 3,
+      "candidates": [
+        {
+          "encoding": "macintosh",
+          "confidence": 67,
+          "language": "de"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 67,
+          "language": "de"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 67,
+          "language": "de"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 30,
+          "language": "cy"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 19,
+          "language": "ro"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 14,
+          "language": "lv"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 9,
+          "language": "pl"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 6,
+          "language": "lt"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 4,
+          "language": "is"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 1,
+          "language": "mt"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "CP850",
+        "language": "es"
+      },
+      "predicted": {
+        "encoding": "CP850",
+        "confidence": 50,
+        "language": "es"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "CP850",
+          "confidence": 50,
+          "language": "es"
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 48,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 48,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 23,
+          "language": "cy"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 23,
+          "language": "ro"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 18,
+          "language": "lv"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 11,
+          "language": "lt"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 6,
+          "language": "pl"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 3,
+          "language": "mt"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 1,
+          "language": "is"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "CP850",
+        "language": "fr"
+      },
+      "predicted": {
+        "encoding": "CP850",
+        "confidence": 70,
+        "language": "fr"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "CP850",
+          "confidence": 70,
+          "language": "fr"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 69,
+          "language": "fr"
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 67,
+          "language": "fr"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 25,
+          "language": "ro"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 20,
+          "language": "lv"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 15,
+          "language": "lt"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 6,
+          "language": "mt"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 6,
+          "language": "cy"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 5,
+          "language": "is"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 5,
+          "language": "pl"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "CP852",
+        "language": "pl"
+      },
+      "predicted": {
+        "encoding": "CP852",
+        "confidence": 26,
+        "language": "pl"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "CP852",
+          "confidence": 26,
+          "language": "pl"
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 12,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 12,
+          "language": "es"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 11,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 10,
+          "language": "ro"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 5,
+          "language": "cy"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 4,
+          "language": "lt"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 3,
+          "language": "lv"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 3,
+          "language": "is"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 2,
+          "language": "mt"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "IBM855",
+        "language": "ru"
+      },
+      "predicted": {
+        "encoding": "IBM855",
+        "confidence": 37,
+        "language": "ru"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "IBM855",
+          "confidence": 37,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 19,
+          "language": "ru"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 8,
+          "language": "uk"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 3,
+          "language": "uk"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 1,
+          "language": "is"
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 0,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 0,
+          "language": "mt"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 0,
+          "language": "lv"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 0,
+          "language": "lt"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 0,
+          "language": "cy"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 0,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 0,
+          "language": "ro"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 0,
+          "language": "es"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 0,
+          "language": "pl"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "IBM855",
+        "language": "sr"
+      },
+      "predicted": {
+        "encoding": "IBM855",
+        "confidence": 38,
+        "language": "ru"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": false,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "IBM855",
+          "confidence": 38,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 25,
+          "language": "ru"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 16,
+          "language": "uk"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 4,
+          "language": "is"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 2,
+          "language": "ru"
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 0,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 0,
+          "language": "mt"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 0,
+          "language": "lv"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 0,
+          "language": "lt"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 0,
+          "language": "cy"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 0,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 0,
+          "language": "ro"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 0,
+          "language": "es"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 0,
+          "language": "pl"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "IBM866",
+        "language": "ru"
+      },
+      "predicted": {
+        "encoding": "IBM866",
+        "confidence": 36,
+        "language": "ru"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "IBM866",
+          "confidence": 36,
+          "language": "ru"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 22,
+          "language": "ru"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 12,
+          "language": "uk"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 3,
+          "language": "sr"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 3,
+          "language": "cy"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 1,
+          "language": "ro"
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 0,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 0,
+          "language": "mt"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 0,
+          "language": "lv"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 0,
+          "language": "is"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 0,
+          "language": "lt"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 0,
+          "language": "es"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 0,
+          "language": "es"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 0,
+          "language": "pl"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "ISO-8859-10",
+        "language": "is"
+      },
+      "predicted": {
+        "encoding": "ISO-8859-10",
+        "confidence": 45,
+        "language": "is"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 45,
+          "language": "is"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 10,
+          "language": "es"
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 9,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 9,
+          "language": "lt"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 9,
+          "language": "cy"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 9,
+          "language": "es"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 7,
+          "language": "uk"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 7,
+          "language": "lv"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 3,
+          "language": "mt"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 3,
+          "language": "pl"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 1,
+          "language": "ro"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "ISO-8859-13",
+        "language": "lt"
+      },
+      "predicted": {
+        "encoding": "ISO-8859-13",
+        "confidence": 27,
+        "language": "lt"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 27,
+          "language": "lt"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 19,
+          "language": "pl"
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 15,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 14,
+          "language": "ro"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 13,
+          "language": "es"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 13,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 9,
+          "language": "mt"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 9,
+          "language": "lv"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 3,
+          "language": "cy"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 1,
+          "language": "is"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "ISO-8859-14",
+        "language": "cy"
+      },
+      "predicted": {
+        "encoding": "ISO-8859-14",
+        "confidence": 38,
+        "language": "cy"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 38,
+          "language": "cy"
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 17,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 17,
+          "language": "es"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 17,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 11,
+          "language": "is"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 11,
+          "language": "lt"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 9,
+          "language": "lv"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 7,
+          "language": "ro"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 3,
+          "language": "mt"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 3,
+          "language": "pl"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 1,
+          "language": "ru"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "ISO-8859-15",
+        "language": "de"
+      },
+      "predicted": {
+        "encoding": "macintosh",
+        "confidence": 67,
+        "language": "de"
+      },
+      "encodingCorrect": false,
+      "languageCorrect": false,
+      "tiedAtTop": 3,
+      "candidates": [
+        {
+          "encoding": "macintosh",
+          "confidence": 67,
+          "language": "de"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 67,
+          "language": "de"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 67,
+          "language": "de"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 30,
+          "language": "cy"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 17,
+          "language": "ro"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 12,
+          "language": "lv"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 9,
+          "language": "pl"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 4,
+          "language": "is"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 4,
+          "language": "lt"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 1,
+          "language": "mt"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "ISO-8859-15",
+        "language": "es"
+      },
+      "predicted": {
+        "encoding": "ISO-8859-15",
+        "confidence": 50,
+        "language": "es"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 50,
+          "language": "es"
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 48,
+          "language": "es"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 48,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 23,
+          "language": "ro"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 21,
+          "language": "cy"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 16,
+          "language": "lv"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 11,
+          "language": "lt"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 6,
+          "language": "pl"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 3,
+          "language": "mt"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 1,
+          "language": "is"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "ISO-8859-15",
+        "language": "fr"
+      },
+      "predicted": {
+        "encoding": "ISO-8859-15",
+        "confidence": 70,
+        "language": "fr"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 70,
+          "language": "fr"
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 68,
+          "language": "fr"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 67,
+          "language": "fr"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 22,
+          "language": "ro"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 17,
+          "language": "lv"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 9,
+          "language": "lt"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 6,
+          "language": "mt"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 6,
+          "language": "cy"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 5,
+          "language": "pl"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 2,
+          "language": "is"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "ISO-8859-16",
+        "language": "ro"
+      },
+      "predicted": {
+        "encoding": "ISO-8859-16",
+        "confidence": 38,
+        "language": "ro"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 38,
+          "language": "ro"
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 24,
+          "language": "fr"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 23,
+          "language": "fr"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 23,
+          "language": "fr"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 16,
+          "language": "lv"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 12,
+          "language": "lt"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 12,
+          "language": "cy"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 11,
+          "language": "mt"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 5,
+          "language": "pl"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 1,
+          "language": "is"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "ISO-8859-3",
+        "language": "mt"
+      },
+      "predicted": {
+        "encoding": "ISO-8859-3",
+        "confidence": 37,
+        "language": "mt"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 37,
+          "language": "mt"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 17,
+          "language": "is"
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 14,
+          "language": "fr"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 14,
+          "language": "fr"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 14,
+          "language": "fr"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 8,
+          "language": "cy"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 7,
+          "language": "lv"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 7,
+          "language": "ro"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 5,
+          "language": "pl"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 1,
+          "language": "lt"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "ISO-8859-4",
+        "language": "lv"
+      },
+      "predicted": {
+        "encoding": "ISO-8859-4",
+        "confidence": 33,
+        "language": "lv"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 33,
+          "language": "lv"
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 14,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 13,
+          "language": "es"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 13,
+          "language": "es"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 7,
+          "language": "pl"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 5,
+          "language": "is"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 5,
+          "language": "lt"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 5,
+          "language": "cy"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 3,
+          "language": "mt"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 1,
+          "language": "ro"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "KOI8-U",
+        "language": "uk"
+      },
+      "predicted": {
+        "encoding": "KOI8-U",
+        "confidence": 20,
+        "language": "uk"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "KOI8-U",
+          "confidence": 20,
+          "language": "uk"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 2,
+          "language": "sr"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 2,
+          "language": "ru"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 1,
+          "language": "lt"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru"
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 0,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 0,
+          "language": "mt"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 0,
+          "language": "lv"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 0,
+          "language": "is"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 0,
+          "language": "cy"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 0,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 0,
+          "language": "ro"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 0,
+          "language": "es"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 0,
+          "language": "pl"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "macintosh",
+        "language": "de"
+      },
+      "predicted": {
+        "encoding": "macintosh",
+        "confidence": 67,
+        "language": "de"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 3,
+      "candidates": [
+        {
+          "encoding": "macintosh",
+          "confidence": 67,
+          "language": "de"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 67,
+          "language": "de"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 67,
+          "language": "de"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 30,
+          "language": "cy"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 19,
+          "language": "ro"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 14,
+          "language": "lv"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 9,
+          "language": "pl"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 6,
+          "language": "lt"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 4,
+          "language": "is"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 1,
+          "language": "mt"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "macintosh",
+        "language": "es"
+      },
+      "predicted": {
+        "encoding": "macintosh",
+        "confidence": 50,
+        "language": "es"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "macintosh",
+          "confidence": 50,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 48,
+          "language": "es"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 48,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 23,
+          "language": "cy"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 23,
+          "language": "ro"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 18,
+          "language": "lv"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 11,
+          "language": "lt"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 6,
+          "language": "pl"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 3,
+          "language": "mt"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 1,
+          "language": "is"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "macintosh",
+        "language": "fr"
+      },
+      "predicted": {
+        "encoding": "macintosh",
+        "confidence": 70,
+        "language": "fr"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "macintosh",
+          "confidence": 70,
+          "language": "fr"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 69,
+          "language": "fr"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 67,
+          "language": "fr"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 25,
+          "language": "ro"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 20,
+          "language": "lv"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 15,
+          "language": "lt"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 6,
+          "language": "mt"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 6,
+          "language": "cy"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 5,
+          "language": "is"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 5,
+          "language": "pl"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr"
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "x-mac-cyrillic",
+        "language": "ru"
+      },
+      "predicted": {
+        "encoding": "x-mac-cyrillic",
+        "confidence": 36,
+        "language": "ru"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 36,
+          "language": "ru"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 6,
+          "language": "uk"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 4,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 1,
+          "language": "ru"
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 0,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 0,
+          "language": "mt"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 0,
+          "language": "lv"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 0,
+          "language": "is"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 0,
+          "language": "lt"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 0,
+          "language": "cy"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 0,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 0,
+          "language": "ro"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 0,
+          "language": "es"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 0,
+          "language": "pl"
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "x-mac-cyrillic",
+        "language": "uk"
+      },
+      "predicted": {
+        "encoding": "x-mac-cyrillic",
+        "confidence": 20,
+        "language": "uk"
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 20,
+          "language": "uk"
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 3,
+          "language": "uk"
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 3,
+          "language": "ru"
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru"
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 0,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 0,
+          "language": "mt"
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 0,
+          "language": "lv"
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 0,
+          "language": "is"
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 0,
+          "language": "lt"
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 0,
+          "language": "cy"
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 0,
+          "language": "es"
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 0,
+          "language": "ro"
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 0,
+          "language": "es"
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 0,
+          "language": "pl"
+        }
+      ]
+    }
+  ]
+}

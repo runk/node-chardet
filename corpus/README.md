@@ -12,6 +12,9 @@ Build and verify the corpus with:
 ```sh
 npm run corpus:build
 npm run corpus:verify
+npm run models:build
+npm run models:evaluate
+npm run models:verify
 ```
 
 The build script generates the corpus and performs an exact iconv round trip for
@@ -24,3 +27,12 @@ Each generated encoding directory contains binary documents arranged by
 language and split. `generated/index.json` records hashes and byte coverage;
 `generated/ngrams.mjs` contains the 128 most frequent raw byte trigrams for
 each encoding/language model, ordered by frequency and packed as 24-bit integers.
+
+The model compiler derives each single-byte encoding's case-folding byte map
+through iconv, applies the detector's whitespace normalization, and emits 64
+sorted detector-ready trigrams into `src/encoding/models/generated.ts`. Models
+are trained only on the training split. `models:evaluate` ranks every generated
+recogniser against all held-out single-byte documents, while
+`models:verify` confirms that the generated model and evaluation report are
+current. CP949 is excluded because its multibyte recogniser requires character
+frequency data rather than byte trigrams.
