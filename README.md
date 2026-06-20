@@ -108,6 +108,7 @@ Note on [TextEncoder](https://developer.mozilla.org/en-US/docs/Web/API/TextEncod
 - windows-1254
 - windows-1255
 - windows-1256
+- windows-874 (TIS-620 / ISO-8859-11)
 - KOI8-R
 
 Currently only these encodings are supported.
@@ -118,4 +119,17 @@ Yes. Type definitions are included.
 
 ### References
 
-- ICU project http://site.icu-project.org/
+- http://site.icu-project.org/
+- https://github.com/TypesettingTools/uchardet
+
+### TODO
+- [ ] windows-1257 for Baltic languages
+- [ ] windows-1258 for Vietnamese
+- [ ] KOI8-U for Ukrainian
+- [ ] IBM866 for DOS Cyrillic
+- [ ] macintosh and x-mac-cyrillic
+- [ ] CP949 / UHC support within the Korean recognizer
+- [ ] ISO-8859-3, ISO-8859-4
+- [ ] ISO-8859-10, ISO-8859-13
+- [ ] ISO-8859-14, ISO-8859-15, ISO-8859-16
+- [ ] DOS CP850, CP852, CP855

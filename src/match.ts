@@ -36,6 +36,7 @@ export type EncodingName =
   | 'windows-1254'
   | 'windows-1255'
   | 'windows-1256'
+  | 'windows-874'
 
 export interface Match {
   confidence: number;

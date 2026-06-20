@@ -16,7 +16,8 @@
     "strict": true,
     "target": "ES2019",
     "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
+    "types": ["node"]
   },
-  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts", "__mocks__", "lib"]
+  "exclude": ["node_modules", "__mocks__", "lib"]
 }

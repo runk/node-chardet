@@ -79,6 +79,8 @@
     "windows-1254",
     "windows-1255",
     "windows-1256",
+    "windows-874",
+    "TIS-620",
     "KOI8-R"
   ],
   "author": "Dmitry Shirokov <deadrunk@gmail.com>",

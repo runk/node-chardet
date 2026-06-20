@@ -41,6 +41,7 @@ const recognisers: Recogniser[] = [
   new sbcs.ISO_8859_9(),
   new sbcs.windows_1251(),
   new sbcs.windows_1256(),
+  new sbcs.windows_874(),
   new sbcs.KOI8_R(),
   new Ascii(),
 ];
