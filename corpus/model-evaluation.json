@@ -1,14 +1,13 @@
 {
   "summary": {
     "tests": 22,
-    "encodingCorrect": 20,
-    "languageCorrect": 19,
-    "topScoreTies": 3
+    "encodingCorrect": 22,
+    "languageCorrect": 22,
+    "topScoreTies": 0
   },
   "confusion": {
     "CP850": {
-      "macintosh": 1,
-      "CP850": 2
+      "CP850": 3
     },
     "CP852": {
       "CP852": 1
@@ -29,8 +28,7 @@
       "ISO-8859-14": 1
     },
     "ISO-8859-15": {
-      "macintosh": 1,
-      "ISO-8859-15": 2
+      "ISO-8859-15": 3
     },
     "ISO-8859-16": {
       "ISO-8859-16": 1
@@ -58,95 +56,13 @@
         "language": "de"
       },
       "predicted": {
-        "encoding": "macintosh",
-        "confidence": 67,
-        "language": "de"
-      },
-      "encodingCorrect": false,
-      "languageCorrect": false,
-      "tiedAtTop": 3,
-      "candidates": [
-        {
-          "encoding": "macintosh",
-          "confidence": 67,
-          "language": "de"
-        },
-        {
-          "encoding": "ISO-8859-15",
-          "confidence": 67,
-          "language": "de"
-        },
-        {
-          "encoding": "CP850",
-          "confidence": 67,
-          "language": "de"
-        },
-        {
-          "encoding": "ISO-8859-14",
-          "confidence": 30,
-          "language": "cy"
-        },
-        {
-          "encoding": "ISO-8859-16",
-          "confidence": 19,
-          "language": "ro"
-        },
-        {
-          "encoding": "ISO-8859-4",
-          "confidence": 14,
-          "language": "lv"
-        },
-        {
-          "encoding": "CP852",
-          "confidence": 9,
-          "language": "pl"
-        },
-        {
-          "encoding": "ISO-8859-13",
-          "confidence": 6,
-          "language": "lt"
-        },
-        {
-          "encoding": "ISO-8859-10",
-          "confidence": 4,
-          "language": "is"
-        },
-        {
-          "encoding": "ISO-8859-3",
-          "confidence": 1,
-          "language": "mt"
-        },
-        {
-          "encoding": "KOI8-U",
-          "confidence": 0,
-          "language": "uk"
-        },
-        {
-          "encoding": "IBM866",
-          "confidence": 0,
-          "language": "ru"
-        },
-        {
-          "encoding": "IBM855",
-          "confidence": 0,
-          "language": "sr"
-        },
-        {
-          "encoding": "x-mac-cyrillic",
-          "confidence": 0,
-          "language": "uk"
-        }
-      ]
-    },
-    {
-      "expected": {
         "encoding": "CP850",
-        "language": "es"
-      },
-      "predicted": {
-        "encoding": "CP850",
-        "confidence": 50,
-        "language": "es"
+        "confidence": 73,
+        "language": "de",
+        "byteLogLikelihood": -3.1697120775185543,
+        "hits": 53,
+        "total": 216,
+        "hitRate": 0.24537037037037038
       },
       "encodingCorrect": true,
       "languageCorrect": true,
@@ -154,159 +70,421 @@
       "candidates": [
         {
           "encoding": "CP850",
-          "confidence": 50,
-          "language": "es"
-        },
-        {
-          "encoding": "macintosh",
-          "confidence": 48,
-          "language": "es"
+          "confidence": 73,
+          "language": "de",
+          "byteLogLikelihood": -3.1697120775185543,
+          "hits": 53,
+          "total": 216,
+          "hitRate": 0.24537037037037038
         },
         {
           "encoding": "ISO-8859-15",
-          "confidence": 48,
-          "language": "es"
+          "confidence": 72,
+          "language": "es",
+          "byteLogLikelihood": -5.00394630594546,
+          "hits": 52,
+          "total": 215,
+          "hitRate": 0.24186046511627907
         },
         {
-          "encoding": "ISO-8859-14",
-          "confidence": 23,
-          "language": "cy"
-        },
-        {
-          "encoding": "ISO-8859-16",
-          "confidence": 23,
-          "language": "ro"
-        },
-        {
-          "encoding": "ISO-8859-4",
-          "confidence": 18,
-          "language": "lv"
-        },
-        {
-          "encoding": "ISO-8859-13",
-          "confidence": 11,
-          "language": "lt"
-        },
-        {
-          "encoding": "CP852",
-          "confidence": 6,
-          "language": "pl"
-        },
-        {
-          "encoding": "ISO-8859-3",
-          "confidence": 3,
-          "language": "mt"
-        },
-        {
-          "encoding": "ISO-8859-10",
-          "confidence": 1,
-          "language": "is"
-        },
-        {
-          "encoding": "KOI8-U",
-          "confidence": 0,
-          "language": "uk"
-        },
-        {
-          "encoding": "IBM866",
-          "confidence": 0,
-          "language": "ru"
-        },
-        {
-          "encoding": "IBM855",
-          "confidence": 0,
-          "language": "sr"
-        },
-        {
-          "encoding": "x-mac-cyrillic",
-          "confidence": 0,
-          "language": "uk"
-        }
-      ]
-    },
-    {
-      "expected": {
-        "encoding": "CP850",
-        "language": "fr"
-      },
-      "predicted": {
-        "encoding": "CP850",
-        "confidence": 70,
-        "language": "fr"
-      },
-      "encodingCorrect": true,
-      "languageCorrect": true,
-      "tiedAtTop": 1,
-      "candidates": [
-        {
-          "encoding": "CP850",
+          "encoding": "macintosh",
           "confidence": 70,
-          "language": "fr"
-        },
-        {
-          "encoding": "ISO-8859-15",
-          "confidence": 69,
-          "language": "fr"
-        },
-        {
-          "encoding": "macintosh",
-          "confidence": 67,
-          "language": "fr"
-        },
-        {
-          "encoding": "ISO-8859-16",
-          "confidence": 25,
-          "language": "ro"
-        },
-        {
-          "encoding": "ISO-8859-4",
-          "confidence": 20,
-          "language": "lv"
-        },
-        {
-          "encoding": "ISO-8859-13",
-          "confidence": 15,
-          "language": "lt"
-        },
-        {
-          "encoding": "ISO-8859-3",
-          "confidence": 6,
-          "language": "mt"
+          "language": "es",
+          "byteLogLikelihood": -5.00394630594546,
+          "hits": 51,
+          "total": 216,
+          "hitRate": 0.2361111111111111
         },
         {
           "encoding": "ISO-8859-14",
-          "confidence": 6,
-          "language": "cy"
+          "confidence": 22,
+          "language": "cy",
+          "byteLogLikelihood": -4.912654885736052,
+          "hits": 16,
+          "total": 215,
+          "hitRate": 0.07441860465116279
         },
         {
-          "encoding": "ISO-8859-10",
+          "encoding": "ISO-8859-16",
+          "confidence": 13,
+          "language": "ro",
+          "byteLogLikelihood": -5.176149732573828,
+          "hits": 10,
+          "total": 215,
+          "hitRate": 0.046511627906976744
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 11,
+          "language": "lv",
+          "byteLogLikelihood": -5.192956850890211,
+          "hits": 8,
+          "total": 215,
+          "hitRate": 0.037209302325581395
+        },
+        {
+          "encoding": "ISO-8859-3",
           "confidence": 5,
-          "language": "is"
+          "language": "mt",
+          "byteLogLikelihood": -5.105945473900581,
+          "hits": 4,
+          "total": 215,
+          "hitRate": 0.018604651162790697
         },
         {
           "encoding": "CP852",
           "confidence": 5,
-          "language": "pl"
+          "language": "pl",
+          "byteLogLikelihood": -5.0875963352323845,
+          "hits": 4,
+          "total": 216,
+          "hitRate": 0.018518518518518517
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 4,
+          "language": "is",
+          "byteLogLikelihood": -4.972957626890147,
+          "hits": 3,
+          "total": 215,
+          "hitRate": 0.013953488372093023
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 2,
+          "language": "lt",
+          "byteLogLikelihood": -5.008439449309933,
+          "hits": 2,
+          "total": 215,
+          "hitRate": 0.009302325581395349
         },
         {
           "encoding": "KOI8-U",
           "confidence": 0,
-          "language": "uk"
+          "language": "uk",
+          "byteLogLikelihood": -6.6502790485874215,
+          "hits": 0,
+          "total": 215,
+          "hitRate": 0
         },
         {
           "encoding": "IBM866",
           "confidence": 0,
-          "language": "ru"
+          "language": "ru",
+          "byteLogLikelihood": -5.6951898769317575,
+          "hits": 0,
+          "total": 216,
+          "hitRate": 0
         },
         {
           "encoding": "IBM855",
           "confidence": 0,
-          "language": "sr"
+          "language": "ru",
+          "byteLogLikelihood": -5.428281637736337,
+          "hits": 0,
+          "total": 216,
+          "hitRate": 0
         },
         {
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
-          "language": "uk"
+          "language": "uk",
+          "byteLogLikelihood": -5.621314697937098,
+          "hits": 0,
+          "total": 216,
+          "hitRate": 0
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "CP850",
+        "language": "es"
+      },
+      "predicted": {
+        "encoding": "CP850",
+        "confidence": 61,
+        "language": "es",
+        "byteLogLikelihood": -3.8346579357668467,
+        "hits": 41,
+        "total": 200,
+        "hitRate": 0.205
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "CP850",
+          "confidence": 61,
+          "language": "es",
+          "byteLogLikelihood": -3.8346579357668467,
+          "hits": 41,
+          "total": 200,
+          "hitRate": 0.205
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 58,
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378169,
+          "hits": 39,
+          "total": 199,
+          "hitRate": 0.19597989949748743
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 58,
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378169,
+          "hits": 39,
+          "total": 199,
+          "hitRate": 0.19597989949748743
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 25,
+          "language": "lv",
+          "byteLogLikelihood": -5.192956850890211,
+          "hits": 17,
+          "total": 199,
+          "hitRate": 0.08542713567839195
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 19,
+          "language": "lt",
+          "byteLogLikelihood": -5.123963979403258,
+          "hits": 13,
+          "total": 199,
+          "hitRate": 0.06532663316582915
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 16,
+          "language": "cy",
+          "byteLogLikelihood": -4.912654885736052,
+          "hits": 11,
+          "total": 199,
+          "hitRate": 0.05527638190954774
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 15,
+          "language": "ro",
+          "byteLogLikelihood": -5.176149732573829,
+          "hits": 10,
+          "total": 199,
+          "hitRate": 0.05025125628140704
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 7,
+          "language": "pl",
+          "byteLogLikelihood": -5.0875963352323845,
+          "hits": 5,
+          "total": 200,
+          "hitRate": 0.025
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 4,
+          "language": "is",
+          "byteLogLikelihood": -5.204006687076795,
+          "hits": 3,
+          "total": 199,
+          "hitRate": 0.01507537688442211
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk",
+          "byteLogLikelihood": -6.351652470382746,
+          "hits": 0,
+          "total": 199,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -3.374008967132244,
+          "hits": 0,
+          "total": 200,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr",
+          "byteLogLikelihood": -4.647154172319646,
+          "hits": 0,
+          "total": 200,
+          "hitRate": 0
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk",
+          "byteLogLikelihood": -6.6502790485874215,
+          "hits": 0,
+          "total": 199,
+          "hitRate": 0
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 0,
+          "language": "mt",
+          "byteLogLikelihood": -4.759371883620607,
+          "hits": 0,
+          "total": 199,
+          "hitRate": 0
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "CP850",
+        "language": "fr"
+      },
+      "predicted": {
+        "encoding": "CP850",
+        "confidence": 77,
+        "language": "fr",
+        "byteLogLikelihood": -2.0661963149298153,
+        "hits": 59,
+        "total": 228,
+        "hitRate": 0.25877192982456143
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "CP850",
+          "confidence": 77,
+          "language": "fr",
+          "byteLogLikelihood": -2.0661963149298153,
+          "hits": 59,
+          "total": 228,
+          "hitRate": 0.25877192982456143
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 75,
+          "language": "es",
+          "byteLogLikelihood": -5.010635294096255,
+          "hits": 56,
+          "total": 224,
+          "hitRate": 0.25
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 71,
+          "language": "es",
+          "byteLogLikelihood": -5.010635294096255,
+          "hits": 54,
+          "total": 228,
+          "hitRate": 0.23684210526315788
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 12,
+          "language": "is",
+          "byteLogLikelihood": -5.204006687076795,
+          "hits": 9,
+          "total": 224,
+          "hitRate": 0.04017857142857143
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 12,
+          "language": "ro",
+          "byteLogLikelihood": -5.176149732573829,
+          "hits": 9,
+          "total": 224,
+          "hitRate": 0.04017857142857143
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 9,
+          "language": "lv",
+          "byteLogLikelihood": -5.192956850890211,
+          "hits": 7,
+          "total": 224,
+          "hitRate": 0.03125
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 8,
+          "language": "mt",
+          "byteLogLikelihood": -5.10594547390058,
+          "hits": 6,
+          "total": 224,
+          "hitRate": 0.026785714285714284
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 7,
+          "language": "pl",
+          "byteLogLikelihood": -5.0875963352323845,
+          "hits": 6,
+          "total": 228,
+          "hitRate": 0.02631578947368421
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 5,
+          "language": "lt",
+          "byteLogLikelihood": -5.123963979403258,
+          "hits": 4,
+          "total": 224,
+          "hitRate": 0.017857142857142856
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 4,
+          "language": "cy",
+          "byteLogLikelihood": -4.912654885736052,
+          "hits": 3,
+          "total": 224,
+          "hitRate": 0.013392857142857142
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk",
+          "byteLogLikelihood": -6.6502790485874215,
+          "hits": 0,
+          "total": 224,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -5.9989365619466835,
+          "hits": 0,
+          "total": 228,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr",
+          "byteLogLikelihood": -6.520621127558697,
+          "hits": 0,
+          "total": 228,
+          "hitRate": 0
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -5.9989365619466835,
+          "hits": 0,
+          "total": 228,
+          "hitRate": 0
         }
       ]
     },
@@ -317,8 +495,12 @@
       },
       "predicted": {
         "encoding": "CP852",
-        "confidence": 26,
-        "language": "pl"
+        "confidence": 40,
+        "language": "pl",
+        "byteLogLikelihood": -3.5291052717201468,
+        "hits": 25,
+        "total": 184,
+        "hitRate": 0.1358695652173913
       },
       "encodingCorrect": true,
       "languageCorrect": true,
@@ -326,73 +508,129 @@
       "candidates": [
         {
           "encoding": "CP852",
-          "confidence": 26,
-          "language": "pl"
+          "confidence": 40,
+          "language": "pl",
+          "byteLogLikelihood": -3.5291052717201468,
+          "hits": 25,
+          "total": 184,
+          "hitRate": 0.1358695652173913
         },
         {
           "encoding": "macintosh",
-          "confidence": 12,
-          "language": "es"
+          "confidence": 6,
+          "language": "es",
+          "byteLogLikelihood": -5.010635294096255,
+          "hits": 4,
+          "total": 182,
+          "hitRate": 0.02197802197802198
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 6,
+          "language": "lt",
+          "byteLogLikelihood": -5.123963979403258,
+          "hits": 4,
+          "total": 183,
+          "hitRate": 0.02185792349726776
         },
         {
           "encoding": "ISO-8859-15",
-          "confidence": 12,
-          "language": "es"
+          "confidence": 6,
+          "language": "de",
+          "byteLogLikelihood": -4.948759890378169,
+          "hits": 4,
+          "total": 183,
+          "hitRate": 0.02185792349726776
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 4,
+          "language": "mt",
+          "byteLogLikelihood": -5.10594547390058,
+          "hits": 3,
+          "total": 183,
+          "hitRate": 0.01639344262295082
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 4,
+          "language": "lv",
+          "byteLogLikelihood": -5.192956850890211,
+          "hits": 3,
+          "total": 184,
+          "hitRate": 0.016304347826086956
         },
         {
           "encoding": "CP850",
-          "confidence": 11,
-          "language": "es"
-        },
-        {
-          "encoding": "ISO-8859-16",
-          "confidence": 10,
-          "language": "ro"
-        },
-        {
-          "encoding": "ISO-8859-14",
-          "confidence": 5,
-          "language": "cy"
-        },
-        {
-          "encoding": "ISO-8859-13",
           "confidence": 4,
-          "language": "lt"
-        },
-        {
-          "encoding": "ISO-8859-4",
-          "confidence": 3,
-          "language": "lv"
+          "language": "es",
+          "byteLogLikelihood": -5.010635294096255,
+          "hits": 3,
+          "total": 184,
+          "hitRate": 0.016304347826086956
         },
         {
           "encoding": "ISO-8859-10",
           "confidence": 3,
-          "language": "is"
+          "language": "is",
+          "byteLogLikelihood": -5.204006687076795,
+          "hits": 2,
+          "total": 184,
+          "hitRate": 0.010869565217391304
         },
         {
-          "encoding": "ISO-8859-3",
-          "confidence": 2,
-          "language": "mt"
+          "encoding": "ISO-8859-14",
+          "confidence": 3,
+          "language": "cy",
+          "byteLogLikelihood": -4.912654885736052,
+          "hits": 2,
+          "total": 184,
+          "hitRate": 0.010869565217391304
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 3,
+          "language": "ro",
+          "byteLogLikelihood": -5.176149732573829,
+          "hits": 2,
+          "total": 183,
+          "hitRate": 0.01092896174863388
         },
         {
           "encoding": "KOI8-U",
           "confidence": 0,
-          "language": "uk"
+          "language": "uk",
+          "byteLogLikelihood": -6.496246341796322,
+          "hits": 0,
+          "total": 183,
+          "hitRate": 0
         },
         {
           "encoding": "IBM866",
           "confidence": 0,
-          "language": "ru"
+          "language": "ru",
+          "byteLogLikelihood": -5.085936520566928,
+          "hits": 0,
+          "total": 184,
+          "hitRate": 0
         },
         {
           "encoding": "IBM855",
           "confidence": 0,
-          "language": "sr"
+          "language": "sr",
+          "byteLogLikelihood": -5.780131236408652,
+          "hits": 0,
+          "total": 184,
+          "hitRate": 0
         },
         {
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
-          "language": "uk"
+          "language": "uk",
+          "byteLogLikelihood": -5.963380725618908,
+          "hits": 0,
+          "total": 183,
+          "hitRate": 0
         }
       ]
     },
@@ -403,8 +641,12 @@
       },
       "predicted": {
         "encoding": "IBM855",
-        "confidence": 37,
-        "language": "ru"
+        "confidence": 43,
+        "language": "ru",
+        "byteLogLikelihood": -3.3137607778551392,
+        "hits": 26,
+        "total": 179,
+        "hitRate": 0.1452513966480447
       },
       "encodingCorrect": true,
       "languageCorrect": true,
@@ -412,73 +654,129 @@
       "candidates": [
         {
           "encoding": "IBM855",
-          "confidence": 37,
-          "language": "ru"
-        },
-        {
-          "encoding": "IBM866",
-          "confidence": 19,
-          "language": "ru"
+          "confidence": 43,
+          "language": "ru",
+          "byteLogLikelihood": -3.3137607778551392,
+          "hits": 26,
+          "total": 179,
+          "hitRate": 0.1452513966480447
         },
         {
           "encoding": "KOI8-U",
-          "confidence": 8,
-          "language": "uk"
+          "confidence": 12,
+          "language": "uk",
+          "byteLogLikelihood": -5.7286135398014055,
+          "hits": 7,
+          "total": 171,
+          "hitRate": 0.04093567251461988
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 11,
+          "language": "ru",
+          "byteLogLikelihood": -5.0885140105798845,
+          "hits": 5,
+          "total": 130,
+          "hitRate": 0.038461538461538464
         },
         {
           "encoding": "x-mac-cyrillic",
-          "confidence": 3,
-          "language": "uk"
+          "confidence": 4,
+          "language": "ru",
+          "byteLogLikelihood": -5.827543836068529,
+          "hits": 2,
+          "total": 137,
+          "hitRate": 0.014598540145985401
         },
         {
           "encoding": "ISO-8859-10",
           "confidence": 1,
-          "language": "is"
+          "language": "is",
+          "byteLogLikelihood": -5.063955266389596,
+          "hits": 1,
+          "total": 160,
+          "hitRate": 0.00625
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 1,
+          "language": "cy",
+          "byteLogLikelihood": -4.908064507056854,
+          "hits": 1,
+          "total": 174,
+          "hitRate": 0.005747126436781609
         },
         {
           "encoding": "macintosh",
           "confidence": 0,
-          "language": "es"
+          "language": "es",
+          "byteLogLikelihood": -4.934208734236853,
+          "hits": 0,
+          "total": 73,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-3",
           "confidence": 0,
-          "language": "mt"
+          "language": "mt",
+          "byteLogLikelihood": -5.011017819901733,
+          "hits": 0,
+          "total": 123,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-4",
           "confidence": 0,
-          "language": "lv"
+          "language": "lv",
+          "byteLogLikelihood": -5.17113011667827,
+          "hits": 0,
+          "total": 169,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-13",
           "confidence": 0,
-          "language": "lt"
-        },
-        {
-          "encoding": "ISO-8859-14",
-          "confidence": 0,
-          "language": "cy"
+          "language": "lt",
+          "byteLogLikelihood": -4.913061957297312,
+          "hits": 0,
+          "total": 149,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-15",
           "confidence": 0,
-          "language": "es"
+          "language": "es",
+          "byteLogLikelihood": -4.805721913064909,
+          "hits": 0,
+          "total": 160,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-16",
           "confidence": 0,
-          "language": "ro"
+          "language": "ro",
+          "byteLogLikelihood": -4.991915414161731,
+          "hits": 0,
+          "total": 162,
+          "hitRate": 0
         },
         {
           "encoding": "CP850",
           "confidence": 0,
-          "language": "es"
+          "language": "es",
+          "byteLogLikelihood": -4.829101213885684,
+          "hits": 0,
+          "total": 167,
+          "hitRate": 0
         },
         {
           "encoding": "CP852",
           "confidence": 0,
-          "language": "pl"
+          "language": "pl",
+          "byteLogLikelihood": -5.066279276789562,
+          "hits": 0,
+          "total": 178,
+          "hitRate": 0
         }
       ]
     },
@@ -489,1200 +787,2040 @@
       },
       "predicted": {
         "encoding": "IBM855",
-        "confidence": 38,
-        "language": "ru"
-      },
-      "encodingCorrect": true,
-      "languageCorrect": false,
-      "tiedAtTop": 1,
-      "candidates": [
-        {
-          "encoding": "IBM855",
-          "confidence": 38,
-          "language": "ru"
-        },
-        {
-          "encoding": "IBM866",
-          "confidence": 25,
-          "language": "ru"
-        },
-        {
-          "encoding": "KOI8-U",
-          "confidence": 16,
-          "language": "uk"
-        },
-        {
-          "encoding": "ISO-8859-10",
-          "confidence": 4,
-          "language": "is"
-        },
-        {
-          "encoding": "x-mac-cyrillic",
-          "confidence": 2,
-          "language": "ru"
-        },
-        {
-          "encoding": "macintosh",
-          "confidence": 0,
-          "language": "es"
-        },
-        {
-          "encoding": "ISO-8859-3",
-          "confidence": 0,
-          "language": "mt"
-        },
-        {
-          "encoding": "ISO-8859-4",
-          "confidence": 0,
-          "language": "lv"
-        },
-        {
-          "encoding": "ISO-8859-13",
-          "confidence": 0,
-          "language": "lt"
-        },
-        {
-          "encoding": "ISO-8859-14",
-          "confidence": 0,
-          "language": "cy"
-        },
-        {
-          "encoding": "ISO-8859-15",
-          "confidence": 0,
-          "language": "es"
-        },
-        {
-          "encoding": "ISO-8859-16",
-          "confidence": 0,
-          "language": "ro"
-        },
-        {
-          "encoding": "CP850",
-          "confidence": 0,
-          "language": "es"
-        },
-        {
-          "encoding": "CP852",
-          "confidence": 0,
-          "language": "pl"
-        }
-      ]
-    },
-    {
-      "expected": {
-        "encoding": "IBM866",
-        "language": "ru"
-      },
-      "predicted": {
-        "encoding": "IBM866",
-        "confidence": 36,
-        "language": "ru"
+        "confidence": 28,
+        "language": "sr",
+        "byteLogLikelihood": -3.3078979474258676,
+        "hits": 16,
+        "total": 166,
+        "hitRate": 0.0963855421686747
       },
       "encodingCorrect": true,
       "languageCorrect": true,
       "tiedAtTop": 1,
       "candidates": [
         {
-          "encoding": "IBM866",
-          "confidence": 36,
-          "language": "ru"
-        },
-        {
-          "encoding": "x-mac-cyrillic",
-          "confidence": 22,
-          "language": "ru"
-        },
-        {
-          "encoding": "KOI8-U",
-          "confidence": 12,
-          "language": "uk"
-        },
-        {
           "encoding": "IBM855",
-          "confidence": 3,
-          "language": "sr"
-        },
-        {
-          "encoding": "ISO-8859-14",
-          "confidence": 3,
-          "language": "cy"
-        },
-        {
-          "encoding": "ISO-8859-16",
-          "confidence": 1,
-          "language": "ro"
-        },
-        {
-          "encoding": "macintosh",
-          "confidence": 0,
-          "language": "es"
-        },
-        {
-          "encoding": "ISO-8859-3",
-          "confidence": 0,
-          "language": "mt"
-        },
-        {
-          "encoding": "ISO-8859-4",
-          "confidence": 0,
-          "language": "lv"
-        },
-        {
-          "encoding": "ISO-8859-10",
-          "confidence": 0,
-          "language": "is"
-        },
-        {
-          "encoding": "ISO-8859-13",
-          "confidence": 0,
-          "language": "lt"
-        },
-        {
-          "encoding": "ISO-8859-15",
-          "confidence": 0,
-          "language": "es"
-        },
-        {
-          "encoding": "CP850",
-          "confidence": 0,
-          "language": "es"
-        },
-        {
-          "encoding": "CP852",
-          "confidence": 0,
-          "language": "pl"
-        }
-      ]
-    },
-    {
-      "expected": {
-        "encoding": "ISO-8859-10",
-        "language": "is"
-      },
-      "predicted": {
-        "encoding": "ISO-8859-10",
-        "confidence": 45,
-        "language": "is"
-      },
-      "encodingCorrect": true,
-      "languageCorrect": true,
-      "tiedAtTop": 1,
-      "candidates": [
-        {
-          "encoding": "ISO-8859-10",
-          "confidence": 45,
-          "language": "is"
-        },
-        {
-          "encoding": "ISO-8859-15",
-          "confidence": 10,
-          "language": "es"
-        },
-        {
-          "encoding": "macintosh",
-          "confidence": 9,
-          "language": "es"
-        },
-        {
-          "encoding": "ISO-8859-13",
-          "confidence": 9,
-          "language": "lt"
-        },
-        {
-          "encoding": "ISO-8859-14",
-          "confidence": 9,
-          "language": "cy"
-        },
-        {
-          "encoding": "CP850",
-          "confidence": 9,
-          "language": "es"
-        },
-        {
-          "encoding": "KOI8-U",
-          "confidence": 7,
-          "language": "uk"
-        },
-        {
-          "encoding": "ISO-8859-4",
-          "confidence": 7,
-          "language": "lv"
-        },
-        {
-          "encoding": "ISO-8859-3",
-          "confidence": 3,
-          "language": "mt"
-        },
-        {
-          "encoding": "CP852",
-          "confidence": 3,
-          "language": "pl"
-        },
-        {
-          "encoding": "ISO-8859-16",
-          "confidence": 1,
-          "language": "ro"
+          "confidence": 28,
+          "language": "sr",
+          "byteLogLikelihood": -3.3078979474258676,
+          "hits": 16,
+          "total": 166,
+          "hitRate": 0.0963855421686747
         },
         {
           "encoding": "IBM866",
-          "confidence": 0,
-          "language": "ru"
+          "confidence": 26,
+          "language": "ru",
+          "byteLogLikelihood": -4.750368103744445,
+          "hits": 12,
+          "total": 137,
+          "hitRate": 0.08759124087591241
         },
         {
-          "encoding": "IBM855",
-          "confidence": 0,
-          "language": "sr"
-        },
-        {
-          "encoding": "x-mac-cyrillic",
-          "confidence": 0,
-          "language": "uk"
-        }
-      ]
-    },
-    {
-      "expected": {
-        "encoding": "ISO-8859-13",
-        "language": "lt"
-      },
-      "predicted": {
-        "encoding": "ISO-8859-13",
-        "confidence": 27,
-        "language": "lt"
-      },
-      "encodingCorrect": true,
-      "languageCorrect": true,
-      "tiedAtTop": 1,
-      "candidates": [
-        {
-          "encoding": "ISO-8859-13",
-          "confidence": 27,
-          "language": "lt"
-        },
-        {
-          "encoding": "CP852",
-          "confidence": 19,
-          "language": "pl"
-        },
-        {
-          "encoding": "macintosh",
-          "confidence": 15,
-          "language": "es"
-        },
-        {
-          "encoding": "ISO-8859-16",
-          "confidence": 14,
-          "language": "ro"
-        },
-        {
-          "encoding": "ISO-8859-15",
-          "confidence": 13,
-          "language": "es"
-        },
-        {
-          "encoding": "CP850",
-          "confidence": 13,
-          "language": "es"
-        },
-        {
-          "encoding": "ISO-8859-3",
+          "encoding": "KOI8-U",
           "confidence": 9,
-          "language": "mt"
-        },
-        {
-          "encoding": "ISO-8859-4",
-          "confidence": 9,
-          "language": "lv"
-        },
-        {
-          "encoding": "ISO-8859-14",
-          "confidence": 3,
-          "language": "cy"
-        },
-        {
-          "encoding": "ISO-8859-10",
-          "confidence": 1,
-          "language": "is"
-        },
-        {
-          "encoding": "KOI8-U",
-          "confidence": 0,
-          "language": "uk"
-        },
-        {
-          "encoding": "IBM866",
-          "confidence": 0,
-          "language": "ru"
-        },
-        {
-          "encoding": "IBM855",
-          "confidence": 0,
-          "language": "sr"
+          "language": "uk",
+          "byteLogLikelihood": -5.9560967315908275,
+          "hits": 4,
+          "total": 130,
+          "hitRate": 0.03076923076923077
         },
         {
           "encoding": "x-mac-cyrillic",
-          "confidence": 0,
-          "language": "uk"
-        }
-      ]
-    },
-    {
-      "expected": {
-        "encoding": "ISO-8859-14",
-        "language": "cy"
-      },
-      "predicted": {
-        "encoding": "ISO-8859-14",
-        "confidence": 38,
-        "language": "cy"
-      },
-      "encodingCorrect": true,
-      "languageCorrect": true,
-      "tiedAtTop": 1,
-      "candidates": [
-        {
-          "encoding": "ISO-8859-14",
-          "confidence": 38,
-          "language": "cy"
-        },
-        {
-          "encoding": "macintosh",
-          "confidence": 17,
-          "language": "es"
-        },
-        {
-          "encoding": "ISO-8859-15",
-          "confidence": 17,
-          "language": "es"
-        },
-        {
-          "encoding": "CP850",
-          "confidence": 17,
-          "language": "es"
-        },
-        {
-          "encoding": "ISO-8859-10",
-          "confidence": 11,
-          "language": "is"
-        },
-        {
-          "encoding": "ISO-8859-13",
-          "confidence": 11,
-          "language": "lt"
-        },
-        {
-          "encoding": "ISO-8859-4",
-          "confidence": 9,
-          "language": "lv"
-        },
-        {
-          "encoding": "ISO-8859-16",
-          "confidence": 7,
-          "language": "ro"
-        },
-        {
-          "encoding": "ISO-8859-3",
-          "confidence": 3,
-          "language": "mt"
-        },
-        {
-          "encoding": "CP852",
-          "confidence": 3,
-          "language": "pl"
-        },
-        {
-          "encoding": "x-mac-cyrillic",
-          "confidence": 1,
-          "language": "ru"
-        },
-        {
-          "encoding": "KOI8-U",
-          "confidence": 0,
-          "language": "uk"
-        },
-        {
-          "encoding": "IBM866",
-          "confidence": 0,
-          "language": "ru"
-        },
-        {
-          "encoding": "IBM855",
-          "confidence": 0,
-          "language": "sr"
-        }
-      ]
-    },
-    {
-      "expected": {
-        "encoding": "ISO-8859-15",
-        "language": "de"
-      },
-      "predicted": {
-        "encoding": "macintosh",
-        "confidence": 67,
-        "language": "de"
-      },
-      "encodingCorrect": false,
-      "languageCorrect": false,
-      "tiedAtTop": 3,
-      "candidates": [
-        {
-          "encoding": "macintosh",
-          "confidence": 67,
-          "language": "de"
-        },
-        {
-          "encoding": "ISO-8859-15",
-          "confidence": 67,
-          "language": "de"
-        },
-        {
-          "encoding": "CP850",
-          "confidence": 67,
-          "language": "de"
-        },
-        {
-          "encoding": "ISO-8859-14",
-          "confidence": 30,
-          "language": "cy"
-        },
-        {
-          "encoding": "ISO-8859-16",
-          "confidence": 17,
-          "language": "ro"
-        },
-        {
-          "encoding": "ISO-8859-4",
-          "confidence": 12,
-          "language": "lv"
-        },
-        {
-          "encoding": "CP852",
-          "confidence": 9,
-          "language": "pl"
-        },
-        {
-          "encoding": "ISO-8859-10",
-          "confidence": 4,
-          "language": "is"
-        },
-        {
-          "encoding": "ISO-8859-13",
-          "confidence": 4,
-          "language": "lt"
-        },
-        {
-          "encoding": "ISO-8859-3",
-          "confidence": 1,
-          "language": "mt"
-        },
-        {
-          "encoding": "KOI8-U",
-          "confidence": 0,
-          "language": "uk"
-        },
-        {
-          "encoding": "IBM866",
-          "confidence": 0,
-          "language": "ru"
-        },
-        {
-          "encoding": "IBM855",
-          "confidence": 0,
-          "language": "sr"
-        },
-        {
-          "encoding": "x-mac-cyrillic",
-          "confidence": 0,
-          "language": "uk"
-        }
-      ]
-    },
-    {
-      "expected": {
-        "encoding": "ISO-8859-15",
-        "language": "es"
-      },
-      "predicted": {
-        "encoding": "ISO-8859-15",
-        "confidence": 50,
-        "language": "es"
-      },
-      "encodingCorrect": true,
-      "languageCorrect": true,
-      "tiedAtTop": 1,
-      "candidates": [
-        {
-          "encoding": "ISO-8859-15",
-          "confidence": 50,
-          "language": "es"
-        },
-        {
-          "encoding": "macintosh",
-          "confidence": 48,
-          "language": "es"
-        },
-        {
-          "encoding": "CP850",
-          "confidence": 48,
-          "language": "es"
-        },
-        {
-          "encoding": "ISO-8859-16",
-          "confidence": 23,
-          "language": "ro"
-        },
-        {
-          "encoding": "ISO-8859-14",
-          "confidence": 21,
-          "language": "cy"
-        },
-        {
-          "encoding": "ISO-8859-4",
-          "confidence": 16,
-          "language": "lv"
-        },
-        {
-          "encoding": "ISO-8859-13",
-          "confidence": 11,
-          "language": "lt"
-        },
-        {
-          "encoding": "CP852",
-          "confidence": 6,
-          "language": "pl"
-        },
-        {
-          "encoding": "ISO-8859-3",
-          "confidence": 3,
-          "language": "mt"
-        },
-        {
-          "encoding": "ISO-8859-10",
-          "confidence": 1,
-          "language": "is"
-        },
-        {
-          "encoding": "KOI8-U",
-          "confidence": 0,
-          "language": "uk"
-        },
-        {
-          "encoding": "IBM866",
-          "confidence": 0,
-          "language": "ru"
-        },
-        {
-          "encoding": "IBM855",
-          "confidence": 0,
-          "language": "sr"
-        },
-        {
-          "encoding": "x-mac-cyrillic",
-          "confidence": 0,
-          "language": "uk"
-        }
-      ]
-    },
-    {
-      "expected": {
-        "encoding": "ISO-8859-15",
-        "language": "fr"
-      },
-      "predicted": {
-        "encoding": "ISO-8859-15",
-        "confidence": 70,
-        "language": "fr"
-      },
-      "encodingCorrect": true,
-      "languageCorrect": true,
-      "tiedAtTop": 1,
-      "candidates": [
-        {
-          "encoding": "ISO-8859-15",
-          "confidence": 70,
-          "language": "fr"
-        },
-        {
-          "encoding": "macintosh",
-          "confidence": 68,
-          "language": "fr"
-        },
-        {
-          "encoding": "CP850",
-          "confidence": 67,
-          "language": "fr"
-        },
-        {
-          "encoding": "ISO-8859-16",
-          "confidence": 22,
-          "language": "ro"
-        },
-        {
-          "encoding": "ISO-8859-4",
-          "confidence": 17,
-          "language": "lv"
-        },
-        {
-          "encoding": "ISO-8859-13",
-          "confidence": 9,
-          "language": "lt"
-        },
-        {
-          "encoding": "ISO-8859-3",
-          "confidence": 6,
-          "language": "mt"
-        },
-        {
-          "encoding": "ISO-8859-14",
-          "confidence": 6,
-          "language": "cy"
-        },
-        {
-          "encoding": "CP852",
-          "confidence": 5,
-          "language": "pl"
-        },
-        {
-          "encoding": "ISO-8859-10",
-          "confidence": 2,
-          "language": "is"
-        },
-        {
-          "encoding": "KOI8-U",
-          "confidence": 0,
-          "language": "uk"
-        },
-        {
-          "encoding": "IBM866",
-          "confidence": 0,
-          "language": "ru"
-        },
-        {
-          "encoding": "IBM855",
-          "confidence": 0,
-          "language": "sr"
-        },
-        {
-          "encoding": "x-mac-cyrillic",
-          "confidence": 0,
-          "language": "uk"
-        }
-      ]
-    },
-    {
-      "expected": {
-        "encoding": "ISO-8859-16",
-        "language": "ro"
-      },
-      "predicted": {
-        "encoding": "ISO-8859-16",
-        "confidence": 38,
-        "language": "ro"
-      },
-      "encodingCorrect": true,
-      "languageCorrect": true,
-      "tiedAtTop": 1,
-      "candidates": [
-        {
-          "encoding": "ISO-8859-16",
-          "confidence": 38,
-          "language": "ro"
-        },
-        {
-          "encoding": "macintosh",
-          "confidence": 24,
-          "language": "fr"
-        },
-        {
-          "encoding": "ISO-8859-15",
-          "confidence": 23,
-          "language": "fr"
-        },
-        {
-          "encoding": "CP850",
-          "confidence": 23,
-          "language": "fr"
-        },
-        {
-          "encoding": "ISO-8859-4",
-          "confidence": 16,
-          "language": "lv"
-        },
-        {
-          "encoding": "ISO-8859-13",
-          "confidence": 12,
-          "language": "lt"
-        },
-        {
-          "encoding": "ISO-8859-14",
-          "confidence": 12,
-          "language": "cy"
-        },
-        {
-          "encoding": "ISO-8859-3",
-          "confidence": 11,
-          "language": "mt"
-        },
-        {
-          "encoding": "CP852",
-          "confidence": 5,
-          "language": "pl"
-        },
-        {
-          "encoding": "ISO-8859-10",
-          "confidence": 1,
-          "language": "is"
-        },
-        {
-          "encoding": "KOI8-U",
-          "confidence": 0,
-          "language": "uk"
-        },
-        {
-          "encoding": "IBM866",
-          "confidence": 0,
-          "language": "ru"
-        },
-        {
-          "encoding": "IBM855",
-          "confidence": 0,
-          "language": "sr"
-        },
-        {
-          "encoding": "x-mac-cyrillic",
-          "confidence": 0,
-          "language": "uk"
-        }
-      ]
-    },
-    {
-      "expected": {
-        "encoding": "ISO-8859-3",
-        "language": "mt"
-      },
-      "predicted": {
-        "encoding": "ISO-8859-3",
-        "confidence": 37,
-        "language": "mt"
-      },
-      "encodingCorrect": true,
-      "languageCorrect": true,
-      "tiedAtTop": 1,
-      "candidates": [
-        {
-          "encoding": "ISO-8859-3",
-          "confidence": 37,
-          "language": "mt"
-        },
-        {
-          "encoding": "ISO-8859-10",
-          "confidence": 17,
-          "language": "is"
-        },
-        {
-          "encoding": "macintosh",
-          "confidence": 14,
-          "language": "fr"
-        },
-        {
-          "encoding": "ISO-8859-15",
-          "confidence": 14,
-          "language": "fr"
-        },
-        {
-          "encoding": "CP850",
-          "confidence": 14,
-          "language": "fr"
-        },
-        {
-          "encoding": "ISO-8859-14",
           "confidence": 8,
-          "language": "cy"
+          "language": "ru",
+          "byteLogLikelihood": -5.930887805718768,
+          "hits": 3,
+          "total": 112,
+          "hitRate": 0.026785714285714284
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 0,
+          "language": "es",
+          "byteLogLikelihood": -4.933799879286931,
+          "hits": 0,
+          "total": 73,
+          "hitRate": 0
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 0,
+          "language": "mt",
+          "byteLogLikelihood": -4.972489513919754,
+          "hits": 0,
+          "total": 99,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-4",
-          "confidence": 7,
-          "language": "lv"
+          "confidence": 0,
+          "language": "lv",
+          "byteLogLikelihood": -5.1929568508902175,
+          "hits": 0,
+          "total": 131,
+          "hitRate": 0
         },
         {
-          "encoding": "ISO-8859-16",
-          "confidence": 7,
-          "language": "ro"
-        },
-        {
-          "encoding": "CP852",
-          "confidence": 5,
-          "language": "pl"
+          "encoding": "ISO-8859-10",
+          "confidence": 0,
+          "language": "is",
+          "byteLogLikelihood": -5.07679784807703,
+          "hits": 0,
+          "total": 145,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-13",
-          "confidence": 1,
-          "language": "lt"
+          "confidence": 0,
+          "language": "lt",
+          "byteLogLikelihood": -4.9405819817248275,
+          "hits": 0,
+          "total": 132,
+          "hitRate": 0
         },
         {
-          "encoding": "KOI8-U",
+          "encoding": "ISO-8859-14",
           "confidence": 0,
-          "language": "uk"
+          "language": "cy",
+          "byteLogLikelihood": -4.9076682153723175,
+          "hits": 0,
+          "total": 157,
+          "hitRate": 0
         },
         {
-          "encoding": "IBM866",
+          "encoding": "ISO-8859-15",
           "confidence": 0,
-          "language": "ru"
+          "language": "es",
+          "byteLogLikelihood": -4.832419313648102,
+          "hits": 0,
+          "total": 138,
+          "hitRate": 0
         },
         {
-          "encoding": "IBM855",
+          "encoding": "ISO-8859-16",
           "confidence": 0,
-          "language": "sr"
+          "language": "ro",
+          "byteLogLikelihood": -5.064961155114886,
+          "hits": 0,
+          "total": 142,
+          "hitRate": 0
         },
         {
-          "encoding": "x-mac-cyrillic",
+          "encoding": "CP850",
           "confidence": 0,
-          "language": "uk"
+          "language": "es",
+          "byteLogLikelihood": -4.704589417548013,
+          "hits": 0,
+          "total": 150,
+          "hitRate": 0
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 0,
+          "language": "pl",
+          "byteLogLikelihood": -5.064438955197371,
+          "hits": 0,
+          "total": 165,
+          "hitRate": 0
         }
       ]
     },
     {
       "expected": {
-        "encoding": "ISO-8859-4",
-        "language": "lv"
+        "encoding": "IBM866",
+        "language": "ru"
       },
       "predicted": {
-        "encoding": "ISO-8859-4",
-        "confidence": 33,
-        "language": "lv"
+        "encoding": "IBM866",
+        "confidence": 41,
+        "language": "ru",
+        "byteLogLikelihood": -3.3137607778551392,
+        "hits": 25,
+        "total": 179,
+        "hitRate": 0.13966480446927373
       },
       "encodingCorrect": true,
       "languageCorrect": true,
       "tiedAtTop": 1,
       "candidates": [
         {
-          "encoding": "ISO-8859-4",
-          "confidence": 33,
-          "language": "lv"
+          "encoding": "IBM866",
+          "confidence": 41,
+          "language": "ru",
+          "byteLogLikelihood": -3.3137607778551392,
+          "hits": 25,
+          "total": 179,
+          "hitRate": 0.13966480446927373
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 15,
+          "language": "uk",
+          "byteLogLikelihood": -5.7926991637421805,
+          "hits": 7,
+          "total": 133,
+          "hitRate": 0.05263157894736842
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 11,
+          "language": "uk",
+          "byteLogLikelihood": -6.434389971367975,
+          "hits": 4,
+          "total": 103,
+          "hitRate": 0.038834951456310676
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 8,
+          "language": "sr",
+          "byteLogLikelihood": -5.021646546946021,
+          "hits": 5,
+          "total": 169,
+          "hitRate": 0.029585798816568046
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 1,
+          "language": "is",
+          "byteLogLikelihood": -5.10390266999273,
+          "hits": 1,
+          "total": 173,
+          "hitRate": 0.005780346820809248
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 1,
+          "language": "cy",
+          "byteLogLikelihood": -4.830028069510369,
+          "hits": 1,
+          "total": 169,
+          "hitRate": 0.005917159763313609
         },
         {
           "encoding": "macintosh",
-          "confidence": 14,
-          "language": "es"
+          "confidence": 0,
+          "language": "es",
+          "byteLogLikelihood": -4.944169511698946,
+          "hits": 0,
+          "total": 67,
+          "hitRate": 0
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 0,
+          "language": "mt",
+          "byteLogLikelihood": -5.096764716542159,
+          "hits": 0,
+          "total": 116,
+          "hitRate": 0
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 0,
+          "language": "lv",
+          "byteLogLikelihood": -4.97978626646186,
+          "hits": 0,
+          "total": 148,
+          "hitRate": 0
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 0,
+          "language": "lt",
+          "byteLogLikelihood": -4.939479070188467,
+          "hits": 0,
+          "total": 116,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-15",
-          "confidence": 13,
-          "language": "es"
+          "confidence": 0,
+          "language": "es",
+          "byteLogLikelihood": -4.848242748706188,
+          "hits": 0,
+          "total": 111,
+          "hitRate": 0
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 0,
+          "language": "ro",
+          "byteLogLikelihood": -5.060916135440135,
+          "hits": 0,
+          "total": 144,
+          "hitRate": 0
         },
         {
           "encoding": "CP850",
-          "confidence": 13,
-          "language": "es"
+          "confidence": 0,
+          "language": "es",
+          "byteLogLikelihood": -4.67718383644863,
+          "hits": 0,
+          "total": 130,
+          "hitRate": 0
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 0,
+          "language": "pl",
+          "byteLogLikelihood": -4.699618505771011,
+          "hits": 0,
+          "total": 166,
+          "hitRate": 0
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "ISO-8859-10",
+        "language": "is"
+      },
+      "predicted": {
+        "encoding": "ISO-8859-10",
+        "confidence": 38,
+        "language": "is",
+        "byteLogLikelihood": -3.025836278693886,
+        "hits": 22,
+        "total": 171,
+        "hitRate": 0.1286549707602339
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 38,
+          "language": "is",
+          "byteLogLikelihood": -3.025836278693886,
+          "hits": 22,
+          "total": 171,
+          "hitRate": 0.1286549707602339
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 12,
+          "language": "mt",
+          "byteLogLikelihood": -5.105945473900579,
+          "hits": 7,
+          "total": 169,
+          "hitRate": 0.04142011834319527
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 7,
+          "language": "lt",
+          "byteLogLikelihood": -3.9895834724624324,
+          "hits": 4,
+          "total": 171,
+          "hitRate": 0.023391812865497075
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 5,
+          "language": "es",
+          "byteLogLikelihood": -5.00394630594546,
+          "hits": 3,
+          "total": 169,
+          "hitRate": 0.01775147928994083
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 5,
+          "language": "lv",
+          "byteLogLikelihood": -5.192956850890211,
+          "hits": 3,
+          "total": 171,
+          "hitRate": 0.017543859649122806
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 5,
+          "language": "es",
+          "byteLogLikelihood": -4.894502014278101,
+          "hits": 3,
+          "total": 171,
+          "hitRate": 0.017543859649122806
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 5,
+          "language": "es",
+          "byteLogLikelihood": -5.00394630594546,
+          "hits": 3,
+          "total": 169,
+          "hitRate": 0.01775147928994083
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 5,
+          "language": "pl",
+          "byteLogLikelihood": -5.087596335232386,
+          "hits": 3,
+          "total": 169,
+          "hitRate": 0.01775147928994083
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 1,
+          "language": "ro",
+          "byteLogLikelihood": -5.17614973257383,
+          "hits": 1,
+          "total": 171,
+          "hitRate": 0.005847953216374269
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk",
+          "byteLogLikelihood": -6.026638569427609,
+          "hits": 0,
+          "total": 171,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -5.838861551509375,
+          "hits": 0,
+          "total": 171,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr",
+          "byteLogLikelihood": -5.795369889151949,
+          "hits": 0,
+          "total": 169,
+          "hitRate": 0
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk",
+          "byteLogLikelihood": -3.7339837119675643,
+          "hits": 0,
+          "total": 171,
+          "hitRate": 0
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 0,
+          "language": "cy",
+          "byteLogLikelihood": -4.657284871845546,
+          "hits": 0,
+          "total": 171,
+          "hitRate": 0
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "ISO-8859-13",
+        "language": "lt"
+      },
+      "predicted": {
+        "encoding": "ISO-8859-13",
+        "confidence": 34,
+        "language": "lt",
+        "byteLogLikelihood": -3.2005302071315755,
+        "hits": 20,
+        "total": 173,
+        "hitRate": 0.11560693641618497
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 34,
+          "language": "lt",
+          "byteLogLikelihood": -3.2005302071315755,
+          "hits": 20,
+          "total": 173,
+          "hitRate": 0.11560693641618497
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 22,
+          "language": "lv",
+          "byteLogLikelihood": -4.610398759564556,
+          "hits": 13,
+          "total": 173,
+          "hitRate": 0.07514450867052024
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 12,
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378169,
+          "hits": 7,
+          "total": 168,
+          "hitRate": 0.041666666666666664
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 12,
+          "language": "fr",
+          "byteLogLikelihood": -4.948759890378169,
+          "hits": 7,
+          "total": 173,
+          "hitRate": 0.04046242774566474
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 12,
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378169,
+          "hits": 7,
+          "total": 170,
+          "hitRate": 0.041176470588235294
         },
         {
           "encoding": "CP852",
           "confidence": 7,
-          "language": "pl"
-        },
-        {
-          "encoding": "ISO-8859-10",
-          "confidence": 5,
-          "language": "is"
-        },
-        {
-          "encoding": "ISO-8859-13",
-          "confidence": 5,
-          "language": "lt"
-        },
-        {
-          "encoding": "ISO-8859-14",
-          "confidence": 5,
-          "language": "cy"
+          "language": "pl",
+          "byteLogLikelihood": -5.087596335232385,
+          "hits": 4,
+          "total": 170,
+          "hitRate": 0.023529411764705882
         },
         {
           "encoding": "ISO-8859-3",
+          "confidence": 5,
+          "language": "mt",
+          "byteLogLikelihood": -5.10594547390058,
+          "hits": 3,
+          "total": 172,
+          "hitRate": 0.01744186046511628
+        },
+        {
+          "encoding": "ISO-8859-14",
           "confidence": 3,
-          "language": "mt"
+          "language": "cy",
+          "byteLogLikelihood": -4.627241340799605,
+          "hits": 2,
+          "total": 173,
+          "hitRate": 0.011560693641618497
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 1,
+          "language": "sr",
+          "byteLogLikelihood": -5.488073838001573,
+          "hits": 1,
+          "total": 170,
+          "hitRate": 0.0058823529411764705
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 1,
+          "language": "is",
+          "byteLogLikelihood": -4.416382325607173,
+          "hits": 1,
+          "total": 173,
+          "hitRate": 0.005780346820809248
         },
         {
           "encoding": "ISO-8859-16",
           "confidence": 1,
-          "language": "ro"
+          "language": "ro",
+          "byteLogLikelihood": -4.659155714377071,
+          "hits": 1,
+          "total": 173,
+          "hitRate": 0.005780346820809248
         },
         {
           "encoding": "KOI8-U",
           "confidence": 0,
-          "language": "uk"
+          "language": "uk",
+          "byteLogLikelihood": -6.252539473951889,
+          "hits": 0,
+          "total": 173,
+          "hitRate": 0
         },
         {
           "encoding": "IBM866",
           "confidence": 0,
-          "language": "ru"
-        },
-        {
-          "encoding": "IBM855",
-          "confidence": 0,
-          "language": "sr"
+          "language": "ru",
+          "byteLogLikelihood": -4.893109334108514,
+          "hits": 0,
+          "total": 171,
+          "hitRate": 0
         },
         {
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
-          "language": "uk"
+          "language": "uk",
+          "byteLogLikelihood": -3.4413288431959623,
+          "hits": 0,
+          "total": 173,
+          "hitRate": 0
         }
       ]
     },
     {
       "expected": {
-        "encoding": "KOI8-U",
-        "language": "uk"
+        "encoding": "ISO-8859-14",
+        "language": "cy"
       },
       "predicted": {
-        "encoding": "KOI8-U",
-        "confidence": 20,
-        "language": "uk"
+        "encoding": "ISO-8859-14",
+        "confidence": 50,
+        "language": "cy",
+        "byteLogLikelihood": -3.9884586449894583,
+        "hits": 32,
+        "total": 189,
+        "hitRate": 0.1693121693121693
       },
       "encodingCorrect": true,
       "languageCorrect": true,
       "tiedAtTop": 1,
       "candidates": [
         {
-          "encoding": "KOI8-U",
-          "confidence": 20,
-          "language": "uk"
-        },
-        {
-          "encoding": "IBM855",
-          "confidence": 2,
-          "language": "sr"
-        },
-        {
-          "encoding": "x-mac-cyrillic",
-          "confidence": 2,
-          "language": "ru"
-        },
-        {
-          "encoding": "ISO-8859-13",
-          "confidence": 1,
-          "language": "lt"
-        },
-        {
-          "encoding": "IBM866",
-          "confidence": 0,
-          "language": "ru"
+          "encoding": "ISO-8859-14",
+          "confidence": 50,
+          "language": "cy",
+          "byteLogLikelihood": -3.9884586449894583,
+          "hits": 32,
+          "total": 189,
+          "hitRate": 0.1693121693121693
         },
         {
           "encoding": "macintosh",
-          "confidence": 0,
-          "language": "es"
+          "confidence": 11,
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378168,
+          "hits": 7,
+          "total": 188,
+          "hitRate": 0.03723404255319149
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 11,
+          "language": "fr",
+          "byteLogLikelihood": -4.948759890378168,
+          "hits": 7,
+          "total": 189,
+          "hitRate": 0.037037037037037035
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 11,
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378168,
+          "hits": 7,
+          "total": 188,
+          "hitRate": 0.03723404255319149
         },
         {
           "encoding": "ISO-8859-3",
-          "confidence": 0,
-          "language": "mt"
-        },
-        {
-          "encoding": "ISO-8859-4",
-          "confidence": 0,
-          "language": "lv"
-        },
-        {
-          "encoding": "ISO-8859-10",
-          "confidence": 0,
-          "language": "is"
-        },
-        {
-          "encoding": "ISO-8859-14",
-          "confidence": 0,
-          "language": "cy"
-        },
-        {
-          "encoding": "ISO-8859-15",
-          "confidence": 0,
-          "language": "es"
-        },
-        {
-          "encoding": "ISO-8859-16",
-          "confidence": 0,
-          "language": "ro"
-        },
-        {
-          "encoding": "CP850",
-          "confidence": 0,
-          "language": "es"
-        },
-        {
-          "encoding": "CP852",
-          "confidence": 0,
-          "language": "pl"
-        }
-      ]
-    },
-    {
-      "expected": {
-        "encoding": "macintosh",
-        "language": "de"
-      },
-      "predicted": {
-        "encoding": "macintosh",
-        "confidence": 67,
-        "language": "de"
-      },
-      "encodingCorrect": true,
-      "languageCorrect": true,
-      "tiedAtTop": 3,
-      "candidates": [
-        {
-          "encoding": "macintosh",
-          "confidence": 67,
-          "language": "de"
-        },
-        {
-          "encoding": "ISO-8859-15",
-          "confidence": 67,
-          "language": "de"
-        },
-        {
-          "encoding": "CP850",
-          "confidence": 67,
-          "language": "de"
-        },
-        {
-          "encoding": "ISO-8859-14",
-          "confidence": 30,
-          "language": "cy"
-        },
-        {
-          "encoding": "ISO-8859-16",
-          "confidence": 19,
-          "language": "ro"
-        },
-        {
-          "encoding": "ISO-8859-4",
-          "confidence": 14,
-          "language": "lv"
-        },
-        {
-          "encoding": "CP852",
-          "confidence": 9,
-          "language": "pl"
-        },
-        {
-          "encoding": "ISO-8859-13",
-          "confidence": 6,
-          "language": "lt"
+          "confidence": 4,
+          "language": "mt",
+          "byteLogLikelihood": -5.10594547390058,
+          "hits": 3,
+          "total": 189,
+          "hitRate": 0.015873015873015872
         },
         {
           "encoding": "ISO-8859-10",
           "confidence": 4,
-          "language": "is"
-        },
-        {
-          "encoding": "ISO-8859-3",
-          "confidence": 1,
-          "language": "mt"
-        },
-        {
-          "encoding": "KOI8-U",
-          "confidence": 0,
-          "language": "uk"
-        },
-        {
-          "encoding": "IBM866",
-          "confidence": 0,
-          "language": "ru"
-        },
-        {
-          "encoding": "IBM855",
-          "confidence": 0,
-          "language": "sr"
-        },
-        {
-          "encoding": "x-mac-cyrillic",
-          "confidence": 0,
-          "language": "uk"
-        }
-      ]
-    },
-    {
-      "expected": {
-        "encoding": "macintosh",
-        "language": "es"
-      },
-      "predicted": {
-        "encoding": "macintosh",
-        "confidence": 50,
-        "language": "es"
-      },
-      "encodingCorrect": true,
-      "languageCorrect": true,
-      "tiedAtTop": 1,
-      "candidates": [
-        {
-          "encoding": "macintosh",
-          "confidence": 50,
-          "language": "es"
-        },
-        {
-          "encoding": "ISO-8859-15",
-          "confidence": 48,
-          "language": "es"
-        },
-        {
-          "encoding": "CP850",
-          "confidence": 48,
-          "language": "es"
-        },
-        {
-          "encoding": "ISO-8859-14",
-          "confidence": 23,
-          "language": "cy"
-        },
-        {
-          "encoding": "ISO-8859-16",
-          "confidence": 23,
-          "language": "ro"
-        },
-        {
-          "encoding": "ISO-8859-4",
-          "confidence": 18,
-          "language": "lv"
-        },
-        {
-          "encoding": "ISO-8859-13",
-          "confidence": 11,
-          "language": "lt"
+          "language": "is",
+          "byteLogLikelihood": -4.009500374258092,
+          "hits": 3,
+          "total": 189,
+          "hitRate": 0.015873015873015872
         },
         {
           "encoding": "CP852",
-          "confidence": 6,
-          "language": "pl"
-        },
-        {
-          "encoding": "ISO-8859-3",
           "confidence": 3,
-          "language": "mt"
+          "language": "pl",
+          "byteLogLikelihood": -5.0875963352323845,
+          "hits": 2,
+          "total": 188,
+          "hitRate": 0.010638297872340425
         },
         {
-          "encoding": "ISO-8859-10",
+          "encoding": "ISO-8859-4",
           "confidence": 1,
-          "language": "is"
+          "language": "lv",
+          "byteLogLikelihood": -4.961907790703562,
+          "hits": 1,
+          "total": 189,
+          "hitRate": 0.005291005291005291
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 1,
+          "language": "lt",
+          "byteLogLikelihood": -3.6470250464554876,
+          "hits": 1,
+          "total": 189,
+          "hitRate": 0.005291005291005291
         },
         {
           "encoding": "KOI8-U",
           "confidence": 0,
-          "language": "uk"
+          "language": "uk",
+          "byteLogLikelihood": -5.821976831991422,
+          "hits": 0,
+          "total": 189,
+          "hitRate": 0
         },
         {
           "encoding": "IBM866",
           "confidence": 0,
-          "language": "ru"
+          "language": "ru",
+          "byteLogLikelihood": -5.350299845594912,
+          "hits": 0,
+          "total": 188,
+          "hitRate": 0
         },
         {
           "encoding": "IBM855",
           "confidence": 0,
-          "language": "sr"
+          "language": "ru",
+          "byteLogLikelihood": -6.3258796462839255,
+          "hits": 0,
+          "total": 188,
+          "hitRate": 0
         },
         {
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
-          "language": "uk"
+          "language": "uk",
+          "byteLogLikelihood": -3.2558159026977727,
+          "hits": 0,
+          "total": 189,
+          "hitRate": 0
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 0,
+          "language": "ro",
+          "byteLogLikelihood": -3.9816434197551254,
+          "hits": 0,
+          "total": 189,
+          "hitRate": 0
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "ISO-8859-15",
+        "language": "de"
+      },
+      "predicted": {
+        "encoding": "ISO-8859-15",
+        "confidence": 73,
+        "language": "de",
+        "byteLogLikelihood": -3.1697120775185543,
+        "hits": 53,
+        "total": 216,
+        "hitRate": 0.24537037037037038
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 73,
+          "language": "de",
+          "byteLogLikelihood": -3.1697120775185543,
+          "hits": 53,
+          "total": 216,
+          "hitRate": 0.24537037037037038
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 72,
+          "language": "es",
+          "byteLogLikelihood": -5.00394630594546,
+          "hits": 52,
+          "total": 215,
+          "hitRate": 0.24186046511627907
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 70,
+          "language": "es",
+          "byteLogLikelihood": -5.00394630594546,
+          "hits": 51,
+          "total": 216,
+          "hitRate": 0.2361111111111111
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 20,
+          "language": "cy",
+          "byteLogLikelihood": -4.912654885736052,
+          "hits": 15,
+          "total": 216,
+          "hitRate": 0.06944444444444445
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 13,
+          "language": "ro",
+          "byteLogLikelihood": -5.176149732573828,
+          "hits": 10,
+          "total": 216,
+          "hitRate": 0.046296296296296294
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 9,
+          "language": "lv",
+          "byteLogLikelihood": -5.192956850890211,
+          "hits": 7,
+          "total": 216,
+          "hitRate": 0.032407407407407406
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 6,
+          "language": "pl",
+          "byteLogLikelihood": -5.0875963352323845,
+          "hits": 5,
+          "total": 216,
+          "hitRate": 0.023148148148148147
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 5,
+          "language": "mt",
+          "byteLogLikelihood": -5.105945473900581,
+          "hits": 4,
+          "total": 216,
+          "hitRate": 0.018518518518518517
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 2,
+          "language": "lt",
+          "byteLogLikelihood": -5.123963979403258,
+          "hits": 2,
+          "total": 216,
+          "hitRate": 0.009259259259259259
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 1,
+          "language": "is",
+          "byteLogLikelihood": -5.204006687076796,
+          "hits": 1,
+          "total": 216,
+          "hitRate": 0.004629629629629629
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk",
+          "byteLogLikelihood": -6.2459431932607865,
+          "hits": 0,
+          "total": 216,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -6.692083742506626,
+          "hits": 0,
+          "total": 216,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr",
+          "byteLogLikelihood": -5.942998477092075,
+          "hits": 0,
+          "total": 216,
+          "hitRate": 0
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk",
+          "byteLogLikelihood": -3.6293325796874343,
+          "hits": 0,
+          "total": 216,
+          "hitRate": 0
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "ISO-8859-15",
+        "language": "es"
+      },
+      "predicted": {
+        "encoding": "ISO-8859-15",
+        "confidence": 61,
+        "language": "es",
+        "byteLogLikelihood": -3.8346579357668467,
+        "hits": 41,
+        "total": 200,
+        "hitRate": 0.205
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 61,
+          "language": "es",
+          "byteLogLikelihood": -3.8346579357668467,
+          "hits": 41,
+          "total": 200,
+          "hitRate": 0.205
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 58,
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378169,
+          "hits": 39,
+          "total": 199,
+          "hitRate": 0.19597989949748743
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 58,
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378169,
+          "hits": 39,
+          "total": 200,
+          "hitRate": 0.195
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 24,
+          "language": "lv",
+          "byteLogLikelihood": -5.009854802778858,
+          "hits": 16,
+          "total": 200,
+          "hitRate": 0.08
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 19,
+          "language": "lt",
+          "byteLogLikelihood": -4.89291491921661,
+          "hits": 13,
+          "total": 200,
+          "hitRate": 0.065
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 16,
+          "language": "cy",
+          "byteLogLikelihood": -4.912654885736052,
+          "hits": 11,
+          "total": 200,
+          "hitRate": 0.055
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 15,
+          "language": "ro",
+          "byteLogLikelihood": -5.176149732573829,
+          "hits": 10,
+          "total": 200,
+          "hitRate": 0.05
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 7,
+          "language": "pl",
+          "byteLogLikelihood": -5.0875963352323845,
+          "hits": 5,
+          "total": 200,
+          "hitRate": 0.025
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 4,
+          "language": "is",
+          "byteLogLikelihood": -3.846028832089471,
+          "hits": 3,
+          "total": 200,
+          "hitRate": 0.015
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk",
+          "byteLogLikelihood": -6.303705458307449,
+          "hits": 0,
+          "total": 200,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -4.977292083618832,
+          "hits": 0,
+          "total": 200,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -4.203740544851505,
+          "hits": 0,
+          "total": 200,
+          "hitRate": 0
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -3.336328204376461,
+          "hits": 0,
+          "total": 200,
+          "hitRate": 0
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 0,
+          "language": "mt",
+          "byteLogLikelihood": -5.10594547390058,
+          "hits": 0,
+          "total": 200,
+          "hitRate": 0
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "ISO-8859-15",
+        "language": "fr"
+      },
+      "predicted": {
+        "encoding": "ISO-8859-15",
+        "confidence": 77,
+        "language": "fr",
+        "byteLogLikelihood": -2.0661963149298153,
+        "hits": 59,
+        "total": 228,
+        "hitRate": 0.25877192982456143
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 77,
+          "language": "fr",
+          "byteLogLikelihood": -2.0661963149298153,
+          "hits": 59,
+          "total": 228,
+          "hitRate": 0.25877192982456143
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 71,
+          "language": "es",
+          "byteLogLikelihood": -5.010635294096255,
+          "hits": 54,
+          "total": 228,
+          "hitRate": 0.23684210526315788
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 71,
+          "language": "es",
+          "byteLogLikelihood": -5.010635294096255,
+          "hits": 54,
+          "total": 228,
+          "hitRate": 0.23684210526315788
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 11,
+          "language": "ro",
+          "byteLogLikelihood": -5.176149732573829,
+          "hits": 9,
+          "total": 228,
+          "hitRate": 0.039473684210526314
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 10,
+          "language": "is",
+          "byteLogLikelihood": -4.510859506516851,
+          "hits": 8,
+          "total": 228,
+          "hitRate": 0.03508771929824561
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 7,
+          "language": "lv",
+          "byteLogLikelihood": -5.192956850890211,
+          "hits": 6,
+          "total": 228,
+          "hitRate": 0.02631578947368421
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 7,
+          "language": "pl",
+          "byteLogLikelihood": -5.0875963352323845,
+          "hits": 6,
+          "total": 228,
+          "hitRate": 0.02631578947368421
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 5,
+          "language": "mt",
+          "byteLogLikelihood": -5.10594547390058,
+          "hits": 4,
+          "total": 228,
+          "hitRate": 0.017543859649122806
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 5,
+          "language": "lt",
+          "byteLogLikelihood": -5.123963979403258,
+          "hits": 4,
+          "total": 228,
+          "hitRate": 0.017543859649122806
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 3,
+          "language": "cy",
+          "byteLogLikelihood": -4.912654885736052,
+          "hits": 3,
+          "total": 228,
+          "hitRate": 0.013157894736842105
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk",
+          "byteLogLikelihood": -6.6502790485874215,
+          "hits": 0,
+          "total": 228,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -5.593471453838519,
+          "hits": 0,
+          "total": 228,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr",
+          "byteLogLikelihood": -4.728861658330641,
+          "hits": 0,
+          "total": 228,
+          "hitRate": 0
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk",
+          "byteLogLikelihood": -4.252383775789052,
+          "hits": 0,
+          "total": 228,
+          "hitRate": 0
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "ISO-8859-16",
+        "language": "ro"
+      },
+      "predicted": {
+        "encoding": "ISO-8859-16",
+        "confidence": 41,
+        "language": "ro",
+        "byteLogLikelihood": -2.6845392975419866,
+        "hits": 28,
+        "total": 202,
+        "hitRate": 0.13861386138613863
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 41,
+          "language": "ro",
+          "byteLogLikelihood": -2.6845392975419866,
+          "hits": 28,
+          "total": 202,
+          "hitRate": 0.13861386138613863
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 19,
+          "language": "es",
+          "byteLogLikelihood": -5.010635294096255,
+          "hits": 13,
+          "total": 198,
+          "hitRate": 0.06565656565656566
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 15,
+          "language": "es",
+          "byteLogLikelihood": -5.010635294096255,
+          "hits": 10,
+          "total": 199,
+          "hitRate": 0.05025125628140704
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 14,
+          "language": "fr",
+          "byteLogLikelihood": -4.903997266317802,
+          "hits": 10,
+          "total": 202,
+          "hitRate": 0.04950495049504951
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 13,
+          "language": "mt",
+          "byteLogLikelihood": -5.105945473900581,
+          "hits": 9,
+          "total": 200,
+          "hitRate": 0.045
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 8,
+          "language": "pl",
+          "byteLogLikelihood": -5.0875963352323845,
+          "hits": 6,
+          "total": 201,
+          "hitRate": 0.029850746268656716
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 7,
+          "language": "lv",
+          "byteLogLikelihood": -4.93663342703058,
+          "hits": 5,
+          "total": 202,
+          "hitRate": 0.024752475247524754
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 5,
+          "language": "is",
+          "byteLogLikelihood": -5.15068767318757,
+          "hits": 4,
+          "total": 202,
+          "hitRate": 0.019801980198019802
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 4,
+          "language": "lt",
+          "byteLogLikelihood": -4.9742785833220795,
+          "hits": 3,
+          "total": 202,
+          "hitRate": 0.01485148514851485
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 4,
+          "language": "cy",
+          "byteLogLikelihood": -4.539421788511467,
+          "hits": 3,
+          "total": 202,
+          "hitRate": 0.01485148514851485
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk",
+          "byteLogLikelihood": -6.321304731740033,
+          "hits": 0,
+          "total": 201,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -4.208609169551528,
+          "hits": 0,
+          "total": 201,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -4.60864828037108,
+          "hits": 0,
+          "total": 201,
+          "hitRate": 0
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -4.229886082373597,
+          "hits": 0,
+          "total": 202,
+          "hitRate": 0
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "ISO-8859-3",
+        "language": "mt"
+      },
+      "predicted": {
+        "encoding": "ISO-8859-3",
+        "confidence": 52,
+        "language": "mt",
+        "byteLogLikelihood": -2.7382134817807957,
+        "hits": 32,
+        "total": 183,
+        "hitRate": 0.17486338797814208
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 52,
+          "language": "mt",
+          "byteLogLikelihood": -2.7382134817807957,
+          "hits": 32,
+          "total": 183,
+          "hitRate": 0.17486338797814208
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 13,
+          "language": "pl",
+          "byteLogLikelihood": -5.0875963352323845,
+          "hits": 8,
+          "total": 177,
+          "hitRate": 0.04519774011299435
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 11,
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378169,
+          "hits": 7,
+          "total": 181,
+          "hitRate": 0.03867403314917127
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 11,
+          "language": "lv",
+          "byteLogLikelihood": -4.945351018208043,
+          "hits": 7,
+          "total": 183,
+          "hitRate": 0.03825136612021858
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 11,
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378169,
+          "hits": 7,
+          "total": 181,
+          "hitRate": 0.03867403314917127
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 11,
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378169,
+          "hits": 7,
+          "total": 177,
+          "hitRate": 0.03954802259887006
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 9,
+          "language": "ro",
+          "byteLogLikelihood": -5.176149732573828,
+          "hits": 6,
+          "total": 182,
+          "hitRate": 0.03296703296703297
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 6,
+          "language": "cy",
+          "byteLogLikelihood": -4.912654885736052,
+          "hits": 4,
+          "total": 183,
+          "hitRate": 0.02185792349726776
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 4,
+          "language": "lt",
+          "byteLogLikelihood": -4.986136327924177,
+          "hits": 3,
+          "total": 182,
+          "hitRate": 0.016483516483516484
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 3,
+          "language": "is",
+          "byteLogLikelihood": -5.204006687076797,
+          "hits": 2,
+          "total": 183,
+          "hitRate": 0.01092896174863388
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk",
+          "byteLogLikelihood": -6.383683979141289,
+          "hits": 0,
+          "total": 181,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -6.404570694946368,
+          "hits": 0,
+          "total": 181,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -5.943656762100738,
+          "hits": 0,
+          "total": 181,
+          "hitRate": 0
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -5.57238445083287,
+          "hits": 0,
+          "total": 182,
+          "hitRate": 0
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "ISO-8859-4",
+        "language": "lv"
+      },
+      "predicted": {
+        "encoding": "ISO-8859-4",
+        "confidence": 40,
+        "language": "lv",
+        "byteLogLikelihood": -3.13286160829961,
+        "hits": 23,
+        "total": 170,
+        "hitRate": 0.13529411764705881
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 40,
+          "language": "lv",
+          "byteLogLikelihood": -3.13286160829961,
+          "hits": 23,
+          "total": 170,
+          "hitRate": 0.13529411764705881
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 16,
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378169,
+          "hits": 9,
+          "total": 168,
+          "hitRate": 0.05357142857142857
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 14,
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378169,
+          "hits": 8,
+          "total": 169,
+          "hitRate": 0.047337278106508875
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 14,
+          "language": "es",
+          "byteLogLikelihood": -4.721042183854175,
+          "hits": 8,
+          "total": 169,
+          "hitRate": 0.047337278106508875
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 12,
+          "language": "pl",
+          "byteLogLikelihood": -5.087596335232385,
+          "hits": 7,
+          "total": 169,
+          "hitRate": 0.04142011834319527
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 10,
+          "language": "lt",
+          "byteLogLikelihood": -4.596975900218536,
+          "hits": 6,
+          "total": 169,
+          "hitRate": 0.03550295857988166
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 8,
+          "language": "mt",
+          "byteLogLikelihood": -5.10594547390058,
+          "hits": 5,
+          "total": 170,
+          "hitRate": 0.029411764705882353
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 7,
+          "language": "is",
+          "byteLogLikelihood": -5.074758182527607,
+          "hits": 4,
+          "total": 170,
+          "hitRate": 0.023529411764705882
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 1,
+          "language": "ro",
+          "byteLogLikelihood": -4.572632236700525,
+          "hits": 1,
+          "total": 169,
+          "hitRate": 0.005917159763313609
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk",
+          "byteLogLikelihood": -6.609505685025072,
+          "hits": 0,
+          "total": 169,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -5.267508614334377,
+          "hits": 0,
+          "total": 168,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -6.182018138172009,
+          "hits": 0,
+          "total": 169,
+          "hitRate": 0
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk",
+          "byteLogLikelihood": -4.6553531811702555,
+          "hits": 0,
+          "total": 170,
+          "hitRate": 0
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 0,
+          "language": "cy",
+          "byteLogLikelihood": -4.9126548857360515,
+          "hits": 0,
+          "total": 170,
+          "hitRate": 0
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "KOI8-U",
+        "language": "uk"
+      },
+      "predicted": {
+        "encoding": "KOI8-U",
+        "confidence": 32,
+        "language": "uk",
+        "byteLogLikelihood": -3.3436975693204882,
+        "hits": 19,
+        "total": 177,
+        "hitRate": 0.10734463276836158
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "KOI8-U",
+          "confidence": 32,
+          "language": "uk",
+          "byteLogLikelihood": -3.3436975693204882,
+          "hits": 19,
+          "total": 177,
+          "hitRate": 0.10734463276836158
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 1,
+          "language": "is",
+          "byteLogLikelihood": -5.128376292359248,
+          "hits": 1,
+          "total": 177,
+          "hitRate": 0.005649717514124294
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -6.582632026409127,
+          "hits": 0,
+          "total": 22,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr",
+          "byteLogLikelihood": -5.922515418323497,
+          "hits": 0,
+          "total": 94,
+          "hitRate": 0
+        },
+        {
+          "encoding": "macintosh",
+          "confidence": 0,
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378152,
+          "hits": 0,
+          "total": 89,
+          "hitRate": 0
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk",
+          "byteLogLikelihood": -6.589678128374873,
+          "hits": 0,
+          "total": 117,
+          "hitRate": 0
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 0,
+          "language": "mt",
+          "byteLogLikelihood": -5.105945473900569,
+          "hits": 0,
+          "total": 175,
+          "hitRate": 0
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 0,
+          "language": "lv",
+          "byteLogLikelihood": -5.19295685089022,
+          "hits": 0,
+          "total": 176,
+          "hitRate": 0
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 0,
+          "language": "lt",
+          "byteLogLikelihood": -5.110283442944831,
+          "hits": 0,
+          "total": 168,
+          "hitRate": 0
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 0,
+          "language": "cy",
+          "byteLogLikelihood": -4.912654885736058,
+          "hits": 0,
+          "total": 177,
+          "hitRate": 0
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 0,
+          "language": "es",
+          "byteLogLikelihood": -4.944199711558678,
+          "hits": 0,
+          "total": 176,
+          "hitRate": 0
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 0,
+          "language": "ro",
+          "byteLogLikelihood": -5.148788659656974,
+          "hits": 0,
+          "total": 177,
+          "hitRate": 0
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 0,
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378152,
+          "hits": 0,
+          "total": 92,
+          "hitRate": 0
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 0,
+          "language": "pl",
+          "byteLogLikelihood": -5.087596335232398,
+          "hits": 0,
+          "total": 94,
+          "hitRate": 0
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "macintosh",
+        "language": "de"
+      },
+      "predicted": {
+        "encoding": "macintosh",
+        "confidence": 73,
+        "language": "de",
+        "byteLogLikelihood": -3.1697120775185543,
+        "hits": 53,
+        "total": 216,
+        "hitRate": 0.24537037037037038
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "macintosh",
+          "confidence": 73,
+          "language": "de",
+          "byteLogLikelihood": -3.1697120775185543,
+          "hits": 53,
+          "total": 216,
+          "hitRate": 0.24537037037037038
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 74,
+          "language": "es",
+          "byteLogLikelihood": -5.00394630594546,
+          "hits": 53,
+          "total": 214,
+          "hitRate": 0.24766355140186916
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 69,
+          "language": "fr",
+          "byteLogLikelihood": -5.00394630594546,
+          "hits": 50,
+          "total": 216,
+          "hitRate": 0.23148148148148148
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 22,
+          "language": "cy",
+          "byteLogLikelihood": -4.912654885736052,
+          "hits": 16,
+          "total": 214,
+          "hitRate": 0.07476635514018691
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 15,
+          "language": "ro",
+          "byteLogLikelihood": -5.176149732573828,
+          "hits": 11,
+          "total": 214,
+          "hitRate": 0.0514018691588785
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 11,
+          "language": "lv",
+          "byteLogLikelihood": -5.192956850890211,
+          "hits": 8,
+          "total": 214,
+          "hitRate": 0.037383177570093455
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 5,
+          "language": "mt",
+          "byteLogLikelihood": -5.105945473900581,
+          "hits": 4,
+          "total": 214,
+          "hitRate": 0.018691588785046728
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 5,
+          "language": "pl",
+          "byteLogLikelihood": -5.0875963352323845,
+          "hits": 4,
+          "total": 216,
+          "hitRate": 0.018518518518518517
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 4,
+          "language": "is",
+          "byteLogLikelihood": -5.204006687076796,
+          "hits": 3,
+          "total": 214,
+          "hitRate": 0.014018691588785047
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 2,
+          "language": "lt",
+          "byteLogLikelihood": -5.123963979403258,
+          "hits": 2,
+          "total": 214,
+          "hitRate": 0.009345794392523364
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk",
+          "byteLogLikelihood": -6.534754518494097,
+          "hits": 0,
+          "total": 215,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -6.345510152226654,
+          "hits": 0,
+          "total": 216,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr",
+          "byteLogLikelihood": -6.337519079447344,
+          "hits": 0,
+          "total": 216,
+          "hitRate": 0
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk",
+          "byteLogLikelihood": -6.6502790485874215,
+          "hits": 0,
+          "total": 216,
+          "hitRate": 0
+        }
+      ]
+    },
+    {
+      "expected": {
+        "encoding": "macintosh",
+        "language": "es"
+      },
+      "predicted": {
+        "encoding": "macintosh",
+        "confidence": 61,
+        "language": "es",
+        "byteLogLikelihood": -3.8346579357668467,
+        "hits": 41,
+        "total": 200,
+        "hitRate": 0.205
+      },
+      "encodingCorrect": true,
+      "languageCorrect": true,
+      "tiedAtTop": 1,
+      "candidates": [
+        {
+          "encoding": "macintosh",
+          "confidence": 61,
+          "language": "es",
+          "byteLogLikelihood": -3.8346579357668467,
+          "hits": 41,
+          "total": 200,
+          "hitRate": 0.205
+        },
+        {
+          "encoding": "ISO-8859-15",
+          "confidence": 58,
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378169,
+          "hits": 39,
+          "total": 199,
+          "hitRate": 0.19597989949748743
+        },
+        {
+          "encoding": "CP850",
+          "confidence": 58,
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378169,
+          "hits": 39,
+          "total": 200,
+          "hitRate": 0.195
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 25,
+          "language": "lv",
+          "byteLogLikelihood": -5.192956850890211,
+          "hits": 17,
+          "total": 199,
+          "hitRate": 0.08542713567839195
+        },
+        {
+          "encoding": "ISO-8859-13",
+          "confidence": 19,
+          "language": "lt",
+          "byteLogLikelihood": -5.123963979403258,
+          "hits": 13,
+          "total": 199,
+          "hitRate": 0.06532663316582915
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 16,
+          "language": "cy",
+          "byteLogLikelihood": -4.912654885736052,
+          "hits": 11,
+          "total": 199,
+          "hitRate": 0.05527638190954774
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 15,
+          "language": "ro",
+          "byteLogLikelihood": -5.176149732573829,
+          "hits": 10,
+          "total": 199,
+          "hitRate": 0.05025125628140704
+        },
+        {
+          "encoding": "CP852",
+          "confidence": 7,
+          "language": "pl",
+          "byteLogLikelihood": -5.0875963352323845,
+          "hits": 5,
+          "total": 200,
+          "hitRate": 0.025
+        },
+        {
+          "encoding": "ISO-8859-10",
+          "confidence": 4,
+          "language": "is",
+          "byteLogLikelihood": -5.204006687076795,
+          "hits": 3,
+          "total": 199,
+          "hitRate": 0.01507537688442211
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 0,
+          "language": "uk",
+          "byteLogLikelihood": -6.6502790485874215,
+          "hits": 0,
+          "total": 199,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM866",
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -6.692083742506628,
+          "hits": 0,
+          "total": 200,
+          "hitRate": 0
+        },
+        {
+          "encoding": "IBM855",
+          "confidence": 0,
+          "language": "sr",
+          "byteLogLikelihood": -5.62474139294467,
+          "hits": 0,
+          "total": 200,
+          "hitRate": 0
+        },
+        {
+          "encoding": "x-mac-cyrillic",
+          "confidence": 0,
+          "language": "uk",
+          "byteLogLikelihood": -6.303705458307449,
+          "hits": 0,
+          "total": 200,
+          "hitRate": 0
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 0,
+          "language": "mt",
+          "byteLogLikelihood": -5.10594547390058,
+          "hits": 0,
+          "total": 199,
+          "hitRate": 0
         }
       ]
     },
@@ -1693,8 +2831,12 @@
       },
       "predicted": {
         "encoding": "macintosh",
-        "confidence": 70,
-        "language": "fr"
+        "confidence": 77,
+        "language": "fr",
+        "byteLogLikelihood": -2.0661963149298153,
+        "hits": 59,
+        "total": 228,
+        "hitRate": 0.25877192982456143
       },
       "encodingCorrect": true,
       "languageCorrect": true,
@@ -1702,73 +2844,129 @@
       "candidates": [
         {
           "encoding": "macintosh",
-          "confidence": 70,
-          "language": "fr"
+          "confidence": 77,
+          "language": "fr",
+          "byteLogLikelihood": -2.0661963149298153,
+          "hits": 59,
+          "total": 228,
+          "hitRate": 0.25877192982456143
         },
         {
           "encoding": "ISO-8859-15",
-          "confidence": 69,
-          "language": "fr"
+          "confidence": 75,
+          "language": "es",
+          "byteLogLikelihood": -5.010635294096255,
+          "hits": 56,
+          "total": 224,
+          "hitRate": 0.25
         },
         {
           "encoding": "CP850",
-          "confidence": 67,
-          "language": "fr"
-        },
-        {
-          "encoding": "ISO-8859-16",
-          "confidence": 25,
-          "language": "ro"
-        },
-        {
-          "encoding": "ISO-8859-4",
-          "confidence": 20,
-          "language": "lv"
-        },
-        {
-          "encoding": "ISO-8859-13",
-          "confidence": 15,
-          "language": "lt"
-        },
-        {
-          "encoding": "ISO-8859-3",
-          "confidence": 6,
-          "language": "mt"
-        },
-        {
-          "encoding": "ISO-8859-14",
-          "confidence": 6,
-          "language": "cy"
+          "confidence": 71,
+          "language": "de",
+          "byteLogLikelihood": -5.010635294096255,
+          "hits": 54,
+          "total": 228,
+          "hitRate": 0.23684210526315788
         },
         {
           "encoding": "ISO-8859-10",
-          "confidence": 5,
-          "language": "is"
+          "confidence": 12,
+          "language": "is",
+          "byteLogLikelihood": -5.204006687076795,
+          "hits": 9,
+          "total": 224,
+          "hitRate": 0.04017857142857143
+        },
+        {
+          "encoding": "ISO-8859-16",
+          "confidence": 12,
+          "language": "ro",
+          "byteLogLikelihood": -5.176149732573829,
+          "hits": 9,
+          "total": 224,
+          "hitRate": 0.04017857142857143
+        },
+        {
+          "encoding": "ISO-8859-4",
+          "confidence": 9,
+          "language": "lv",
+          "byteLogLikelihood": -5.192956850890211,
+          "hits": 7,
+          "total": 224,
+          "hitRate": 0.03125
+        },
+        {
+          "encoding": "ISO-8859-3",
+          "confidence": 8,
+          "language": "mt",
+          "byteLogLikelihood": -5.10594547390058,
+          "hits": 6,
+          "total": 224,
+          "hitRate": 0.026785714285714284
         },
         {
           "encoding": "CP852",
+          "confidence": 7,
+          "language": "pl",
+          "byteLogLikelihood": -5.0875963352323845,
+          "hits": 6,
+          "total": 228,
+          "hitRate": 0.02631578947368421
+        },
+        {
+          "encoding": "ISO-8859-13",
           "confidence": 5,
-          "language": "pl"
+          "language": "lt",
+          "byteLogLikelihood": -5.123963979403258,
+          "hits": 4,
+          "total": 224,
+          "hitRate": 0.017857142857142856
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 4,
+          "language": "cy",
+          "byteLogLikelihood": -4.912654885736052,
+          "hits": 3,
+          "total": 224,
+          "hitRate": 0.013392857142857142
         },
         {
           "encoding": "KOI8-U",
           "confidence": 0,
-          "language": "uk"
+          "language": "uk",
+          "byteLogLikelihood": -6.6502790485874215,
+          "hits": 0,
+          "total": 224,
+          "hitRate": 0
         },
         {
           "encoding": "IBM866",
           "confidence": 0,
-          "language": "ru"
+          "language": "ru",
+          "byteLogLikelihood": -5.9989365619466835,
+          "hits": 0,
+          "total": 228,
+          "hitRate": 0
         },
         {
           "encoding": "IBM855",
           "confidence": 0,
-          "language": "sr"
+          "language": "sr",
+          "byteLogLikelihood": -3.576182148392255,
+          "hits": 0,
+          "total": 228,
+          "hitRate": 0
         },
         {
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
-          "language": "uk"
+          "language": "ru",
+          "byteLogLikelihood": -5.9989365619466835,
+          "hits": 0,
+          "total": 228,
+          "hitRate": 0
         }
       ]
     },
@@ -1780,7 +2978,11 @@
       "predicted": {
         "encoding": "x-mac-cyrillic",
         "confidence": 36,
-        "language": "ru"
+        "language": "ru",
+        "byteLogLikelihood": -3.3137607778551392,
+        "hits": 22,
+        "total": 179,
+        "hitRate": 0.12290502793296089
       },
       "encodingCorrect": true,
       "languageCorrect": true,
@@ -1789,72 +2991,128 @@
         {
           "encoding": "x-mac-cyrillic",
           "confidence": 36,
-          "language": "ru"
-        },
-        {
-          "encoding": "KOI8-U",
-          "confidence": 6,
-          "language": "uk"
+          "language": "ru",
+          "byteLogLikelihood": -3.3137607778551392,
+          "hits": 22,
+          "total": 179,
+          "hitRate": 0.12290502793296089
         },
         {
           "encoding": "IBM855",
-          "confidence": 4,
-          "language": "ru"
+          "confidence": 9,
+          "language": "ru",
+          "byteLogLikelihood": -5.603105135042386,
+          "hits": 5,
+          "total": 165,
+          "hitRate": 0.030303030303030304
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 3,
+          "language": "uk",
+          "byteLogLikelihood": -6.334488595020551,
+          "hits": 2,
+          "total": 177,
+          "hitRate": 0.011299435028248588
+        },
+        {
+          "encoding": "ISO-8859-14",
+          "confidence": 1,
+          "language": "cy",
+          "byteLogLikelihood": -4.724449359888652,
+          "hits": 1,
+          "total": 177,
+          "hitRate": 0.005649717514124294
         },
         {
           "encoding": "IBM866",
-          "confidence": 1,
-          "language": "ru"
+          "confidence": 0,
+          "language": "ru",
+          "byteLogLikelihood": -5.050263664880272,
+          "hits": 0,
+          "total": 169,
+          "hitRate": 0
         },
         {
           "encoding": "macintosh",
           "confidence": 0,
-          "language": "es"
+          "language": "es",
+          "byteLogLikelihood": -4.944169511698946,
+          "hits": 0,
+          "total": 151,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-3",
           "confidence": 0,
-          "language": "mt"
+          "language": "mt",
+          "byteLogLikelihood": -4.904224209153041,
+          "hits": 0,
+          "total": 175,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-4",
           "confidence": 0,
-          "language": "lv"
+          "language": "lv",
+          "byteLogLikelihood": -4.796591053119867,
+          "hits": 0,
+          "total": 177,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-10",
           "confidence": 0,
-          "language": "is"
+          "language": "is",
+          "byteLogLikelihood": -4.93924957375923,
+          "hits": 0,
+          "total": 177,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-13",
           "confidence": 0,
-          "language": "lt"
-        },
-        {
-          "encoding": "ISO-8859-14",
-          "confidence": 0,
-          "language": "cy"
+          "language": "lt",
+          "byteLogLikelihood": -4.664085453059877,
+          "hits": 0,
+          "total": 177,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-15",
           "confidence": 0,
-          "language": "es"
+          "language": "fr",
+          "byteLogLikelihood": -4.760478683075776,
+          "hits": 0,
+          "total": 177,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-16",
           "confidence": 0,
-          "language": "ro"
+          "language": "ro",
+          "byteLogLikelihood": -4.935887060164776,
+          "hits": 0,
+          "total": 177,
+          "hitRate": 0
         },
         {
           "encoding": "CP850",
           "confidence": 0,
-          "language": "es"
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378152,
+          "hits": 0,
+          "total": 137,
+          "hitRate": 0
         },
         {
           "encoding": "CP852",
           "confidence": 0,
-          "language": "pl"
+          "language": "pl",
+          "byteLogLikelihood": -5.083005956553193,
+          "hits": 0,
+          "total": 156,
+          "hitRate": 0
         }
       ]
     },
@@ -1865,8 +3123,12 @@
       },
       "predicted": {
         "encoding": "x-mac-cyrillic",
-        "confidence": 20,
-        "language": "uk"
+        "confidence": 32,
+        "language": "uk",
+        "byteLogLikelihood": -3.3436975693204882,
+        "hits": 19,
+        "total": 177,
+        "hitRate": 0.10734463276836158
       },
       "encodingCorrect": true,
       "languageCorrect": true,
@@ -1874,73 +3136,129 @@
       "candidates": [
         {
           "encoding": "x-mac-cyrillic",
-          "confidence": 20,
-          "language": "uk"
-        },
-        {
-          "encoding": "KOI8-U",
-          "confidence": 3,
-          "language": "uk"
+          "confidence": 32,
+          "language": "uk",
+          "byteLogLikelihood": -3.3436975693204882,
+          "hits": 19,
+          "total": 177,
+          "hitRate": 0.10734463276836158
         },
         {
           "encoding": "IBM855",
-          "confidence": 3,
-          "language": "ru"
+          "confidence": 5,
+          "language": "ru",
+          "byteLogLikelihood": -5.830774318920549,
+          "hits": 3,
+          "total": 163,
+          "hitRate": 0.018404907975460124
+        },
+        {
+          "encoding": "KOI8-U",
+          "confidence": 1,
+          "language": "uk",
+          "byteLogLikelihood": -6.341901231005968,
+          "hits": 1,
+          "total": 175,
+          "hitRate": 0.005714285714285714
         },
         {
           "encoding": "IBM866",
           "confidence": 0,
-          "language": "ru"
+          "language": "ru",
+          "byteLogLikelihood": -5.100977296295079,
+          "hits": 0,
+          "total": 167,
+          "hitRate": 0
         },
         {
           "encoding": "macintosh",
           "confidence": 0,
-          "language": "es"
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378152,
+          "hits": 0,
+          "total": 139,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-3",
           "confidence": 0,
-          "language": "mt"
+          "language": "mt",
+          "byteLogLikelihood": -5.035218126431041,
+          "hits": 0,
+          "total": 164,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-4",
           "confidence": 0,
-          "language": "lv"
+          "language": "lv",
+          "byteLogLikelihood": -4.726279355537798,
+          "hits": 0,
+          "total": 169,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-10",
           "confidence": 0,
-          "language": "is"
+          "language": "is",
+          "byteLogLikelihood": -4.876716873436606,
+          "hits": 0,
+          "total": 175,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-13",
           "confidence": 0,
-          "language": "lt"
+          "language": "lt",
+          "byteLogLikelihood": -4.66922099520459,
+          "hits": 0,
+          "total": 169,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-14",
           "confidence": 0,
-          "language": "cy"
+          "language": "cy",
+          "byteLogLikelihood": -4.725687554137649,
+          "hits": 0,
+          "total": 175,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-15",
           "confidence": 0,
-          "language": "es"
+          "language": "fr",
+          "byteLogLikelihood": -4.753004092614596,
+          "hits": 0,
+          "total": 175,
+          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-16",
           "confidence": 0,
-          "language": "ro"
+          "language": "ro",
+          "byteLogLikelihood": -4.986714390957144,
+          "hits": 0,
+          "total": 175,
+          "hitRate": 0
         },
         {
           "encoding": "CP850",
           "confidence": 0,
-          "language": "es"
+          "language": "es",
+          "byteLogLikelihood": -4.948759890378152,
+          "hits": 0,
+          "total": 137,
+          "hitRate": 0
         },
         {
           "encoding": "CP852",
           "confidence": 0,
-          "language": "pl"
+          "language": "pl",
+          "byteLogLikelihood": -5.087596335232398,
+          "hits": 0,
+          "total": 152,
+          "hitRate": 0
         }
       ]
     }
