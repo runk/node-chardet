@@ -16,6 +16,7 @@ assert.deepStrictEqual(chardet.analyse(Buffer.from('This is a test')), [
   { confidence: 10, name: 'Big5', lang: 'zh' },
   { confidence: 10, name: 'EUC-JP', lang: 'ja' },
   { confidence: 10, name: 'EUC-KR', lang: 'ko' },
+  { confidence: 10, name: 'CP949', lang: 'ko' },
   { confidence: 10, name: 'GB18030', lang: 'zh' },
 ]);
 

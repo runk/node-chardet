@@ -23,4 +23,8 @@ describe('Multibyte Character Sets', () => {
   it('should return EUC-KR', () => {
     expect(chardet.detectFileSync(base + '/euc_kr')).toBe('EUC-KR');
   });
+
+  it('should return CP949', () => {
+    expect(chardet.detectFileSync(base + '/cp949')).toBe('CP949');
+  });
 });

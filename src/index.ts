@@ -9,6 +9,7 @@ import * as unicode from './encoding/unicode';
 import * as mbcs from './encoding/mbcs';
 import * as sbcs from './encoding/sbcs';
 import * as iso2022 from './encoding/iso2022';
+import * as legacy from './encoding/legacy';
 import { isByteArray } from './utils';
 
 interface FullOptions {
@@ -28,22 +29,37 @@ const recognisers: Recogniser[] = [
   new mbcs.big5(),
   new mbcs.euc_jp(),
   new mbcs.euc_kr(),
+  new mbcs.cp949(),
   new mbcs.gb_18030(),
   new iso2022.ISO_2022_JP(),
   new iso2022.ISO_2022_KR(),
   new iso2022.ISO_2022_CN(),
   new sbcs.ISO_8859_1(),
   new sbcs.ISO_8859_2(),
+  new legacy.ISO_8859_3(),
+  new legacy.ISO_8859_4(),
   new sbcs.ISO_8859_5(),
   new sbcs.ISO_8859_6(),
   new sbcs.ISO_8859_7(),
   new sbcs.ISO_8859_8(),
   new sbcs.ISO_8859_9(),
+  new legacy.ISO_8859_10(),
+  new legacy.ISO_8859_13(),
+  new legacy.ISO_8859_14(),
+  new legacy.ISO_8859_15(),
+  new legacy.ISO_8859_16(),
   new sbcs.windows_1251(),
   new sbcs.windows_1256(),
   new sbcs.windows_1257(),
   new sbcs.windows_1258(),
   new sbcs.windows_874(),
+  new sbcs.KOI8_U(),
+  new sbcs.IBM866(),
+  new sbcs.IBM855(),
+  new sbcs.macintosh(),
+  new sbcs.x_mac_cyrillic(),
+  new legacy.CP850(),
+  new legacy.CP852(),
   new sbcs.KOI8_R(),
   new Ascii(),
 ];

@@ -1,7 +1,7 @@
 import * as chardet from '..';
 import fs from 'fs';
 import path from 'path';
-import { describe, expect, it, test } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 describe('Singlebyte Character Sets', () => {
   const base = path.join(__dirname, '/../test/data/encodings');
@@ -22,8 +22,19 @@ describe('Singlebyte Character Sets', () => {
     expect(detect('iso88592_cs')).toBe('ISO-8859-2');
   });
 
-  test.todo('should return ISO-8859-3');
-  test.todo('should return ISO-8859-4');
+  it('should return ISO-8859-3 (Maltese)', () => {
+    expect(analyse('iso88593_mt')).toMatchObject({
+      name: 'ISO-8859-3',
+      lang: 'mt',
+    });
+  });
+
+  it('should return ISO-8859-4 (Latvian)', () => {
+    expect(analyse('iso88594_lv')).toMatchObject({
+      name: 'ISO-8859-4',
+      lang: 'lv',
+    });
+  });
 
   it('should return ISO-8859-5 (Russian)', () => {
     expect(detect('iso88595_ru')).toBe('ISO-8859-5');
@@ -45,13 +56,43 @@ describe('Singlebyte Character Sets', () => {
     expect(detect('iso88599_tr')).toBe('ISO-8859-9');
   });
 
-  test.todo('should return ISO-8859-10');
-  test.todo('should return ISO-8859-11');
+  it('should return ISO-8859-10 (Icelandic)', () => {
+    expect(analyse('iso885910_is')).toMatchObject({
+      name: 'ISO-8859-10',
+      lang: 'is',
+    });
+  });
+  it('should detect ISO-8859-11 / TIS-620 under its windows-874 name', () => {
+    expect(detect('windows_874')).toBe('windows-874');
+  });
   // iso-8859-12 is abandoned
-  test.todo('should return ISO-8859-13');
-  test.todo('should return ISO-8859-14');
-  test.todo('should return ISO-8859-15');
-  test.todo('should return ISO-8859-16');
+  it('should return ISO-8859-13 (Lithuanian)', () => {
+    expect(analyse('iso885913_lt')).toMatchObject({
+      name: 'ISO-8859-13',
+      lang: 'lt',
+    });
+  });
+
+  it('should return ISO-8859-14 (Welsh)', () => {
+    expect(analyse('iso885914_cy')).toMatchObject({
+      name: 'ISO-8859-14',
+      lang: 'cy',
+    });
+  });
+
+  it('should return ISO-8859-15 (French)', () => {
+    expect(analyse('iso885915_fr')).toMatchObject({
+      name: 'ISO-8859-15',
+      lang: 'fr',
+    });
+  });
+
+  it('should return ISO-8859-16 (Romanian)', () => {
+    expect(analyse('iso885916_ro')).toMatchObject({
+      name: 'ISO-8859-16',
+      lang: 'ro',
+    });
+  });
 
   it('should return windows-874 for Thai text', () => {
     expect(detect('windows_874')).toBe('windows-874');
@@ -97,6 +138,51 @@ describe('Singlebyte Character Sets', () => {
       name: 'windows-1258',
       lang: 'vi',
     });
+  });
+
+  it('should return KOI8-U (Ukrainian)', () => {
+    expect(analyse('koi8u')).toMatchObject({
+      name: 'KOI8-U',
+      lang: 'uk',
+    });
+  });
+
+  it('should return IBM866 (Russian)', () => {
+    expect(analyse('ibm866')).toMatchObject({
+      name: 'IBM866',
+      lang: 'ru',
+    });
+  });
+
+  it.each(['bg', 'ru', 'sr'])('should return IBM855 (%s)', (language) => {
+    expect(analyse(`ibm855_${language}`)).toMatchObject({
+      name: 'IBM855',
+    });
+  });
+
+  it.each(['ru', 'uk'])('should return x-mac-cyrillic (%s)', (language) => {
+    expect(analyse(`x_mac_cyrillic_${language}`)).toMatchObject({
+      name: 'x-mac-cyrillic',
+      lang: language,
+    });
+  });
+
+  it.each(['en', 'fr', 'de', 'es'])(
+    'should return macintosh (%s)',
+    (language) => {
+      expect(analyse(`macintosh_${language}`)).toMatchObject({
+        name: 'macintosh',
+        lang: language,
+      });
+    },
+  );
+
+  it('should return CP850 (French)', () => {
+    expect(analyse('cp850_fr')).toMatchObject({ name: 'CP850', lang: 'fr' });
+  });
+
+  it('should return CP852 (Polish)', () => {
+    expect(analyse('cp852_pl')).toMatchObject({ name: 'CP852', lang: 'pl' });
   });
 
   it('should return KOI8-R (Russian)', () => {

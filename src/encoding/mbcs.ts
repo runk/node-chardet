@@ -398,6 +398,23 @@ export class euc_jp extends mbcs {
  *    is created and kept by the public CharsetDetector class
  */
 export class euc_kr extends mbcs {
+  match(det: Context): Match | null {
+    for (let i = 0; i < det.rawLen; i++) {
+      const firstByte = det.rawInput[i];
+      if (firstByte <= 0x7f) continue;
+      const secondByte = det.rawInput[++i];
+      if (
+        firstByte < 0xa1 ||
+        firstByte > 0xfe ||
+        secondByte < 0xa1 ||
+        secondByte > 0xfe
+      ) {
+        return null;
+      }
+    }
+    return super.match(det);
+  }
+
   name(): EncodingName {
     return 'EUC-KR';
   }
@@ -424,7 +441,66 @@ export class euc_kr extends mbcs {
     0xc8ad,
   ];
 
-  nextChar = eucNextChar;
+  nextChar(iter: IteratedChar, det: Context) {
+    iter.index = iter.nextIndex;
+    iter.error = false;
+
+    const firstByte = (iter.charValue = iter.nextByte(det));
+    if (firstByte < 0) return false;
+    if (firstByte <= 0x7f) return true;
+
+    const secondByte = iter.nextByte(det);
+    if (secondByte < 0) return false;
+    iter.charValue = (firstByte << 8) | secondByte;
+    if (
+      firstByte < 0xa1 ||
+      firstByte > 0xfe ||
+      secondByte < 0xa1 ||
+      secondByte > 0xfe
+    ) {
+      iter.error = true;
+    }
+    return true;
+  }
+}
+
+export class cp949 extends euc_kr {
+  match(det: Context): Match | null {
+    return mbcs.prototype.match.call(this, det);
+  }
+
+  name(): EncodingName {
+    return 'CP949';
+  }
+
+  nextChar(iter: IteratedChar, det: Context) {
+    iter.index = iter.nextIndex;
+    iter.error = false;
+
+    const firstByte = (iter.charValue = iter.nextByte(det));
+    if (firstByte < 0) return false;
+    if (firstByte <= 0x7f) return true;
+
+    const secondByte = iter.nextByte(det);
+    if (secondByte < 0) return false;
+    iter.charValue = (firstByte << 8) | secondByte;
+
+    const extensionTrail =
+      (secondByte >= 0x41 && secondByte <= 0x5a) ||
+      (secondByte >= 0x61 && secondByte <= 0x7a) ||
+      (secondByte >= 0x81 && secondByte <= 0xfe);
+    const standardTrail = secondByte >= 0xa1 && secondByte <= 0xfe;
+
+    if (
+      !(
+        (firstByte >= 0x81 && firstByte <= 0xc6 && extensionTrail) ||
+        (firstByte >= 0xc7 && firstByte <= 0xfe && standardTrail)
+      )
+    ) {
+      iter.error = true;
+    }
+    return true;
+  }
 }
 
 /**
