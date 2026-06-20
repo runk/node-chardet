@@ -1,4 +1,4 @@
-import { Context, Recogniser } from "./encoding";
+import { Context, Recogniser } from './encoding';
 
 export type EncodingName =
   | 'ASCII'
@@ -38,7 +38,7 @@ export type EncodingName =
   | 'windows-1256'
   | 'windows-1257'
   | 'windows-1258'
-  | 'windows-874'
+  | 'windows-874';
 
 export interface Match {
   confidence: number;

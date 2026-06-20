@@ -4,7 +4,7 @@ on:
   push:
     branches: [master]
   pull_request:
-    branches: ["*"]
+    branches: ['*']
 
 jobs:
   build:
@@ -27,3 +27,20 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: .github/workflows/test-build.sh
+
+  corpus:
+    name: Verify corpus and models
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Use Node.js 24
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24.x
+      - run: npm i
+      - name: Verify generated corpus
+        run: npm run corpus:verify
+      - name: Verify generated detector models
+        run: npm run models:verify

@@ -100,7 +100,7 @@ export const analyse = (buffer: Uint8Array): AnalyseResult => {
 
 export const detectFile = (
   filepath: string,
-  opts: Options = {}
+  opts: Options = {},
 ): Promise<DetectResult> =>
   new Promise((resolve, reject) => {
     let fd: any;
@@ -125,16 +125,23 @@ export const detectFile = (
       fd = fs.openSync(filepath, 'r');
       let sample = Buffer.allocUnsafe(sampleSize);
 
-      fs.read(fd, sample, 0, sampleSize, opts.offset, (err: NodeJS.ErrnoException | null, bytesRead: number) => {
-        if (err) {
-          handler(err, null);
-        } else {
-          if (bytesRead < sampleSize) {
-            sample = sample.subarray(0, bytesRead);
+      fs.read(
+        fd,
+        sample,
+        0,
+        sampleSize,
+        opts.offset,
+        (err: NodeJS.ErrnoException | null, bytesRead: number) => {
+          if (err) {
+            handler(err, null);
+          } else {
+            if (bytesRead < sampleSize) {
+              sample = sample.subarray(0, bytesRead);
+            }
+            handler(null, sample);
           }
-          handler(null, sample);
-        }
-      });
+        },
+      );
       return;
     }
 
@@ -143,7 +150,7 @@ export const detectFile = (
 
 export const detectFileSync = (
   filepath: string,
-  opts: Options = {}
+  opts: Options = {},
 ): DetectResult => {
   const fs = loadFs();
 

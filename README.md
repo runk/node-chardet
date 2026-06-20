@@ -125,6 +125,7 @@ Yes. Type definitions are included.
 - https://github.com/TypesettingTools/uchardet
 
 ### TODO
+
 - [ ] KOI8-U for Ukrainian
 - [ ] IBM866 for DOS Cyrillic
 - [ ] macintosh and x-mac-cyrillic

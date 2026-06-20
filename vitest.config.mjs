@@ -8,7 +8,11 @@ export default defineConfig({
       provider: 'v8',
       reportsDirectory: 'coverage',
       include: ['src/**/*.ts'],
-      exclude: ['src/**/*.test.ts', 'src/test/**'],
+      exclude: [
+        'src/**/*.test.ts',
+        'src/encoding/models/generated.ts',
+        'src/test/**',
+      ],
     },
   },
 });
