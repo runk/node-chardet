@@ -10,7 +10,9 @@
     "esModuleInterop": true,
     "extendedDiagnostics": false,
     "listEmittedFiles": true,
-    "module": "commonjs",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "noEmit": true,
     "removeComments": true,
     "sourceMap": true,
     "strict": true,
@@ -19,5 +21,6 @@
     "noUnusedParameters": true,
     "types": ["node"]
   },
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "__mocks__", "lib"]
 }

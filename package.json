@@ -13,10 +13,11 @@
     "url": "http://github.com/runk/node-chardet/issues"
   },
   "scripts": {
-    "build": "rm -rf lib/* && tsc",
+    "build": "rm -rf lib/* && tsc -p tsconfig.build.json",
     "format": "prettier --write ./src/**/*.ts",
     "format:check": "prettier --list-different ./src/**/*.ts",
-    "test": "vitest run --coverage",
+    "test": "npm run test:typecheck && vitest run --coverage",
+    "test:typecheck": "tsc",
     "prepublish": "npm run build",
     "semantic-release": "semantic-release",
     "typecheck": "tsc"
