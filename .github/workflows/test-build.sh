@@ -1,4 +1,4 @@
 #!/bin/sh -ex
 
 node ./.github/workflows/test-build.js
-npx ts-node ./.github/workflows/test-build.ts
+npx tsx ./.github/workflows/test-build.ts

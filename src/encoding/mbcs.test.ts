@@ -1,4 +1,5 @@
 import * as chardet from '..';
+import { describe, expect, it } from 'vitest';
 
 describe('Multibyte Character Sets', () => {
   const base = __dirname + '/../test/data/encodings';

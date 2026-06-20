@@ -1,4 +1,5 @@
 import { isByteArray } from './utils';
+import { describe, expect, test } from 'vitest';
 
 describe('isByteArray', () => {
   test('positives', () => {

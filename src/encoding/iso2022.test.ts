@@ -1,6 +1,7 @@
 import * as chardet from '..';
 import fs from 'fs';
 import path from 'path';
+import { describe, expect, it } from 'vitest';
 
 describe('ISO-2022', () => {
   const base = __dirname + '/../test/data/encodings';
