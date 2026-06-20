@@ -59,7 +59,7 @@
         "encoding": "CP850",
         "confidence": 73,
         "language": "de",
-        "byteLogLikelihood": -3.1697120775185543,
+        "byteLogLikelihood": -3.169712077519,
         "hits": 53,
         "total": 216,
         "hitRate": 0.24537037037037038
@@ -72,7 +72,7 @@
           "encoding": "CP850",
           "confidence": 73,
           "language": "de",
-          "byteLogLikelihood": -3.1697120775185543,
+          "byteLogLikelihood": -3.169712077519,
           "hits": 53,
           "total": 216,
           "hitRate": 0.24537037037037038
@@ -81,7 +81,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 72,
           "language": "es",
-          "byteLogLikelihood": -5.00394630594546,
+          "byteLogLikelihood": -5.003946305945,
           "hits": 52,
           "total": 215,
           "hitRate": 0.24186046511627907
@@ -90,7 +90,7 @@
           "encoding": "macintosh",
           "confidence": 70,
           "language": "es",
-          "byteLogLikelihood": -5.00394630594546,
+          "byteLogLikelihood": -5.003946305945,
           "hits": 51,
           "total": 216,
           "hitRate": 0.2361111111111111
@@ -99,7 +99,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 22,
           "language": "cy",
-          "byteLogLikelihood": -4.912654885736052,
+          "byteLogLikelihood": -4.912654885736,
           "hits": 16,
           "total": 215,
           "hitRate": 0.07441860465116279
@@ -108,7 +108,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 13,
           "language": "ro",
-          "byteLogLikelihood": -5.176149732573828,
+          "byteLogLikelihood": -5.176149732574,
           "hits": 10,
           "total": 215,
           "hitRate": 0.046511627906976744
@@ -117,7 +117,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 11,
           "language": "lv",
-          "byteLogLikelihood": -5.192956850890211,
+          "byteLogLikelihood": -5.19295685089,
           "hits": 8,
           "total": 215,
           "hitRate": 0.037209302325581395
@@ -126,7 +126,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 5,
           "language": "mt",
-          "byteLogLikelihood": -5.105945473900581,
+          "byteLogLikelihood": -5.105945473901,
           "hits": 4,
           "total": 215,
           "hitRate": 0.018604651162790697
@@ -135,7 +135,7 @@
           "encoding": "CP852",
           "confidence": 5,
           "language": "pl",
-          "byteLogLikelihood": -5.0875963352323845,
+          "byteLogLikelihood": -5.087596335232,
           "hits": 4,
           "total": 216,
           "hitRate": 0.018518518518518517
@@ -144,7 +144,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 4,
           "language": "is",
-          "byteLogLikelihood": -4.972957626890147,
+          "byteLogLikelihood": -4.97295762689,
           "hits": 3,
           "total": 215,
           "hitRate": 0.013953488372093023
@@ -153,7 +153,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 2,
           "language": "lt",
-          "byteLogLikelihood": -5.008439449309933,
+          "byteLogLikelihood": -5.00843944931,
           "hits": 2,
           "total": 215,
           "hitRate": 0.009302325581395349
@@ -162,7 +162,7 @@
           "encoding": "KOI8-U",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -6.6502790485874215,
+          "byteLogLikelihood": -6.650279048587,
           "hits": 0,
           "total": 215,
           "hitRate": 0
@@ -171,7 +171,7 @@
           "encoding": "IBM866",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -5.6951898769317575,
+          "byteLogLikelihood": -5.695189876932,
           "hits": 0,
           "total": 216,
           "hitRate": 0
@@ -180,7 +180,7 @@
           "encoding": "IBM855",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -5.428281637736337,
+          "byteLogLikelihood": -5.428281637736,
           "hits": 0,
           "total": 216,
           "hitRate": 0
@@ -189,7 +189,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -5.621314697937098,
+          "byteLogLikelihood": -5.621314697937,
           "hits": 0,
           "total": 216,
           "hitRate": 0
@@ -205,7 +205,7 @@
         "encoding": "CP850",
         "confidence": 61,
         "language": "es",
-        "byteLogLikelihood": -3.8346579357668467,
+        "byteLogLikelihood": -3.834657935767,
         "hits": 41,
         "total": 200,
         "hitRate": 0.205
@@ -218,7 +218,7 @@
           "encoding": "CP850",
           "confidence": 61,
           "language": "es",
-          "byteLogLikelihood": -3.8346579357668467,
+          "byteLogLikelihood": -3.834657935767,
           "hits": 41,
           "total": 200,
           "hitRate": 0.205
@@ -227,7 +227,7 @@
           "encoding": "macintosh",
           "confidence": 58,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378169,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 39,
           "total": 199,
           "hitRate": 0.19597989949748743
@@ -236,7 +236,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 58,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378169,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 39,
           "total": 199,
           "hitRate": 0.19597989949748743
@@ -245,7 +245,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 25,
           "language": "lv",
-          "byteLogLikelihood": -5.192956850890211,
+          "byteLogLikelihood": -5.19295685089,
           "hits": 17,
           "total": 199,
           "hitRate": 0.08542713567839195
@@ -254,7 +254,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 19,
           "language": "lt",
-          "byteLogLikelihood": -5.123963979403258,
+          "byteLogLikelihood": -5.123963979403,
           "hits": 13,
           "total": 199,
           "hitRate": 0.06532663316582915
@@ -263,7 +263,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 16,
           "language": "cy",
-          "byteLogLikelihood": -4.912654885736052,
+          "byteLogLikelihood": -4.912654885736,
           "hits": 11,
           "total": 199,
           "hitRate": 0.05527638190954774
@@ -272,7 +272,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 15,
           "language": "ro",
-          "byteLogLikelihood": -5.176149732573829,
+          "byteLogLikelihood": -5.176149732574,
           "hits": 10,
           "total": 199,
           "hitRate": 0.05025125628140704
@@ -281,7 +281,7 @@
           "encoding": "CP852",
           "confidence": 7,
           "language": "pl",
-          "byteLogLikelihood": -5.0875963352323845,
+          "byteLogLikelihood": -5.087596335232,
           "hits": 5,
           "total": 200,
           "hitRate": 0.025
@@ -290,7 +290,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 4,
           "language": "is",
-          "byteLogLikelihood": -5.204006687076795,
+          "byteLogLikelihood": -5.204006687077,
           "hits": 3,
           "total": 199,
           "hitRate": 0.01507537688442211
@@ -299,7 +299,7 @@
           "encoding": "KOI8-U",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -6.351652470382746,
+          "byteLogLikelihood": -6.351652470383,
           "hits": 0,
           "total": 199,
           "hitRate": 0
@@ -308,7 +308,7 @@
           "encoding": "IBM866",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -3.374008967132244,
+          "byteLogLikelihood": -3.374008967132,
           "hits": 0,
           "total": 200,
           "hitRate": 0
@@ -317,7 +317,7 @@
           "encoding": "IBM855",
           "confidence": 0,
           "language": "sr",
-          "byteLogLikelihood": -4.647154172319646,
+          "byteLogLikelihood": -4.64715417232,
           "hits": 0,
           "total": 200,
           "hitRate": 0
@@ -326,7 +326,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -6.6502790485874215,
+          "byteLogLikelihood": -6.650279048587,
           "hits": 0,
           "total": 199,
           "hitRate": 0
@@ -335,7 +335,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 0,
           "language": "mt",
-          "byteLogLikelihood": -4.759371883620607,
+          "byteLogLikelihood": -4.759371883621,
           "hits": 0,
           "total": 199,
           "hitRate": 0
@@ -351,7 +351,7 @@
         "encoding": "CP850",
         "confidence": 77,
         "language": "fr",
-        "byteLogLikelihood": -2.0661963149298153,
+        "byteLogLikelihood": -2.06619631493,
         "hits": 59,
         "total": 228,
         "hitRate": 0.25877192982456143
@@ -364,7 +364,7 @@
           "encoding": "CP850",
           "confidence": 77,
           "language": "fr",
-          "byteLogLikelihood": -2.0661963149298153,
+          "byteLogLikelihood": -2.06619631493,
           "hits": 59,
           "total": 228,
           "hitRate": 0.25877192982456143
@@ -373,7 +373,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 75,
           "language": "es",
-          "byteLogLikelihood": -5.010635294096255,
+          "byteLogLikelihood": -5.010635294096,
           "hits": 56,
           "total": 224,
           "hitRate": 0.25
@@ -382,7 +382,7 @@
           "encoding": "macintosh",
           "confidence": 71,
           "language": "es",
-          "byteLogLikelihood": -5.010635294096255,
+          "byteLogLikelihood": -5.010635294096,
           "hits": 54,
           "total": 228,
           "hitRate": 0.23684210526315788
@@ -391,7 +391,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 12,
           "language": "is",
-          "byteLogLikelihood": -5.204006687076795,
+          "byteLogLikelihood": -5.204006687077,
           "hits": 9,
           "total": 224,
           "hitRate": 0.04017857142857143
@@ -400,7 +400,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 12,
           "language": "ro",
-          "byteLogLikelihood": -5.176149732573829,
+          "byteLogLikelihood": -5.176149732574,
           "hits": 9,
           "total": 224,
           "hitRate": 0.04017857142857143
@@ -409,7 +409,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 9,
           "language": "lv",
-          "byteLogLikelihood": -5.192956850890211,
+          "byteLogLikelihood": -5.19295685089,
           "hits": 7,
           "total": 224,
           "hitRate": 0.03125
@@ -418,7 +418,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 8,
           "language": "mt",
-          "byteLogLikelihood": -5.10594547390058,
+          "byteLogLikelihood": -5.105945473901,
           "hits": 6,
           "total": 224,
           "hitRate": 0.026785714285714284
@@ -427,7 +427,7 @@
           "encoding": "CP852",
           "confidence": 7,
           "language": "pl",
-          "byteLogLikelihood": -5.0875963352323845,
+          "byteLogLikelihood": -5.087596335232,
           "hits": 6,
           "total": 228,
           "hitRate": 0.02631578947368421
@@ -436,7 +436,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 5,
           "language": "lt",
-          "byteLogLikelihood": -5.123963979403258,
+          "byteLogLikelihood": -5.123963979403,
           "hits": 4,
           "total": 224,
           "hitRate": 0.017857142857142856
@@ -445,7 +445,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 4,
           "language": "cy",
-          "byteLogLikelihood": -4.912654885736052,
+          "byteLogLikelihood": -4.912654885736,
           "hits": 3,
           "total": 224,
           "hitRate": 0.013392857142857142
@@ -454,7 +454,7 @@
           "encoding": "KOI8-U",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -6.6502790485874215,
+          "byteLogLikelihood": -6.650279048587,
           "hits": 0,
           "total": 224,
           "hitRate": 0
@@ -463,7 +463,7 @@
           "encoding": "IBM866",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -5.9989365619466835,
+          "byteLogLikelihood": -5.998936561947,
           "hits": 0,
           "total": 228,
           "hitRate": 0
@@ -472,7 +472,7 @@
           "encoding": "IBM855",
           "confidence": 0,
           "language": "sr",
-          "byteLogLikelihood": -6.520621127558697,
+          "byteLogLikelihood": -6.520621127559,
           "hits": 0,
           "total": 228,
           "hitRate": 0
@@ -481,7 +481,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -5.9989365619466835,
+          "byteLogLikelihood": -5.998936561947,
           "hits": 0,
           "total": 228,
           "hitRate": 0
@@ -497,7 +497,7 @@
         "encoding": "CP852",
         "confidence": 40,
         "language": "pl",
-        "byteLogLikelihood": -3.5291052717201468,
+        "byteLogLikelihood": -3.52910527172,
         "hits": 25,
         "total": 184,
         "hitRate": 0.1358695652173913
@@ -510,7 +510,7 @@
           "encoding": "CP852",
           "confidence": 40,
           "language": "pl",
-          "byteLogLikelihood": -3.5291052717201468,
+          "byteLogLikelihood": -3.52910527172,
           "hits": 25,
           "total": 184,
           "hitRate": 0.1358695652173913
@@ -519,7 +519,7 @@
           "encoding": "macintosh",
           "confidence": 6,
           "language": "es",
-          "byteLogLikelihood": -5.010635294096255,
+          "byteLogLikelihood": -5.010635294096,
           "hits": 4,
           "total": 182,
           "hitRate": 0.02197802197802198
@@ -528,7 +528,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 6,
           "language": "lt",
-          "byteLogLikelihood": -5.123963979403258,
+          "byteLogLikelihood": -5.123963979403,
           "hits": 4,
           "total": 183,
           "hitRate": 0.02185792349726776
@@ -537,7 +537,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 6,
           "language": "de",
-          "byteLogLikelihood": -4.948759890378169,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 4,
           "total": 183,
           "hitRate": 0.02185792349726776
@@ -546,7 +546,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 4,
           "language": "mt",
-          "byteLogLikelihood": -5.10594547390058,
+          "byteLogLikelihood": -5.105945473901,
           "hits": 3,
           "total": 183,
           "hitRate": 0.01639344262295082
@@ -555,7 +555,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 4,
           "language": "lv",
-          "byteLogLikelihood": -5.192956850890211,
+          "byteLogLikelihood": -5.19295685089,
           "hits": 3,
           "total": 184,
           "hitRate": 0.016304347826086956
@@ -564,7 +564,7 @@
           "encoding": "CP850",
           "confidence": 4,
           "language": "es",
-          "byteLogLikelihood": -5.010635294096255,
+          "byteLogLikelihood": -5.010635294096,
           "hits": 3,
           "total": 184,
           "hitRate": 0.016304347826086956
@@ -573,7 +573,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 3,
           "language": "is",
-          "byteLogLikelihood": -5.204006687076795,
+          "byteLogLikelihood": -5.204006687077,
           "hits": 2,
           "total": 184,
           "hitRate": 0.010869565217391304
@@ -582,7 +582,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 3,
           "language": "cy",
-          "byteLogLikelihood": -4.912654885736052,
+          "byteLogLikelihood": -4.912654885736,
           "hits": 2,
           "total": 184,
           "hitRate": 0.010869565217391304
@@ -591,7 +591,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 3,
           "language": "ro",
-          "byteLogLikelihood": -5.176149732573829,
+          "byteLogLikelihood": -5.176149732574,
           "hits": 2,
           "total": 183,
           "hitRate": 0.01092896174863388
@@ -600,7 +600,7 @@
           "encoding": "KOI8-U",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -6.496246341796322,
+          "byteLogLikelihood": -6.496246341796,
           "hits": 0,
           "total": 183,
           "hitRate": 0
@@ -609,7 +609,7 @@
           "encoding": "IBM866",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -5.085936520566928,
+          "byteLogLikelihood": -5.085936520567,
           "hits": 0,
           "total": 184,
           "hitRate": 0
@@ -618,7 +618,7 @@
           "encoding": "IBM855",
           "confidence": 0,
           "language": "sr",
-          "byteLogLikelihood": -5.780131236408652,
+          "byteLogLikelihood": -5.780131236409,
           "hits": 0,
           "total": 184,
           "hitRate": 0
@@ -627,7 +627,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -5.963380725618908,
+          "byteLogLikelihood": -5.963380725619,
           "hits": 0,
           "total": 183,
           "hitRate": 0
@@ -643,7 +643,7 @@
         "encoding": "IBM855",
         "confidence": 43,
         "language": "ru",
-        "byteLogLikelihood": -3.3137607778551392,
+        "byteLogLikelihood": -3.313760777855,
         "hits": 26,
         "total": 179,
         "hitRate": 0.1452513966480447
@@ -656,7 +656,7 @@
           "encoding": "IBM855",
           "confidence": 43,
           "language": "ru",
-          "byteLogLikelihood": -3.3137607778551392,
+          "byteLogLikelihood": -3.313760777855,
           "hits": 26,
           "total": 179,
           "hitRate": 0.1452513966480447
@@ -665,7 +665,7 @@
           "encoding": "KOI8-U",
           "confidence": 12,
           "language": "uk",
-          "byteLogLikelihood": -5.7286135398014055,
+          "byteLogLikelihood": -5.728613539801,
           "hits": 7,
           "total": 171,
           "hitRate": 0.04093567251461988
@@ -674,7 +674,7 @@
           "encoding": "IBM866",
           "confidence": 11,
           "language": "ru",
-          "byteLogLikelihood": -5.0885140105798845,
+          "byteLogLikelihood": -5.08851401058,
           "hits": 5,
           "total": 130,
           "hitRate": 0.038461538461538464
@@ -683,7 +683,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 4,
           "language": "ru",
-          "byteLogLikelihood": -5.827543836068529,
+          "byteLogLikelihood": -5.827543836069,
           "hits": 2,
           "total": 137,
           "hitRate": 0.014598540145985401
@@ -692,7 +692,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 1,
           "language": "is",
-          "byteLogLikelihood": -5.063955266389596,
+          "byteLogLikelihood": -5.06395526639,
           "hits": 1,
           "total": 160,
           "hitRate": 0.00625
@@ -701,7 +701,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 1,
           "language": "cy",
-          "byteLogLikelihood": -4.908064507056854,
+          "byteLogLikelihood": -4.908064507057,
           "hits": 1,
           "total": 174,
           "hitRate": 0.005747126436781609
@@ -710,7 +710,7 @@
           "encoding": "macintosh",
           "confidence": 0,
           "language": "es",
-          "byteLogLikelihood": -4.934208734236853,
+          "byteLogLikelihood": -4.934208734237,
           "hits": 0,
           "total": 73,
           "hitRate": 0
@@ -719,7 +719,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 0,
           "language": "mt",
-          "byteLogLikelihood": -5.011017819901733,
+          "byteLogLikelihood": -5.011017819902,
           "hits": 0,
           "total": 123,
           "hitRate": 0
@@ -728,7 +728,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 0,
           "language": "lv",
-          "byteLogLikelihood": -5.17113011667827,
+          "byteLogLikelihood": -5.171130116678,
           "hits": 0,
           "total": 169,
           "hitRate": 0
@@ -737,7 +737,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 0,
           "language": "lt",
-          "byteLogLikelihood": -4.913061957297312,
+          "byteLogLikelihood": -4.913061957297,
           "hits": 0,
           "total": 149,
           "hitRate": 0
@@ -746,7 +746,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 0,
           "language": "es",
-          "byteLogLikelihood": -4.805721913064909,
+          "byteLogLikelihood": -4.805721913065,
           "hits": 0,
           "total": 160,
           "hitRate": 0
@@ -755,7 +755,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 0,
           "language": "ro",
-          "byteLogLikelihood": -4.991915414161731,
+          "byteLogLikelihood": -4.991915414162,
           "hits": 0,
           "total": 162,
           "hitRate": 0
@@ -764,7 +764,7 @@
           "encoding": "CP850",
           "confidence": 0,
           "language": "es",
-          "byteLogLikelihood": -4.829101213885684,
+          "byteLogLikelihood": -4.829101213886,
           "hits": 0,
           "total": 167,
           "hitRate": 0
@@ -773,7 +773,7 @@
           "encoding": "CP852",
           "confidence": 0,
           "language": "pl",
-          "byteLogLikelihood": -5.066279276789562,
+          "byteLogLikelihood": -5.06627927679,
           "hits": 0,
           "total": 178,
           "hitRate": 0
@@ -789,7 +789,7 @@
         "encoding": "IBM855",
         "confidence": 28,
         "language": "sr",
-        "byteLogLikelihood": -3.3078979474258676,
+        "byteLogLikelihood": -3.307897947426,
         "hits": 16,
         "total": 166,
         "hitRate": 0.0963855421686747
@@ -802,7 +802,7 @@
           "encoding": "IBM855",
           "confidence": 28,
           "language": "sr",
-          "byteLogLikelihood": -3.3078979474258676,
+          "byteLogLikelihood": -3.307897947426,
           "hits": 16,
           "total": 166,
           "hitRate": 0.0963855421686747
@@ -811,7 +811,7 @@
           "encoding": "IBM866",
           "confidence": 26,
           "language": "ru",
-          "byteLogLikelihood": -4.750368103744445,
+          "byteLogLikelihood": -4.750368103744,
           "hits": 12,
           "total": 137,
           "hitRate": 0.08759124087591241
@@ -820,7 +820,7 @@
           "encoding": "KOI8-U",
           "confidence": 9,
           "language": "uk",
-          "byteLogLikelihood": -5.9560967315908275,
+          "byteLogLikelihood": -5.956096731591,
           "hits": 4,
           "total": 130,
           "hitRate": 0.03076923076923077
@@ -829,7 +829,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 8,
           "language": "ru",
-          "byteLogLikelihood": -5.930887805718768,
+          "byteLogLikelihood": -5.930887805719,
           "hits": 3,
           "total": 112,
           "hitRate": 0.026785714285714284
@@ -838,7 +838,7 @@
           "encoding": "macintosh",
           "confidence": 0,
           "language": "es",
-          "byteLogLikelihood": -4.933799879286931,
+          "byteLogLikelihood": -4.933799879287,
           "hits": 0,
           "total": 73,
           "hitRate": 0
@@ -847,7 +847,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 0,
           "language": "mt",
-          "byteLogLikelihood": -4.972489513919754,
+          "byteLogLikelihood": -4.97248951392,
           "hits": 0,
           "total": 99,
           "hitRate": 0
@@ -856,7 +856,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 0,
           "language": "lv",
-          "byteLogLikelihood": -5.1929568508902175,
+          "byteLogLikelihood": -5.19295685089,
           "hits": 0,
           "total": 131,
           "hitRate": 0
@@ -865,7 +865,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 0,
           "language": "is",
-          "byteLogLikelihood": -5.07679784807703,
+          "byteLogLikelihood": -5.076797848077,
           "hits": 0,
           "total": 145,
           "hitRate": 0
@@ -874,7 +874,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 0,
           "language": "lt",
-          "byteLogLikelihood": -4.9405819817248275,
+          "byteLogLikelihood": -4.940581981725,
           "hits": 0,
           "total": 132,
           "hitRate": 0
@@ -883,7 +883,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 0,
           "language": "cy",
-          "byteLogLikelihood": -4.9076682153723175,
+          "byteLogLikelihood": -4.907668215372,
           "hits": 0,
           "total": 157,
           "hitRate": 0
@@ -892,7 +892,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 0,
           "language": "es",
-          "byteLogLikelihood": -4.832419313648102,
+          "byteLogLikelihood": -4.832419313648,
           "hits": 0,
           "total": 138,
           "hitRate": 0
@@ -901,7 +901,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 0,
           "language": "ro",
-          "byteLogLikelihood": -5.064961155114886,
+          "byteLogLikelihood": -5.064961155115,
           "hits": 0,
           "total": 142,
           "hitRate": 0
@@ -910,7 +910,7 @@
           "encoding": "CP850",
           "confidence": 0,
           "language": "es",
-          "byteLogLikelihood": -4.704589417548013,
+          "byteLogLikelihood": -4.704589417548,
           "hits": 0,
           "total": 150,
           "hitRate": 0
@@ -919,7 +919,7 @@
           "encoding": "CP852",
           "confidence": 0,
           "language": "pl",
-          "byteLogLikelihood": -5.064438955197371,
+          "byteLogLikelihood": -5.064438955197,
           "hits": 0,
           "total": 165,
           "hitRate": 0
@@ -935,7 +935,7 @@
         "encoding": "IBM866",
         "confidence": 41,
         "language": "ru",
-        "byteLogLikelihood": -3.3137607778551392,
+        "byteLogLikelihood": -3.313760777855,
         "hits": 25,
         "total": 179,
         "hitRate": 0.13966480446927373
@@ -948,7 +948,7 @@
           "encoding": "IBM866",
           "confidence": 41,
           "language": "ru",
-          "byteLogLikelihood": -3.3137607778551392,
+          "byteLogLikelihood": -3.313760777855,
           "hits": 25,
           "total": 179,
           "hitRate": 0.13966480446927373
@@ -957,7 +957,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 15,
           "language": "uk",
-          "byteLogLikelihood": -5.7926991637421805,
+          "byteLogLikelihood": -5.792699163742,
           "hits": 7,
           "total": 133,
           "hitRate": 0.05263157894736842
@@ -966,7 +966,7 @@
           "encoding": "KOI8-U",
           "confidence": 11,
           "language": "uk",
-          "byteLogLikelihood": -6.434389971367975,
+          "byteLogLikelihood": -6.434389971368,
           "hits": 4,
           "total": 103,
           "hitRate": 0.038834951456310676
@@ -975,7 +975,7 @@
           "encoding": "IBM855",
           "confidence": 8,
           "language": "sr",
-          "byteLogLikelihood": -5.021646546946021,
+          "byteLogLikelihood": -5.021646546946,
           "hits": 5,
           "total": 169,
           "hitRate": 0.029585798816568046
@@ -984,7 +984,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 1,
           "language": "is",
-          "byteLogLikelihood": -5.10390266999273,
+          "byteLogLikelihood": -5.103902669993,
           "hits": 1,
           "total": 173,
           "hitRate": 0.005780346820809248
@@ -993,7 +993,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 1,
           "language": "cy",
-          "byteLogLikelihood": -4.830028069510369,
+          "byteLogLikelihood": -4.83002806951,
           "hits": 1,
           "total": 169,
           "hitRate": 0.005917159763313609
@@ -1002,7 +1002,7 @@
           "encoding": "macintosh",
           "confidence": 0,
           "language": "es",
-          "byteLogLikelihood": -4.944169511698946,
+          "byteLogLikelihood": -4.944169511699,
           "hits": 0,
           "total": 67,
           "hitRate": 0
@@ -1011,7 +1011,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 0,
           "language": "mt",
-          "byteLogLikelihood": -5.096764716542159,
+          "byteLogLikelihood": -5.096764716542,
           "hits": 0,
           "total": 116,
           "hitRate": 0
@@ -1020,7 +1020,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 0,
           "language": "lv",
-          "byteLogLikelihood": -4.97978626646186,
+          "byteLogLikelihood": -4.979786266462,
           "hits": 0,
           "total": 148,
           "hitRate": 0
@@ -1029,7 +1029,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 0,
           "language": "lt",
-          "byteLogLikelihood": -4.939479070188467,
+          "byteLogLikelihood": -4.939479070188,
           "hits": 0,
           "total": 116,
           "hitRate": 0
@@ -1038,7 +1038,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 0,
           "language": "es",
-          "byteLogLikelihood": -4.848242748706188,
+          "byteLogLikelihood": -4.848242748706,
           "hits": 0,
           "total": 111,
           "hitRate": 0
@@ -1047,7 +1047,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 0,
           "language": "ro",
-          "byteLogLikelihood": -5.060916135440135,
+          "byteLogLikelihood": -5.06091613544,
           "hits": 0,
           "total": 144,
           "hitRate": 0
@@ -1056,7 +1056,7 @@
           "encoding": "CP850",
           "confidence": 0,
           "language": "es",
-          "byteLogLikelihood": -4.67718383644863,
+          "byteLogLikelihood": -4.677183836449,
           "hits": 0,
           "total": 130,
           "hitRate": 0
@@ -1065,7 +1065,7 @@
           "encoding": "CP852",
           "confidence": 0,
           "language": "pl",
-          "byteLogLikelihood": -4.699618505771011,
+          "byteLogLikelihood": -4.699618505771,
           "hits": 0,
           "total": 166,
           "hitRate": 0
@@ -1081,7 +1081,7 @@
         "encoding": "ISO-8859-10",
         "confidence": 38,
         "language": "is",
-        "byteLogLikelihood": -3.025836278693886,
+        "byteLogLikelihood": -3.025836278694,
         "hits": 22,
         "total": 171,
         "hitRate": 0.1286549707602339
@@ -1094,7 +1094,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 38,
           "language": "is",
-          "byteLogLikelihood": -3.025836278693886,
+          "byteLogLikelihood": -3.025836278694,
           "hits": 22,
           "total": 171,
           "hitRate": 0.1286549707602339
@@ -1103,7 +1103,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 12,
           "language": "mt",
-          "byteLogLikelihood": -5.105945473900579,
+          "byteLogLikelihood": -5.105945473901,
           "hits": 7,
           "total": 169,
           "hitRate": 0.04142011834319527
@@ -1112,7 +1112,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 7,
           "language": "lt",
-          "byteLogLikelihood": -3.9895834724624324,
+          "byteLogLikelihood": -3.989583472462,
           "hits": 4,
           "total": 171,
           "hitRate": 0.023391812865497075
@@ -1121,7 +1121,7 @@
           "encoding": "macintosh",
           "confidence": 5,
           "language": "es",
-          "byteLogLikelihood": -5.00394630594546,
+          "byteLogLikelihood": -5.003946305945,
           "hits": 3,
           "total": 169,
           "hitRate": 0.01775147928994083
@@ -1130,7 +1130,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 5,
           "language": "lv",
-          "byteLogLikelihood": -5.192956850890211,
+          "byteLogLikelihood": -5.19295685089,
           "hits": 3,
           "total": 171,
           "hitRate": 0.017543859649122806
@@ -1139,7 +1139,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 5,
           "language": "es",
-          "byteLogLikelihood": -4.894502014278101,
+          "byteLogLikelihood": -4.894502014278,
           "hits": 3,
           "total": 171,
           "hitRate": 0.017543859649122806
@@ -1148,7 +1148,7 @@
           "encoding": "CP850",
           "confidence": 5,
           "language": "es",
-          "byteLogLikelihood": -5.00394630594546,
+          "byteLogLikelihood": -5.003946305945,
           "hits": 3,
           "total": 169,
           "hitRate": 0.01775147928994083
@@ -1157,7 +1157,7 @@
           "encoding": "CP852",
           "confidence": 5,
           "language": "pl",
-          "byteLogLikelihood": -5.087596335232386,
+          "byteLogLikelihood": -5.087596335232,
           "hits": 3,
           "total": 169,
           "hitRate": 0.01775147928994083
@@ -1166,7 +1166,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 1,
           "language": "ro",
-          "byteLogLikelihood": -5.17614973257383,
+          "byteLogLikelihood": -5.176149732574,
           "hits": 1,
           "total": 171,
           "hitRate": 0.005847953216374269
@@ -1175,7 +1175,7 @@
           "encoding": "KOI8-U",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -6.026638569427609,
+          "byteLogLikelihood": -6.026638569428,
           "hits": 0,
           "total": 171,
           "hitRate": 0
@@ -1184,7 +1184,7 @@
           "encoding": "IBM866",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -5.838861551509375,
+          "byteLogLikelihood": -5.838861551509,
           "hits": 0,
           "total": 171,
           "hitRate": 0
@@ -1193,7 +1193,7 @@
           "encoding": "IBM855",
           "confidence": 0,
           "language": "sr",
-          "byteLogLikelihood": -5.795369889151949,
+          "byteLogLikelihood": -5.795369889152,
           "hits": 0,
           "total": 169,
           "hitRate": 0
@@ -1202,7 +1202,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -3.7339837119675643,
+          "byteLogLikelihood": -3.733983711968,
           "hits": 0,
           "total": 171,
           "hitRate": 0
@@ -1211,7 +1211,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 0,
           "language": "cy",
-          "byteLogLikelihood": -4.657284871845546,
+          "byteLogLikelihood": -4.657284871846,
           "hits": 0,
           "total": 171,
           "hitRate": 0
@@ -1227,7 +1227,7 @@
         "encoding": "ISO-8859-13",
         "confidence": 34,
         "language": "lt",
-        "byteLogLikelihood": -3.2005302071315755,
+        "byteLogLikelihood": -3.200530207132,
         "hits": 20,
         "total": 173,
         "hitRate": 0.11560693641618497
@@ -1240,7 +1240,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 34,
           "language": "lt",
-          "byteLogLikelihood": -3.2005302071315755,
+          "byteLogLikelihood": -3.200530207132,
           "hits": 20,
           "total": 173,
           "hitRate": 0.11560693641618497
@@ -1249,7 +1249,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 22,
           "language": "lv",
-          "byteLogLikelihood": -4.610398759564556,
+          "byteLogLikelihood": -4.610398759565,
           "hits": 13,
           "total": 173,
           "hitRate": 0.07514450867052024
@@ -1258,7 +1258,7 @@
           "encoding": "macintosh",
           "confidence": 12,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378169,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 7,
           "total": 168,
           "hitRate": 0.041666666666666664
@@ -1267,7 +1267,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 12,
           "language": "fr",
-          "byteLogLikelihood": -4.948759890378169,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 7,
           "total": 173,
           "hitRate": 0.04046242774566474
@@ -1276,7 +1276,7 @@
           "encoding": "CP850",
           "confidence": 12,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378169,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 7,
           "total": 170,
           "hitRate": 0.041176470588235294
@@ -1285,7 +1285,7 @@
           "encoding": "CP852",
           "confidence": 7,
           "language": "pl",
-          "byteLogLikelihood": -5.087596335232385,
+          "byteLogLikelihood": -5.087596335232,
           "hits": 4,
           "total": 170,
           "hitRate": 0.023529411764705882
@@ -1294,7 +1294,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 5,
           "language": "mt",
-          "byteLogLikelihood": -5.10594547390058,
+          "byteLogLikelihood": -5.105945473901,
           "hits": 3,
           "total": 172,
           "hitRate": 0.01744186046511628
@@ -1303,7 +1303,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 3,
           "language": "cy",
-          "byteLogLikelihood": -4.627241340799605,
+          "byteLogLikelihood": -4.6272413408,
           "hits": 2,
           "total": 173,
           "hitRate": 0.011560693641618497
@@ -1312,7 +1312,7 @@
           "encoding": "IBM855",
           "confidence": 1,
           "language": "sr",
-          "byteLogLikelihood": -5.488073838001573,
+          "byteLogLikelihood": -5.488073838002,
           "hits": 1,
           "total": 170,
           "hitRate": 0.0058823529411764705
@@ -1321,7 +1321,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 1,
           "language": "is",
-          "byteLogLikelihood": -4.416382325607173,
+          "byteLogLikelihood": -4.416382325607,
           "hits": 1,
           "total": 173,
           "hitRate": 0.005780346820809248
@@ -1330,7 +1330,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 1,
           "language": "ro",
-          "byteLogLikelihood": -4.659155714377071,
+          "byteLogLikelihood": -4.659155714377,
           "hits": 1,
           "total": 173,
           "hitRate": 0.005780346820809248
@@ -1339,7 +1339,7 @@
           "encoding": "KOI8-U",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -6.252539473951889,
+          "byteLogLikelihood": -6.252539473952,
           "hits": 0,
           "total": 173,
           "hitRate": 0
@@ -1348,7 +1348,7 @@
           "encoding": "IBM866",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -4.893109334108514,
+          "byteLogLikelihood": -4.893109334109,
           "hits": 0,
           "total": 171,
           "hitRate": 0
@@ -1357,7 +1357,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -3.4413288431959623,
+          "byteLogLikelihood": -3.441328843196,
           "hits": 0,
           "total": 173,
           "hitRate": 0
@@ -1373,7 +1373,7 @@
         "encoding": "ISO-8859-14",
         "confidence": 50,
         "language": "cy",
-        "byteLogLikelihood": -3.9884586449894583,
+        "byteLogLikelihood": -3.988458644989,
         "hits": 32,
         "total": 189,
         "hitRate": 0.1693121693121693
@@ -1386,7 +1386,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 50,
           "language": "cy",
-          "byteLogLikelihood": -3.9884586449894583,
+          "byteLogLikelihood": -3.988458644989,
           "hits": 32,
           "total": 189,
           "hitRate": 0.1693121693121693
@@ -1395,7 +1395,7 @@
           "encoding": "macintosh",
           "confidence": 11,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378168,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 7,
           "total": 188,
           "hitRate": 0.03723404255319149
@@ -1404,7 +1404,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 11,
           "language": "fr",
-          "byteLogLikelihood": -4.948759890378168,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 7,
           "total": 189,
           "hitRate": 0.037037037037037035
@@ -1413,7 +1413,7 @@
           "encoding": "CP850",
           "confidence": 11,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378168,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 7,
           "total": 188,
           "hitRate": 0.03723404255319149
@@ -1422,7 +1422,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 4,
           "language": "mt",
-          "byteLogLikelihood": -5.10594547390058,
+          "byteLogLikelihood": -5.105945473901,
           "hits": 3,
           "total": 189,
           "hitRate": 0.015873015873015872
@@ -1431,7 +1431,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 4,
           "language": "is",
-          "byteLogLikelihood": -4.009500374258092,
+          "byteLogLikelihood": -4.009500374258,
           "hits": 3,
           "total": 189,
           "hitRate": 0.015873015873015872
@@ -1440,7 +1440,7 @@
           "encoding": "CP852",
           "confidence": 3,
           "language": "pl",
-          "byteLogLikelihood": -5.0875963352323845,
+          "byteLogLikelihood": -5.087596335232,
           "hits": 2,
           "total": 188,
           "hitRate": 0.010638297872340425
@@ -1449,7 +1449,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 1,
           "language": "lv",
-          "byteLogLikelihood": -4.961907790703562,
+          "byteLogLikelihood": -4.961907790704,
           "hits": 1,
           "total": 189,
           "hitRate": 0.005291005291005291
@@ -1458,7 +1458,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 1,
           "language": "lt",
-          "byteLogLikelihood": -3.6470250464554876,
+          "byteLogLikelihood": -3.647025046455,
           "hits": 1,
           "total": 189,
           "hitRate": 0.005291005291005291
@@ -1467,7 +1467,7 @@
           "encoding": "KOI8-U",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -5.821976831991422,
+          "byteLogLikelihood": -5.821976831991,
           "hits": 0,
           "total": 189,
           "hitRate": 0
@@ -1476,7 +1476,7 @@
           "encoding": "IBM866",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -5.350299845594912,
+          "byteLogLikelihood": -5.350299845595,
           "hits": 0,
           "total": 188,
           "hitRate": 0
@@ -1485,7 +1485,7 @@
           "encoding": "IBM855",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -6.3258796462839255,
+          "byteLogLikelihood": -6.325879646284,
           "hits": 0,
           "total": 188,
           "hitRate": 0
@@ -1494,7 +1494,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -3.2558159026977727,
+          "byteLogLikelihood": -3.255815902698,
           "hits": 0,
           "total": 189,
           "hitRate": 0
@@ -1503,7 +1503,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 0,
           "language": "ro",
-          "byteLogLikelihood": -3.9816434197551254,
+          "byteLogLikelihood": -3.981643419755,
           "hits": 0,
           "total": 189,
           "hitRate": 0
@@ -1519,7 +1519,7 @@
         "encoding": "ISO-8859-15",
         "confidence": 73,
         "language": "de",
-        "byteLogLikelihood": -3.1697120775185543,
+        "byteLogLikelihood": -3.169712077519,
         "hits": 53,
         "total": 216,
         "hitRate": 0.24537037037037038
@@ -1532,7 +1532,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 73,
           "language": "de",
-          "byteLogLikelihood": -3.1697120775185543,
+          "byteLogLikelihood": -3.169712077519,
           "hits": 53,
           "total": 216,
           "hitRate": 0.24537037037037038
@@ -1541,7 +1541,7 @@
           "encoding": "macintosh",
           "confidence": 72,
           "language": "es",
-          "byteLogLikelihood": -5.00394630594546,
+          "byteLogLikelihood": -5.003946305945,
           "hits": 52,
           "total": 215,
           "hitRate": 0.24186046511627907
@@ -1550,7 +1550,7 @@
           "encoding": "CP850",
           "confidence": 70,
           "language": "es",
-          "byteLogLikelihood": -5.00394630594546,
+          "byteLogLikelihood": -5.003946305945,
           "hits": 51,
           "total": 216,
           "hitRate": 0.2361111111111111
@@ -1559,7 +1559,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 20,
           "language": "cy",
-          "byteLogLikelihood": -4.912654885736052,
+          "byteLogLikelihood": -4.912654885736,
           "hits": 15,
           "total": 216,
           "hitRate": 0.06944444444444445
@@ -1568,7 +1568,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 13,
           "language": "ro",
-          "byteLogLikelihood": -5.176149732573828,
+          "byteLogLikelihood": -5.176149732574,
           "hits": 10,
           "total": 216,
           "hitRate": 0.046296296296296294
@@ -1577,7 +1577,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 9,
           "language": "lv",
-          "byteLogLikelihood": -5.192956850890211,
+          "byteLogLikelihood": -5.19295685089,
           "hits": 7,
           "total": 216,
           "hitRate": 0.032407407407407406
@@ -1586,7 +1586,7 @@
           "encoding": "CP852",
           "confidence": 6,
           "language": "pl",
-          "byteLogLikelihood": -5.0875963352323845,
+          "byteLogLikelihood": -5.087596335232,
           "hits": 5,
           "total": 216,
           "hitRate": 0.023148148148148147
@@ -1595,7 +1595,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 5,
           "language": "mt",
-          "byteLogLikelihood": -5.105945473900581,
+          "byteLogLikelihood": -5.105945473901,
           "hits": 4,
           "total": 216,
           "hitRate": 0.018518518518518517
@@ -1604,7 +1604,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 2,
           "language": "lt",
-          "byteLogLikelihood": -5.123963979403258,
+          "byteLogLikelihood": -5.123963979403,
           "hits": 2,
           "total": 216,
           "hitRate": 0.009259259259259259
@@ -1613,7 +1613,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 1,
           "language": "is",
-          "byteLogLikelihood": -5.204006687076796,
+          "byteLogLikelihood": -5.204006687077,
           "hits": 1,
           "total": 216,
           "hitRate": 0.004629629629629629
@@ -1622,7 +1622,7 @@
           "encoding": "KOI8-U",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -6.2459431932607865,
+          "byteLogLikelihood": -6.245943193261,
           "hits": 0,
           "total": 216,
           "hitRate": 0
@@ -1631,7 +1631,7 @@
           "encoding": "IBM866",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -6.692083742506626,
+          "byteLogLikelihood": -6.692083742507,
           "hits": 0,
           "total": 216,
           "hitRate": 0
@@ -1640,7 +1640,7 @@
           "encoding": "IBM855",
           "confidence": 0,
           "language": "sr",
-          "byteLogLikelihood": -5.942998477092075,
+          "byteLogLikelihood": -5.942998477092,
           "hits": 0,
           "total": 216,
           "hitRate": 0
@@ -1649,7 +1649,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -3.6293325796874343,
+          "byteLogLikelihood": -3.629332579687,
           "hits": 0,
           "total": 216,
           "hitRate": 0
@@ -1665,7 +1665,7 @@
         "encoding": "ISO-8859-15",
         "confidence": 61,
         "language": "es",
-        "byteLogLikelihood": -3.8346579357668467,
+        "byteLogLikelihood": -3.834657935767,
         "hits": 41,
         "total": 200,
         "hitRate": 0.205
@@ -1678,7 +1678,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 61,
           "language": "es",
-          "byteLogLikelihood": -3.8346579357668467,
+          "byteLogLikelihood": -3.834657935767,
           "hits": 41,
           "total": 200,
           "hitRate": 0.205
@@ -1687,7 +1687,7 @@
           "encoding": "macintosh",
           "confidence": 58,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378169,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 39,
           "total": 199,
           "hitRate": 0.19597989949748743
@@ -1696,7 +1696,7 @@
           "encoding": "CP850",
           "confidence": 58,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378169,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 39,
           "total": 200,
           "hitRate": 0.195
@@ -1705,7 +1705,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 24,
           "language": "lv",
-          "byteLogLikelihood": -5.009854802778858,
+          "byteLogLikelihood": -5.009854802779,
           "hits": 16,
           "total": 200,
           "hitRate": 0.08
@@ -1714,7 +1714,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 19,
           "language": "lt",
-          "byteLogLikelihood": -4.89291491921661,
+          "byteLogLikelihood": -4.892914919217,
           "hits": 13,
           "total": 200,
           "hitRate": 0.065
@@ -1723,7 +1723,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 16,
           "language": "cy",
-          "byteLogLikelihood": -4.912654885736052,
+          "byteLogLikelihood": -4.912654885736,
           "hits": 11,
           "total": 200,
           "hitRate": 0.055
@@ -1732,7 +1732,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 15,
           "language": "ro",
-          "byteLogLikelihood": -5.176149732573829,
+          "byteLogLikelihood": -5.176149732574,
           "hits": 10,
           "total": 200,
           "hitRate": 0.05
@@ -1741,7 +1741,7 @@
           "encoding": "CP852",
           "confidence": 7,
           "language": "pl",
-          "byteLogLikelihood": -5.0875963352323845,
+          "byteLogLikelihood": -5.087596335232,
           "hits": 5,
           "total": 200,
           "hitRate": 0.025
@@ -1750,7 +1750,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 4,
           "language": "is",
-          "byteLogLikelihood": -3.846028832089471,
+          "byteLogLikelihood": -3.846028832089,
           "hits": 3,
           "total": 200,
           "hitRate": 0.015
@@ -1759,7 +1759,7 @@
           "encoding": "KOI8-U",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -6.303705458307449,
+          "byteLogLikelihood": -6.303705458307,
           "hits": 0,
           "total": 200,
           "hitRate": 0
@@ -1768,7 +1768,7 @@
           "encoding": "IBM866",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -4.977292083618832,
+          "byteLogLikelihood": -4.977292083619,
           "hits": 0,
           "total": 200,
           "hitRate": 0
@@ -1777,7 +1777,7 @@
           "encoding": "IBM855",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -4.203740544851505,
+          "byteLogLikelihood": -4.203740544852,
           "hits": 0,
           "total": 200,
           "hitRate": 0
@@ -1786,7 +1786,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -3.336328204376461,
+          "byteLogLikelihood": -3.336328204376,
           "hits": 0,
           "total": 200,
           "hitRate": 0
@@ -1795,7 +1795,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 0,
           "language": "mt",
-          "byteLogLikelihood": -5.10594547390058,
+          "byteLogLikelihood": -5.105945473901,
           "hits": 0,
           "total": 200,
           "hitRate": 0
@@ -1811,7 +1811,7 @@
         "encoding": "ISO-8859-15",
         "confidence": 77,
         "language": "fr",
-        "byteLogLikelihood": -2.0661963149298153,
+        "byteLogLikelihood": -2.06619631493,
         "hits": 59,
         "total": 228,
         "hitRate": 0.25877192982456143
@@ -1824,7 +1824,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 77,
           "language": "fr",
-          "byteLogLikelihood": -2.0661963149298153,
+          "byteLogLikelihood": -2.06619631493,
           "hits": 59,
           "total": 228,
           "hitRate": 0.25877192982456143
@@ -1833,7 +1833,7 @@
           "encoding": "macintosh",
           "confidence": 71,
           "language": "es",
-          "byteLogLikelihood": -5.010635294096255,
+          "byteLogLikelihood": -5.010635294096,
           "hits": 54,
           "total": 228,
           "hitRate": 0.23684210526315788
@@ -1842,7 +1842,7 @@
           "encoding": "CP850",
           "confidence": 71,
           "language": "es",
-          "byteLogLikelihood": -5.010635294096255,
+          "byteLogLikelihood": -5.010635294096,
           "hits": 54,
           "total": 228,
           "hitRate": 0.23684210526315788
@@ -1851,7 +1851,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 11,
           "language": "ro",
-          "byteLogLikelihood": -5.176149732573829,
+          "byteLogLikelihood": -5.176149732574,
           "hits": 9,
           "total": 228,
           "hitRate": 0.039473684210526314
@@ -1860,7 +1860,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 10,
           "language": "is",
-          "byteLogLikelihood": -4.510859506516851,
+          "byteLogLikelihood": -4.510859506517,
           "hits": 8,
           "total": 228,
           "hitRate": 0.03508771929824561
@@ -1869,7 +1869,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 7,
           "language": "lv",
-          "byteLogLikelihood": -5.192956850890211,
+          "byteLogLikelihood": -5.19295685089,
           "hits": 6,
           "total": 228,
           "hitRate": 0.02631578947368421
@@ -1878,7 +1878,7 @@
           "encoding": "CP852",
           "confidence": 7,
           "language": "pl",
-          "byteLogLikelihood": -5.0875963352323845,
+          "byteLogLikelihood": -5.087596335232,
           "hits": 6,
           "total": 228,
           "hitRate": 0.02631578947368421
@@ -1887,7 +1887,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 5,
           "language": "mt",
-          "byteLogLikelihood": -5.10594547390058,
+          "byteLogLikelihood": -5.105945473901,
           "hits": 4,
           "total": 228,
           "hitRate": 0.017543859649122806
@@ -1896,7 +1896,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 5,
           "language": "lt",
-          "byteLogLikelihood": -5.123963979403258,
+          "byteLogLikelihood": -5.123963979403,
           "hits": 4,
           "total": 228,
           "hitRate": 0.017543859649122806
@@ -1905,7 +1905,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 3,
           "language": "cy",
-          "byteLogLikelihood": -4.912654885736052,
+          "byteLogLikelihood": -4.912654885736,
           "hits": 3,
           "total": 228,
           "hitRate": 0.013157894736842105
@@ -1914,7 +1914,7 @@
           "encoding": "KOI8-U",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -6.6502790485874215,
+          "byteLogLikelihood": -6.650279048587,
           "hits": 0,
           "total": 228,
           "hitRate": 0
@@ -1923,7 +1923,7 @@
           "encoding": "IBM866",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -5.593471453838519,
+          "byteLogLikelihood": -5.593471453839,
           "hits": 0,
           "total": 228,
           "hitRate": 0
@@ -1932,7 +1932,7 @@
           "encoding": "IBM855",
           "confidence": 0,
           "language": "sr",
-          "byteLogLikelihood": -4.728861658330641,
+          "byteLogLikelihood": -4.728861658331,
           "hits": 0,
           "total": 228,
           "hitRate": 0
@@ -1941,7 +1941,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -4.252383775789052,
+          "byteLogLikelihood": -4.252383775789,
           "hits": 0,
           "total": 228,
           "hitRate": 0
@@ -1957,7 +1957,7 @@
         "encoding": "ISO-8859-16",
         "confidence": 41,
         "language": "ro",
-        "byteLogLikelihood": -2.6845392975419866,
+        "byteLogLikelihood": -2.684539297542,
         "hits": 28,
         "total": 202,
         "hitRate": 0.13861386138613863
@@ -1970,7 +1970,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 41,
           "language": "ro",
-          "byteLogLikelihood": -2.6845392975419866,
+          "byteLogLikelihood": -2.684539297542,
           "hits": 28,
           "total": 202,
           "hitRate": 0.13861386138613863
@@ -1979,7 +1979,7 @@
           "encoding": "macintosh",
           "confidence": 19,
           "language": "es",
-          "byteLogLikelihood": -5.010635294096255,
+          "byteLogLikelihood": -5.010635294096,
           "hits": 13,
           "total": 198,
           "hitRate": 0.06565656565656566
@@ -1988,7 +1988,7 @@
           "encoding": "CP850",
           "confidence": 15,
           "language": "es",
-          "byteLogLikelihood": -5.010635294096255,
+          "byteLogLikelihood": -5.010635294096,
           "hits": 10,
           "total": 199,
           "hitRate": 0.05025125628140704
@@ -1997,7 +1997,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 14,
           "language": "fr",
-          "byteLogLikelihood": -4.903997266317802,
+          "byteLogLikelihood": -4.903997266318,
           "hits": 10,
           "total": 202,
           "hitRate": 0.04950495049504951
@@ -2006,7 +2006,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 13,
           "language": "mt",
-          "byteLogLikelihood": -5.105945473900581,
+          "byteLogLikelihood": -5.105945473901,
           "hits": 9,
           "total": 200,
           "hitRate": 0.045
@@ -2015,7 +2015,7 @@
           "encoding": "CP852",
           "confidence": 8,
           "language": "pl",
-          "byteLogLikelihood": -5.0875963352323845,
+          "byteLogLikelihood": -5.087596335232,
           "hits": 6,
           "total": 201,
           "hitRate": 0.029850746268656716
@@ -2024,7 +2024,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 7,
           "language": "lv",
-          "byteLogLikelihood": -4.93663342703058,
+          "byteLogLikelihood": -4.936633427031,
           "hits": 5,
           "total": 202,
           "hitRate": 0.024752475247524754
@@ -2033,7 +2033,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 5,
           "language": "is",
-          "byteLogLikelihood": -5.15068767318757,
+          "byteLogLikelihood": -5.150687673188,
           "hits": 4,
           "total": 202,
           "hitRate": 0.019801980198019802
@@ -2042,7 +2042,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 4,
           "language": "lt",
-          "byteLogLikelihood": -4.9742785833220795,
+          "byteLogLikelihood": -4.974278583322,
           "hits": 3,
           "total": 202,
           "hitRate": 0.01485148514851485
@@ -2051,7 +2051,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 4,
           "language": "cy",
-          "byteLogLikelihood": -4.539421788511467,
+          "byteLogLikelihood": -4.539421788511,
           "hits": 3,
           "total": 202,
           "hitRate": 0.01485148514851485
@@ -2060,7 +2060,7 @@
           "encoding": "KOI8-U",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -6.321304731740033,
+          "byteLogLikelihood": -6.32130473174,
           "hits": 0,
           "total": 201,
           "hitRate": 0
@@ -2069,7 +2069,7 @@
           "encoding": "IBM866",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -4.208609169551528,
+          "byteLogLikelihood": -4.208609169552,
           "hits": 0,
           "total": 201,
           "hitRate": 0
@@ -2078,7 +2078,7 @@
           "encoding": "IBM855",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -4.60864828037108,
+          "byteLogLikelihood": -4.608648280371,
           "hits": 0,
           "total": 201,
           "hitRate": 0
@@ -2087,7 +2087,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -4.229886082373597,
+          "byteLogLikelihood": -4.229886082374,
           "hits": 0,
           "total": 202,
           "hitRate": 0
@@ -2103,7 +2103,7 @@
         "encoding": "ISO-8859-3",
         "confidence": 52,
         "language": "mt",
-        "byteLogLikelihood": -2.7382134817807957,
+        "byteLogLikelihood": -2.738213481781,
         "hits": 32,
         "total": 183,
         "hitRate": 0.17486338797814208
@@ -2116,7 +2116,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 52,
           "language": "mt",
-          "byteLogLikelihood": -2.7382134817807957,
+          "byteLogLikelihood": -2.738213481781,
           "hits": 32,
           "total": 183,
           "hitRate": 0.17486338797814208
@@ -2125,7 +2125,7 @@
           "encoding": "CP852",
           "confidence": 13,
           "language": "pl",
-          "byteLogLikelihood": -5.0875963352323845,
+          "byteLogLikelihood": -5.087596335232,
           "hits": 8,
           "total": 177,
           "hitRate": 0.04519774011299435
@@ -2134,7 +2134,7 @@
           "encoding": "macintosh",
           "confidence": 11,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378169,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 7,
           "total": 181,
           "hitRate": 0.03867403314917127
@@ -2143,7 +2143,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 11,
           "language": "lv",
-          "byteLogLikelihood": -4.945351018208043,
+          "byteLogLikelihood": -4.945351018208,
           "hits": 7,
           "total": 183,
           "hitRate": 0.03825136612021858
@@ -2152,7 +2152,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 11,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378169,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 7,
           "total": 181,
           "hitRate": 0.03867403314917127
@@ -2161,7 +2161,7 @@
           "encoding": "CP850",
           "confidence": 11,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378169,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 7,
           "total": 177,
           "hitRate": 0.03954802259887006
@@ -2170,7 +2170,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 9,
           "language": "ro",
-          "byteLogLikelihood": -5.176149732573828,
+          "byteLogLikelihood": -5.176149732574,
           "hits": 6,
           "total": 182,
           "hitRate": 0.03296703296703297
@@ -2179,7 +2179,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 6,
           "language": "cy",
-          "byteLogLikelihood": -4.912654885736052,
+          "byteLogLikelihood": -4.912654885736,
           "hits": 4,
           "total": 183,
           "hitRate": 0.02185792349726776
@@ -2188,7 +2188,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 4,
           "language": "lt",
-          "byteLogLikelihood": -4.986136327924177,
+          "byteLogLikelihood": -4.986136327924,
           "hits": 3,
           "total": 182,
           "hitRate": 0.016483516483516484
@@ -2197,7 +2197,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 3,
           "language": "is",
-          "byteLogLikelihood": -5.204006687076797,
+          "byteLogLikelihood": -5.204006687077,
           "hits": 2,
           "total": 183,
           "hitRate": 0.01092896174863388
@@ -2206,7 +2206,7 @@
           "encoding": "KOI8-U",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -6.383683979141289,
+          "byteLogLikelihood": -6.383683979141,
           "hits": 0,
           "total": 181,
           "hitRate": 0
@@ -2215,7 +2215,7 @@
           "encoding": "IBM866",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -6.404570694946368,
+          "byteLogLikelihood": -6.404570694946,
           "hits": 0,
           "total": 181,
           "hitRate": 0
@@ -2224,7 +2224,7 @@
           "encoding": "IBM855",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -5.943656762100738,
+          "byteLogLikelihood": -5.943656762101,
           "hits": 0,
           "total": 181,
           "hitRate": 0
@@ -2233,7 +2233,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -5.57238445083287,
+          "byteLogLikelihood": -5.572384450833,
           "hits": 0,
           "total": 182,
           "hitRate": 0
@@ -2249,7 +2249,7 @@
         "encoding": "ISO-8859-4",
         "confidence": 40,
         "language": "lv",
-        "byteLogLikelihood": -3.13286160829961,
+        "byteLogLikelihood": -3.1328616083,
         "hits": 23,
         "total": 170,
         "hitRate": 0.13529411764705881
@@ -2262,7 +2262,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 40,
           "language": "lv",
-          "byteLogLikelihood": -3.13286160829961,
+          "byteLogLikelihood": -3.1328616083,
           "hits": 23,
           "total": 170,
           "hitRate": 0.13529411764705881
@@ -2271,7 +2271,7 @@
           "encoding": "CP850",
           "confidence": 16,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378169,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 9,
           "total": 168,
           "hitRate": 0.05357142857142857
@@ -2280,7 +2280,7 @@
           "encoding": "macintosh",
           "confidence": 14,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378169,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 8,
           "total": 169,
           "hitRate": 0.047337278106508875
@@ -2289,7 +2289,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 14,
           "language": "es",
-          "byteLogLikelihood": -4.721042183854175,
+          "byteLogLikelihood": -4.721042183854,
           "hits": 8,
           "total": 169,
           "hitRate": 0.047337278106508875
@@ -2298,7 +2298,7 @@
           "encoding": "CP852",
           "confidence": 12,
           "language": "pl",
-          "byteLogLikelihood": -5.087596335232385,
+          "byteLogLikelihood": -5.087596335232,
           "hits": 7,
           "total": 169,
           "hitRate": 0.04142011834319527
@@ -2307,7 +2307,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 10,
           "language": "lt",
-          "byteLogLikelihood": -4.596975900218536,
+          "byteLogLikelihood": -4.596975900219,
           "hits": 6,
           "total": 169,
           "hitRate": 0.03550295857988166
@@ -2316,7 +2316,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 8,
           "language": "mt",
-          "byteLogLikelihood": -5.10594547390058,
+          "byteLogLikelihood": -5.105945473901,
           "hits": 5,
           "total": 170,
           "hitRate": 0.029411764705882353
@@ -2325,7 +2325,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 7,
           "language": "is",
-          "byteLogLikelihood": -5.074758182527607,
+          "byteLogLikelihood": -5.074758182528,
           "hits": 4,
           "total": 170,
           "hitRate": 0.023529411764705882
@@ -2334,7 +2334,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 1,
           "language": "ro",
-          "byteLogLikelihood": -4.572632236700525,
+          "byteLogLikelihood": -4.572632236701,
           "hits": 1,
           "total": 169,
           "hitRate": 0.005917159763313609
@@ -2343,7 +2343,7 @@
           "encoding": "KOI8-U",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -6.609505685025072,
+          "byteLogLikelihood": -6.609505685025,
           "hits": 0,
           "total": 169,
           "hitRate": 0
@@ -2352,7 +2352,7 @@
           "encoding": "IBM866",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -5.267508614334377,
+          "byteLogLikelihood": -5.267508614334,
           "hits": 0,
           "total": 168,
           "hitRate": 0
@@ -2361,7 +2361,7 @@
           "encoding": "IBM855",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -6.182018138172009,
+          "byteLogLikelihood": -6.182018138172,
           "hits": 0,
           "total": 169,
           "hitRate": 0
@@ -2370,7 +2370,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -4.6553531811702555,
+          "byteLogLikelihood": -4.65535318117,
           "hits": 0,
           "total": 170,
           "hitRate": 0
@@ -2379,7 +2379,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 0,
           "language": "cy",
-          "byteLogLikelihood": -4.9126548857360515,
+          "byteLogLikelihood": -4.912654885736,
           "hits": 0,
           "total": 170,
           "hitRate": 0
@@ -2395,7 +2395,7 @@
         "encoding": "KOI8-U",
         "confidence": 32,
         "language": "uk",
-        "byteLogLikelihood": -3.3436975693204882,
+        "byteLogLikelihood": -3.34369756932,
         "hits": 19,
         "total": 177,
         "hitRate": 0.10734463276836158
@@ -2408,7 +2408,7 @@
           "encoding": "KOI8-U",
           "confidence": 32,
           "language": "uk",
-          "byteLogLikelihood": -3.3436975693204882,
+          "byteLogLikelihood": -3.34369756932,
           "hits": 19,
           "total": 177,
           "hitRate": 0.10734463276836158
@@ -2417,7 +2417,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 1,
           "language": "is",
-          "byteLogLikelihood": -5.128376292359248,
+          "byteLogLikelihood": -5.128376292359,
           "hits": 1,
           "total": 177,
           "hitRate": 0.005649717514124294
@@ -2426,7 +2426,7 @@
           "encoding": "IBM866",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -6.582632026409127,
+          "byteLogLikelihood": -6.582632026409,
           "hits": 0,
           "total": 22,
           "hitRate": 0
@@ -2435,7 +2435,7 @@
           "encoding": "IBM855",
           "confidence": 0,
           "language": "sr",
-          "byteLogLikelihood": -5.922515418323497,
+          "byteLogLikelihood": -5.922515418323,
           "hits": 0,
           "total": 94,
           "hitRate": 0
@@ -2444,7 +2444,7 @@
           "encoding": "macintosh",
           "confidence": 0,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378152,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 0,
           "total": 89,
           "hitRate": 0
@@ -2453,7 +2453,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -6.589678128374873,
+          "byteLogLikelihood": -6.589678128375,
           "hits": 0,
           "total": 117,
           "hitRate": 0
@@ -2462,7 +2462,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 0,
           "language": "mt",
-          "byteLogLikelihood": -5.105945473900569,
+          "byteLogLikelihood": -5.105945473901,
           "hits": 0,
           "total": 175,
           "hitRate": 0
@@ -2471,7 +2471,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 0,
           "language": "lv",
-          "byteLogLikelihood": -5.19295685089022,
+          "byteLogLikelihood": -5.19295685089,
           "hits": 0,
           "total": 176,
           "hitRate": 0
@@ -2480,7 +2480,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 0,
           "language": "lt",
-          "byteLogLikelihood": -5.110283442944831,
+          "byteLogLikelihood": -5.110283442945,
           "hits": 0,
           "total": 168,
           "hitRate": 0
@@ -2489,7 +2489,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 0,
           "language": "cy",
-          "byteLogLikelihood": -4.912654885736058,
+          "byteLogLikelihood": -4.912654885736,
           "hits": 0,
           "total": 177,
           "hitRate": 0
@@ -2498,7 +2498,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 0,
           "language": "es",
-          "byteLogLikelihood": -4.944199711558678,
+          "byteLogLikelihood": -4.944199711559,
           "hits": 0,
           "total": 176,
           "hitRate": 0
@@ -2507,7 +2507,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 0,
           "language": "ro",
-          "byteLogLikelihood": -5.148788659656974,
+          "byteLogLikelihood": -5.148788659657,
           "hits": 0,
           "total": 177,
           "hitRate": 0
@@ -2516,7 +2516,7 @@
           "encoding": "CP850",
           "confidence": 0,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378152,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 0,
           "total": 92,
           "hitRate": 0
@@ -2525,7 +2525,7 @@
           "encoding": "CP852",
           "confidence": 0,
           "language": "pl",
-          "byteLogLikelihood": -5.087596335232398,
+          "byteLogLikelihood": -5.087596335232,
           "hits": 0,
           "total": 94,
           "hitRate": 0
@@ -2541,7 +2541,7 @@
         "encoding": "macintosh",
         "confidence": 73,
         "language": "de",
-        "byteLogLikelihood": -3.1697120775185543,
+        "byteLogLikelihood": -3.169712077519,
         "hits": 53,
         "total": 216,
         "hitRate": 0.24537037037037038
@@ -2554,7 +2554,7 @@
           "encoding": "macintosh",
           "confidence": 73,
           "language": "de",
-          "byteLogLikelihood": -3.1697120775185543,
+          "byteLogLikelihood": -3.169712077519,
           "hits": 53,
           "total": 216,
           "hitRate": 0.24537037037037038
@@ -2563,7 +2563,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 74,
           "language": "es",
-          "byteLogLikelihood": -5.00394630594546,
+          "byteLogLikelihood": -5.003946305945,
           "hits": 53,
           "total": 214,
           "hitRate": 0.24766355140186916
@@ -2572,7 +2572,7 @@
           "encoding": "CP850",
           "confidence": 69,
           "language": "fr",
-          "byteLogLikelihood": -5.00394630594546,
+          "byteLogLikelihood": -5.003946305945,
           "hits": 50,
           "total": 216,
           "hitRate": 0.23148148148148148
@@ -2581,7 +2581,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 22,
           "language": "cy",
-          "byteLogLikelihood": -4.912654885736052,
+          "byteLogLikelihood": -4.912654885736,
           "hits": 16,
           "total": 214,
           "hitRate": 0.07476635514018691
@@ -2590,7 +2590,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 15,
           "language": "ro",
-          "byteLogLikelihood": -5.176149732573828,
+          "byteLogLikelihood": -5.176149732574,
           "hits": 11,
           "total": 214,
           "hitRate": 0.0514018691588785
@@ -2599,7 +2599,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 11,
           "language": "lv",
-          "byteLogLikelihood": -5.192956850890211,
+          "byteLogLikelihood": -5.19295685089,
           "hits": 8,
           "total": 214,
           "hitRate": 0.037383177570093455
@@ -2608,7 +2608,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 5,
           "language": "mt",
-          "byteLogLikelihood": -5.105945473900581,
+          "byteLogLikelihood": -5.105945473901,
           "hits": 4,
           "total": 214,
           "hitRate": 0.018691588785046728
@@ -2617,7 +2617,7 @@
           "encoding": "CP852",
           "confidence": 5,
           "language": "pl",
-          "byteLogLikelihood": -5.0875963352323845,
+          "byteLogLikelihood": -5.087596335232,
           "hits": 4,
           "total": 216,
           "hitRate": 0.018518518518518517
@@ -2626,7 +2626,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 4,
           "language": "is",
-          "byteLogLikelihood": -5.204006687076796,
+          "byteLogLikelihood": -5.204006687077,
           "hits": 3,
           "total": 214,
           "hitRate": 0.014018691588785047
@@ -2635,7 +2635,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 2,
           "language": "lt",
-          "byteLogLikelihood": -5.123963979403258,
+          "byteLogLikelihood": -5.123963979403,
           "hits": 2,
           "total": 214,
           "hitRate": 0.009345794392523364
@@ -2644,7 +2644,7 @@
           "encoding": "KOI8-U",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -6.534754518494097,
+          "byteLogLikelihood": -6.534754518494,
           "hits": 0,
           "total": 215,
           "hitRate": 0
@@ -2653,7 +2653,7 @@
           "encoding": "IBM866",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -6.345510152226654,
+          "byteLogLikelihood": -6.345510152227,
           "hits": 0,
           "total": 216,
           "hitRate": 0
@@ -2662,7 +2662,7 @@
           "encoding": "IBM855",
           "confidence": 0,
           "language": "sr",
-          "byteLogLikelihood": -6.337519079447344,
+          "byteLogLikelihood": -6.337519079447,
           "hits": 0,
           "total": 216,
           "hitRate": 0
@@ -2671,7 +2671,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -6.6502790485874215,
+          "byteLogLikelihood": -6.650279048587,
           "hits": 0,
           "total": 216,
           "hitRate": 0
@@ -2687,7 +2687,7 @@
         "encoding": "macintosh",
         "confidence": 61,
         "language": "es",
-        "byteLogLikelihood": -3.8346579357668467,
+        "byteLogLikelihood": -3.834657935767,
         "hits": 41,
         "total": 200,
         "hitRate": 0.205
@@ -2700,7 +2700,7 @@
           "encoding": "macintosh",
           "confidence": 61,
           "language": "es",
-          "byteLogLikelihood": -3.8346579357668467,
+          "byteLogLikelihood": -3.834657935767,
           "hits": 41,
           "total": 200,
           "hitRate": 0.205
@@ -2709,7 +2709,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 58,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378169,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 39,
           "total": 199,
           "hitRate": 0.19597989949748743
@@ -2718,7 +2718,7 @@
           "encoding": "CP850",
           "confidence": 58,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378169,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 39,
           "total": 200,
           "hitRate": 0.195
@@ -2727,7 +2727,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 25,
           "language": "lv",
-          "byteLogLikelihood": -5.192956850890211,
+          "byteLogLikelihood": -5.19295685089,
           "hits": 17,
           "total": 199,
           "hitRate": 0.08542713567839195
@@ -2736,7 +2736,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 19,
           "language": "lt",
-          "byteLogLikelihood": -5.123963979403258,
+          "byteLogLikelihood": -5.123963979403,
           "hits": 13,
           "total": 199,
           "hitRate": 0.06532663316582915
@@ -2745,7 +2745,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 16,
           "language": "cy",
-          "byteLogLikelihood": -4.912654885736052,
+          "byteLogLikelihood": -4.912654885736,
           "hits": 11,
           "total": 199,
           "hitRate": 0.05527638190954774
@@ -2754,7 +2754,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 15,
           "language": "ro",
-          "byteLogLikelihood": -5.176149732573829,
+          "byteLogLikelihood": -5.176149732574,
           "hits": 10,
           "total": 199,
           "hitRate": 0.05025125628140704
@@ -2763,7 +2763,7 @@
           "encoding": "CP852",
           "confidence": 7,
           "language": "pl",
-          "byteLogLikelihood": -5.0875963352323845,
+          "byteLogLikelihood": -5.087596335232,
           "hits": 5,
           "total": 200,
           "hitRate": 0.025
@@ -2772,7 +2772,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 4,
           "language": "is",
-          "byteLogLikelihood": -5.204006687076795,
+          "byteLogLikelihood": -5.204006687077,
           "hits": 3,
           "total": 199,
           "hitRate": 0.01507537688442211
@@ -2781,7 +2781,7 @@
           "encoding": "KOI8-U",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -6.6502790485874215,
+          "byteLogLikelihood": -6.650279048587,
           "hits": 0,
           "total": 199,
           "hitRate": 0
@@ -2790,7 +2790,7 @@
           "encoding": "IBM866",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -6.692083742506628,
+          "byteLogLikelihood": -6.692083742507,
           "hits": 0,
           "total": 200,
           "hitRate": 0
@@ -2799,7 +2799,7 @@
           "encoding": "IBM855",
           "confidence": 0,
           "language": "sr",
-          "byteLogLikelihood": -5.62474139294467,
+          "byteLogLikelihood": -5.624741392945,
           "hits": 0,
           "total": 200,
           "hitRate": 0
@@ -2808,7 +2808,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -6.303705458307449,
+          "byteLogLikelihood": -6.303705458307,
           "hits": 0,
           "total": 200,
           "hitRate": 0
@@ -2817,7 +2817,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 0,
           "language": "mt",
-          "byteLogLikelihood": -5.10594547390058,
+          "byteLogLikelihood": -5.105945473901,
           "hits": 0,
           "total": 199,
           "hitRate": 0
@@ -2833,7 +2833,7 @@
         "encoding": "macintosh",
         "confidence": 77,
         "language": "fr",
-        "byteLogLikelihood": -2.0661963149298153,
+        "byteLogLikelihood": -2.06619631493,
         "hits": 59,
         "total": 228,
         "hitRate": 0.25877192982456143
@@ -2846,7 +2846,7 @@
           "encoding": "macintosh",
           "confidence": 77,
           "language": "fr",
-          "byteLogLikelihood": -2.0661963149298153,
+          "byteLogLikelihood": -2.06619631493,
           "hits": 59,
           "total": 228,
           "hitRate": 0.25877192982456143
@@ -2855,7 +2855,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 75,
           "language": "es",
-          "byteLogLikelihood": -5.010635294096255,
+          "byteLogLikelihood": -5.010635294096,
           "hits": 56,
           "total": 224,
           "hitRate": 0.25
@@ -2864,7 +2864,7 @@
           "encoding": "CP850",
           "confidence": 71,
           "language": "de",
-          "byteLogLikelihood": -5.010635294096255,
+          "byteLogLikelihood": -5.010635294096,
           "hits": 54,
           "total": 228,
           "hitRate": 0.23684210526315788
@@ -2873,7 +2873,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 12,
           "language": "is",
-          "byteLogLikelihood": -5.204006687076795,
+          "byteLogLikelihood": -5.204006687077,
           "hits": 9,
           "total": 224,
           "hitRate": 0.04017857142857143
@@ -2882,7 +2882,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 12,
           "language": "ro",
-          "byteLogLikelihood": -5.176149732573829,
+          "byteLogLikelihood": -5.176149732574,
           "hits": 9,
           "total": 224,
           "hitRate": 0.04017857142857143
@@ -2891,7 +2891,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 9,
           "language": "lv",
-          "byteLogLikelihood": -5.192956850890211,
+          "byteLogLikelihood": -5.19295685089,
           "hits": 7,
           "total": 224,
           "hitRate": 0.03125
@@ -2900,7 +2900,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 8,
           "language": "mt",
-          "byteLogLikelihood": -5.10594547390058,
+          "byteLogLikelihood": -5.105945473901,
           "hits": 6,
           "total": 224,
           "hitRate": 0.026785714285714284
@@ -2909,7 +2909,7 @@
           "encoding": "CP852",
           "confidence": 7,
           "language": "pl",
-          "byteLogLikelihood": -5.0875963352323845,
+          "byteLogLikelihood": -5.087596335232,
           "hits": 6,
           "total": 228,
           "hitRate": 0.02631578947368421
@@ -2918,7 +2918,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 5,
           "language": "lt",
-          "byteLogLikelihood": -5.123963979403258,
+          "byteLogLikelihood": -5.123963979403,
           "hits": 4,
           "total": 224,
           "hitRate": 0.017857142857142856
@@ -2927,7 +2927,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 4,
           "language": "cy",
-          "byteLogLikelihood": -4.912654885736052,
+          "byteLogLikelihood": -4.912654885736,
           "hits": 3,
           "total": 224,
           "hitRate": 0.013392857142857142
@@ -2936,7 +2936,7 @@
           "encoding": "KOI8-U",
           "confidence": 0,
           "language": "uk",
-          "byteLogLikelihood": -6.6502790485874215,
+          "byteLogLikelihood": -6.650279048587,
           "hits": 0,
           "total": 224,
           "hitRate": 0
@@ -2945,7 +2945,7 @@
           "encoding": "IBM866",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -5.9989365619466835,
+          "byteLogLikelihood": -5.998936561947,
           "hits": 0,
           "total": 228,
           "hitRate": 0
@@ -2954,7 +2954,7 @@
           "encoding": "IBM855",
           "confidence": 0,
           "language": "sr",
-          "byteLogLikelihood": -3.576182148392255,
+          "byteLogLikelihood": -3.576182148392,
           "hits": 0,
           "total": 228,
           "hitRate": 0
@@ -2963,7 +2963,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -5.9989365619466835,
+          "byteLogLikelihood": -5.998936561947,
           "hits": 0,
           "total": 228,
           "hitRate": 0
@@ -2979,7 +2979,7 @@
         "encoding": "x-mac-cyrillic",
         "confidence": 36,
         "language": "ru",
-        "byteLogLikelihood": -3.3137607778551392,
+        "byteLogLikelihood": -3.313760777855,
         "hits": 22,
         "total": 179,
         "hitRate": 0.12290502793296089
@@ -2992,7 +2992,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 36,
           "language": "ru",
-          "byteLogLikelihood": -3.3137607778551392,
+          "byteLogLikelihood": -3.313760777855,
           "hits": 22,
           "total": 179,
           "hitRate": 0.12290502793296089
@@ -3001,7 +3001,7 @@
           "encoding": "IBM855",
           "confidence": 9,
           "language": "ru",
-          "byteLogLikelihood": -5.603105135042386,
+          "byteLogLikelihood": -5.603105135042,
           "hits": 5,
           "total": 165,
           "hitRate": 0.030303030303030304
@@ -3010,7 +3010,7 @@
           "encoding": "KOI8-U",
           "confidence": 3,
           "language": "uk",
-          "byteLogLikelihood": -6.334488595020551,
+          "byteLogLikelihood": -6.334488595021,
           "hits": 2,
           "total": 177,
           "hitRate": 0.011299435028248588
@@ -3019,7 +3019,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 1,
           "language": "cy",
-          "byteLogLikelihood": -4.724449359888652,
+          "byteLogLikelihood": -4.724449359889,
           "hits": 1,
           "total": 177,
           "hitRate": 0.005649717514124294
@@ -3028,7 +3028,7 @@
           "encoding": "IBM866",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -5.050263664880272,
+          "byteLogLikelihood": -5.05026366488,
           "hits": 0,
           "total": 169,
           "hitRate": 0
@@ -3037,7 +3037,7 @@
           "encoding": "macintosh",
           "confidence": 0,
           "language": "es",
-          "byteLogLikelihood": -4.944169511698946,
+          "byteLogLikelihood": -4.944169511699,
           "hits": 0,
           "total": 151,
           "hitRate": 0
@@ -3046,7 +3046,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 0,
           "language": "mt",
-          "byteLogLikelihood": -4.904224209153041,
+          "byteLogLikelihood": -4.904224209153,
           "hits": 0,
           "total": 175,
           "hitRate": 0
@@ -3055,7 +3055,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 0,
           "language": "lv",
-          "byteLogLikelihood": -4.796591053119867,
+          "byteLogLikelihood": -4.79659105312,
           "hits": 0,
           "total": 177,
           "hitRate": 0
@@ -3064,7 +3064,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 0,
           "language": "is",
-          "byteLogLikelihood": -4.93924957375923,
+          "byteLogLikelihood": -4.939249573759,
           "hits": 0,
           "total": 177,
           "hitRate": 0
@@ -3073,7 +3073,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 0,
           "language": "lt",
-          "byteLogLikelihood": -4.664085453059877,
+          "byteLogLikelihood": -4.66408545306,
           "hits": 0,
           "total": 177,
           "hitRate": 0
@@ -3082,7 +3082,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 0,
           "language": "fr",
-          "byteLogLikelihood": -4.760478683075776,
+          "byteLogLikelihood": -4.760478683076,
           "hits": 0,
           "total": 177,
           "hitRate": 0
@@ -3091,7 +3091,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 0,
           "language": "ro",
-          "byteLogLikelihood": -4.935887060164776,
+          "byteLogLikelihood": -4.935887060165,
           "hits": 0,
           "total": 177,
           "hitRate": 0
@@ -3100,7 +3100,7 @@
           "encoding": "CP850",
           "confidence": 0,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378152,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 0,
           "total": 137,
           "hitRate": 0
@@ -3109,7 +3109,7 @@
           "encoding": "CP852",
           "confidence": 0,
           "language": "pl",
-          "byteLogLikelihood": -5.083005956553193,
+          "byteLogLikelihood": -5.083005956553,
           "hits": 0,
           "total": 156,
           "hitRate": 0
@@ -3125,7 +3125,7 @@
         "encoding": "x-mac-cyrillic",
         "confidence": 32,
         "language": "uk",
-        "byteLogLikelihood": -3.3436975693204882,
+        "byteLogLikelihood": -3.34369756932,
         "hits": 19,
         "total": 177,
         "hitRate": 0.10734463276836158
@@ -3138,7 +3138,7 @@
           "encoding": "x-mac-cyrillic",
           "confidence": 32,
           "language": "uk",
-          "byteLogLikelihood": -3.3436975693204882,
+          "byteLogLikelihood": -3.34369756932,
           "hits": 19,
           "total": 177,
           "hitRate": 0.10734463276836158
@@ -3147,7 +3147,7 @@
           "encoding": "IBM855",
           "confidence": 5,
           "language": "ru",
-          "byteLogLikelihood": -5.830774318920549,
+          "byteLogLikelihood": -5.830774318921,
           "hits": 3,
           "total": 163,
           "hitRate": 0.018404907975460124
@@ -3156,7 +3156,7 @@
           "encoding": "KOI8-U",
           "confidence": 1,
           "language": "uk",
-          "byteLogLikelihood": -6.341901231005968,
+          "byteLogLikelihood": -6.341901231006,
           "hits": 1,
           "total": 175,
           "hitRate": 0.005714285714285714
@@ -3165,7 +3165,7 @@
           "encoding": "IBM866",
           "confidence": 0,
           "language": "ru",
-          "byteLogLikelihood": -5.100977296295079,
+          "byteLogLikelihood": -5.100977296295,
           "hits": 0,
           "total": 167,
           "hitRate": 0
@@ -3174,7 +3174,7 @@
           "encoding": "macintosh",
           "confidence": 0,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378152,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 0,
           "total": 139,
           "hitRate": 0
@@ -3183,7 +3183,7 @@
           "encoding": "ISO-8859-3",
           "confidence": 0,
           "language": "mt",
-          "byteLogLikelihood": -5.035218126431041,
+          "byteLogLikelihood": -5.035218126431,
           "hits": 0,
           "total": 164,
           "hitRate": 0
@@ -3192,7 +3192,7 @@
           "encoding": "ISO-8859-4",
           "confidence": 0,
           "language": "lv",
-          "byteLogLikelihood": -4.726279355537798,
+          "byteLogLikelihood": -4.726279355538,
           "hits": 0,
           "total": 169,
           "hitRate": 0
@@ -3201,7 +3201,7 @@
           "encoding": "ISO-8859-10",
           "confidence": 0,
           "language": "is",
-          "byteLogLikelihood": -4.876716873436606,
+          "byteLogLikelihood": -4.876716873437,
           "hits": 0,
           "total": 175,
           "hitRate": 0
@@ -3210,7 +3210,7 @@
           "encoding": "ISO-8859-13",
           "confidence": 0,
           "language": "lt",
-          "byteLogLikelihood": -4.66922099520459,
+          "byteLogLikelihood": -4.669220995205,
           "hits": 0,
           "total": 169,
           "hitRate": 0
@@ -3219,7 +3219,7 @@
           "encoding": "ISO-8859-14",
           "confidence": 0,
           "language": "cy",
-          "byteLogLikelihood": -4.725687554137649,
+          "byteLogLikelihood": -4.725687554138,
           "hits": 0,
           "total": 175,
           "hitRate": 0
@@ -3228,7 +3228,7 @@
           "encoding": "ISO-8859-15",
           "confidence": 0,
           "language": "fr",
-          "byteLogLikelihood": -4.753004092614596,
+          "byteLogLikelihood": -4.753004092615,
           "hits": 0,
           "total": 175,
           "hitRate": 0
@@ -3237,7 +3237,7 @@
           "encoding": "ISO-8859-16",
           "confidence": 0,
           "language": "ro",
-          "byteLogLikelihood": -4.986714390957144,
+          "byteLogLikelihood": -4.986714390957,
           "hits": 0,
           "total": 175,
           "hitRate": 0
@@ -3246,7 +3246,7 @@
           "encoding": "CP850",
           "confidence": 0,
           "language": "es",
-          "byteLogLikelihood": -4.948759890378152,
+          "byteLogLikelihood": -4.948759890378,
           "hits": 0,
           "total": 137,
           "hitRate": 0
@@ -3255,7 +3255,7 @@
           "encoding": "CP852",
           "confidence": 0,
           "language": "pl",
-          "byteLogLikelihood": -5.087596335232398,
+          "byteLogLikelihood": -5.087596335232,
           "hits": 0,
           "total": 152,
           "hitRate": 0

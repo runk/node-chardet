@@ -171,7 +171,9 @@ function byteLogLikelihood(buffer, distribution) {
       highBytes += 1;
     }
   }
-  return highBytes === 0 ? Number.NEGATIVE_INFINITY : likelihood / highBytes;
+  return highBytes === 0
+    ? Number.NEGATIVE_INFINITY
+    : Number((likelihood / highBytes).toFixed(12));
 }
 
 function ngramScore(buffer, byteMap, modelNgrams) {
