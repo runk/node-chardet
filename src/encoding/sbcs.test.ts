@@ -1,4 +1,5 @@
 import * as chardet from '..';
+import fs from 'fs';
 import path from 'path';
 import { describe, expect, it, test } from 'vitest';
 
@@ -7,6 +8,10 @@ describe('Singlebyte Character Sets', () => {
 
   const detect = (filename: string) => {
     return chardet.detectFileSync(path.join(base, filename));
+  };
+
+  const analyse = (filename: string) => {
+    return chardet.analyse(fs.readFileSync(path.join(base, filename)))[0];
   };
 
   it('should return ISO-8859-1 (English)', () => {
@@ -78,6 +83,20 @@ describe('Singlebyte Character Sets', () => {
 
   it('should return windows-1256 (Arabic)', () => {
     expect(detect('windows_1256')).toBe('windows-1256');
+  });
+
+  it.each(['et', 'lv', 'lt'])('should return windows-1257 (%s)', (language) => {
+    expect(analyse(`windows_1257_${language}`)).toMatchObject({
+      name: 'windows-1257',
+      lang: language,
+    });
+  });
+
+  it('should return windows-1258 (Vietnamese)', () => {
+    expect(analyse('windows_1258')).toMatchObject({
+      name: 'windows-1258',
+      lang: 'vi',
+    });
   });
 
   it('should return KOI8-R (Russian)', () => {

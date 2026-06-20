@@ -15,7 +15,9 @@ describe('chardet', () => {
     { 'confidence': 10, 'name': 'windows-1253', 'lang': 'el' }, // Greek
     { 'confidence': 6, 'name': 'windows-1250', 'lang': 'pl' },
     { 'confidence': 4, 'name': 'windows-1254', 'lang': 'tr' },
+    { 'confidence': 3, 'name': 'windows-1257', 'lang': 'et' },
     { 'confidence': 2, 'name': 'windows-1251', 'lang': 'ru' },
+    { 'confidence': 1, 'name': 'windows-1258', 'lang': 'vi' },
     { 'confidence': 0, 'name': 'ASCII', 'lang': undefined },
   ];
 
