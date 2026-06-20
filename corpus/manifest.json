@@ -3,15 +3,27 @@
     { "name": "KOI8-U", "iconv": "KOI8-U", "languages": ["uk"] },
     { "name": "IBM866", "iconv": "CP866", "languages": ["ru"] },
     { "name": "IBM855", "iconv": "CP855", "languages": ["ru", "sr"] },
-    { "name": "macintosh", "iconv": "MACINTOSH", "languages": ["fr", "de", "es"] },
-    { "name": "x-mac-cyrillic", "iconv": "MAC-CYRILLIC", "languages": ["ru", "uk"] },
+    {
+      "name": "macintosh",
+      "iconv": "MACINTOSH",
+      "languages": ["fr", "de", "es"]
+    },
+    {
+      "name": "x-mac-cyrillic",
+      "iconv": "MAC-CYRILLIC",
+      "languages": ["ru", "uk"]
+    },
     { "name": "CP949", "iconv": "CP949", "languages": ["ko"] },
     { "name": "ISO-8859-3", "iconv": "ISO-8859-3", "languages": ["mt"] },
     { "name": "ISO-8859-4", "iconv": "ISO-8859-4", "languages": ["lv"] },
     { "name": "ISO-8859-10", "iconv": "ISO-8859-10", "languages": ["is"] },
     { "name": "ISO-8859-13", "iconv": "ISO-8859-13", "languages": ["lt"] },
     { "name": "ISO-8859-14", "iconv": "ISO-8859-14", "languages": ["cy"] },
-    { "name": "ISO-8859-15", "iconv": "ISO-8859-15", "languages": ["fr", "de", "es"] },
+    {
+      "name": "ISO-8859-15",
+      "iconv": "ISO-8859-15",
+      "languages": ["fr", "de", "es"]
+    },
     { "name": "ISO-8859-16", "iconv": "ISO-8859-16", "languages": ["ro"] },
     { "name": "CP850", "iconv": "CP850", "languages": ["fr", "de", "es"] },
     { "name": "CP852", "iconv": "CP852", "languages": ["pl"] }

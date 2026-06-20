@@ -11,24 +11,16 @@ Build and verify the corpus with:
 
 ```sh
 npm run corpus:build
-npm run corpus:check
+npm run corpus:verify
 ```
 
-The build performs an exact iconv round trip for every document. Four documents
-per language are assigned to training and one is held out for testing. Statistics
-are calculated from training documents only, preventing direct test leakage.
+The build script generates the corpus and performs an exact iconv round trip for
+every document. The check script independently rebuilds into a temporary
+directory and byte-compares the result with `generated/`. Four documents per
+language are assigned to training and one is held out for testing. Statistics are
+calculated from training documents only, preventing direct test leakage.
 
 Each generated encoding directory contains binary documents arranged by
 language and split. `generated/index.json` records hashes and byte coverage;
 `generated/ngrams.json` contains the 128 most frequent raw byte trigrams for
-each encoding/language model.
-
-## Limitations
-
-- Synthetic writing has vocabulary and style bias.
-- Five independent documents per language is enough for pipeline development,
-  but not enough to calibrate production confidence scores.
-- Raw trigram statistics still need each recogniser's case-folding byte map
-  before they can become detector models.
-- Similar single-byte encodings require a confusion-matrix evaluation against
-  both positive and negative corpora.
+each encoding/language model, ordered by frequency and packed as 24-bit integers.

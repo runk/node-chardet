@@ -14,8 +14,10 @@
   },
   "scripts": {
     "build": "rm -rf lib/* && tsc -p tsconfig.build.json",
-    "format": "prettier --write ./src/**/*.ts",
-    "format:check": "prettier --list-different ./src/**/*.ts",
+    "corpus:build": "node scripts/build-corpus.mjs",
+    "corpus:verify": "node scripts/verify-corpus.mjs",
+    "format": "prettier --write \"**/*.{ts,json,md,mjs}\"",
+    "format:check": "prettier --list-different \"**/*.{ts,json,md,mjs}\"",
     "test": "npm run test:typecheck && vitest run --coverage",
     "test:typecheck": "tsc",
     "prepublish": "npm run build",

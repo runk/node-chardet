@@ -6,154 +6,504 @@
       "code": "uk",
       "name": "Ukrainian",
       "documents": [
-        { "id": "city-morning", "split": "train", "title": "Ранок у місті", "text": "Ранкове місто повільно прокидається. На зупинках збираються люди, кав'ярні відчиняють двері, а над дахами світлішає небо. Перехожі вітаються, читають новини й планують справи на цілий день." },
-        { "id": "library", "split": "train", "title": "Тиха бібліотека", "text": "У районній бібліотеці пахне папером і деревом. Читачі шукають книжки про історію, мову та подорожі. Бібліотекарка радить нові видання і готує виставку для школярів." },
-        { "id": "market", "split": "train", "title": "Суботній ринок", "text": "Щосуботи на площі працює великий ринок. Фермери привозять яблука, мед, сир і запашний хліб. Покупці уважно вибирають овочі, розмовляють із продавцями та діляться домашніми рецептами." },
-        { "id": "workshop", "split": "train", "title": "Майстерня ідей", "text": "Невелика команда створює програму для місцевого музею. Дизайнери обговорюють зручне меню, розробники перевіряють код, а редактори готують зрозумілі описи українською мовою." },
-        { "id": "river-trip", "split": "test", "title": "Подорож до річки", "text": "У неділю друзі вирушили до тихої річки за селом. Вони взяли мапу, теплий чай і фотоапарат. Після довгої прогулянки мандрівники відпочивали на березі та слухали вечірніх птахів." }
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Ранок у місті",
+          "text": "Ранкове місто повільно прокидається. На зупинках збираються люди, кав'ярні відчиняють двері, а над дахами світлішає небо. Перехожі вітаються, читають новини й планують справи на цілий день."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Тиха бібліотека",
+          "text": "У районній бібліотеці пахне папером і деревом. Читачі шукають книжки про історію, мову та подорожі. Бібліотекарка радить нові видання і готує виставку для школярів."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Суботній ринок",
+          "text": "Щосуботи на площі працює великий ринок. Фермери привозять яблука, мед, сир і запашний хліб. Покупці уважно вибирають овочі, розмовляють із продавцями та діляться домашніми рецептами."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Майстерня ідей",
+          "text": "Невелика команда створює програму для місцевого музею. Дизайнери обговорюють зручне меню, розробники перевіряють код, а редактори готують зрозумілі описи українською мовою."
+        },
+        {
+          "id": "river-trip",
+          "split": "test",
+          "title": "Подорож до річки",
+          "text": "У неділю друзі вирушили до тихої річки за селом. Вони взяли мапу, теплий чай і фотоапарат. Після довгої прогулянки мандрівники відпочивали на березі та слухали вечірніх птахів."
+        }
       ]
     },
     {
       "code": "ru",
       "name": "Russian",
       "documents": [
-        { "id": "city-morning", "split": "train", "title": "Утро в городе", "text": "Город просыпается постепенно. На остановках появляются пассажиры, булочная открывает двери, а первые автобусы выходят на маршрут. Люди читают сообщения и обсуждают планы на новый день." },
-        { "id": "library", "split": "train", "title": "Районная библиотека", "text": "В библиотеке тихо шелестят страницы. Читатели выбирают книги об истории, науке и путешествиях. Сотрудники готовят выставку, отвечают на вопросы и помогают школьникам найти нужные материалы." },
-        { "id": "market", "split": "train", "title": "Осенняя ярмарка", "text": "На площади проходит осенняя ярмарка. Фермеры привезли яблоки, мёд, сыр и свежий хлеб. Покупатели сравнивают продукты, беседуют с продавцами и записывают интересные домашние рецепты." },
-        { "id": "workshop", "split": "train", "title": "Рабочая мастерская", "text": "Небольшая команда создаёт электронный каталог музея. Дизайнеры обсуждают меню, программисты проверяют код, а редакторы готовят ясные описания для посетителей разных возрастов." },
-        { "id": "river-trip", "split": "test", "title": "Поездка к реке", "text": "В воскресенье друзья отправились к спокойной реке за городом. Они взяли карту, горячий чай и фотоаппарат. После долгой прогулки путешественники отдыхали на берегу и слушали вечерних птиц." }
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Утро в городе",
+          "text": "Город просыпается постепенно. На остановках появляются пассажиры, булочная открывает двери, а первые автобусы выходят на маршрут. Люди читают сообщения и обсуждают планы на новый день."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Районная библиотека",
+          "text": "В библиотеке тихо шелестят страницы. Читатели выбирают книги об истории, науке и путешествиях. Сотрудники готовят выставку, отвечают на вопросы и помогают школьникам найти нужные материалы."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Осенняя ярмарка",
+          "text": "На площади проходит осенняя ярмарка. Фермеры привезли яблоки, мёд, сыр и свежий хлеб. Покупатели сравнивают продукты, беседуют с продавцами и записывают интересные домашние рецепты."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Рабочая мастерская",
+          "text": "Небольшая команда создаёт электронный каталог музея. Дизайнеры обсуждают меню, программисты проверяют код, а редакторы готовят ясные описания для посетителей разных возрастов."
+        },
+        {
+          "id": "river-trip",
+          "split": "test",
+          "title": "Поездка к реке",
+          "text": "В воскресенье друзья отправились к спокойной реке за городом. Они взяли карту, горячий чай и фотоаппарат. После долгой прогулки путешественники отдыхали на берегу и слушали вечерних птиц."
+        }
       ]
     },
     {
       "code": "sr",
       "name": "Serbian",
       "documents": [
-        { "id": "city-morning", "split": "train", "title": "Јутро у граду", "text": "Град се полако буди. На станицама се окупљају путници, пекаре отварају врата, а први аутобуси крећу кроз улице. Људи читају вести и договарају обавезе за нови дан." },
-        { "id": "library", "split": "train", "title": "Мала библиотека", "text": "У библиотеци се тихо окрећу странице. Читаоци траже књиге о историји, језику и путовањима. Библиотекар помаже ђацима и припрема изложбу старих издања." },
-        { "id": "market", "split": "train", "title": "Суботња пијаца", "text": "На градској пијаци продавци нуде јабуке, мед, сир и свеж хлеб. Купци пажљиво бирају поврће, разговарају са произвођачима и размењују породичне рецепте." },
-        { "id": "workshop", "split": "train", "title": "Дигитална радионица", "text": "Мали тим прави електронски водич за музеј. Дизајнери уређују мени, програмери проверавају код, а уредници пишу јасне описе за посетиоце." },
-        { "id": "river-trip", "split": "test", "title": "Излет поред реке", "text": "У недељу су пријатељи отишли до мирне реке. Понели су мапу, топао чај и фотоапарат. После дуге шетње одмарали су се на обали и слушали вечерње птице." }
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Јутро у граду",
+          "text": "Град се полако буди. На станицама се окупљају путници, пекаре отварају врата, а први аутобуси крећу кроз улице. Људи читају вести и договарају обавезе за нови дан."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Мала библиотека",
+          "text": "У библиотеци се тихо окрећу странице. Читаоци траже књиге о историји, језику и путовањима. Библиотекар помаже ђацима и припрема изложбу старих издања."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Суботња пијаца",
+          "text": "На градској пијаци продавци нуде јабуке, мед, сир и свеж хлеб. Купци пажљиво бирају поврће, разговарају са произвођачима и размењују породичне рецепте."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Дигитална радионица",
+          "text": "Мали тим прави електронски водич за музеј. Дизајнери уређују мени, програмери проверавају код, а уредници пишу јасне описе за посетиоце."
+        },
+        {
+          "id": "river-trip",
+          "split": "test",
+          "title": "Излет поред реке",
+          "text": "У недељу су пријатељи отишли до мирне реке. Понели су мапу, топао чај и фотоапарат. После дуге шетње одмарали су се на обали и слушали вечерње птице."
+        }
       ]
     },
     {
       "code": "fr",
       "name": "French",
       "documents": [
-        { "id": "city-morning", "split": "train", "title": "Le matin en ville", "text": "La ville se réveille lentement. Les cafés ouvrent leurs portes, les autobus commencent leur trajet et les passants consultent les nouvelles. Chacun prépare sa journée sous un ciel encore pâle." },
-        { "id": "library", "split": "train", "title": "La bibliothèque calme", "text": "Dans la bibliothèque du quartier, les pages tournent en silence. Les lecteurs cherchent des livres sur l'histoire, les sciences et les voyages. Une bibliothécaire prépare une exposition pour les élèves." },
-        { "id": "market", "split": "train", "title": "Le marché du samedi", "text": "Le marché remplit la place de couleurs et de parfums. Les producteurs proposent des pommes, du miel, du fromage et du pain frais. Les clients discutent des saisons et échangent des recettes familiales." },
-        { "id": "workshop", "split": "train", "title": "Un atelier numérique", "text": "Une petite équipe construit le catalogue numérique du musée. Les graphistes organisent le menu, les développeurs vérifient le code et les rédacteurs préparent des textes clairs pour le public." },
-        { "id": "river-trip", "split": "test", "title": "Une promenade près de la rivière", "text": "Dimanche, des amis partent vers une rivière tranquille. Ils emportent une carte, du thé chaud et un appareil photo. Après une longue marche, ils se reposent sur la rive et écoutent les oiseaux." }
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Le matin en ville",
+          "text": "La ville se réveille lentement. Les cafés ouvrent leurs portes, les autobus commencent leur trajet et les passants consultent les nouvelles. Chacun prépare sa journée sous un ciel encore pâle."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "La bibliothèque calme",
+          "text": "Dans la bibliothèque du quartier, les pages tournent en silence. Les lecteurs cherchent des livres sur l'histoire, les sciences et les voyages. Une bibliothécaire prépare une exposition pour les élèves."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Le marché du samedi",
+          "text": "Le marché remplit la place de couleurs et de parfums. Les producteurs proposent des pommes, du miel, du fromage et du pain frais. Les clients discutent des saisons et échangent des recettes familiales."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Un atelier numérique",
+          "text": "Une petite équipe construit le catalogue numérique du musée. Les graphistes organisent le menu, les développeurs vérifient le code et les rédacteurs préparent des textes clairs pour le public."
+        },
+        {
+          "id": "river-trip",
+          "split": "test",
+          "title": "Une promenade près de la rivière",
+          "text": "Dimanche, des amis partent vers une rivière tranquille. Ils emportent une carte, du thé chaud et un appareil photo. Après une longue marche, ils se reposent sur la rive et écoutent les oiseaux."
+        }
       ]
     },
     {
       "code": "de",
       "name": "German",
       "documents": [
-        { "id": "city-morning", "split": "train", "title": "Morgen in der Stadt", "text": "Die Stadt erwacht langsam. Bäckereien öffnen ihre Türen, Busse beginnen ihre Fahrt und viele Menschen lesen unterwegs die Nachrichten. Über den Dächern wird der Himmel allmählich heller." },
-        { "id": "library", "split": "train", "title": "Die ruhige Bibliothek", "text": "In der kleinen Bibliothek rascheln leise die Seiten. Besucher suchen Bücher über Geschichte, Technik und ferne Länder. Eine Mitarbeiterin bereitet eine Ausstellung für Schüler vor." },
-        { "id": "market", "split": "train", "title": "Markt am Samstag", "text": "Auf dem Platz bieten Bauern Äpfel, Käse, Honig und frisches Brot an. Die Kunden vergleichen Gemüse, sprechen über die Ernte und tauschen einfache Rezepte aus." },
-        { "id": "workshop", "split": "train", "title": "Digitale Werkstatt", "text": "Ein kleines Team entwickelt einen digitalen Museumsführer. Designer ordnen das Menü, Entwickler prüfen den Code und Redakteure schreiben verständliche Texte für Gäste." },
-        { "id": "river-trip", "split": "test", "title": "Ausflug an den Fluss", "text": "Am Sonntag wandern Freunde zu einem ruhigen Fluss. Sie nehmen eine Karte, heißen Tee und eine Kamera mit. Nach dem langen Weg sitzen sie am Ufer und hören den Vögeln zu." }
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Morgen in der Stadt",
+          "text": "Die Stadt erwacht langsam. Bäckereien öffnen ihre Türen, Busse beginnen ihre Fahrt und viele Menschen lesen unterwegs die Nachrichten. Über den Dächern wird der Himmel allmählich heller."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Die ruhige Bibliothek",
+          "text": "In der kleinen Bibliothek rascheln leise die Seiten. Besucher suchen Bücher über Geschichte, Technik und ferne Länder. Eine Mitarbeiterin bereitet eine Ausstellung für Schüler vor."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Markt am Samstag",
+          "text": "Auf dem Platz bieten Bauern Äpfel, Käse, Honig und frisches Brot an. Die Kunden vergleichen Gemüse, sprechen über die Ernte und tauschen einfache Rezepte aus."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Digitale Werkstatt",
+          "text": "Ein kleines Team entwickelt einen digitalen Museumsführer. Designer ordnen das Menü, Entwickler prüfen den Code und Redakteure schreiben verständliche Texte für Gäste."
+        },
+        {
+          "id": "river-trip",
+          "split": "test",
+          "title": "Ausflug an den Fluss",
+          "text": "Am Sonntag wandern Freunde zu einem ruhigen Fluss. Sie nehmen eine Karte, heißen Tee und eine Kamera mit. Nach dem langen Weg sitzen sie am Ufer und hören den Vögeln zu."
+        }
       ]
     },
     {
       "code": "es",
       "name": "Spanish",
       "documents": [
-        { "id": "city-morning", "split": "train", "title": "La mañana en la ciudad", "text": "La ciudad despierta poco a poco. Las cafeterías abren sus puertas, los autobuses inician la ruta y los vecinos leen las noticias. El cielo se vuelve más claro sobre los tejados." },
-        { "id": "library", "split": "train", "title": "Una biblioteca tranquila", "text": "En la biblioteca del barrio se oyen páginas y pasos suaves. Los lectores buscan libros de historia, ciencia y viajes. La bibliotecaria prepara una exposición para los alumnos." },
-        { "id": "market", "split": "train", "title": "El mercado del sábado", "text": "El mercado llena la plaza de colores. Los agricultores venden manzanas, miel, queso y pan recién hecho. Los clientes comparan las verduras y comparten recetas de sus familias." },
-        { "id": "workshop", "split": "train", "title": "Taller digital", "text": "Un equipo pequeño crea el catálogo digital del museo. Los diseñadores ordenan el menú, los programadores revisan el código y los editores escriben textos claros para el público." },
-        { "id": "river-trip", "split": "test", "title": "Paseo junto al río", "text": "El domingo unos amigos caminan hacia un río tranquilo. Llevan un mapa, té caliente y una cámara. Después del paseo descansan en la orilla y escuchan a los pájaros." }
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "La mañana en la ciudad",
+          "text": "La ciudad despierta poco a poco. Las cafeterías abren sus puertas, los autobuses inician la ruta y los vecinos leen las noticias. El cielo se vuelve más claro sobre los tejados."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Una biblioteca tranquila",
+          "text": "En la biblioteca del barrio se oyen páginas y pasos suaves. Los lectores buscan libros de historia, ciencia y viajes. La bibliotecaria prepara una exposición para los alumnos."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "El mercado del sábado",
+          "text": "El mercado llena la plaza de colores. Los agricultores venden manzanas, miel, queso y pan recién hecho. Los clientes comparan las verduras y comparten recetas de sus familias."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Taller digital",
+          "text": "Un equipo pequeño crea el catálogo digital del museo. Los diseñadores ordenan el menú, los programadores revisan el código y los editores escriben textos claros para el público."
+        },
+        {
+          "id": "river-trip",
+          "split": "test",
+          "title": "Paseo junto al río",
+          "text": "El domingo unos amigos caminan hacia un río tranquilo. Llevan un mapa, té caliente y una cámara. Después del paseo descansan en la orilla y escuchan a los pájaros."
+        }
       ]
     },
     {
       "code": "ko",
       "name": "Korean",
       "documents": [
-        { "id": "city-morning", "split": "train", "title": "도시의 아침", "text": "도시는 천천히 아침을 맞는다. 카페가 문을 열고 버스가 첫 운행을 시작하며 사람들은 휴대전화로 뉴스를 읽는다. 건물 사이로 밝은 햇빛이 번진다." },
-        { "id": "library", "split": "train", "title": "조용한 도서관", "text": "동네 도서관에는 책장 넘기는 소리가 잔잔하게 들린다. 독자들은 역사와 과학, 여행에 관한 책을 찾는다. 사서는 학생들을 위한 작은 전시를 준비한다." },
-        { "id": "market", "split": "train", "title": "토요일 시장", "text": "광장에 열린 시장에는 사과와 꿀, 치즈와 갓 구운 빵이 놓인다. 손님들은 채소를 고르고 농부와 계절 이야기를 나누며 집에서 만든 요리법을 소개한다." },
-        { "id": "workshop", "split": "train", "title": "디지털 작업실", "text": "작은 팀이 박물관 안내 프로그램을 만든다. 디자이너는 메뉴를 정리하고 개발자는 코드를 확인하며 편집자는 방문객에게 쉬운 설명을 쓴다. 확장 글자 똠과 뷁도 검사한다." },
-        { "id": "river-trip", "split": "test", "title": "강가로 떠난 여행", "text": "일요일에 친구들은 도시 밖의 조용한 강으로 걸어갔다. 지도와 따뜻한 차, 사진기를 챙겼다. 긴 산책 뒤에는 강가에 앉아 저녁 새소리를 들었다." }
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "도시의 아침",
+          "text": "도시는 천천히 아침을 맞는다. 카페가 문을 열고 버스가 첫 운행을 시작하며 사람들은 휴대전화로 뉴스를 읽는다. 건물 사이로 밝은 햇빛이 번진다."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "조용한 도서관",
+          "text": "동네 도서관에는 책장 넘기는 소리가 잔잔하게 들린다. 독자들은 역사와 과학, 여행에 관한 책을 찾는다. 사서는 학생들을 위한 작은 전시를 준비한다."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "토요일 시장",
+          "text": "광장에 열린 시장에는 사과와 꿀, 치즈와 갓 구운 빵이 놓인다. 손님들은 채소를 고르고 농부와 계절 이야기를 나누며 집에서 만든 요리법을 소개한다."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "디지털 작업실",
+          "text": "작은 팀이 박물관 안내 프로그램을 만든다. 디자이너는 메뉴를 정리하고 개발자는 코드를 확인하며 편집자는 방문객에게 쉬운 설명을 쓴다. 확장 글자 똠과 뷁도 검사한다."
+        },
+        {
+          "id": "river-trip",
+          "split": "test",
+          "title": "강가로 떠난 여행",
+          "text": "일요일에 친구들은 도시 밖의 조용한 강으로 걸어갔다. 지도와 따뜻한 차, 사진기를 챙겼다. 긴 산책 뒤에는 강가에 앉아 저녁 새소리를 들었다."
+        }
       ]
     },
     {
       "code": "mt",
       "name": "Maltese",
       "documents": [
-        { "id": "city-morning", "split": "train", "title": "Filgħodu fil-belt", "text": "Il-belt tqum bil-mod. Il-ħwienet jiftħu l-bibien, il-karozzi tal-linja jibdew il-vjaġġ u n-nies jaqraw l-aħbarijiet. Id-dawl jiżdied fuq il-bjut qodma." },
-        { "id": "library", "split": "train", "title": "Il-librerija kwieta", "text": "Fil-librerija tal-lokal jinstema' l-ħoss tal-paġni. Il-qarrejja jfittxu kotba dwar l-istorja, ix-xjenza u l-ivvjaġġar. Il-librara tħejji wirja għall-istudenti." },
-        { "id": "market", "split": "train", "title": "Is-suq tas-Sibt", "text": "Is-suq jimla l-pjazza b'kuluri u rwejjaħ. Il-bdiewa jġibu tuffieħ, għasel, ġobon u ħobż frisk. Ix-xerrejja jitkellmu magħhom u jaqsmu riċetti tal-familja." },
-        { "id": "workshop", "split": "train", "title": "Ħidma diġitali", "text": "Tim żgħir joħloq gwida diġitali għall-mużew. Id-disinjaturi jirranġaw il-menu, l-iżviluppaturi jiċċekkjaw il-kodiċi u l-edituri jiktbu tagħrif ċar." },
-        { "id": "river-trip", "split": "test", "title": "Mixja ħdejn ix-xmara", "text": "Nhar il-Ħadd grupp ta' ħbieb mar lejn xmara kwieta. Ħadu mappa, te sħun u kamera. Wara mixja twila qagħdu fuq ix-xatt u semgħu l-għasafar ta' filgħaxija." }
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Filgħodu fil-belt",
+          "text": "Il-belt tqum bil-mod. Il-ħwienet jiftħu l-bibien, il-karozzi tal-linja jibdew il-vjaġġ u n-nies jaqraw l-aħbarijiet. Id-dawl jiżdied fuq il-bjut qodma."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Il-librerija kwieta",
+          "text": "Fil-librerija tal-lokal jinstema' l-ħoss tal-paġni. Il-qarrejja jfittxu kotba dwar l-istorja, ix-xjenza u l-ivvjaġġar. Il-librara tħejji wirja għall-istudenti."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Is-suq tas-Sibt",
+          "text": "Is-suq jimla l-pjazza b'kuluri u rwejjaħ. Il-bdiewa jġibu tuffieħ, għasel, ġobon u ħobż frisk. Ix-xerrejja jitkellmu magħhom u jaqsmu riċetti tal-familja."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Ħidma diġitali",
+          "text": "Tim żgħir joħloq gwida diġitali għall-mużew. Id-disinjaturi jirranġaw il-menu, l-iżviluppaturi jiċċekkjaw il-kodiċi u l-edituri jiktbu tagħrif ċar."
+        },
+        {
+          "id": "river-trip",
+          "split": "test",
+          "title": "Mixja ħdejn ix-xmara",
+          "text": "Nhar il-Ħadd grupp ta' ħbieb mar lejn xmara kwieta. Ħadu mappa, te sħun u kamera. Wara mixja twila qagħdu fuq ix-xatt u semgħu l-għasafar ta' filgħaxija."
+        }
       ]
     },
     {
       "code": "lv",
       "name": "Latvian",
       "documents": [
-        { "id": "city-morning", "split": "train", "title": "Rīts pilsētā", "text": "Pilsēta mostas lēni. Kafejnīcas atver durvis, autobusi sāk pirmos maršrutus, un cilvēki lasa ziņas. Virs māju jumtiem debesis kļūst arvien gaišākas." },
-        { "id": "library", "split": "train", "title": "Klusā bibliotēka", "text": "Rajona bibliotēkā klusi čaukst grāmatu lapas. Lasītāji meklē darbus par vēsturi, zinātni un ceļojumiem. Bibliotekāre gatavo izstādi skolēniem." },
-        { "id": "market", "split": "train", "title": "Sestdienas tirgus", "text": "Tirgus laukumu piepilda krāsas un smaržas. Zemnieki piedāvā ābolus, medu, sieru un svaigu maizi. Pircēji izvēlas dārzeņus un pārrunā ģimenes receptes." },
-        { "id": "workshop", "split": "train", "title": "Digitālā darbnīca", "text": "Neliela komanda veido muzeja digitālo ceļvedi. Dizaineri sakārto izvēlni, programmētāji pārbauda kodu, bet redaktori raksta skaidrus aprakstus." },
-        { "id": "river-trip", "split": "test", "title": "Pastaiga gar upi", "text": "Svētdien draugi devās uz klusu upi ārpus pilsētas. Viņi paņēma karti, siltu tēju un fotoaparātu. Pēc garās pastaigas visi atpūtās krastā." }
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Rīts pilsētā",
+          "text": "Pilsēta mostas lēni. Kafejnīcas atver durvis, autobusi sāk pirmos maršrutus, un cilvēki lasa ziņas. Virs māju jumtiem debesis kļūst arvien gaišākas."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Klusā bibliotēka",
+          "text": "Rajona bibliotēkā klusi čaukst grāmatu lapas. Lasītāji meklē darbus par vēsturi, zinātni un ceļojumiem. Bibliotekāre gatavo izstādi skolēniem."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Sestdienas tirgus",
+          "text": "Tirgus laukumu piepilda krāsas un smaržas. Zemnieki piedāvā ābolus, medu, sieru un svaigu maizi. Pircēji izvēlas dārzeņus un pārrunā ģimenes receptes."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Digitālā darbnīca",
+          "text": "Neliela komanda veido muzeja digitālo ceļvedi. Dizaineri sakārto izvēlni, programmētāji pārbauda kodu, bet redaktori raksta skaidrus aprakstus."
+        },
+        {
+          "id": "river-trip",
+          "split": "test",
+          "title": "Pastaiga gar upi",
+          "text": "Svētdien draugi devās uz klusu upi ārpus pilsētas. Viņi paņēma karti, siltu tēju un fotoaparātu. Pēc garās pastaigas visi atpūtās krastā."
+        }
       ]
     },
     {
       "code": "is",
       "name": "Icelandic",
       "documents": [
-        { "id": "city-morning", "split": "train", "title": "Morgunn í borginni", "text": "Borgin vaknar hægt. Kaffihús opna dyrnar, strætisvagnar hefja fyrstu ferðina og fólk les fréttir. Himinninn verður bjartari yfir húsþökunum." },
-        { "id": "library", "split": "train", "title": "Rólega bókasafnið", "text": "Á bókasafninu heyrist lágt blaðsíðuskraf. Lesendur leita að bókum um sögu, vísindi og ferðalög. Starfsmaður undirbýr litla sýningu fyrir nemendur." },
-        { "id": "market", "split": "train", "title": "Markaður á laugardegi", "text": "Markaðurinn fyllir torgið af litum og ilm. Bændur selja epli, hunang, ost og nýtt brauð. Gestir velja grænmeti og skiptast á gömlum uppskriftum." },
-        { "id": "workshop", "split": "train", "title": "Stafræn vinnustofa", "text": "Lítið teymi býr til stafrænan leiðarvísi fyrir safnið. Hönnuðir skipuleggja valmyndina, forritarar prófa kóðann og ritstjórar skrifa skýran texta." },
-        { "id": "river-trip", "split": "test", "title": "Ganga við ána", "text": "Á sunnudegi gengu vinir að rólegri á utan við bæinn. Þeir tóku kort, heitt te og myndavél. Eftir langa göngu sátu þeir á bakkanum og hlustuðu á fuglana." }
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Morgunn í borginni",
+          "text": "Borgin vaknar hægt. Kaffihús opna dyrnar, strætisvagnar hefja fyrstu ferðina og fólk les fréttir. Himinninn verður bjartari yfir húsþökunum."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Rólega bókasafnið",
+          "text": "Á bókasafninu heyrist lágt blaðsíðuskraf. Lesendur leita að bókum um sögu, vísindi og ferðalög. Starfsmaður undirbýr litla sýningu fyrir nemendur."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Markaður á laugardegi",
+          "text": "Markaðurinn fyllir torgið af litum og ilm. Bændur selja epli, hunang, ost og nýtt brauð. Gestir velja grænmeti og skiptast á gömlum uppskriftum."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Stafræn vinnustofa",
+          "text": "Lítið teymi býr til stafrænan leiðarvísi fyrir safnið. Hönnuðir skipuleggja valmyndina, forritarar prófa kóðann og ritstjórar skrifa skýran texta."
+        },
+        {
+          "id": "river-trip",
+          "split": "test",
+          "title": "Ganga við ána",
+          "text": "Á sunnudegi gengu vinir að rólegri á utan við bæinn. Þeir tóku kort, heitt te og myndavél. Eftir langa göngu sátu þeir á bakkanum og hlustuðu á fuglana."
+        }
       ]
     },
     {
       "code": "lt",
       "name": "Lithuanian",
       "documents": [
-        { "id": "city-morning", "split": "train", "title": "Rytas mieste", "text": "Miestas bunda pamažu. Kavinės atveria duris, autobusai pradeda pirmuosius maršrutus, o žmonės skaito žinias. Virš senų stogų šviesėja dangus." },
-        { "id": "library", "split": "train", "title": "Tyli biblioteka", "text": "Rajono bibliotekoje tyliai šiugžda puslapiai. Skaitytojai ieško knygų apie istoriją, mokslą ir keliones. Bibliotekininkė rengia parodą mokiniams." },
-        { "id": "market", "split": "train", "title": "Šeštadienio turgus", "text": "Turgaus aikštę pripildo spalvos ir kvapai. Ūkininkai siūlo obuolių, medaus, sūrio ir šviežios duonos. Pirkėjai renkasi daržoves ir dalijasi receptais." },
-        { "id": "workshop", "split": "train", "title": "Skaitmeninės dirbtuvės", "text": "Nedidelė komanda kuria skaitmeninį muziejaus vadovą. Dizaineriai tvarko meniu, programuotojai tikrina kodą, o redaktoriai rašo aiškius aprašymus." },
-        { "id": "river-trip", "split": "test", "title": "Kelionė prie upės", "text": "Sekmadienį draugai išėjo prie ramios upės už miesto. Jie pasiėmė žemėlapį, šiltos arbatos ir fotoaparatą. Po ilgo žygio visi ilsėjosi ant kranto." }
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Rytas mieste",
+          "text": "Miestas bunda pamažu. Kavinės atveria duris, autobusai pradeda pirmuosius maršrutus, o žmonės skaito žinias. Virš senų stogų šviesėja dangus."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Tyli biblioteka",
+          "text": "Rajono bibliotekoje tyliai šiugžda puslapiai. Skaitytojai ieško knygų apie istoriją, mokslą ir keliones. Bibliotekininkė rengia parodą mokiniams."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Šeštadienio turgus",
+          "text": "Turgaus aikštę pripildo spalvos ir kvapai. Ūkininkai siūlo obuolių, medaus, sūrio ir šviežios duonos. Pirkėjai renkasi daržoves ir dalijasi receptais."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Skaitmeninės dirbtuvės",
+          "text": "Nedidelė komanda kuria skaitmeninį muziejaus vadovą. Dizaineriai tvarko meniu, programuotojai tikrina kodą, o redaktoriai rašo aiškius aprašymus."
+        },
+        {
+          "id": "river-trip",
+          "split": "test",
+          "title": "Kelionė prie upės",
+          "text": "Sekmadienį draugai išėjo prie ramios upės už miesto. Jie pasiėmė žemėlapį, šiltos arbatos ir fotoaparatą. Po ilgo žygio visi ilsėjosi ant kranto."
+        }
       ]
     },
     {
       "code": "cy",
       "name": "Welsh",
       "documents": [
-        { "id": "city-morning", "split": "train", "title": "Bore yn y ddinas", "text": "Mae'r ddinas yn deffro'n araf. Mae caffis yn agor eu drysau, bysiau'n dechrau teithio a phobl yn darllen y newyddion. Clywir cân foreol a gwelir cŵn yn cerdded uwchben y stryd." },
-        { "id": "library", "split": "train", "title": "Y llyfrgell dawel", "text": "Yn y llyfrgell leol mae tudalennau'n troi'n dawel. Mae darllenwyr yn chwilio am lyfrau am hanes, gwyddoniaeth a theithio. Mae'r llyfrgellydd yn paratoi arddangosfa am hen dŷ." },
-        { "id": "market", "split": "train", "title": "Marchnad ddydd Sadwrn", "text": "Mae'r farchnad yn llenwi'r sgwâr â lliw a sawr. Mae ffermwyr yn gwerthu afalau, mêl, caws a bara ffres. Mae cwsmeriaid yn dewis llysiau ac yn rhannu ryseitiau." },
-        { "id": "workshop", "split": "train", "title": "Gweithdy digidol", "text": "Mae tîm bach yn creu canllaw digidol i'r amgueddfa. Mae dylunwyr yn trefnu'r ddewislen, datblygwyr yn profi'r côd a golygyddion yn ysgrifennu testun clir." },
-        { "id": "river-trip", "split": "test", "title": "Taith ger yr afon", "text": "Ddydd Sul aeth ffrindiau at afon dawel y tu allan i'r dref. Aethant â map, te cynnes a chamera. Ar ôl cerdded yn hir, gorffwysasant ar y lan." }
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Bore yn y ddinas",
+          "text": "Mae'r ddinas yn deffro'n araf. Mae caffis yn agor eu drysau, bysiau'n dechrau teithio a phobl yn darllen y newyddion. Clywir cân foreol a gwelir cŵn yn cerdded uwchben y stryd."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Y llyfrgell dawel",
+          "text": "Yn y llyfrgell leol mae tudalennau'n troi'n dawel. Mae darllenwyr yn chwilio am lyfrau am hanes, gwyddoniaeth a theithio. Mae'r llyfrgellydd yn paratoi arddangosfa am hen dŷ."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Marchnad ddydd Sadwrn",
+          "text": "Mae'r farchnad yn llenwi'r sgwâr â lliw a sawr. Mae ffermwyr yn gwerthu afalau, mêl, caws a bara ffres. Mae cwsmeriaid yn dewis llysiau ac yn rhannu ryseitiau."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Gweithdy digidol",
+          "text": "Mae tîm bach yn creu canllaw digidol i'r amgueddfa. Mae dylunwyr yn trefnu'r ddewislen, datblygwyr yn profi'r côd a golygyddion yn ysgrifennu testun clir."
+        },
+        {
+          "id": "river-trip",
+          "split": "test",
+          "title": "Taith ger yr afon",
+          "text": "Ddydd Sul aeth ffrindiau at afon dawel y tu allan i'r dref. Aethant â map, te cynnes a chamera. Ar ôl cerdded yn hir, gorffwysasant ar y lan."
+        }
       ]
     },
     {
       "code": "ro",
       "name": "Romanian",
       "documents": [
-        { "id": "city-morning", "split": "train", "title": "Dimineața în oraș", "text": "Orașul se trezește încet. Cafenelele deschid ușile, autobuzele pornesc pe traseu, iar oamenii citesc știrile. Cerul devine mai luminos deasupra clădirilor." },
-        { "id": "library", "split": "train", "title": "Biblioteca liniștită", "text": "În biblioteca de cartier se aud pagini întoarse încet. Cititorii caută cărți despre istorie, știință și călătorii. Bibliotecara pregătește o expoziție pentru elevi." },
-        { "id": "market", "split": "train", "title": "Piața de sâmbătă", "text": "Piața umple centrul cu mirosuri și culori. Fermierii aduc mere, miere, brânză și pâine proaspătă. Cumpărătorii aleg legume și schimbă rețete de familie." },
-        { "id": "workshop", "split": "train", "title": "Atelier digital", "text": "O echipă mică realizează ghidul digital al muzeului. Designerii organizează meniul, programatorii verifică sursa, iar redactorii scriu explicații clare." },
-        { "id": "river-trip", "split": "test", "title": "Plimbare lângă râu", "text": "Duminică, prietenii au mers spre un râu liniștit din afara orașului. Au luat o hartă, ceai cald și un aparat foto. După plimbare s-au odihnit pe mal." }
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Dimineața în oraș",
+          "text": "Orașul se trezește încet. Cafenelele deschid ușile, autobuzele pornesc pe traseu, iar oamenii citesc știrile. Cerul devine mai luminos deasupra clădirilor."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Biblioteca liniștită",
+          "text": "În biblioteca de cartier se aud pagini întoarse încet. Cititorii caută cărți despre istorie, știință și călătorii. Bibliotecara pregătește o expoziție pentru elevi."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Piața de sâmbătă",
+          "text": "Piața umple centrul cu mirosuri și culori. Fermierii aduc mere, miere, brânză și pâine proaspătă. Cumpărătorii aleg legume și schimbă rețete de familie."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Atelier digital",
+          "text": "O echipă mică realizează ghidul digital al muzeului. Designerii organizează meniul, programatorii verifică sursa, iar redactorii scriu explicații clare."
+        },
+        {
+          "id": "river-trip",
+          "split": "test",
+          "title": "Plimbare lângă râu",
+          "text": "Duminică, prietenii au mers spre un râu liniștit din afara orașului. Au luat o hartă, ceai cald și un aparat foto. După plimbare s-au odihnit pe mal."
+        }
       ]
     },
     {
       "code": "pl",
       "name": "Polish",
       "documents": [
-        { "id": "city-morning", "split": "train", "title": "Poranek w mieście", "text": "Miasto budzi się powoli. Kawiarnie otwierają drzwi, autobusy rozpoczynają pierwsze kursy, a ludzie czytają wiadomości. Nad dachami robi się coraz jaśniej." },
-        { "id": "library", "split": "train", "title": "Cicha biblioteka", "text": "W osiedlowej bibliotece słychać szelest kartek. Czytelnicy szukają książek o historii, nauce i podróżach. Bibliotekarka przygotowuje wystawę dla uczniów." },
-        { "id": "market", "split": "train", "title": "Sobotni targ", "text": "Targ wypełnia rynek kolorami i zapachami. Rolnicy sprzedają jabłka, miód, ser i świeży chleb. Klienci wybierają warzywa i wymieniają rodzinne przepisy." },
-        { "id": "workshop", "split": "train", "title": "Cyfrowa pracownia", "text": "Mały zespół tworzy cyfrowy przewodnik po muzeum. Projektanci układają menu, programiści sprawdzają kod, a redaktorzy piszą jasne opisy dla gości." },
-        { "id": "river-trip", "split": "test", "title": "Spacer nad rzeką", "text": "W niedzielę przyjaciele poszli nad spokojną rzekę za miastem. Zabrali mapę, ciepłą herbatę i aparat. Po długim spacerze odpoczywali na brzegu." }
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Poranek w mieście",
+          "text": "Miasto budzi się powoli. Kawiarnie otwierają drzwi, autobusy rozpoczynają pierwsze kursy, a ludzie czytają wiadomości. Nad dachami robi się coraz jaśniej."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Cicha biblioteka",
+          "text": "W osiedlowej bibliotece słychać szelest kartek. Czytelnicy szukają książek o historii, nauce i podróżach. Bibliotekarka przygotowuje wystawę dla uczniów."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Sobotni targ",
+          "text": "Targ wypełnia rynek kolorami i zapachami. Rolnicy sprzedają jabłka, miód, ser i świeży chleb. Klienci wybierają warzywa i wymieniają rodzinne przepisy."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Cyfrowa pracownia",
+          "text": "Mały zespół tworzy cyfrowy przewodnik po muzeum. Projektanci układają menu, programiści sprawdzają kod, a redaktorzy piszą jasne opisy dla gości."
+        },
+        {
+          "id": "river-trip",
+          "split": "test",
+          "title": "Spacer nad rzeką",
+          "text": "W niedzielę przyjaciele poszli nad spokojną rzekę za miastem. Zabrali mapę, ciepłą herbatę i aparat. Po długim spacerze odpoczywali na brzegu."
+        }
       ]
     }
   ]
