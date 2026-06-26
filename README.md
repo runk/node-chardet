@@ -79,21 +79,14 @@ In other words, if you receive a piece of data over the network and want to dete
 
 Note on [TextEncoder](https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/TextEncoder): By default, it returns a UTF-8 encoded buffer, which means the buffer will not be in the original encoding of the string.
 
-## Supported Encodings:
+## Supported Encodings
 
-- UTF-8
-- UTF-16 LE
-- UTF-16 BE
-- UTF-32 LE
-- UTF-32 BE
+`detect()` and `analyse()` may return the following encoding names:
+
+- ASCII
 - ISO-2022-JP
 - ISO-2022-KR
 - ISO-2022-CN
-- Shift_JIS
-- Big5
-- EUC-JP
-- EUC-KR
-- GB18030
 - ISO-8859-1
 - ISO-8859-2
 - ISO-8859-5
@@ -101,6 +94,18 @@ Note on [TextEncoder](https://developer.mozilla.org/en-US/docs/Web/API/TextEncod
 - ISO-8859-7
 - ISO-8859-8
 - ISO-8859-9
+- Big5
+- EUC-JP
+- EUC-KR
+- GB18030
+- KOI8-R
+- Shift_JIS
+- UTF-8
+- UTF-16BE
+- UTF-16LE
+- UTF-32BE
+- UTF-32LE
+- windows-874 (TIS-620 / ISO-8859-11)
 - windows-1250
 - windows-1251
 - windows-1252
@@ -110,8 +115,6 @@ Note on [TextEncoder](https://developer.mozilla.org/en-US/docs/Web/API/TextEncod
 - windows-1256
 - windows-1257
 - windows-1258
-- windows-874 (TIS-620 / ISO-8859-11)
-- KOI8-R
 
 Currently only these encodings are supported.
 
