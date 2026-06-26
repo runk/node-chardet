@@ -18,7 +18,6 @@ class NGramParser {
   ngramList: number[];
   byteMap: number[];
 
-  // TODO: is it safe to set it like this?
   spaceChar: number = 0x20;
 
   constructor(theNgramList: number[], theByteMap: number[]) {
@@ -71,7 +70,6 @@ class NGramParser {
     while ((b = this.nextByte(det)) >= 0) {
       const mb = this.byteMap[b];
 
-      // TODO: 0x20 might not be a space in all character sets...
       if (mb != 0) {
         if (!(mb == this.spaceChar && ignoreSpace)) {
           this.addByte(mb);
@@ -81,16 +79,13 @@ class NGramParser {
       }
     }
 
-    // TODO: Is this OK? The buffer could have ended in the middle of a word...
     this.addByte(this.spaceChar);
 
     const rawPercent = this.hitCount / this.ngramCount;
 
-    // TODO - This is a bit of a hack to take care of a case
-    // were we were getting a confidence of 135...
-    if (rawPercent > 0.33) return 98;
+    if (rawPercent > 0.33) return 0.98;
 
-    return Math.floor(rawPercent * 300.0);
+    return Math.floor(rawPercent * 300.0) / 100;
   }
 }
 
@@ -107,7 +102,7 @@ class NGramsPlusLang {
 const isFlatNgrams = (val: NGramsPlusLang[] | number[]): val is number[] =>
   Array.isArray(val) && isFinite(val[0] as number);
 
-class sbcs implements Recogniser {
+abstract class sbcs implements Recogniser {
   spaceChar = 0x20;
 
   private nGramLang?: string = undefined;
@@ -120,9 +115,7 @@ class sbcs implements Recogniser {
     return [];
   }
 
-  name(_input: Context): EncodingName {
-    return 'sbcs';
-  }
+  abstract name(input: Context): EncodingName;
 
   language(): string | undefined {
     return this.nGramLang;
@@ -1064,30 +1057,3 @@ export class KOI8_R extends sbcs {
     return 'ru';
   }
 }
-
-/*
-module.exports.ISO_8859_7 = function() {
-  this.byteMap = function() {
-    return [
-
-    ];
-  };
-
-  this.ngrams = function() {
-    return [
-
-    ];
-  };
-
-  this.name = function(det) {
-    if (typeof det == 'undefined')
-      return 'ISO-8859-7';
-    return det.c1Bytes ? 'windows-1253' : 'ISO-8859-7';
-  };
-
-  language() {
-    return 'el';
-  };
-};
-util.inherits(module.exports.ISO_8859_7, sbcs);
-*/

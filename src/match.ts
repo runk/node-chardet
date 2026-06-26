@@ -6,7 +6,6 @@ export type EncodingName =
   | 'EUC-JP'
   | 'EUC-KR'
   | 'GB18030'
-  | 'ISO_2022' // TODO: Use hyphen
   | 'ISO-2022-CN'
   | 'ISO-2022-JP'
   | 'ISO-2022-KR'
@@ -17,11 +16,8 @@ export type EncodingName =
   | 'ISO-8859-7'
   | 'ISO-8859-8'
   | 'ISO-8859-9'
-  | 'ISO-8859-9'
   | 'KOI8-R'
-  | 'mbcs'
-  | 'sbcs'
-  | 'Shift_JIS' // TODO: Use hyphen
+  | 'Shift_JIS'
   | 'UTF-16BE'
   | 'UTF-16LE'
   | 'UTF-32'
@@ -32,7 +28,6 @@ export type EncodingName =
   | 'windows-1251'
   | 'windows-1252'
   | 'windows-1253'
-  | 'windows-1254'
   | 'windows-1254'
   | 'windows-1255'
   | 'windows-1256'

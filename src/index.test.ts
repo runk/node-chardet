@@ -6,17 +6,17 @@ import { describe, expect, it } from 'vitest';
 describe('chardet', () => {
   const path = __dirname + '/test/data/encodings/utf8';
   const expectedEncodingsFromPath = [
-    { confidence: 100, name: 'UTF-8', lang: undefined },
-    { confidence: 32, name: 'windows-1252', lang: 'fr' },
-    { confidence: 19, name: 'KOI8-R', lang: 'ru' },
-    { confidence: 10, name: 'Big5', lang: 'zh' },
-    { confidence: 10, name: 'GB18030', lang: 'zh' }, // Mandarin
-    { confidence: 10, name: 'windows-1253', lang: 'el' }, // Greek
-    { confidence: 6, name: 'windows-1250', lang: 'pl' },
-    { confidence: 4, name: 'windows-1254', lang: 'tr' },
-    { confidence: 3, name: 'windows-1257', lang: 'et' },
-    { confidence: 2, name: 'windows-1251', lang: 'ru' },
-    { confidence: 1, name: 'windows-1258', lang: 'vi' },
+    { confidence: 1, name: 'UTF-8', lang: undefined },
+    { confidence: 0.32, name: 'windows-1252', lang: 'fr' },
+    { confidence: 0.19, name: 'KOI8-R', lang: 'ru' },
+    { confidence: 0.1, name: 'Big5', lang: 'zh' },
+    { confidence: 0.1, name: 'GB18030', lang: 'zh' }, // Mandarin
+    { confidence: 0.1, name: 'windows-1253', lang: 'el' }, // Greek
+    { confidence: 0.06, name: 'windows-1250', lang: 'pl' },
+    { confidence: 0.04, name: 'windows-1254', lang: 'tr' },
+    { confidence: 0.03, name: 'windows-1257', lang: 'et' },
+    { confidence: 0.02, name: 'windows-1251', lang: 'ru' },
+    { confidence: 0.01, name: 'windows-1258', lang: 'vi' },
     { confidence: 0, name: 'ASCII', lang: undefined },
   ];
 

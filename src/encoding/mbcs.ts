@@ -80,12 +80,10 @@ class IteratedChar {
  * frequency-of-occurrence of characters.
  */
 
-class mbcs implements Recogniser {
+abstract class mbcs implements Recogniser {
   commonChars: number[] = [];
 
-  name(): EncodingName {
-    return 'mbcs';
-  }
+  abstract name(): EncodingName;
 
   /**
    * Test the match of this charset with the input text data
@@ -93,9 +91,7 @@ class mbcs implements Recogniser {
    *
    * @param det  The CharsetDetector, which contains the input text
    *             to be checked for being in this charset.
-   * @return     Two values packed into one int  (Damn java, anyhow)
-   *             bits 0-7:  the match confidence, ranging from 0-100
-   *             bits 8-15: The match reason, an enum-like value.
+   * @return     A match with confidence ranging from 0 to 1.
    */
   match(det: Context): Match | null {
     let doubleByteCharCount = 0,
@@ -141,7 +137,7 @@ class mbcs implements Recogniser {
         } else {
           //   ASCII or ISO file?  It's probably not our encoding,
           //   but is not incompatible with our encoding, so don't give it a zero.
-          confidence = 10;
+          confidence = 0.1;
         }
         break detectBlock;
       }
@@ -159,18 +155,17 @@ class mbcs implements Recogniser {
         // We have no statistics on frequently occurring characters.
         //  Assess confidence purely on having a reasonable number of
         //  multi-byte characters (the more the better
-        confidence = 30 + doubleByteCharCount - 20 * badCharCount;
-        if (confidence > 100) {
-          confidence = 100;
+        confidence = (30 + doubleByteCharCount - 20 * badCharCount) / 100;
+        if (confidence > 1) {
+          confidence = 1;
         }
       } else {
         // Frequency of occurrence statistics exist.
         const maxVal = Math.log(doubleByteCharCount / 4);
         const scaleFactor = 90.0 / maxVal;
-        confidence = Math.floor(
-          Math.log(commonCharCount + 1) * scaleFactor + 10,
-        );
-        confidence = Math.min(confidence, 100);
+        confidence =
+          Math.floor(Math.log(commonCharCount + 1) * scaleFactor + 10) / 100;
+        confidence = Math.min(confidence, 1);
       }
     } // end of detectBlock:
 
@@ -189,9 +184,7 @@ class mbcs implements Recogniser {
    *            being iterated over.
    * @return    True if a character was returned, false at end of input.
    */
-  nextChar(_iter: IteratedChar, _det: Context): boolean {
-    return true;
-  }
+  abstract nextChar(iter: IteratedChar, det: Context): boolean;
 }
 
 /**
@@ -206,9 +199,6 @@ export class sjis extends mbcs {
     return 'ja';
   }
 
-  // TODO:  This set of data comes from the character frequency-
-  //        of-occurrence analysis tool.  The data needs to be moved
-  //        into a resource and loaded from there.
   commonChars = [
     0x8140, 0x8141, 0x8142, 0x8145, 0x815b, 0x8169, 0x816a, 0x8175, 0x8176,
     0x82a0, 0x82a2, 0x82a4, 0x82a9, 0x82aa, 0x82ab, 0x82ad, 0x82af, 0x82b1,
@@ -257,9 +247,6 @@ export class big5 extends mbcs {
   language() {
     return 'zh';
   }
-  // TODO:  This set of data comes from the character frequency-
-  //        of-occurrence analysis tool.  The data needs to be moved
-  //        into a resource and loaded from there.
   commonChars = [
     0xa140, 0xa141, 0xa142, 0xa143, 0xa147, 0xa149, 0xa175, 0xa176, 0xa440,
     0xa446, 0xa447, 0xa448, 0xa451, 0xa454, 0xa457, 0xa464, 0xa46a, 0xa46c,
@@ -372,9 +359,6 @@ export class euc_jp extends mbcs {
     return 'ja';
   }
 
-  // TODO:  This set of data comes from the character frequency-
-  //        of-occurrence analysis tool.  The data needs to be moved
-  //        into a resource and loaded from there.
   commonChars = [
     0xa1a1, 0xa1a2, 0xa1a3, 0xa1a6, 0xa1bc, 0xa1ca, 0xa1cb, 0xa1d6, 0xa1d7,
     0xa4a2, 0xa4a4, 0xa4a6, 0xa4a8, 0xa4aa, 0xa4ab, 0xa4ac, 0xa4ad, 0xa4af,
@@ -406,9 +390,6 @@ export class euc_kr extends mbcs {
     return 'ko';
   }
 
-  // TODO:  This set of data comes from the character frequency-
-  //        of-occurrence analysis tool.  The data needs to be moved
-  //        into a resource and loaded from there.
   commonChars = [
     0xb0a1, 0xb0b3, 0xb0c5, 0xb0cd, 0xb0d4, 0xb0e6, 0xb0ed, 0xb0f8, 0xb0fa,
     0xb0fc, 0xb1b8, 0xb1b9, 0xb1c7, 0xb1d7, 0xb1e2, 0xb3aa, 0xb3bb, 0xb4c2,
@@ -492,9 +473,6 @@ export class gb_18030 extends mbcs {
     return iter.done == false;
   }
 
-  // TODO:  This set of data comes from the character frequency-
-  //        of-occurrence analysis tool.  The data needs to be moved
-  //        into a resource and loaded from there.
   commonChars = [
     0xa1a1, 0xa1a2, 0xa1a3, 0xa1a4, 0xa1b0, 0xa1b1, 0xa1f1, 0xa1f3, 0xa3a1,
     0xa3ac, 0xa3ba, 0xb1a8, 0xb1b8, 0xb1be, 0xb2bb, 0xb3c9, 0xb3f6, 0xb4f3,

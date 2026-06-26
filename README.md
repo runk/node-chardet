@@ -41,8 +41,8 @@ Returned value is an array of objects sorted by confidence value in descending o
 
 ```javascript
 [
-  { confidence: 90, name: 'UTF-8' },
-  { confidence: 20, name: 'windows-1252', lang: 'fr' },
+  { confidence: 0.9, name: 'UTF-8' },
+  { confidence: 0.2, name: 'windows-1252', lang: 'fr' },
 ];
 ```
 

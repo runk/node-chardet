@@ -11,7 +11,7 @@ describe('ISO-2022', () => {
 
   it('should return ISO-2022-JP', () => {
     expect(analyse('iso2022jp')).toEqual({
-      confidence: 100,
+      confidence: 1,
       lang: 'ja',
       name: 'ISO-2022-JP',
     });
@@ -19,7 +19,7 @@ describe('ISO-2022', () => {
 
   it('should return ISO-2022-KR', () => {
     expect(analyse('iso2022kr')).toEqual({
-      confidence: 100,
+      confidence: 1,
       lang: 'kr',
       name: 'ISO-2022-KR',
     });
@@ -27,7 +27,7 @@ describe('ISO-2022', () => {
 
   it('should return ISO-2022-CN', () => {
     expect(analyse('iso2022cn')).toEqual({
-      confidence: 100,
+      confidence: 1,
       lang: 'zh',
       name: 'ISO-2022-CN',
     });

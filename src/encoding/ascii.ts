@@ -16,6 +16,6 @@ export default class Ascii implements Recogniser {
       }
     }
 
-    return match(det, this, 100);
+    return match(det, this, 1);
   }
 }
