@@ -1,5 +1,433 @@
 {
   "encodings": [
+    {
+      "name": "ASCII",
+      "iconv": "ASCII",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "en",
+          "split": "validation",
+          "document": "ascii",
+          "path": "src/test/data/encodings/ascii"
+        }
+      ]
+    },
+    {
+      "name": "ISO-2022-JP",
+      "iconv": "ISO-2022-JP",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "ja",
+          "split": "validation",
+          "document": "iso2022jp",
+          "path": "src/test/data/encodings/iso2022jp"
+        }
+      ]
+    },
+    {
+      "name": "ISO-2022-KR",
+      "iconv": "ISO-2022-KR",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "ko",
+          "split": "validation",
+          "document": "iso2022kr",
+          "path": "src/test/data/encodings/iso2022kr"
+        }
+      ]
+    },
+    {
+      "name": "ISO-2022-CN",
+      "iconv": "ISO-2022-CN",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "zh",
+          "split": "validation",
+          "document": "iso2022cn",
+          "path": "src/test/data/encodings/iso2022cn"
+        }
+      ]
+    },
+    {
+      "name": "ISO-8859-1",
+      "iconv": "ISO-8859-1",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "en",
+          "split": "validation",
+          "document": "iso88591-en",
+          "path": "src/test/data/encodings/iso88591_en"
+        }
+      ]
+    },
+    {
+      "name": "ISO-8859-2",
+      "iconv": "ISO-8859-2",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "cs",
+          "split": "validation",
+          "document": "iso88592-cs",
+          "path": "src/test/data/encodings/iso88592_cs"
+        }
+      ]
+    },
+    {
+      "name": "ISO-8859-5",
+      "iconv": "ISO-8859-5",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "ru",
+          "split": "validation",
+          "document": "iso88595-ru",
+          "path": "src/test/data/encodings/iso88595_ru"
+        }
+      ]
+    },
+    {
+      "name": "ISO-8859-6",
+      "iconv": "ISO-8859-6",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "ar",
+          "split": "validation",
+          "document": "iso88596-ar",
+          "path": "src/test/data/encodings/iso88596_ar"
+        }
+      ]
+    },
+    {
+      "name": "ISO-8859-7",
+      "iconv": "ISO-8859-7",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "el",
+          "split": "validation",
+          "document": "iso88597-el",
+          "path": "src/test/data/encodings/iso88597_el"
+        }
+      ]
+    },
+    {
+      "name": "ISO-8859-8",
+      "iconv": "ISO-8859-8",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "he",
+          "split": "validation",
+          "document": "iso88598-he",
+          "path": "src/test/data/encodings/iso88598_he"
+        }
+      ]
+    },
+    {
+      "name": "ISO-8859-9",
+      "iconv": "ISO-8859-9",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "tr",
+          "split": "validation",
+          "document": "iso88599-tr",
+          "path": "src/test/data/encodings/iso88599_tr"
+        }
+      ]
+    },
+    {
+      "name": "Big5",
+      "iconv": "BIG5",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "zh",
+          "split": "validation",
+          "document": "big5",
+          "path": "src/test/data/encodings/big5"
+        }
+      ]
+    },
+    {
+      "name": "EUC-JP",
+      "iconv": "EUC-JP",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "ja",
+          "split": "validation",
+          "document": "euc-jp",
+          "path": "src/test/data/encodings/euc_jp"
+        }
+      ]
+    },
+    {
+      "name": "EUC-KR",
+      "iconv": "EUC-KR",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "ko",
+          "split": "validation",
+          "document": "euc-kr",
+          "path": "src/test/data/encodings/euc_kr"
+        }
+      ]
+    },
+    {
+      "name": "GB18030",
+      "iconv": "GB18030",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "zh",
+          "split": "validation",
+          "document": "gb18030",
+          "path": "src/test/data/encodings/gb18030"
+        }
+      ]
+    },
+    {
+      "name": "KOI8-R",
+      "iconv": "KOI8-R",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "ru",
+          "split": "validation",
+          "document": "koi8r",
+          "path": "src/test/data/encodings/koi8r"
+        }
+      ]
+    },
+    {
+      "name": "Shift_JIS",
+      "iconv": "SHIFT_JIS",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "ja",
+          "split": "validation",
+          "document": "shiftjis",
+          "path": "src/test/data/encodings/shiftjis"
+        }
+      ]
+    },
+    {
+      "name": "UTF-8",
+      "iconv": "UTF-8",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "en",
+          "split": "validation",
+          "document": "utf8",
+          "path": "src/test/data/encodings/utf8"
+        }
+      ]
+    },
+    {
+      "name": "UTF-16BE",
+      "iconv": "UTF-16BE",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "en",
+          "split": "validation",
+          "document": "utf16be",
+          "path": "src/test/data/encodings/utf16be"
+        }
+      ]
+    },
+    {
+      "name": "UTF-16LE",
+      "iconv": "UTF-16LE",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "en",
+          "split": "validation",
+          "document": "utf16le",
+          "path": "src/test/data/encodings/utf16le"
+        }
+      ]
+    },
+    {
+      "name": "UTF-32BE",
+      "iconv": "UTF-32BE",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "en",
+          "split": "validation",
+          "document": "utf32be",
+          "path": "src/test/data/encodings/utf32be"
+        }
+      ]
+    },
+    {
+      "name": "UTF-32LE",
+      "iconv": "UTF-32LE",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "en",
+          "split": "validation",
+          "document": "utf32le",
+          "path": "src/test/data/encodings/utf32le"
+        }
+      ]
+    },
+    {
+      "name": "windows-874",
+      "iconv": "WINDOWS-874",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "th",
+          "split": "validation",
+          "document": "windows-874",
+          "path": "src/test/data/encodings/windows_874"
+        }
+      ]
+    },
+    {
+      "name": "windows-1250",
+      "iconv": "WINDOWS-1250",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "cs",
+          "split": "validation",
+          "document": "windows-1250",
+          "path": "src/test/data/encodings/windows_1250"
+        }
+      ]
+    },
+    {
+      "name": "windows-1251",
+      "iconv": "WINDOWS-1251",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "ru",
+          "split": "validation",
+          "document": "windows-1251",
+          "path": "src/test/data/encodings/windows_1251"
+        }
+      ]
+    },
+    {
+      "name": "windows-1252",
+      "iconv": "WINDOWS-1252",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "en",
+          "split": "validation",
+          "document": "windows-1252",
+          "path": "src/test/data/encodings/windows_1252"
+        }
+      ]
+    },
+    {
+      "name": "windows-1253",
+      "iconv": "WINDOWS-1253",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "el",
+          "split": "validation",
+          "document": "windows-1253",
+          "path": "src/test/data/encodings/windows_1253"
+        }
+      ]
+    },
+    {
+      "name": "windows-1254",
+      "iconv": "WINDOWS-1254",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "tr",
+          "split": "validation",
+          "document": "windows-1254",
+          "path": "src/test/data/encodings/windows_1254"
+        }
+      ]
+    },
+    {
+      "name": "windows-1255",
+      "iconv": "WINDOWS-1255",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "he",
+          "split": "validation",
+          "document": "windows-1255",
+          "path": "src/test/data/encodings/windows_1255"
+        }
+      ]
+    },
+    {
+      "name": "windows-1256",
+      "iconv": "WINDOWS-1256",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "ar",
+          "split": "validation",
+          "document": "windows-1256",
+          "path": "src/test/data/encodings/windows_1256"
+        }
+      ]
+    },
+    {
+      "name": "windows-1257",
+      "iconv": "WINDOWS-1257",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "et",
+          "split": "validation",
+          "document": "windows-1257-et",
+          "path": "src/test/data/encodings/windows_1257_et"
+        },
+        {
+          "language": "lt",
+          "split": "validation",
+          "document": "windows-1257-lt",
+          "path": "src/test/data/encodings/windows_1257_lt"
+        },
+        {
+          "language": "lv",
+          "split": "validation",
+          "document": "windows-1257-lv",
+          "path": "src/test/data/encodings/windows_1257_lv"
+        }
+      ]
+    },
+    {
+      "name": "windows-1258",
+      "iconv": "WINDOWS-1258",
+      "model": false,
+      "fixtures": [
+        {
+          "language": "vi",
+          "split": "validation",
+          "document": "windows-1258",
+          "path": "src/test/data/encodings/windows_1258"
+        }
+      ]
+    },
     { "name": "KOI8-U", "iconv": "KOI8-U", "languages": ["uk"] },
     { "name": "IBM866", "iconv": "CP866", "languages": ["ru"] },
     { "name": "IBM855", "iconv": "CP855", "languages": ["ru", "sr"] },

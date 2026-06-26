@@ -200,6 +200,7 @@ function statisticallyCompetitive(best, candidate) {
 function compileSingleByteModels() {
   const models = [];
   for (const encoding of manifest.encodings) {
+    if (encoding.model === false || encoding.fixtures) continue;
     if (encoding.name === 'CP949') continue;
 
     const byteMap = byteMapFor(encoding.iconv);

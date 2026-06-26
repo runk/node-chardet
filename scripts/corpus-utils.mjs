@@ -103,6 +103,36 @@ export function buildCorpus(destination) {
   const ngrams = [];
 
   for (const encoding of manifest.encodings) {
+    if (encoding.fixtures) {
+      for (const fixture of encoding.fixtures) {
+        const encoded = readFileSync(join(root, fixture.path));
+        const outputPath = join(
+          destination,
+          encoding.name,
+          fixture.language,
+          fixture.split,
+          `${fixture.document}.bin`,
+        );
+        mkdirSync(dirname(outputPath), { recursive: true });
+        writeFileSync(outputPath, encoded);
+
+        const highBytes = [...encoded].filter((byte) => byte >= 0x80);
+        index.push({
+          encoding: encoding.name,
+          iconv: encoding.iconv,
+          language: fixture.language,
+          split: fixture.split,
+          document: fixture.document,
+          path: relative(destination, outputPath),
+          bytes: encoded.length,
+          highBytes: highBytes.length,
+          uniqueHighBytes: new Set(highBytes).size,
+          sha256: sha256(encoded),
+        });
+      }
+      continue;
+    }
+
     for (const languageCode of encoding.languages) {
       const language = sourceByLanguage.get(languageCode);
       if (!language)
@@ -182,7 +212,10 @@ export function buildCorpus(destination) {
         if (document.split === 'train') trainBuffers.push(encoded);
       }
 
-      if (modelHighByteCount < 10 || modelHighByteValues.size < 3) {
+      if (
+        encoding.name !== 'ASCII' &&
+        (modelHighByteCount < 10 || modelHighByteValues.size < 3)
+      ) {
         throw new Error(
           `${encoding.name}/${languageCode} has insufficient high-byte coverage`,
         );

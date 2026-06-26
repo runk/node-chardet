@@ -114,7 +114,7 @@ export class ISO_2022_KR extends ISO_2022 {
     return 'ISO-2022-KR';
   }
   language() {
-    return 'kr';
+    return 'ko';
   }
   escapeSequences = [[0x1b, 0x24, 0x29, 0x43]];
 }

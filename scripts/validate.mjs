@@ -15,15 +15,7 @@ function option(name, fallback) {
   return arg ? arg.slice(prefix.length) : fallback;
 }
 
-function percent(value, total) {
-  return total === 0 ? '0.00%' : `${((value / total) * 100).toFixed(2)}%`;
-}
-
-function increment(object, key) {
-  object[key] = (object[key] ?? 0) + 1;
-}
-
-const split = option('split', 'all');
+const split = option('split', 'validation');
 const rows = corpusIndex.filter(
   (row) => split === 'all' || row.split === split,
 );
@@ -49,107 +41,52 @@ const results = rows.map((row) => {
   };
 });
 
+function ok(value) {
+  return value ? '✅' : '❌';
+}
+
+function percent(value, total) {
+  return total === 0 ? '0.00%' : `${((value / total) * 100).toFixed(2)}%`;
+}
+
 const summary = {
   files: results.length,
+  predicted: results.filter((result) => result.predicted !== null).length,
   encodingCorrect: results.filter((result) => result.encodingCorrect).length,
   languageCorrect: results.filter((result) => result.languageCorrect).length,
-  noPrediction: results.filter((result) => result.predicted === null).length,
 };
-
-const bySplit = {};
-const byExpectedEncoding = {};
-const topPredictions = {};
-
-for (const result of results) {
-  const splitSummary = (bySplit[result.expected.split] ??= {
-    files: 0,
-    encodingCorrect: 0,
-    languageCorrect: 0,
-  });
-  splitSummary.files += 1;
-  if (result.encodingCorrect) splitSummary.encodingCorrect += 1;
-  if (result.languageCorrect) splitSummary.languageCorrect += 1;
-
-  const encodingSummary = (byExpectedEncoding[result.expected.encoding] ??= {
-    files: 0,
-    encodingCorrect: 0,
-    languageCorrect: 0,
-    predictions: {},
-  });
-  encodingSummary.files += 1;
-  if (result.encodingCorrect) encodingSummary.encodingCorrect += 1;
-  if (result.languageCorrect) encodingSummary.languageCorrect += 1;
-  increment(encodingSummary.predictions, result.predicted?.name ?? '<none>');
-  increment(topPredictions, result.predicted?.name ?? '<none>');
-}
 
 console.log('Library corpus validation');
 console.log('=========================');
-console.log(`Split: ${split}`);
-console.log(`Files: ${summary.files}`);
-console.log(
-  `Encoding correct: ${summary.encodingCorrect}/${summary.files} (${percent(
-    summary.encodingCorrect,
-    summary.files,
-  )})`,
-);
-console.log(
-  `Language correct: ${summary.languageCorrect}/${summary.files} (${percent(
-    summary.languageCorrect,
-    summary.files,
-  )})`,
-);
-console.log(`No prediction: ${summary.noPrediction}`);
-
-console.log('\nBy split');
+console.log(''); // empty line
+const summaryRows = [
+  ['Split', split],
+  ['Files', summary.files],
+  ['Coverage', percent(summary.predicted, summary.files)],
+  ['Encoding Accuracy', percent(summary.encodingCorrect, summary.files)],
+  ['Language Accuracy', percent(summary.languageCorrect, summary.files)],
+];
+const summaryWidth = Math.max(...summaryRows.map(([label]) => label.length));
+for (const [label, value] of summaryRows) {
+  console.log(`${label.padEnd(summaryWidth)}  ${value}`);
+}
+console.log('');
 console.table(
-  Object.entries(bySplit).map(([name, item]) => ({
-    split: name,
-    files: item.files,
-    encodingCorrect: item.encodingCorrect,
-    encodingAccuracy: percent(item.encodingCorrect, item.files),
-    languageCorrect: item.languageCorrect,
-    languageAccuracy: percent(item.languageCorrect, item.files),
-  })),
-);
-
-console.log('\nBy expected encoding');
-console.table(
-  Object.entries(byExpectedEncoding)
-    .sort(([left], [right]) => left.localeCompare(right))
-    .map(([encoding, item]) => ({
-      encoding,
-      files: item.files,
-      encodingCorrect: item.encodingCorrect,
-      encodingAccuracy: percent(item.encodingCorrect, item.files),
-      languageCorrect: item.languageCorrect,
-      mostCommonPrediction: Object.entries(item.predictions).sort(
-        ([leftName, leftCount], [rightName, rightCount]) =>
-          rightCount - leftCount || leftName.localeCompare(rightName),
-      )[0][0],
-    })),
-);
-
-console.log('\nTop predicted encodings');
-console.table(
-  Object.entries(topPredictions)
+  results
     .sort(
-      ([leftName, leftCount], [rightName, rightCount]) =>
-        rightCount - leftCount || leftName.localeCompare(rightName),
+      (left, right) =>
+        `${left.expected.encoding}/${left.expected.language}`.localeCompare(
+          `${right.expected.encoding}/${right.expected.language}`,
+        ) || left.expected.path.localeCompare(right.expected.path),
     )
-    .map(([encoding, count]) => ({ encoding, count })),
-);
-
-const failures = results.filter((result) => !result.encodingCorrect);
-console.log('\nFirst 20 encoding mismatches');
-console.table(
-  failures.slice(0, 20).map((result) => ({
-    expected: result.expected.encoding,
-    language: result.expected.language,
-    split: result.expected.split,
-    predicted: result.predicted?.name ?? '<none>',
-    predictedLanguage: result.predicted?.lang ?? '',
-    confidence: result.predicted?.confidence ?? '',
-    path: result.expected.path,
-  })),
+    .map((result) => ({
+      expected: result.expected.encoding,
+      lang: result.expected.language,
+      predicted: result.predicted?.name ?? '<none>',
+      predictedLang: result.predicted?.lang ?? '',
+      confidence: result.predicted?.confidence ?? '',
+      encodingOk: ok(result.encodingCorrect),
+      languageOk: ok(result.languageCorrect),
+      path: result.expected.path,
+    })),
 );
