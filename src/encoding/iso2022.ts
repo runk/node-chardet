@@ -7,12 +7,10 @@ import match, { type Match, type EncodingName } from '../match';
  * of encodings.
  */
 
-class ISO_2022 implements Recogniser {
+abstract class ISO_2022 implements Recogniser {
   escapeSequences: number[][] = [];
 
-  name(): EncodingName {
-    return 'ISO_2022';
-  }
+  abstract name(): EncodingName;
 
   match(det: Context): Match | null {
     /**
@@ -70,15 +68,15 @@ class ISO_2022 implements Recogniser {
     //
     // Initial quality is based on relative proportion of recognized vs.
     //   unrecognized escape sequences.
-    //   All good:  quality = 100;
+    //   All good:  quality = 1;
     //   half or less good: quality = 0;
     //   linear in between.
-    confidence = (100 * hits - 100 * misses) / (hits + misses);
+    confidence = (hits - misses) / (hits + misses);
 
     // Back off quality if there were too few escape sequences seen.
     //   Include shifts in this computation, so that KR does not get penalized
     //   for having only a single Escape sequence, but many shifts.
-    if (hits + shifts < 5) confidence -= (5 - (hits + shifts)) * 10;
+    if (hits + shifts < 5) confidence -= (5 - (hits + shifts)) * 0.1;
 
     return confidence <= 0 ? null : match(det, this, confidence);
   }

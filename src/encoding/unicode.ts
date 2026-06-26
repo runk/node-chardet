@@ -18,7 +18,7 @@ export class UTF_16BE implements Recogniser {
       (input[0] & 0xff) == 0xfe &&
       (input[1] & 0xff) == 0xff
     ) {
-      return match(det, this, 100); // confidence = 100
+      return match(det, this, 1);
     }
 
     // TODO: Do some statistics to check for unsigned UTF-16BE
@@ -44,7 +44,7 @@ export class UTF_16LE implements Recogniser {
         // It is probably UTF-32 LE, not UTF-16
         return null;
       }
-      return match(det, this, 100); // confidence = 100
+      return match(det, this, 1);
     }
 
     // TODO: Do some statistics to check for unsigned UTF-16LE
@@ -94,19 +94,18 @@ class UTF_32 implements Recogniser, WithGetChar {
     // Cook up some sort of confidence score, based on presence of a BOM
     //    and the existence of valid and/or invalid multi-byte sequences.
     if (hasBOM && numInvalid == 0) {
-      confidence = 100;
+      confidence = 1;
     } else if (hasBOM && numValid > numInvalid * 10) {
-      confidence = 80;
+      confidence = 0.8;
     } else if (numValid > 3 && numInvalid == 0) {
-      confidence = 100;
+      confidence = 1;
     } else if (numValid > 0 && numInvalid == 0) {
-      confidence = 80;
+      confidence = 0.8;
     } else if (numValid > numInvalid * 10) {
       // Probably corrupt UTF-32BE data.  Valid sequences aren't likely by chance.
-      confidence = 25;
+      confidence = 0.25;
     }
 
-    // return confidence == 0 ? null : new CharsetMatch(det, this, confidence);
     return confidence == 0 ? null : match(det, this, confidence);
   }
 }

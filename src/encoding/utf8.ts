@@ -60,16 +60,16 @@ export default class Utf8 implements Recogniser {
     // Cook up some sort of confidence score, based on presence of a BOM
     //    and the existence of valid and/or invalid multi-byte sequences.
     confidence = 0;
-    if (hasBOM && numInvalid == 0) confidence = 100;
-    else if (hasBOM && numValid > numInvalid * 10) confidence = 80;
-    else if (numValid > 3 && numInvalid == 0) confidence = 100;
-    else if (numValid > 0 && numInvalid == 0) confidence = 80;
+    if (hasBOM && numInvalid == 0) confidence = 1;
+    else if (hasBOM && numValid > numInvalid * 10) confidence = 0.8;
+    else if (numValid > 3 && numInvalid == 0) confidence = 1;
+    else if (numValid > 0 && numInvalid == 0) confidence = 0.8;
     else if (numValid == 0 && numInvalid == 0)
       // Plain ASCII.
-      confidence = 10;
+      confidence = 0.1;
     else if (numValid > numInvalid * 10)
       // Probably corrupt utf-8 data.  Valid sequences aren't likely by chance.
-      confidence = 25;
+      confidence = 0.25;
     else return null;
 
     return match(det, this, confidence);
