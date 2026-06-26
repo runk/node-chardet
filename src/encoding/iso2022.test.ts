@@ -20,7 +20,7 @@ describe('ISO-2022', () => {
   it('should return ISO-2022-KR', () => {
     expect(analyse('iso2022kr')).toEqual({
       confidence: 100,
-      lang: 'kr',
+      lang: 'ko',
       name: 'ISO-2022-KR',
     });
   });
