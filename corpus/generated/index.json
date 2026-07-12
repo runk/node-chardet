@@ -1734,10 +1734,10 @@
     "split": "test",
     "document": "community-garden",
     "path": "ISO-8859-16/ro/test/community-garden.bin",
-    "bytes": 206,
-    "highBytes": 13,
-    "uniqueHighBytes": 5,
-    "sha256": "e4d43eaeb3f3bce0f6df9d5686ab19d34d2a691464c0b3372e95e5c12fd577a8"
+    "bytes": 224,
+    "highBytes": 15,
+    "uniqueHighBytes": 6,
+    "sha256": "cbb06341ae7b36086fa1cc8e9ce8df8a66cf37ac24a4558200e71f037eaf6bc5"
   },
   {
     "encoding": "ISO-8859-16",
@@ -1746,10 +1746,10 @@
     "split": "train",
     "document": "city-morning",
     "path": "ISO-8859-16/ro/train/city-morning.bin",
-    "bytes": 175,
-    "highBytes": 9,
-    "uniqueHighBytes": 4,
-    "sha256": "43a5a1c9acb7d2f14701b3b5572198acbce41ccfc9d90a00a95ca2489147830e"
+    "bytes": 193,
+    "highBytes": 11,
+    "uniqueHighBytes": 5,
+    "sha256": "47d8c1bf653e17a058fd3c8a3141eaa08652db1c8e27a46be5b177a8770b1006"
   },
   {
     "encoding": "ISO-8859-16",
@@ -1758,10 +1758,10 @@
     "split": "train",
     "document": "library",
     "path": "ISO-8859-16/ro/train/library.bin",
-    "bytes": 187,
-    "highBytes": 17,
-    "uniqueHighBytes": 5,
-    "sha256": "817a8d7982dedb766196da67179b581a6940e424e6ae2861577aeeaaf10e114b"
+    "bytes": 205,
+    "highBytes": 19,
+    "uniqueHighBytes": 6,
+    "sha256": "fbd051c8abf29897208b0f3199e4504b8d40677a58edea5d541b37bfea98b459"
   },
   {
     "encoding": "ISO-8859-16",
@@ -1770,10 +1770,10 @@
     "split": "train",
     "document": "market",
     "path": "ISO-8859-16/ro/train/market.bin",
-    "bytes": 171,
-    "highBytes": 17,
-    "uniqueHighBytes": 4,
-    "sha256": "ffff0df00228d68d1960c1f38b157084fce5c73e17e7a732a49d86251c834437"
+    "bytes": 189,
+    "highBytes": 19,
+    "uniqueHighBytes": 5,
+    "sha256": "8584a99429d049f70c73ea6c50208b23faef446f1c50b9833b7e31e2ef3adbc5"
   },
   {
     "encoding": "ISO-8859-16",
@@ -1782,10 +1782,10 @@
     "split": "train",
     "document": "workshop",
     "path": "ISO-8859-16/ro/train/workshop.bin",
-    "bytes": 170,
-    "highBytes": 6,
-    "uniqueHighBytes": 2,
-    "sha256": "46e9670deecb580c1738a31a3aab804b6d54ffd3dcfee66eb0adf988e60d7c5f"
+    "bytes": 188,
+    "highBytes": 8,
+    "uniqueHighBytes": 3,
+    "sha256": "d3dbc5ecf59a9705bc6dd1d7ed97222304426d439ee87084d3729d221a00145c"
   },
   {
     "encoding": "ISO-8859-16",
@@ -1794,10 +1794,10 @@
     "split": "validation",
     "document": "river-trip",
     "path": "ISO-8859-16/ro/validation/river-trip.bin",
-    "bytes": 170,
-    "highBytes": 10,
-    "uniqueHighBytes": 3,
-    "sha256": "a815d6b249d38b71948eac38e0de8ff5dc4b1be0e04b1c108d75a0d9bba37a99"
+    "bytes": 188,
+    "highBytes": 12,
+    "uniqueHighBytes": 5,
+    "sha256": "d130ff9bdb9431000be39f0d1f6cd5d7a0aa805e8bd4eca9723c71761b110020"
   },
   {
     "encoding": "ISO-8859-2",

@@ -64,7 +64,12 @@
       "iconv": "ISO-8859-15",
       "languages": ["fr", "de", "es"]
     },
-    { "name": "ISO-8859-16", "iconv": "ISO-8859-16", "languages": ["ro"] },
+    {
+      "name": "ISO-8859-16",
+      "iconv": "ISO-8859-16",
+      "languages": ["ro"],
+      "sourceSuffix": " Prețul este 10 €."
+    },
     { "name": "CP850", "iconv": "CP850", "languages": ["fr", "de", "es"] },
     { "name": "CP852", "iconv": "CP852", "languages": ["pl"] }
   ]

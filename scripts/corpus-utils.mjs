@@ -143,6 +143,9 @@ export function buildCorpus(destination) {
         )) {
           sourceText = sourceText.replaceAll(from, to);
         }
+        if (encoding.sourceSuffix) {
+          sourceText = `${sourceText.trimEnd()}${encoding.sourceSuffix}\n`;
+        }
         const utf8 = Buffer.from(sourceText, 'utf8');
         const encoded = iconv(utf8, 'UTF-8', encoding.iconv);
         const decoded = iconv(encoded, encoding.iconv, 'UTF-8');
