@@ -505,6 +505,582 @@
           "text": "W niedzielę przyjaciele poszli nad spokojną rzekę za miastem. Zabrali mapę, ciepłą herbatę i aparat. Po długim spacerze odpoczywali na brzegu."
         }
       ]
+    },
+    {
+      "code": "ar",
+      "name": "Arabic",
+      "documents": [
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "صباح المدينة",
+          "text": "تستيقظ المدينة بهدوء وتفتح المقاهي أبوابها بينما ينتظر الناس الحافلات ويقرؤون الأخبار."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "المكتبة الهادئة",
+          "text": "يبحث القراء عن كتب التاريخ والعلوم ويساعد أمين المكتبة الطلاب في اختيار المراجع المناسبة."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "سوق السبت",
+          "text": "يعرض المزارعون الخبز والعسل والفاكهة ويتبادل الزوار الوصفات والأحاديث الودية."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "ورشة رقمية",
+          "text": "يصمم فريق صغير دليلا للمتحف ويراجع المبرمجون الشفرة ويكتب المحررون وصفا واضحا."
+        },
+        {
+          "id": "river-trip",
+          "split": "validation",
+          "title": "رحلة إلى النهر",
+          "text": "حمل الأصدقاء خريطة وشايا ساخنا ومشوا حتى النهر ثم استمعوا إلى طيور المساء."
+        }
+      ]
+    },
+    {
+      "code": "cs",
+      "name": "Czech",
+      "documents": [
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Ráno ve městě",
+          "text": "Město se pomalu probouzí, kavárny otevírají dveře a lidé čekají na první autobusy."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Tichá knihovna",
+          "text": "Čtenáři hledají knihy o historii a vědě, zatímco knihovnice radí žákům."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Sobotní trh",
+          "text": "Farmáři prodávají čerstvý chléb, med, ovoce a voňavé byliny."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Digitální dílna",
+          "text": "Malý tým připravuje průvodce muzeem, kontroluje kód a píše jasné popisy."
+        },
+        {
+          "id": "river-trip",
+          "split": "validation",
+          "title": "Výlet k řece",
+          "text": "Přátelé vzali mapu a teplý čaj, prošli lesem a odpočívali u řeky."
+        }
+      ]
+    },
+    {
+      "code": "da",
+      "name": "Danish",
+      "documents": [
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Morgen i byen",
+          "text": "Byen vågner langsomt, caféerne åbner, og folk venter på de første busser."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Det stille bibliotek",
+          "text": "Læsere finder bøger om historie og videnskab, mens bibliotekaren hjælper eleverne."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Lørdagsmarked",
+          "text": "Bønder sælger frisk brød, æbler, ost og honning på den travle plads."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Digitalt værksted",
+          "text": "Et lille hold bygger en museumsguide, undersøger koden og skriver tydelige tekster."
+        },
+        {
+          "id": "river-trip",
+          "split": "validation",
+          "title": "Tur til floden",
+          "text": "Vennerne tog et kort og varm te med på en søndag og hvilede bagefter ved floden."
+        }
+      ]
+    },
+    {
+      "code": "en",
+      "name": "English",
+      "documents": [
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Morning in the city",
+          "text": "The city wakes slowly; cafés open their doors and commuters read news beside a façade."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "The quiet library",
+          "text": "Readers browse books about history, science, and naïve art while the librarian prepares a résumé."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Saturday market",
+          "text": "Farmers sell bread, apples, jalapeños, and pâté while neighbours exchange recipes."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Digital workshop",
+          "text": "A small team designs the museum guide and discusses its rôle, code, and clear descriptions."
+        },
+        {
+          "id": "river-trip",
+          "split": "validation",
+          "title": "Journey to the river",
+          "text": "Friends carried a map and a thermos, walked past the café, and rested by the river."
+        }
+      ]
+    },
+    {
+      "code": "el",
+      "name": "Greek",
+      "documents": [
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Πρωί στην πόλη",
+          "text": "Η πόλη ξυπνά αργά, τα καφέ ανοίγουν και οι άνθρωποι περιμένουν τα λεωφορεία."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Ήσυχη βιβλιοθήκη",
+          "text": "Οι αναγνώστες ψάχνουν βιβλία ιστορίας και επιστήμης και η βιβλιοθηκάριος βοηθά τους μαθητές."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Σαββατιάτικη αγορά",
+          "text": "Οι αγρότες πουλούν ψωμί, μέλι, φρούτα και μυρωδικά στην πλατεία."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Ψηφιακό εργαστήριο",
+          "text": "Μια μικρή ομάδα ετοιμάζει οδηγό μουσείου, ελέγχει τον κώδικα και γράφει καθαρά κείμενα."
+        },
+        {
+          "id": "river-trip",
+          "split": "validation",
+          "title": "Εκδρομή στο ποτάμι",
+          "text": "Οι φίλοι πήραν χάρτη και ζεστό τσάι και ξεκουράστηκαν δίπλα στο ποτάμι."
+        }
+      ]
+    },
+    {
+      "code": "et",
+      "name": "Estonian",
+      "documents": [
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Hommik linnas",
+          "text": "Linn ärkab aeglaselt, kohvikud avavad uksed ja inimesed ootavad esimesi busse."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Vaikne raamatukogu",
+          "text": "Lugejad otsivad ajaloo- ja teadusraamatuid ning raamatukoguhoidja aitab õpilasi."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Laupäevane turg",
+          "text": "Talunikud müüvad värsket leiba, õunu, juustu ja mett rahvarohkel väljakul."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Digitaalne töötuba",
+          "text": "Väike meeskond koostab muuseumijuhti, kontrollib koodi ja kirjutab selgeid kirjeldusi."
+        },
+        {
+          "id": "river-trip",
+          "split": "validation",
+          "title": "Retk jõe äärde",
+          "text": "Sõbrad võtsid kaardi ja sooja tee ning puhkasid pärast jalutuskäiku jõe ääres."
+        }
+      ]
+    },
+    {
+      "code": "he",
+      "name": "Hebrew",
+      "documents": [
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "בוקר בעיר",
+          "text": "העיר מתעוררת לאט, בתי הקפה נפתחים ואנשים מחכים לאוטובוסים הראשונים."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "הספרייה השקטה",
+          "text": "קוראים מחפשים ספרי היסטוריה ומדע והספרנית עוזרת לתלמידים לבחור מקורות."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "שוק שבת",
+          "text": "חקלאים מוכרים לחם טרי, דבש, פירות וגבינה בכיכר העמוסה."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "סדנה דיגיטלית",
+          "text": "צוות קטן מכין מדריך למוזיאון, בודק את הקוד וכותב תיאורים ברורים."
+        },
+        {
+          "id": "river-trip",
+          "split": "validation",
+          "title": "טיול אל הנהר",
+          "text": "החברים לקחו מפה ותה חם, הלכו ביער ונחו ליד הנהר."
+        }
+      ]
+    },
+    {
+      "code": "hu",
+      "name": "Hungarian",
+      "documents": [
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Reggel a városban",
+          "text": "A város lassan ébred, a kávézók kinyitnak, az emberek pedig buszra várnak."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "A csendes könyvtár",
+          "text": "Az olvasók történelmi és tudományos könyveket keresnek, a könyvtáros segít a diákoknak."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Szombati piac",
+          "text": "A gazdák friss kenyeret, almát, sajtot és mézet árulnak a téren."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Digitális műhely",
+          "text": "Egy kis csapat múzeumi útmutatót készít, kódot ellenőriz és világos leírásokat ír."
+        },
+        {
+          "id": "river-trip",
+          "split": "validation",
+          "title": "Kirándulás a folyóhoz",
+          "text": "A barátok térképet és meleg teát vittek, majd megpihentek a folyó partján."
+        }
+      ]
+    },
+    {
+      "code": "it",
+      "name": "Italian",
+      "documents": [
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Mattina in città",
+          "text": "La città si sveglia lentamente, i caffè aprono e la gente aspetta i primi autobus."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "La biblioteca tranquilla",
+          "text": "I lettori cercano più libri di storia, geografia e scienza mentre la bibliotecaria aiuta gli studenti più giovani."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Mercato del sabato",
+          "text": "Gli agricoltori vendono pane fresco, caffè, mele, formaggio e miele nella piazza della città."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Laboratorio digitale",
+          "text": "Una piccola squadra prepara la guida del museo, controlla il codice e scrive descrizioni chiare perché siano utili a più persone."
+        },
+        {
+          "id": "river-trip",
+          "split": "validation",
+          "title": "Gita al fiume",
+          "text": "Gli amici portano una mappa e tè caldo, camminano nel bosco e riposano sulla riva."
+        }
+      ]
+    },
+    {
+      "code": "nl",
+      "name": "Dutch",
+      "documents": [
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Ochtend in de stad",
+          "text": "De stad ontwaakt langzaam, cafés openen hun deuren en mensen wachten op de eerste bussen."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "De stille bibliotheek",
+          "text": "Lezers zoeken boeken over geschiedenis en wetenschap terwijl de bibliothecaris geïnteresseerde leerlingen en één leraar helpt."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Zaterdagmarkt",
+          "text": "Boeren verkopen vers brood, appels, kaas en honing naast twee cafés op het drukke plein."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Digitale werkplaats",
+          "text": "Een klein team maakt een museumgids, controleert de code en schrijft duidelijke ideeën over poëzie en teksten."
+        },
+        {
+          "id": "river-trip",
+          "split": "validation",
+          "title": "Reis naar de rivier",
+          "text": "Vrienden namen een kaart en warme thee mee en rustten na één lange wandeling bij de rivier."
+        }
+      ]
+    },
+    {
+      "code": "no",
+      "name": "Norwegian",
+      "documents": [
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Morgen i byen",
+          "text": "Byen våkner langsomt, kafeene åpner dørene og folk venter på de første bussene nær bryggen og sjøen."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Det stille biblioteket",
+          "text": "Lesere finner bøker om historie, ærlige fortellinger og vitenskap mens bibliotekaren hjelper elevene."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Lørdagsmarked",
+          "text": "Bønder selger ferskt brød, epler, ost og honning på det travle torget."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Digitalt verksted",
+          "text": "Et lite lag lager en museumsguide, undersøker koden og skriver tydelige tekster."
+        },
+        {
+          "id": "river-trip",
+          "split": "validation",
+          "title": "Tur til elven",
+          "text": "Vennene tok med kart og varm te på søndag og hvilte senere ved elven."
+        }
+      ]
+    },
+    {
+      "code": "pt",
+      "name": "Portuguese",
+      "documents": [
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Manhã na cidade",
+          "text": "A cidade acorda devagar, os cafés abrem e as pessoas esperam os primeiros ônibus."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "A biblioteca tranquila",
+          "text": "Os leitores procuram livros de história e ciência enquanto a bibliotecária ajuda os alunos."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Mercado de sábado",
+          "text": "Os agricultores vendem pão fresco, maçãs, queijo e mel na praça movimentada."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Oficina digital",
+          "text": "Uma pequena equipe prepara o guia do museu, verifica o código e escreve descrições claras."
+        },
+        {
+          "id": "river-trip",
+          "split": "validation",
+          "title": "Viagem ao rio",
+          "text": "Os amigos levaram um mapa e chá quente, caminharam pela mata e descansaram junto ao rio."
+        }
+      ]
+    },
+    {
+      "code": "sv",
+      "name": "Swedish",
+      "documents": [
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Morgon i staden",
+          "text": "Staden vaknar långsamt, kaféerna öppnar och människor väntar på de första bussarna."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Det tysta biblioteket",
+          "text": "Läsare söker böcker om historia och vetenskap medan bibliotekarien hjälper eleverna."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Lördagsmarknad",
+          "text": "Bönder säljer färskt bröd, äpplen, ost och honung på det livliga torget."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Digital verkstad",
+          "text": "Ett litet lag skapar en museiguide, granskar koden och skriver tydliga texter för besökare."
+        },
+        {
+          "id": "river-trip",
+          "split": "validation",
+          "title": "Utflykt till floden",
+          "text": "Vännerna tog med karta och varmt te och vilade sedan vid floden."
+        }
+      ]
+    },
+    {
+      "code": "th",
+      "name": "Thai",
+      "documents": [
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "เช้าในเมือง",
+          "text": "เมืองค่อย ๆ ตื่น ร้านกาแฟเปิดประตูและผู้คนรอรถโดยสารเที่ยวแรก"
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "ห้องสมุดเงียบสงบ",
+          "text": "ผู้อ่านค้นหาหนังสือประวัติศาสตร์และวิทยาศาสตร์ บรรณารักษ์ช่วยนักเรียนเลือกข้อมูล"
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "ตลาดวันเสาร์",
+          "text": "ชาวนาขายขนมปังสด ผลไม้ ชีส และน้ำผึ้งในลานที่คึกคัก"
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "ห้องทำงานดิจิทัล",
+          "text": "ทีมเล็กจัดทำคู่มือพิพิธภัณฑ์ ตรวจรหัส และเขียนคำอธิบายที่ชัดเจน"
+        },
+        {
+          "id": "river-trip",
+          "split": "validation",
+          "title": "เที่ยวริมแม่น้ำ",
+          "text": "เพื่อนนำแผนที่กับชาร้อนไปเดินในป่าแล้วพักผ่อนริมแม่น้ำ"
+        }
+      ]
+    },
+    {
+      "code": "tr",
+      "name": "Turkish",
+      "documents": [
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Şehirde sabah",
+          "text": "Şehir yavaşça uyanır, kafeler açılır ve insanlar ilk otobüsleri bekler."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Sessiz kütüphane",
+          "text": "Okurlar tarih ve bilim kitapları ararken kütüphaneci öğrencilere yardımcı olur."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Cumartesi pazarı",
+          "text": "Çiftçiler kalabalık meydanda taze ekmek, elma, peynir ve bal satar."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Dijital atölye",
+          "text": "Küçük bir ekip müze rehberi hazırlar, kodu denetler ve açık açıklamalar yazar."
+        },
+        {
+          "id": "river-trip",
+          "split": "validation",
+          "title": "Nehir gezisi",
+          "text": "Arkadaşlar harita ve sıcak çay alıp ormanda yürüdü, sonra nehir kıyısında dinlendi."
+        }
+      ]
+    },
+    {
+      "code": "vi",
+      "name": "Vietnamese",
+      "documents": [
+        {
+          "id": "city-morning",
+          "split": "train",
+          "title": "Buổi sáng trong thành phố",
+          "text": "Thành phố thức dậy chậm rãi, quán cà phê mở cửa và mọi người chờ chuyến xe buýt đầu tiên."
+        },
+        {
+          "id": "library",
+          "split": "train",
+          "title": "Thư viện yên tĩnh",
+          "text": "Độc giả tìm sách lịch sử và khoa học, còn thủ thư giúp học sinh chọn tài liệu."
+        },
+        {
+          "id": "market",
+          "split": "train",
+          "title": "Chợ thứ bảy",
+          "text": "Nông dân bán bánh mì, táo, phô mai và mật ong tại quảng trường đông đúc."
+        },
+        {
+          "id": "workshop",
+          "split": "train",
+          "title": "Xưởng kỹ thuật số",
+          "text": "Một nhóm nhỏ làm hướng dẫn bảo tàng, kiểm tra mã và viết mô tả rõ ràng."
+        },
+        {
+          "id": "river-trip",
+          "split": "validation",
+          "title": "Chuyến đi ra sông",
+          "text": "Bạn bè mang bản đồ và trà nóng, đi qua rừng rồi nghỉ bên bờ sông."
+        }
+      ]
     }
   ]
 }

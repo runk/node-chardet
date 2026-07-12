@@ -19,6 +19,8 @@
     "models:build": "node scripts/build-models.mjs",
     "models:evaluate": "node scripts/evaluate-models.mjs",
     "models:verify": "node scripts/verify-models.mjs",
+    "benchmark": "tsx scripts/benchmark.mjs",
+    "validate": "tsx scripts/validate.mjs",
     "format": "prettier --write \"**/*.{ts,json,md,mjs}\"",
     "format:check": "prettier --list-different \"**/*.{ts,json,md,mjs}\"",
     "test": "npm run test:typecheck && vitest run --coverage",

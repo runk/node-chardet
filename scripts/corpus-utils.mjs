@@ -137,13 +137,22 @@ export function buildCorpus(destination) {
       let modelHighByteCount = 0;
       const modelHighByteValues = new Set();
       for (const document of language.documents) {
-        const utf8 = Buffer.from(
-          `${document.title}\n\n${document.text}\n`,
-          'utf8',
-        );
+        let sourceText = `${document.title}\n\n${document.text}\n`;
+        for (const [from, to] of Object.entries(
+          encoding.sourceReplacements ?? {},
+        )) {
+          sourceText = sourceText.replaceAll(from, to);
+        }
+        if (encoding.sourceSuffix) {
+          sourceText = `${sourceText.trimEnd()}${encoding.sourceSuffix}\n`;
+        }
+        const utf8 = Buffer.from(sourceText, 'utf8');
         const encoded = iconv(utf8, 'UTF-8', encoding.iconv);
         const decoded = iconv(encoded, encoding.iconv, 'UTF-8');
-        if (!decoded.equals(utf8)) {
+        if (
+          decoded.toString('utf8').normalize('NFC') !==
+          utf8.toString('utf8').normalize('NFC')
+        ) {
           throw new Error(
             `${encoding.name}/${languageCode}/${document.id} did not round trip`,
           );

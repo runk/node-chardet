@@ -197,6 +197,39 @@ function statisticallyCompetitive(best, candidate) {
   return best.hitRate - candidate.hitRate <= margin;
 }
 
+function decodedText(buffer, encodingName) {
+  const encoding = manifest.encodings.find(
+    (candidate) => candidate.name === encodingName,
+  );
+  if (!encoding) throw new Error(`Missing manifest encoding: ${encodingName}`);
+  return iconv(buffer, encoding.iconv, 'UTF-8');
+}
+
+function byteEquivalent(buffer, leftEncoding, rightEncoding) {
+  try {
+    return decodedText(buffer, leftEncoding).equals(
+      decodedText(buffer, rightEncoding),
+    );
+  } catch {
+    return false;
+  }
+}
+
+const equivalentEncodingFamilies = [
+  ['ISO-8859-1', 'ISO-8859-15', 'windows-1252'],
+  ['ISO-8859-2', 'windows-1250'],
+  ['ISO-8859-7', 'windows-1253'],
+  ['ISO-8859-8', 'windows-1255'],
+  ['ISO-8859-9', 'windows-1254'],
+  ['ISO-8859-13', 'windows-1257'],
+];
+
+function encodingFamily(name) {
+  return (
+    equivalentEncodingFamilies.find((family) => family.includes(name)) ?? [name]
+  );
+}
+
 function compileSingleByteModels() {
   const models = [];
   for (const encoding of manifest.encodings) {
@@ -250,15 +283,10 @@ function evaluate(models) {
         (left, right) => right.byteLogLikelihood - left.byteLogLikelihood,
       );
       const confidenceLanguage = confidenceLanguages[0];
-      languageScores.sort(
-        (left, right) =>
-          right.byteLogLikelihood - left.byteLogLikelihood ||
-          right.confidence - left.confidence,
-      );
       return {
         encoding: model.encoding,
         confidence: confidenceScore,
-        language: languageScores[0].language,
+        language: confidenceLanguage.language,
         byteLogLikelihood: confidenceLanguage.byteLogLikelihood,
         hits: confidenceLanguage.hits,
         total: confidenceLanguage.total,
@@ -282,14 +310,42 @@ function evaluate(models) {
       (candidate) => !competitiveEncodings.has(candidate.encoding),
     );
     candidates.splice(0, candidates.length, ...competitive, ...remaining);
-    const predicted = candidates[0];
+    const strongestPrediction = candidates[0];
+    const strongestFamily = encodingFamily(strongestPrediction.encoding);
+    const equivalentLanguageCandidates = candidates.filter(
+      (candidate) =>
+        strongestFamily.includes(candidate.encoding) &&
+        byteEquivalent(
+          buffer,
+          strongestPrediction.encoding,
+          candidate.encoding,
+        ),
+    );
+    equivalentLanguageCandidates.sort(
+      (left, right) =>
+        manifest.encodings.findIndex(
+          (encoding) => encoding.name === left.encoding,
+        ) -
+        manifest.encodings.findIndex(
+          (encoding) => encoding.name === right.encoding,
+        ),
+    );
+    const predicted = {
+      ...strongestPrediction,
+      language: equivalentLanguageCandidates[0].language,
+    };
+    const encodingExact = predicted.encoding === test.encoding;
+    const encodingEquivalent =
+      !encodingExact &&
+      byteEquivalent(buffer, test.encoding, predicted.encoding);
+    const encodingCorrect = encodingExact || encodingEquivalent;
     return {
       expected: { encoding: test.encoding, language: test.language },
       predicted,
-      encodingCorrect: predicted.encoding === test.encoding,
-      languageCorrect:
-        predicted.encoding === test.encoding &&
-        predicted.language === test.language,
+      encodingExact,
+      encodingEquivalent,
+      encodingCorrect,
+      languageCorrect: encodingCorrect && predicted.language === test.language,
       tiedAtTop: candidates.filter(
         (candidate) => candidate.confidence === predicted.confidence,
       ).length,
@@ -308,6 +364,9 @@ function evaluate(models) {
   return {
     summary: {
       tests: results.length,
+      encodingExact: results.filter((result) => result.encodingExact).length,
+      encodingEquivalent: results.filter((result) => result.encodingEquivalent)
+        .length,
       encodingCorrect: results.filter((result) => result.encodingCorrect)
         .length,
       languageCorrect: results.filter((result) => result.languageCorrect)
