@@ -85,6 +85,102 @@
       "id": "community-garden",
       "title": "Ogród sąsiedzki",
       "text": "Mieszkańcy zmienili pusty dziedziniec w zielony ogród z kwiatami, warzywami i młodymi drzewami. Dzieci zrobiły kolorowe tabliczki, a rodziny co tydzień podlewają rośliny."
+    },
+    {
+      "language": "ar",
+      "id": "community-garden",
+      "title": "حديقة الحي",
+      "text": "زرع الجيران الزهور والأشجار في ساحة قديمة، وصنع الأطفال لافتات ملونة واتفق الجميع على سقي النباتات."
+    },
+    {
+      "language": "cs",
+      "id": "community-garden",
+      "title": "Sousedská zahrada",
+      "text": "Sousedé proměnili prázdný dvůr v zelenou zahradu, děti namalovaly barevné značky a rodiny zalévají rostliny."
+    },
+    {
+      "language": "da",
+      "id": "community-garden",
+      "title": "Fælleshaven",
+      "text": "Naboerne gjorde en tom gård til en grøn have, børnene malede skilte, og familierne vander planterne hver uge."
+    },
+    {
+      "language": "en",
+      "id": "community-garden",
+      "title": "The community garden",
+      "text": "Neighbours turned an empty courtyard into a garden with flowers, vegetables, young trees, and a small café table."
+    },
+    {
+      "language": "el",
+      "id": "community-garden",
+      "title": "Ο κοινοτικός κήπος",
+      "text": "Οι γείτονες έκαναν μια άδεια αυλή πράσινο κήπο, τα παιδιά ζωγράφισαν πινακίδες και οι οικογένειες ποτίζουν τα φυτά."
+    },
+    {
+      "language": "et",
+      "id": "community-garden",
+      "title": "Kogukonna aed",
+      "text": "Naabrid muutsid tühja hoovi roheliseks aiaks, lapsed maalisid sildid ja pered kastavad taimi igal nädalal."
+    },
+    {
+      "language": "he",
+      "id": "community-garden",
+      "title": "הגינה הקהילתית",
+      "text": "השכנים הפכו חצר ריקה לגינה ירוקה, הילדים ציירו שלטים והמשפחות משקות את הצמחים בכל שבוע."
+    },
+    {
+      "language": "hu",
+      "id": "community-garden",
+      "title": "Közösségi kert",
+      "text": "A szomszédok zöld kertté alakították az üres udvart, a gyerekek táblákat festettek, a családok pedig öntözik a növényeket."
+    },
+    {
+      "language": "it",
+      "id": "community-garden",
+      "title": "Il giardino comune",
+      "text": "I vicini hanno trasformato un cortile vuoto in un giardino della città, i bambini hanno dipinto cartelli e le famiglie annaffiano le piante."
+    },
+    {
+      "language": "nl",
+      "id": "community-garden",
+      "title": "De buurttuin",
+      "text": "Buren veranderden een lege binnenplaats naast een café in een groene tuin, kinderen schilderden borden en gezinnen geven de planten water."
+    },
+    {
+      "language": "no",
+      "id": "community-garden",
+      "title": "Felleshagen",
+      "text": "Naboene gjorde en tom gård til en grønn hage, barna malte skilt og familiene vanner plantene hver uke."
+    },
+    {
+      "language": "pt",
+      "id": "community-garden",
+      "title": "A horta comunitária",
+      "text": "Os vizinhos transformaram um pátio vazio em jardim, as crianças pintaram placas e as famílias regam as plantas toda semana."
+    },
+    {
+      "language": "sv",
+      "id": "community-garden",
+      "title": "Gemensam trädgård",
+      "text": "Grannarna gjorde en tom gård till en grön trädgård, barnen målade skyltar och familjerna vattnar växterna varje vecka."
+    },
+    {
+      "language": "th",
+      "id": "community-garden",
+      "title": "สวนชุมชน",
+      "text": "เพื่อนบ้านเปลี่ยนลานว่างเป็นสวนสีเขียว เด็ก ๆ วาดป้ายและครอบครัวช่วยกันรดน้ำต้นไม้ทุกสัปดาห์"
+    },
+    {
+      "language": "tr",
+      "id": "community-garden",
+      "title": "Mahalle bahçesi",
+      "text": "Komşular boş avluyu yeşil bir bahçeye çevirdi, çocuklar renkli tabelalar yaptı ve aileler bitkileri her hafta suluyor."
+    },
+    {
+      "language": "vi",
+      "id": "community-garden",
+      "title": "Vườn cộng đồng",
+      "text": "Hàng xóm biến sân trống thành khu vườn xanh, trẻ em vẽ biển màu và các gia đình tưới cây mỗi tuần."
     }
   ]
 }

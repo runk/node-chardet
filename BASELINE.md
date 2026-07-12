@@ -97,6 +97,13 @@ canonical `EncodingName` values. Iconv/compiler input labels such as `CP866`,
 `CP855`, `MACINTOSH`, and `MAC-CYRILLIC` are implementation aliases and must not
 be returned by `detect` or `analyse`.
 
+## Migration scope decision
+
+All existing SBCS recognizers will move to generated models. The legacy byte
+maps and n-gram tables in `src/encoding/sbcs.ts` will not remain as a parallel
+model system. Existing encodings must first be added to the corpus/model inputs,
+generated, and validated before their hard-coded tables are removed.
+
 ## Known pre-migration limitations
 
 - Generated SBCS models are not consumed or registered by the detector.

@@ -1,5 +1,45 @@
 {
   "encodings": [
+    {
+      "name": "ISO-8859-1",
+      "iconv": "ISO-8859-1",
+      "languages": ["da", "de", "en", "es", "fr", "it", "nl", "no", "pt", "sv"]
+    },
+    {
+      "name": "ISO-8859-2",
+      "iconv": "ISO-8859-2",
+      "languages": ["cs", "hu", "pl", "ro"],
+      "sourceReplacements": { "Ș": "Ş", "ș": "ş", "Ț": "Ţ", "ț": "ţ" }
+    },
+    { "name": "ISO-8859-5", "iconv": "ISO-8859-5", "languages": ["ru"] },
+    { "name": "ISO-8859-6", "iconv": "ISO-8859-6", "languages": ["ar"] },
+    { "name": "ISO-8859-7", "iconv": "ISO-8859-7", "languages": ["el"] },
+    { "name": "ISO-8859-8", "iconv": "ISO-8859-8", "languages": ["he"] },
+    { "name": "ISO-8859-9", "iconv": "ISO-8859-9", "languages": ["tr"] },
+    {
+      "name": "windows-1250",
+      "iconv": "WINDOWS-1250",
+      "languages": ["cs", "hu", "pl", "ro"],
+      "sourceReplacements": { "Ș": "Ş", "ș": "ş", "Ț": "Ţ", "ț": "ţ" }
+    },
+    { "name": "windows-1251", "iconv": "WINDOWS-1251", "languages": ["ru"] },
+    {
+      "name": "windows-1252",
+      "iconv": "WINDOWS-1252",
+      "languages": ["da", "de", "en", "es", "fr", "it", "nl", "no", "pt", "sv"]
+    },
+    { "name": "windows-1253", "iconv": "WINDOWS-1253", "languages": ["el"] },
+    { "name": "windows-1254", "iconv": "WINDOWS-1254", "languages": ["tr"] },
+    { "name": "windows-1255", "iconv": "WINDOWS-1255", "languages": ["he"] },
+    { "name": "windows-1256", "iconv": "WINDOWS-1256", "languages": ["ar"] },
+    {
+      "name": "windows-1257",
+      "iconv": "WINDOWS-1257",
+      "languages": ["et", "lv", "lt"]
+    },
+    { "name": "windows-1258", "iconv": "WINDOWS-1258", "languages": ["vi"] },
+    { "name": "windows-874", "iconv": "WINDOWS-874", "languages": ["th"] },
+    { "name": "KOI8-R", "iconv": "KOI8-R", "languages": ["ru"] },
     { "name": "KOI8-U", "iconv": "KOI8-U", "languages": ["uk"] },
     { "name": "IBM866", "iconv": "CP866", "languages": ["ru"] },
     { "name": "IBM855", "iconv": "CP855", "languages": ["ru", "sr"] },
