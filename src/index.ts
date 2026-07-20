@@ -7,7 +7,7 @@ import Ascii from './encoding/ascii';
 import Utf8 from './encoding/utf8';
 import * as unicode from './encoding/unicode';
 import * as mbcs from './encoding/mbcs';
-import * as sbcs from './encoding/sbcs';
+import { analyseGeneratedSBCS } from './encoding/sbcs';
 import * as iso2022 from './encoding/iso2022';
 import { isByteArray } from './utils';
 
@@ -32,19 +32,6 @@ const recognisers: Recogniser[] = [
   new iso2022.ISO_2022_JP(),
   new iso2022.ISO_2022_KR(),
   new iso2022.ISO_2022_CN(),
-  new sbcs.ISO_8859_1(),
-  new sbcs.ISO_8859_2(),
-  new sbcs.ISO_8859_5(),
-  new sbcs.ISO_8859_6(),
-  new sbcs.ISO_8859_7(),
-  new sbcs.ISO_8859_8(),
-  new sbcs.ISO_8859_9(),
-  new sbcs.windows_1251(),
-  new sbcs.windows_1256(),
-  new sbcs.windows_1257(),
-  new sbcs.windows_1258(),
-  new sbcs.windows_874(),
-  new sbcs.KOI8_R(),
   new Ascii(),
 ];
 
@@ -84,16 +71,27 @@ export const analyse = (buffer: Uint8Array): AnalyseResult => {
     inputLen: buffer.length,
   };
 
-  const matches = recognisers
-    .map((rec) => {
-      return rec.match(context);
-    })
-    .filter((match) => {
-      return !!match;
-    })
-    .sort((a, b) => {
-      return b!.confidence - a!.confidence;
-    });
+  const generatedMatches = analyseGeneratedSBCS(context);
+  const generatedRank = new Map(
+    generatedMatches.map((value, index) => [value.name, index]),
+  );
+  const matches = [
+    ...recognisers
+      .map((rec) => {
+        return rec.match(context);
+      })
+      .filter((match) => {
+        return !!match;
+      }),
+    ...generatedMatches,
+  ].sort((a, b) => {
+    const leftRank = generatedRank.get(a!.name);
+    const rightRank = generatedRank.get(b!.name);
+    if (leftRank !== undefined && rightRank !== undefined) {
+      return leftRank - rightRank;
+    }
+    return b!.confidence - a!.confidence;
+  });
 
   return matches as Match[];
 };

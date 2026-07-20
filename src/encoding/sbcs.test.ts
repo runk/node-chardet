@@ -18,6 +18,14 @@ describe('Singlebyte Character Sets', () => {
     expect(detect('iso88591_en')).toBe('ISO-8859-1');
   });
 
+  it('should retain a weak ISO-8859-1 candidate after byte prefiltering', () => {
+    const fixture = path.join(
+      __dirname,
+      '../../corpus/generated/ISO-8859-1/es/validation/river-trip.bin',
+    );
+    expect(chardet.detectFileSync(fixture)).toBe('ISO-8859-1');
+  });
+
   it('should return ISO-8859-2 (Czech)', () => {
     expect(detect('iso88592_cs')).toBe('ISO-8859-2');
   });

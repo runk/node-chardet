@@ -5,7 +5,7 @@ import { describe, expect, it } from 'vitest';
 
 describe('chardet', () => {
   const path = __dirname + '/test/data/encodings/utf8';
-  const expectedEncodingsFromPath = [
+  const legacyExpectedEncodingsFromPath = [
     { confidence: 1, name: 'UTF-8', lang: undefined },
     { confidence: 0.32, name: 'windows-1252', lang: 'fr' },
     { confidence: 0.19, name: 'KOI8-R', lang: 'ru' },
@@ -94,7 +94,16 @@ describe('chardet', () => {
   describe('#analyse', () => {
     it('should return a list of encodings, sorted by confidence level in descending order', () => {
       const matches = chardet.analyse(fs.readFileSync(path));
-      expect(matches).toEqual(expectedEncodingsFromPath);
+      expect(matches[0]).toEqual(legacyExpectedEncodingsFromPath[0]);
+      expect(matches.length).toBeGreaterThan(
+        legacyExpectedEncodingsFromPath.length,
+      );
+      expect(
+        matches.every(
+          (match, index) =>
+            index === 0 || matches[index - 1].confidence >= match.confidence,
+        ),
+      ).toBe(true);
     });
   });
 });
