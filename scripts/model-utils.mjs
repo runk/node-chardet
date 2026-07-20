@@ -2,6 +2,11 @@ import { spawnSync } from 'node:child_process';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {
+  prepareSBCSModels,
+  scoreSBCS,
+  trigrams,
+} from '../src/encoding/sbcs-scoring.ts';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const corpus = join(root, 'corpus');
@@ -90,30 +95,6 @@ function byteMapFor(encoding) {
   return byteMap;
 }
 
-function normalizedBytes(buffer, byteMap) {
-  const normalized = [];
-  let ignoreSpace = false;
-  for (const byte of buffer) {
-    const mapped = byteMap[byte];
-    if (mapped !== 0) {
-      if (!(mapped === 0x20 && ignoreSpace)) normalized.push(mapped);
-      ignoreSpace = mapped === 0x20;
-    }
-  }
-  normalized.push(0x20);
-  return normalized;
-}
-
-function trigrams(buffer, byteMap) {
-  const values = [];
-  let trigram = 0;
-  for (const byte of normalizedBytes(buffer, byteMap)) {
-    trigram = ((trigram << 8) + byte) & 0xffffff;
-    values.push(trigram);
-  }
-  return values;
-}
-
 function detectorNgrams(buffers, byteMap) {
   const counts = new Map();
   for (const buffer of buffers) {
@@ -160,43 +141,6 @@ function highByteDistribution(buffers) {
   };
 }
 
-function byteLogLikelihood(buffer, distribution) {
-  const counts = new Map(distribution.counts);
-  const denominator = distribution.total + 128;
-  let highBytes = 0;
-  let likelihood = 0;
-  for (const byte of buffer) {
-    if (byte >= 0x80) {
-      likelihood += Math.log(((counts.get(byte) ?? 0) + 1) / denominator);
-      highBytes += 1;
-    }
-  }
-  return highBytes === 0
-    ? Number.NEGATIVE_INFINITY
-    : Number((likelihood / highBytes).toFixed(12));
-}
-
-function ngramScore(buffer, byteMap, modelNgrams) {
-  const known = new Set(modelNgrams);
-  const values = trigrams(buffer, byteMap);
-  const hits = values.filter((trigram) => known.has(trigram)).length;
-  const rawPercent = hits / values.length;
-  return {
-    confidence: rawPercent > 0.33 ? 98 : Math.floor(rawPercent * 300),
-    hits,
-    total: values.length,
-    hitRate: rawPercent,
-  };
-}
-
-function statisticallyCompetitive(best, candidate) {
-  const variance =
-    (best.hitRate * (1 - best.hitRate)) / best.total +
-    (candidate.hitRate * (1 - candidate.hitRate)) / candidate.total;
-  const margin = 1.96 * Math.sqrt(variance);
-  return best.hitRate - candidate.hitRate <= margin;
-}
-
 function decodedText(buffer, encodingName) {
   const encoding = manifest.encodings.find(
     (candidate) => candidate.name === encodingName,
@@ -213,21 +157,6 @@ function byteEquivalent(buffer, leftEncoding, rightEncoding) {
   } catch {
     return false;
   }
-}
-
-const equivalentEncodingFamilies = [
-  ['ISO-8859-1', 'ISO-8859-15', 'windows-1252'],
-  ['ISO-8859-2', 'windows-1250'],
-  ['ISO-8859-7', 'windows-1253'],
-  ['ISO-8859-8', 'windows-1255'],
-  ['ISO-8859-9', 'windows-1254'],
-  ['ISO-8859-13', 'windows-1257'],
-];
-
-function encodingFamily(name) {
-  return (
-    equivalentEncodingFamilies.find((family) => family.includes(name)) ?? [name]
-  );
 }
 
 function compileSingleByteModels() {
@@ -262,78 +191,14 @@ function compileSingleByteModels() {
 }
 
 function evaluate(models) {
+  const preparedModels = prepareSBCSModels(models);
   const tests = corpusIndex.filter(
     (row) => row.split === 'test' && row.encoding !== 'CP949',
   );
   const results = tests.map((test) => {
     const buffer = readFileSync(join(generatedCorpus, test.path));
-    const candidates = models.map((model) => {
-      const languageScores = model.languages.map((language) => ({
-        language: language.language,
-        ...ngramScore(buffer, model.byteMap, language.ngrams),
-        byteLogLikelihood: byteLogLikelihood(buffer, language.highBytes),
-      }));
-      const confidenceScore = Math.max(
-        ...languageScores.map((score) => score.confidence),
-      );
-      const confidenceLanguages = languageScores.filter(
-        (score) => score.confidence === confidenceScore,
-      );
-      confidenceLanguages.sort(
-        (left, right) => right.byteLogLikelihood - left.byteLogLikelihood,
-      );
-      const confidenceLanguage = confidenceLanguages[0];
-      return {
-        encoding: model.encoding,
-        confidence: confidenceScore,
-        language: confidenceLanguage.language,
-        byteLogLikelihood: confidenceLanguage.byteLogLikelihood,
-        hits: confidenceLanguage.hits,
-        total: confidenceLanguage.total,
-        hitRate: confidenceLanguage.hitRate,
-      };
-    });
-    candidates.sort((left, right) => right.confidence - left.confidence);
-    const strongest = candidates[0];
-    const competitive = candidates.filter((candidate) =>
-      statisticallyCompetitive(strongest, candidate),
-    );
-    const competitiveEncodings = new Set(
-      competitive.map((candidate) => candidate.encoding),
-    );
-    competitive.sort(
-      (left, right) =>
-        right.byteLogLikelihood - left.byteLogLikelihood ||
-        right.confidence - left.confidence,
-    );
-    const remaining = candidates.filter(
-      (candidate) => !competitiveEncodings.has(candidate.encoding),
-    );
-    candidates.splice(0, candidates.length, ...competitive, ...remaining);
-    const strongestPrediction = candidates[0];
-    const strongestFamily = encodingFamily(strongestPrediction.encoding);
-    const equivalentLanguageCandidates = candidates.filter(
-      (candidate) =>
-        strongestFamily.includes(candidate.encoding) &&
-        byteEquivalent(
-          buffer,
-          strongestPrediction.encoding,
-          candidate.encoding,
-        ),
-    );
-    equivalentLanguageCandidates.sort(
-      (left, right) =>
-        manifest.encodings.findIndex(
-          (encoding) => encoding.name === left.encoding,
-        ) -
-        manifest.encodings.findIndex(
-          (encoding) => encoding.name === right.encoding,
-        ),
-    );
-    const predicted = {
-      ...strongestPrediction,
-      language: equivalentLanguageCandidates[0].language,
-    };
+    const candidates = scoreSBCS(buffer, preparedModels);
+    const predicted = candidates[0];
     const encodingExact = predicted.encoding === test.encoding;
     const encodingEquivalent =
       !encodingExact &&
