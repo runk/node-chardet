@@ -157,7 +157,9 @@ function byteLogLikelihood(
     highBytes += count;
   }
 
-  return highBytes === 0 ? Number.NEGATIVE_INFINITY : likelihood / highBytes;
+  return highBytes === 0
+    ? Number.NEGATIVE_INFINITY
+    : Number((likelihood / highBytes).toFixed(12));
 }
 
 function modelByteLogLikelihood(
