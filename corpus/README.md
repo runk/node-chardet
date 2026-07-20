@@ -36,12 +36,14 @@ The model compiler derives each single-byte encoding's case-folding byte map
 through iconv, applies the detector's whitespace normalization, and emits 64
 sorted detector-ready trigrams into `src/encoding/models/generated.ts`. It also
 learns Laplace-smoothed high-byte distributions from the training split. The
-evaluator uses byte likelihood to rank candidates whose trigram hit rates are
-statistically competitive at a 95% margin. `models:evaluate` reports every
-held-out test document, while `models:verify` checks reproducibility and fails if
-any encoding or language result is incorrect. A different encoding label is
-accepted only when both encodings decode the actual held-out bytes identically;
-the report distinguishes these byte-equivalent results from exact matches.
-CP949 is excluded because its
-multibyte recogniser requires character frequency data rather than byte
-trigrams.
+compiler evaluator and library runtime share the normalization, trigram,
+byte-likelihood, confidence, candidate-prefiltering, and tie-breaking
+implementation in `src/encoding/sbcs-scoring.ts`. Candidates whose trigram hit
+rates are statistically competitive at a 95% margin are ranked by byte
+likelihood and deterministic encoding-family preferences. `models:evaluate`
+reports every held-out test document, while `models:verify` checks
+reproducibility and fails if any encoding or language result is incorrect. A
+different encoding label is accepted only when both encodings decode the actual
+held-out bytes identically; the report distinguishes these byte-equivalent
+results from exact matches. CP949 is excluded because its multibyte recogniser
+requires character frequency data rather than byte trigrams.
