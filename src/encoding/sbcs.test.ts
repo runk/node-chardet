@@ -1,10 +1,11 @@
 import * as chardet from '..';
 import fs from 'fs';
 import path from 'path';
-import { describe, expect, it, test } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 describe('Singlebyte Character Sets', () => {
   const base = path.join(__dirname, '/../test/data/encodings');
+  const corpus = path.join(__dirname, '../../corpus/generated');
 
   const detect = (filename: string) => {
     return chardet.detectFileSync(path.join(base, filename));
@@ -13,6 +14,12 @@ describe('Singlebyte Character Sets', () => {
   const analyse = (filename: string) => {
     return chardet.analyse(fs.readFileSync(path.join(base, filename)))[0];
   };
+
+  const corpusFixture = (
+    encoding: string,
+    language: string,
+    filename = 'validation/river-trip.bin',
+  ) => path.join(corpus, encoding, language, filename);
 
   it('should return ISO-8859-1 (English)', () => {
     expect(detect('iso88591_en')).toBe('ISO-8859-1');
@@ -30,8 +37,20 @@ describe('Singlebyte Character Sets', () => {
     expect(detect('iso88592_cs')).toBe('ISO-8859-2');
   });
 
-  test.todo('should return ISO-8859-3');
-  test.todo('should return ISO-8859-4');
+  it.each([
+    ['ISO-8859-3', 'mt'],
+    ['ISO-8859-4', 'lv'],
+    ['ISO-8859-10', 'is'],
+    ['ISO-8859-14', 'cy'],
+    ['ISO-8859-16', 'ro'],
+  ])('should return %s (%s)', (encoding, language) => {
+    const fixture = corpusFixture(encoding, language);
+    expect(chardet.detectFileSync(fixture)).toBe(encoding);
+    expect(chardet.analyse(fs.readFileSync(fixture))[0]).toMatchObject({
+      name: encoding,
+      lang: language,
+    });
+  });
 
   it('should return ISO-8859-5 (Russian)', () => {
     expect(detect('iso88595_ru')).toBe('ISO-8859-5');
@@ -53,17 +72,26 @@ describe('Singlebyte Character Sets', () => {
     expect(detect('iso88599_tr')).toBe('ISO-8859-9');
   });
 
-  test.todo('should return ISO-8859-10');
-  test.todo('should return ISO-8859-11');
-  // iso-8859-12 is abandoned
-  test.todo('should return ISO-8859-13');
-  test.todo('should return ISO-8859-14');
-  test.todo('should return ISO-8859-15');
-  test.todo('should return ISO-8859-16');
-
-  it('should return windows-874 for Thai text', () => {
+  it('should return windows-874 for ISO-8859-11-compatible Thai text', () => {
     expect(detect('windows_874')).toBe('windows-874');
   });
+
+  // iso-8859-12 is abandoned
+  it.each([
+    ['ISO-8859-13', 'lt'],
+    ['ISO-8859-15', 'fr'],
+  ])(
+    'should return a %s candidate for byte-compatible text',
+    (encoding, language) => {
+      const fixture = corpusFixture(encoding, language);
+      expect(chardet.analyse(fs.readFileSync(fixture))).toContainEqual(
+        expect.objectContaining({
+          name: encoding,
+          lang: language,
+        }),
+      );
+    },
+  );
 
   it('should return windows-1250 (Czech)', () => {
     expect(detect('windows_1250')).toBe('windows-1250');

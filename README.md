@@ -89,16 +89,29 @@ Note on [TextEncoder](https://developer.mozilla.org/en-US/docs/Web/API/TextEncod
 - ISO-2022-CN
 - ISO-8859-1
 - ISO-8859-2
+- ISO-8859-3
+- ISO-8859-4
 - ISO-8859-5
 - ISO-8859-6
 - ISO-8859-7
 - ISO-8859-8
 - ISO-8859-9
+- ISO-8859-10
+- ISO-8859-13
+- ISO-8859-14
+- ISO-8859-15
+- ISO-8859-16
 - Big5
+- CP850
+- CP852
 - EUC-JP
 - EUC-KR
 - GB18030
+- IBM855
+- IBM866
 - KOI8-R
+- KOI8-U
+- macintosh
 - Shift_JIS
 - UTF-8
 - UTF-16BE
@@ -115,6 +128,7 @@ Note on [TextEncoder](https://developer.mozilla.org/en-US/docs/Web/API/TextEncod
 - windows-1256
 - windows-1257
 - windows-1258
+- x-mac-cyrillic
 
 Currently only these encodings are supported.
 
@@ -129,11 +143,4 @@ Yes. Type definitions are included.
 
 ### TODO
 
-- [ ] KOI8-U for Ukrainian
-- [ ] IBM866 for DOS Cyrillic
-- [ ] macintosh and x-mac-cyrillic
 - [ ] CP949 / UHC support within the Korean recognizer
-- [ ] ISO-8859-3, ISO-8859-4
-- [ ] ISO-8859-10, ISO-8859-13
-- [ ] ISO-8859-14, ISO-8859-15, ISO-8859-16
-- [ ] DOS CP850, CP852, CP855
