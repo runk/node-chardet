@@ -53,7 +53,44 @@
       "iconv": "MAC-CYRILLIC",
       "languages": ["ru", "uk"]
     },
-    { "name": "CP949", "iconv": "CP949", "languages": ["ko"] },
+    {
+      "name": "Shift_JIS",
+      "iconv": "SHIFT_JIS",
+      "languages": ["ja"],
+      "family": "multibyte"
+    },
+    {
+      "name": "EUC-JP",
+      "iconv": "EUC-JP",
+      "languages": ["ja"],
+      "family": "multibyte"
+    },
+    {
+      "name": "Big5",
+      "iconv": "BIG5",
+      "languages": ["zh"],
+      "family": "multibyte"
+    },
+    {
+      "name": "GB18030",
+      "iconv": "GB18030",
+      "languages": ["zh"],
+      "family": "multibyte"
+    },
+    {
+      "name": "EUC-KR",
+      "iconv": "EUC-KR",
+      "languages": ["ko"],
+      "family": "multibyte",
+      "sourceReplacements": { "똠": "글", "뷁": "자" }
+    },
+    {
+      "name": "CP949",
+      "iconv": "CP949",
+      "languages": ["ko"],
+      "family": "multibyte",
+      "runtime": false
+    },
     { "name": "ISO-8859-3", "iconv": "ISO-8859-3", "languages": ["mt"] },
     { "name": "ISO-8859-4", "iconv": "ISO-8859-4", "languages": ["lv"] },
     { "name": "ISO-8859-10", "iconv": "ISO-8859-10", "languages": ["is"] },

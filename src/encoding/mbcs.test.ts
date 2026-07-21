@@ -1,8 +1,11 @@
 import * as chardet from '..';
+import fs from 'fs';
+import path from 'path';
 import { describe, expect, it } from 'vitest';
 
 describe('Multibyte Character Sets', () => {
   const base = __dirname + '/../test/data/encodings';
+  const corpus = path.join(__dirname, '../../corpus/generated');
 
   it('should return Shift_JIS', () => {
     expect(chardet.detectFileSync(base + '/shiftjis')).toBe('Shift_JIS');
@@ -22,5 +25,24 @@ describe('Multibyte Character Sets', () => {
 
   it('should return EUC-KR', () => {
     expect(chardet.detectFileSync(base + '/euc_kr')).toBe('EUC-KR');
+  });
+
+  it.each([
+    ['Shift_JIS', 'ja'],
+    ['EUC-JP', 'ja'],
+    ['Big5', 'zh'],
+    ['GB18030', 'zh'],
+    ['EUC-KR', 'ko'],
+  ])('uses the generated %s model for held-out %s text', (encoding, lang) => {
+    const fixture = path.join(
+      corpus,
+      encoding,
+      lang,
+      'test/community-garden.bin',
+    );
+    expect(chardet.analyse(fs.readFileSync(fixture))[0]).toMatchObject({
+      name: encoding,
+      lang,
+    });
   });
 });

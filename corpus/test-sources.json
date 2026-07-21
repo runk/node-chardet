@@ -181,6 +181,18 @@
       "id": "community-garden",
       "title": "Vườn cộng đồng",
       "text": "Hàng xóm biến sân trống thành khu vườn xanh, trẻ em vẽ biển màu và các gia đình tưới cây mỗi tuần."
+    },
+    {
+      "language": "ja",
+      "id": "community-garden",
+      "title": "地域の庭",
+      "text": "近所の人たちは空いていた庭を整え、花や野菜や若い木を植えた。子どもたちは色鮮やかな札を作り、家族は毎週植物に水をやる。"
+    },
+    {
+      "language": "zh",
+      "id": "community-garden",
+      "title": "社區花園",
+      "text": "鄰居們把空院子改造成綠色花園，種下鮮花、蔬菜和小樹。孩子們畫了彩色標牌，各家每週一起給植物澆水。"
     }
   ]
 }

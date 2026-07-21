@@ -76,6 +76,22 @@ describe('Singlebyte Character Sets', () => {
     expect(detect('windows_874')).toBe('windows-874');
   });
 
+  it.each(['validation/river-trip.bin', 'test/community-garden.bin'])(
+    'should prefer windows-874 to weak multibyte matches in %s',
+    (filename) => {
+      const matches = chardet.analyse(
+        fs.readFileSync(corpusFixture('windows-874', 'th', filename)),
+      );
+      const windows874 = matches.find((match) => match.name === 'windows-874');
+      const eucJp = matches.find((match) => match.name === 'EUC-JP');
+
+      expect(matches[0]).toMatchObject({ name: 'windows-874', lang: 'th' });
+      expect(eucJp?.confidence).toBeLessThanOrEqual(
+        windows874?.confidence ?? 0,
+      );
+    },
+  );
+
   // iso-8859-12 is abandoned
   it.each([
     ['ISO-8859-13', 'lt'],
