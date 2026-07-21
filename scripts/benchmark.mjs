@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -8,6 +9,15 @@ const generatedCorpus = join(root, 'corpus', 'generated');
 const corpusIndex = JSON.parse(
   readFileSync(join(generatedCorpus, 'index.json'), 'utf8'),
 );
+const manifest = JSON.parse(
+  readFileSync(join(root, 'corpus', 'manifest.json'), 'utf8'),
+);
+const familyByEncoding = new Map(
+  manifest.encodings.map((encoding) => [
+    encoding.name,
+    encoding.family === 'multibyte' ? 'multibyte' : 'singlebyte',
+  ]),
+);
 
 function option(name, fallback) {
   const prefix = `--${name}=`;
@@ -17,13 +27,19 @@ function option(name, fallback) {
 
 const iterations = Number(option('iterations', '100'));
 const split = option('split', 'all');
+const family = option('family', 'all');
 
 if (!Number.isInteger(iterations) || iterations < 1) {
   throw new Error('--iterations must be a positive integer');
 }
+if (!['all', 'singlebyte', 'multibyte'].includes(family)) {
+  throw new Error('--family must be all, singlebyte, or multibyte');
+}
 
 const rows = corpusIndex.filter(
-  (row) => split === 'all' || row.split === split,
+  (row) =>
+    (split === 'all' || row.split === split) &&
+    (family === 'all' || familyByEncoding.get(row.encoding) === family),
 );
 if (rows.length === 0) {
   throw new Error(`No corpus files matched split: ${split}`);
@@ -33,6 +49,9 @@ const inputs = rows.map((row) => ({
   ...row,
   buffer: readFileSync(join(generatedCorpus, row.path)),
 }));
+const workloadHash = createHash('sha256')
+  .update(rows.map((row) => `${row.path}\0${row.sha256}\n`).join(''))
+  .digest('hex');
 
 for (const input of inputs) analyse(input.buffer);
 
@@ -54,7 +73,15 @@ const bytesPerSecond = bytes / (elapsedMs / 1000);
 console.log('Library corpus benchmark');
 console.log('========================');
 console.log(`Split: ${split}`);
+console.log(`Family: ${family}`);
 console.log(`Files: ${inputs.length}`);
+console.log(
+  `Input bytes per iteration: ${inputs.reduce(
+    (total, input) => total + input.buffer.length,
+    0,
+  )}`,
+);
+console.log(`Workload SHA-256: ${workloadHash}`);
 console.log(`Iterations: ${iterations}`);
 console.log(`Calls: ${calls}`);
 console.log(`Bytes processed: ${bytes}`);

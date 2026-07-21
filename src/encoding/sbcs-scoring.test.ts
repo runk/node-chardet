@@ -59,7 +59,10 @@ describe('shared SBCS scoring', () => {
     const corpusIndex = JSON.parse(
       fs.readFileSync(path.join(corpusRoot, 'index.json'), 'utf8'),
     ) as { encoding: string; path: string }[];
-    const rows = corpusIndex.filter(({ encoding }) => encoding !== 'CP949');
+    const modelNames = new Set(
+      generatedSBCSModels.map(({ encoding }) => encoding as string),
+    );
+    const rows = corpusIndex.filter(({ encoding }) => modelNames.has(encoding));
 
     for (const row of rows) {
       const input = fs.readFileSync(path.join(corpusRoot, row.path));

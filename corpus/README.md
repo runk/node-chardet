@@ -18,6 +18,18 @@ npm run models:evaluate
 npm run models:verify
 ```
 
+Benchmark all inputs or isolate a stable recognizer family workload with:
+
+```sh
+npm run benchmark
+npm run benchmark -- --family=singlebyte
+npm run benchmark -- --family=multibyte
+```
+
+Benchmark output includes the input bytes per iteration and a workload SHA-256.
+Performance results are comparable only when the family, split, and workload
+hash match.
+
 The build script generates the corpus and performs an iconv round trip for every
 document, allowing canonically equivalent Unicode composition where an encoding
 such as windows-1258 stores combining marks. The check script independently rebuilds into a temporary

@@ -8,7 +8,7 @@ import {
   trigrams,
 } from '../src/encoding/sbcs-scoring.ts';
 import { big5, euc_jp, euc_kr, gb_18030, sjis } from '../src/encoding/mbcs.ts';
-import { scoreMBCS } from '../src/encoding/mbcs-scoring.ts';
+import { prepareMBCSModel, scoreMBCS } from '../src/encoding/mbcs-scoring.ts';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const corpus = join(root, 'corpus');
@@ -324,6 +324,11 @@ function evaluate(models) {
 }
 
 function evaluateMultibyte(models) {
+  const preparedModels = models.map((model) => ({
+    model,
+    prepared: prepareMBCSModel(model),
+    recogniser: multibyteRecognisers.get(model.encoding),
+  }));
   const tests = corpusIndex.filter(
     (row) =>
       row.split === 'test' &&
@@ -331,12 +336,11 @@ function evaluateMultibyte(models) {
   );
   const results = tests.map((test) => {
     const buffer = readFileSync(join(generatedCorpus, test.path));
-    const candidates = models
-      .map((model) => {
-        const recogniser = multibyteRecognisers.get(model.encoding);
+    const candidates = preparedModels
+      .map(({ model, prepared, recogniser }) => {
         const score = scoreMBCS(
           recogniser.statistics(detectorContext(buffer)),
-          model,
+          prepared,
         );
         return {
           encoding: model.encoding,
