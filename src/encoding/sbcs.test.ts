@@ -137,12 +137,41 @@ describe('Singlebyte Character Sets', () => {
     expect(detect('windows_1256')).toBe('windows-1256');
   });
 
-  it.each(['et', 'lv', 'lt'])('should return windows-1257 (%s)', (language) => {
+  it.each(['et', 'lv'])('should return windows-1257 (%s)', (language) => {
     expect(analyse(`windows_1257_${language}`)).toMatchObject({
       name: 'windows-1257',
       lang: language,
     });
   });
+
+  it('should return canonical ISO-8859-13 for byte-equivalent windows-1257 text', () => {
+    const matches = chardet.analyse(
+      fs.readFileSync(path.join(base, 'windows_1257_lt')),
+    );
+    expect(matches[0]).toMatchObject({ name: 'ISO-8859-13', lang: 'lt' });
+    expect(matches).toContainEqual(
+      expect.objectContaining({ name: 'windows-1257', lang: 'lt' }),
+    );
+  });
+
+  it.each([
+    ['windows-1252', 'en', 'ISO-8859-1'],
+    ['windows-1250', 'cs', 'ISO-8859-2'],
+    ['windows-1253', 'el', 'ISO-8859-7'],
+    ['windows-1255', 'he', 'ISO-8859-8'],
+    ['windows-1254', 'tr', 'ISO-8859-9'],
+    ['windows-1257', 'lt', 'ISO-8859-13'],
+  ])(
+    'should return the canonical result for byte-equivalent %s/%s text',
+    (encoding, language, expected) => {
+      const fixture = corpusFixture(
+        encoding,
+        language,
+        'test/community-garden.bin',
+      );
+      expect(chardet.detectFileSync(fixture)).toBe(expected);
+    },
+  );
 
   it('should return windows-1258 (Vietnamese)', () => {
     expect(analyse('windows_1258')).toMatchObject({

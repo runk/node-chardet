@@ -14,6 +14,10 @@ export interface GeneratedSBCSLanguage {
 export interface GeneratedSBCSModel {
   readonly encoding: EncodingName;
   readonly byteMap: readonly number[];
+  readonly byteDifferences: readonly {
+    readonly encoding: EncodingName;
+    readonly bytes: readonly number[];
+  }[];
   readonly languages: readonly GeneratedSBCSLanguage[];
 }
 

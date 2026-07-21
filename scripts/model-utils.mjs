@@ -3,6 +3,7 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
+  equivalentEncodingFamilies,
   prepareSBCSModels,
   scoreSBCS,
   trigrams,
@@ -97,6 +98,17 @@ function byteMapFor(encoding) {
   return byteMap;
 }
 
+function decodedByteSignatures(encoding) {
+  const source = [];
+  for (let byte = 0x80; byte <= 0xff; byte++) source.push(byte, 0);
+  const decoded = iconv(Buffer.from(source), encoding, 'UTF-8', true);
+  const signatures = splitAtNull(decoded).map((value) => value.toString('hex'));
+  if (signatures.length !== 128) {
+    throw new Error(`Could not derive byte signatures for ${encoding}`);
+  }
+  return signatures;
+}
+
 function detectorNgrams(buffers, byteMap) {
   const counts = new Map();
   for (const buffer of buffers) {
@@ -167,6 +179,7 @@ function compileSingleByteModels() {
     if (encoding.family === 'multibyte') continue;
 
     const byteMap = byteMapFor(encoding.iconv);
+    const decodedBytes = decodedByteSignatures(encoding.iconv);
     const languages = encoding.languages.map((language) => {
       const buffers = corpusIndex
         .filter(
@@ -187,9 +200,36 @@ function compileSingleByteModels() {
         highBytes: highByteDistribution(buffers),
       };
     });
-    models.push({ encoding: encoding.name, byteMap, languages });
+    models.push({
+      encoding: encoding.name,
+      byteMap,
+      decodedBytes,
+      languages,
+    });
   }
-  return models;
+  return models.map((model) => {
+    const family = equivalentEncodingFamilies.find((candidate) =>
+      candidate.includes(model.encoding),
+    );
+    const byteDifferences = (family ?? [])
+      .filter((encoding) => encoding !== model.encoding)
+      .map((encoding) => {
+        const other = models.find(
+          (candidate) => candidate.encoding === encoding,
+        );
+        if (!other) throw new Error(`Missing family model: ${encoding}`);
+        return {
+          encoding,
+          bytes: model.decodedBytes
+            .map((signature, index) =>
+              signature === other.decodedBytes[index] ? -1 : index + 0x80,
+            )
+            .filter((byte) => byte >= 0),
+        };
+      });
+    const { decodedBytes: _decodedBytes, ...runtimeModel } = model;
+    return { ...runtimeModel, byteDifferences };
+  });
 }
 
 const multibyteRecognisers = new Map([
@@ -391,6 +431,37 @@ function serializeModels(models, multibyteModels) {
   for (const model of models) {
     lines.push('  {');
     lines.push(`    encoding: ${javascriptString(model.encoding)},`);
+    if (model.byteDifferences.length === 0) {
+      lines.push('    byteDifferences: [],');
+    } else {
+      lines.push('    byteDifferences: [');
+      for (const difference of model.byteDifferences) {
+        lines.push('      {');
+        lines.push(
+          `        encoding: ${javascriptString(difference.encoding)},`,
+        );
+        if (difference.bytes.length <= 8) {
+          lines.push(
+            `        bytes: [${difference.bytes
+              .map((value) => hex(value, 2))
+              .join(', ')}],`,
+          );
+        } else {
+          lines.push('        bytes: [');
+          for (let index = 0; index < difference.bytes.length; index += 11) {
+            lines.push(
+              `          ${difference.bytes
+                .slice(index, index + 11)
+                .map((value) => hex(value, 2))
+                .join(', ')},`,
+            );
+          }
+          lines.push('        ],');
+        }
+        lines.push('      },');
+      }
+      lines.push('    ],');
+    }
     lines.push('    byteMap: [');
     for (let index = 0; index < model.byteMap.length; index += 12) {
       lines.push(

@@ -10,7 +10,7 @@ const preparedSBCSModels = prepareSBCSModels(
 
 export function analyseGeneratedSBCS(context: Context): Match[] {
   let confidenceCeiling = 1;
-  return scoreSBCS(context.inputBytes, preparedSBCSModels, context.c1Bytes)
+  return scoreSBCS(context.inputBytes, preparedSBCSModels)
     .filter((value) => value.confidence > 0)
     .map(({ encoding, language, confidence }) => {
       confidenceCeiling = Math.min(confidenceCeiling, confidence / 100);

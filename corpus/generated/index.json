@@ -2682,10 +2682,10 @@
     "split": "train",
     "document": "city-morning",
     "path": "ISO-8859-7/el/train/city-morning.bin",
-    "bytes": 93,
-    "highBytes": 74,
-    "uniqueHighBytes": 25,
-    "sha256": "80e97194d91d40aeae9020cd96d22ac6ad01e3c39020377e32bdf63c2b9622e0"
+    "bytes": 121,
+    "highBytes": 97,
+    "uniqueHighBytes": 27,
+    "sha256": "8e2aca0d43e81b4438e5a3a26052534898818dcb285c9f96a33b9d899fbafde7"
   },
   {
     "encoding": "ISO-8859-7",
@@ -4410,10 +4410,10 @@
     "split": "train",
     "document": "city-morning",
     "path": "windows-1253/el/train/city-morning.bin",
-    "bytes": 93,
-    "highBytes": 74,
-    "uniqueHighBytes": 25,
-    "sha256": "80e97194d91d40aeae9020cd96d22ac6ad01e3c39020377e32bdf63c2b9622e0"
+    "bytes": 121,
+    "highBytes": 97,
+    "uniqueHighBytes": 27,
+    "sha256": "dbec3cc3beec6c535e197b80734e7a9150ee5ce0f14a6bd98b7be29d94657abc"
   },
   {
     "encoding": "windows-1253",

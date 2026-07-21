@@ -1,3 +1,4 @@
+import { spawnSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -8,6 +9,30 @@ const generatedCorpus = join(root, 'corpus', 'generated');
 const corpusIndex = JSON.parse(
   readFileSync(join(generatedCorpus, 'index.json'), 'utf8'),
 );
+const manifest = JSON.parse(
+  readFileSync(join(root, 'corpus', 'manifest.json'), 'utf8'),
+);
+const iconvNames = new Map(
+  manifest.encodings.map((encoding) => [encoding.name, encoding.iconv]),
+);
+
+function decoded(buffer, encodingName) {
+  const iconvName = iconvNames.get(encodingName);
+  if (!iconvName) return null;
+  const result = spawnSync('iconv', ['-f', iconvName, '-t', 'UTF-8'], {
+    input: buffer,
+  });
+  return result.status === 0 ? result.stdout : null;
+}
+
+function byteEquivalent(buffer, expected, predicted) {
+  if (!predicted || expected === predicted) return false;
+  const expectedText = decoded(buffer, expected);
+  const predictedText = decoded(buffer, predicted);
+  return Boolean(
+    expectedText && predictedText && expectedText.equals(predictedText),
+  );
+}
 
 function option(name, fallback) {
   const prefix = `--${name}=`;
@@ -35,6 +60,11 @@ const results = rows.map((row) => {
   const buffer = readFileSync(join(generatedCorpus, row.path));
   const matches = analyse(buffer);
   const predicted = matches[0] ?? null;
+  const encodingEquivalent = byteEquivalent(
+    buffer,
+    row.encoding,
+    predicted?.name,
+  );
   return {
     expected: {
       encoding: row.encoding,
@@ -44,6 +74,7 @@ const results = rows.map((row) => {
     },
     predicted,
     encodingCorrect: predicted?.name === row.encoding,
+    encodingEquivalent,
     languageCorrect:
       predicted?.name === row.encoding && predicted?.lang === row.language,
   };
@@ -52,6 +83,8 @@ const results = rows.map((row) => {
 const summary = {
   files: results.length,
   encodingCorrect: results.filter((result) => result.encodingCorrect).length,
+  encodingEquivalent: results.filter((result) => result.encodingEquivalent)
+    .length,
   languageCorrect: results.filter((result) => result.languageCorrect).length,
   noPrediction: results.filter((result) => result.predicted === null).length,
 };
@@ -90,6 +123,19 @@ console.log(`Files: ${summary.files}`);
 console.log(
   `Encoding correct: ${summary.encodingCorrect}/${summary.files} (${percent(
     summary.encodingCorrect,
+    summary.files,
+  )})`,
+);
+console.log(
+  `Byte-equivalent canonical result: ${summary.encodingEquivalent}/${summary.files} (${percent(
+    summary.encodingEquivalent,
+    summary.files,
+  )})`,
+);
+const compatible = summary.encodingCorrect + summary.encodingEquivalent;
+console.log(
+  `Exact or byte-equivalent: ${compatible}/${summary.files} (${percent(
+    compatible,
     summary.files,
   )})`,
 );
@@ -141,6 +187,32 @@ console.table(
 );
 
 const failures = results.filter((result) => !result.encodingCorrect);
+const collisionGroups = new Map();
+for (const result of failures) {
+  const predicted = result.predicted?.name ?? '<none>';
+  const key = `${result.expected.encoding}\0${predicted}`;
+  const group = collisionGroups.get(key) ?? {
+    expected: result.expected.encoding,
+    predicted,
+    count: 0,
+    byteEquivalent: 0,
+    distinguishable: 0,
+  };
+  group.count += 1;
+  if (result.encodingEquivalent) group.byteEquivalent += 1;
+  else group.distinguishable += 1;
+  collisionGroups.set(key, group);
+}
+
+console.log('\nCollision inventory');
+console.table(
+  [...collisionGroups.values()].sort(
+    (left, right) =>
+      left.expected.localeCompare(right.expected) ||
+      left.predicted.localeCompare(right.predicted),
+  ),
+);
+
 console.log('\nFirst 20 encoding mismatches');
 console.table(
   failures.slice(0, 20).map((result) => ({
@@ -150,6 +222,9 @@ console.table(
     predicted: result.predicted?.name ?? '<none>',
     predictedLanguage: result.predicted?.lang ?? '',
     confidence: result.predicted?.confidence ?? '',
+    classification: result.encodingEquivalent
+      ? 'byte-equivalent'
+      : 'distinguishable',
     path: result.expected.path,
   })),
 );

@@ -27,6 +27,7 @@ export interface SBCSCandidate extends SBCSScore {
 
 interface RankedSBCSCandidate extends SBCSCandidate {
   readonly modelIndex: number;
+  readonly byteDifferences: ReadonlyMap<EncodingName, ReadonlySet<number>>;
 }
 
 interface PreparedSBCSLanguage {
@@ -39,11 +40,12 @@ export interface PreparedSBCSModel {
   readonly modelIndex: number;
   readonly languages: readonly PreparedSBCSLanguage[];
   readonly ngramLanguageIndexes: ReadonlyMap<number, readonly number[]>;
+  readonly byteDifferences: ReadonlyMap<EncodingName, ReadonlySet<number>>;
 }
 
 type HighByteCounts = readonly (readonly [number, number])[];
 
-const equivalentEncodingFamilies = [
+export const equivalentEncodingFamilies = [
   ['ISO-8859-1', 'ISO-8859-15', 'windows-1252'],
   ['ISO-8859-2', 'windows-1250'],
   ['ISO-8859-7', 'windows-1253'],
@@ -142,6 +144,12 @@ export function prepareSBCSModels(
       highByteLogProbabilities: highByteLogProbabilities(language.highBytes),
     })),
     ngramLanguageIndexes: ngramLanguageIndexes(model),
+    byteDifferences: new Map(
+      model.byteDifferences.map(({ encoding, bytes }) => [
+        encoding,
+        new Set(bytes),
+      ]),
+    ),
   }));
 }
 
@@ -222,6 +230,7 @@ function candidate(
     total,
     hitRate: bestHitRate,
     modelIndex: prepared.modelIndex,
+    byteDifferences: prepared.byteDifferences,
   };
 }
 
@@ -232,26 +241,30 @@ function family(name: EncodingName) {
 }
 
 function familyPreference(
-  left: SBCSCandidate,
-  right: SBCSCandidate,
-  c1Bytes: boolean,
+  left: RankedSBCSCandidate,
+  right: RankedSBCSCandidate,
+  input: Uint8Array,
 ) {
   const leftFamily = family(left.encoding);
   if (!leftFamily || leftFamily !== family(right.encoding)) return 0;
-  const preferred =
-    leftFamily[0] === 'ISO-8859-13' || c1Bytes
-      ? [...leftFamily].reverse()
-      : [...leftFamily];
+  const differences = left.byteDifferences.get(right.encoding);
+  if (!differences) return 0;
+  const observedDifferences = input.filter((byte) => differences.has(byte));
+  if (observedDifferences.some((byte) => byte >= 0x80 && byte <= 0x9f)) {
+    const leftWindows = left.encoding.startsWith('windows-');
+    const rightWindows = right.encoding.startsWith('windows-');
+    if (leftWindows !== rightWindows) return leftWindows ? -1 : 1;
+  }
+  if (observedDifferences.length > 0) return 0;
   return (
-    preferred.indexOf(left.encoding as never) -
-    preferred.indexOf(right.encoding as never)
+    leftFamily.indexOf(left.encoding as never) -
+    leftFamily.indexOf(right.encoding as never)
   );
 }
 
 export function scoreSBCS(
   input: Uint8Array,
   preparedModels: readonly PreparedSBCSModel[],
-  c1Bytes = input.some((byte) => byte >= 0x80 && byte <= 0x9f),
 ): SBCSCandidate[] {
   if (preparedModels.length === 0) return [];
 
@@ -289,7 +302,7 @@ export function scoreSBCS(
   const competitiveNames = new Set(competitive.map((value) => value.encoding));
   competitive.sort(
     (left, right) =>
-      familyPreference(left, right, c1Bytes) ||
+      familyPreference(left, right, input) ||
       right.byteLogLikelihood - left.byteLogLikelihood ||
       right.confidence - left.confidence ||
       left.modelIndex - right.modelIndex,
@@ -299,6 +312,10 @@ export function scoreSBCS(
   );
 
   return [...competitive, ...remaining].map(
-    ({ modelIndex: _modelIndex, ...value }) => value,
+    ({
+      modelIndex: _modelIndex,
+      byteDifferences: _byteDifferences,
+      ...value
+    }) => value,
   );
 }

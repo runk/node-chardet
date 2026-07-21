@@ -27,7 +27,7 @@
       "ISO-8859-10": 1
     },
     "ISO-8859-13": {
-      "windows-1257": 1
+      "ISO-8859-13": 1
     },
     "ISO-8859-14": {
       "ISO-8859-14": 1
@@ -94,7 +94,8 @@
       "windows-1256": 1
     },
     "windows-1257": {
-      "windows-1257": 3
+      "windows-1257": 2,
+      "ISO-8859-13": 1
     },
     "windows-1258": {
       "windows-1258": 1
@@ -146,7 +147,7 @@
           "hitRate": 0.24186046511627907
         },
         {
-          "encoding": "ISO-8859-15",
+          "encoding": "ISO-8859-1",
           "language": "de",
           "confidence": 72,
           "byteLogLikelihood": -5.003946305945,
@@ -155,7 +156,7 @@
           "hitRate": 0.24186046511627907
         },
         {
-          "encoding": "ISO-8859-1",
+          "encoding": "ISO-8859-15",
           "language": "de",
           "confidence": 72,
           "byteLogLikelihood": -5.003946305945,
@@ -406,7 +407,7 @@
           "hitRate": 0.25
         },
         {
-          "encoding": "ISO-8859-15",
+          "encoding": "ISO-8859-1",
           "language": "fr",
           "confidence": 75,
           "byteLogLikelihood": -5.010635294096,
@@ -415,7 +416,7 @@
           "hitRate": 0.25
         },
         {
-          "encoding": "ISO-8859-1",
+          "encoding": "ISO-8859-15",
           "language": "fr",
           "confidence": 75,
           "byteLogLikelihood": -5.010635294096,
@@ -1083,6 +1084,15 @@
           "hitRate": 0.03333333333333333
         },
         {
+          "encoding": "ISO-8859-10",
+          "language": "is",
+          "confidence": 7,
+          "byteLogLikelihood": -4.717529149813,
+          "hits": 3,
+          "total": 120,
+          "hitRate": 0.025
+        },
+        {
           "encoding": "ISO-8859-3",
           "language": "mt",
           "confidence": 2,
@@ -1099,15 +1109,6 @@
           "hits": 1,
           "total": 120,
           "hitRate": 0.008333333333333333
-        },
-        {
-          "encoding": "ISO-8859-7",
-          "language": "el",
-          "confidence": 0,
-          "byteLogLikelihood": -4.689401143463,
-          "hits": 0,
-          "total": 120,
-          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-8",
@@ -1225,7 +1226,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.349754587225,
+          "byteLogLikelihood": -4.399067900766,
           "hits": 0,
           "total": 216,
           "hitRate": 0
@@ -1243,7 +1244,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.349754587225,
+          "byteLogLikelihood": -4.399067900766,
           "hits": 0,
           "total": 216,
           "hitRate": 0
@@ -1346,7 +1347,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -2.654561516151,
+          "byteLogLikelihood": -2.673103171025,
           "hits": 0,
           "total": 132,
           "hitRate": 0
@@ -1364,7 +1365,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -2.654561516151,
+          "byteLogLikelihood": -2.673103171025,
           "hits": 0,
           "total": 132,
           "hitRate": 0
@@ -1476,7 +1477,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.106555532888,
+          "byteLogLikelihood": -3.058231515477,
           "hits": 0,
           "total": 200,
           "hitRate": 0
@@ -1503,7 +1504,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.106555532888,
+          "byteLogLikelihood": -3.058231515477,
           "hits": 0,
           "total": 200,
           "hitRate": 0
@@ -1615,7 +1616,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -2.654561516151,
+          "byteLogLikelihood": -2.673103171025,
           "hits": 0,
           "total": 228,
           "hitRate": 0
@@ -1633,7 +1634,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -2.654561516151,
+          "byteLogLikelihood": -2.673103171025,
           "hits": 0,
           "total": 228,
           "hitRate": 0
@@ -1875,7 +1876,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -2.654561516151,
+          "byteLogLikelihood": -2.673103171025,
           "hits": 0,
           "total": 151,
           "hitRate": 0
@@ -1893,7 +1894,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -2.654561516151,
+          "byteLogLikelihood": -2.673103171025,
           "hits": 0,
           "total": 151,
           "hitRate": 0
@@ -2005,7 +2006,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.154384602589,
+          "byteLogLikelihood": -4.175118709209,
           "hits": 0,
           "total": 114,
           "hitRate": 0
@@ -2032,7 +2033,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.154384602589,
+          "byteLogLikelihood": -4.175118709209,
           "hits": 0,
           "total": 114,
           "hitRate": 0
@@ -2117,7 +2118,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.017269736716,
+          "byteLogLikelihood": -2.990690350149,
           "hits": 0,
           "total": 143,
           "hitRate": 0
@@ -2144,7 +2145,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.017269736716,
+          "byteLogLikelihood": -2.990690350149,
           "hits": 0,
           "total": 143,
           "hitRate": 0
@@ -2265,7 +2266,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.876181596107,
+          "byteLogLikelihood": -3.896915702727,
           "hits": 0,
           "total": 136,
           "hitRate": 0
@@ -2292,7 +2293,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.876181596107,
+          "byteLogLikelihood": -3.896915702727,
           "hits": 0,
           "total": 136,
           "hitRate": 0
@@ -2395,7 +2396,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.963723644165,
+          "byteLogLikelihood": -3.911589835566,
           "hits": 0,
           "total": 171,
           "hitRate": 0
@@ -2422,7 +2423,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.963723644165,
+          "byteLogLikelihood": -3.911589835566,
           "hits": 0,
           "total": 171,
           "hitRate": 0
@@ -2453,7 +2454,7 @@
         "language": "lt"
       },
       "predicted": {
-        "encoding": "windows-1257",
+        "encoding": "ISO-8859-13",
         "language": "lt",
         "confidence": 34,
         "byteLogLikelihood": -3.200530207132,
@@ -2461,14 +2462,14 @@
         "total": 173,
         "hitRate": 0.11560693641618497
       },
-      "encodingExact": false,
-      "encodingEquivalent": true,
+      "encodingExact": true,
+      "encodingEquivalent": false,
       "encodingCorrect": true,
       "languageCorrect": true,
       "tiedAtTop": 2,
       "candidates": [
         {
-          "encoding": "windows-1257",
+          "encoding": "ISO-8859-13",
           "language": "lt",
           "confidence": 34,
           "byteLogLikelihood": -3.200530207132,
@@ -2477,7 +2478,7 @@
           "hitRate": 0.11560693641618497
         },
         {
-          "encoding": "ISO-8859-13",
+          "encoding": "windows-1257",
           "language": "lt",
           "confidence": 34,
           "byteLogLikelihood": -3.200530207132,
@@ -2525,7 +2526,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.472500251122,
+          "byteLogLikelihood": -4.427440823818,
           "hits": 0,
           "total": 173,
           "hitRate": 0
@@ -2552,7 +2553,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.472500251122,
+          "byteLogLikelihood": -4.427440823818,
           "hits": 0,
           "total": 173,
           "hitRate": 0
@@ -2664,7 +2665,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.254156765951,
+          "byteLogLikelihood": -4.236579847671,
           "hits": 0,
           "total": 189,
           "hitRate": 0
@@ -2682,7 +2683,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.254156765951,
+          "byteLogLikelihood": -4.236579847671,
           "hits": 0,
           "total": 189,
           "hitRate": 0
@@ -2785,7 +2786,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.349754587225,
+          "byteLogLikelihood": -4.399067900766,
           "hits": 0,
           "total": 216,
           "hitRate": 0
@@ -2803,7 +2804,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.349754587225,
+          "byteLogLikelihood": -4.399067900766,
           "hits": 0,
           "total": 216,
           "hitRate": 0
@@ -2906,7 +2907,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.106555532888,
+          "byteLogLikelihood": -3.058231515477,
           "hits": 0,
           "total": 200,
           "hitRate": 0
@@ -2933,7 +2934,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.106555532888,
+          "byteLogLikelihood": -3.058231515477,
           "hits": 0,
           "total": 200,
           "hitRate": 0
@@ -3045,7 +3046,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -2.654561516151,
+          "byteLogLikelihood": -2.673103171025,
           "hits": 0,
           "total": 228,
           "hitRate": 0
@@ -3063,7 +3064,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -2.654561516151,
+          "byteLogLikelihood": -2.673103171025,
           "hits": 0,
           "total": 228,
           "hitRate": 0
@@ -3175,7 +3176,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.499845100591,
+          "byteLogLikelihood": -4.504680330223,
           "hits": 0,
           "total": 214,
           "hitRate": 0
@@ -3296,7 +3297,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.401446196881,
+          "byteLogLikelihood": -3.394484116991,
           "hits": 0,
           "total": 126,
           "hitRate": 0
@@ -3323,7 +3324,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.401446196881,
+          "byteLogLikelihood": -3.394484116991,
           "hits": 0,
           "total": 126,
           "hitRate": 0
@@ -3444,7 +3445,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.430247904624,
+          "byteLogLikelihood": -3.449350708315,
           "hits": 0,
           "total": 136,
           "hitRate": 0
@@ -3462,7 +3463,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.430247904624,
+          "byteLogLikelihood": -3.449350708315,
           "hits": 0,
           "total": 136,
           "hitRate": 0
@@ -3571,15 +3572,6 @@
           "hitRate": 0.02185792349726776
         },
         {
-          "encoding": "CP850",
-          "language": "fr",
-          "confidence": 6,
-          "byteLogLikelihood": -5.010635294096,
-          "hits": 4,
-          "total": 182,
-          "hitRate": 0.02197802197802198
-        },
-        {
           "encoding": "ISO-8859-4",
           "language": "lv",
           "confidence": 4,
@@ -3614,6 +3606,15 @@
           "hits": 1,
           "total": 184,
           "hitRate": 0.005434782608695652
+        },
+        {
+          "encoding": "ISO-8859-7",
+          "language": "el",
+          "confidence": 0,
+          "byteLogLikelihood": -4.926589029727,
+          "hits": 0,
+          "total": 183,
+          "hitRate": 0
         }
       ]
     },
@@ -3695,7 +3696,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.33505338151,
+          "byteLogLikelihood": -4.333045829002,
           "hits": 0,
           "total": 202,
           "hitRate": 0
@@ -4276,7 +4277,7 @@
         "encoding": "ISO-8859-7",
         "language": "el",
         "confidence": 51,
-        "byteLogLikelihood": -3.435199502,
+        "byteLogLikelihood": -3.423668208814,
         "hits": 23,
         "total": 134,
         "hitRate": 0.17164179104477612
@@ -4291,7 +4292,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 51,
-          "byteLogLikelihood": -3.435199502,
+          "byteLogLikelihood": -3.423668208814,
           "hits": 23,
           "total": 134,
           "hitRate": 0.17164179104477612
@@ -4300,7 +4301,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 51,
-          "byteLogLikelihood": -3.435199502,
+          "byteLogLikelihood": -3.423668208814,
           "hits": 23,
           "total": 134,
           "hitRate": 0.17164179104477612
@@ -4439,7 +4440,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 2,
-          "byteLogLikelihood": -3.981926233577,
+          "byteLogLikelihood": -3.995580702348,
           "hits": 1,
           "total": 102,
           "hitRate": 0.00980392156862745
@@ -4448,7 +4449,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 2,
-          "byteLogLikelihood": -3.981926233577,
+          "byteLogLikelihood": -3.995580702348,
           "hits": 1,
           "total": 102,
           "hitRate": 0.00980392156862745
@@ -4632,7 +4633,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.216966174066,
+          "byteLogLikelihood": -4.198049967981,
           "hits": 0,
           "total": 134,
           "hitRate": 0
@@ -4641,7 +4642,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.216966174066,
+          "byteLogLikelihood": -4.198049967981,
           "hits": 0,
           "total": 134,
           "hitRate": 0
@@ -4956,7 +4957,7 @@
           "hitRate": 0.2361111111111111
         },
         {
-          "encoding": "ISO-8859-15",
+          "encoding": "ISO-8859-1",
           "language": "de",
           "confidence": 74,
           "byteLogLikelihood": -5.003946305945,
@@ -4965,7 +4966,7 @@
           "hitRate": 0.24766355140186916
         },
         {
-          "encoding": "ISO-8859-1",
+          "encoding": "ISO-8859-15",
           "language": "de",
           "confidence": 74,
           "byteLogLikelihood": -5.003946305945,
@@ -5086,7 +5087,7 @@
           "hitRate": 0.19597989949748743
         },
         {
-          "encoding": "ISO-8859-15",
+          "encoding": "ISO-8859-1",
           "language": "es",
           "confidence": 58,
           "byteLogLikelihood": -4.948759890378,
@@ -5095,7 +5096,7 @@
           "hitRate": 0.19597989949748743
         },
         {
-          "encoding": "ISO-8859-1",
+          "encoding": "ISO-8859-15",
           "language": "es",
           "confidence": 58,
           "byteLogLikelihood": -4.948759890378,
@@ -5216,7 +5217,7 @@
           "hitRate": 0.23684210526315788
         },
         {
-          "encoding": "ISO-8859-15",
+          "encoding": "ISO-8859-1",
           "language": "fr",
           "confidence": 75,
           "byteLogLikelihood": -5.010635294096,
@@ -5225,7 +5226,7 @@
           "hitRate": 0.25
         },
         {
-          "encoding": "ISO-8859-1",
+          "encoding": "ISO-8859-15",
           "language": "fr",
           "confidence": 75,
           "byteLogLikelihood": -5.010635294096,
@@ -5376,7 +5377,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.401446196881,
+          "byteLogLikelihood": -3.394484116991,
           "hits": 0,
           "total": 126,
           "hitRate": 0
@@ -5403,7 +5404,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.401446196881,
+          "byteLogLikelihood": -3.394484116991,
           "hits": 0,
           "total": 126,
           "hitRate": 0
@@ -5524,7 +5525,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.430247904624,
+          "byteLogLikelihood": -3.449350708315,
           "hits": 0,
           "total": 136,
           "hitRate": 0
@@ -5542,7 +5543,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.430247904624,
+          "byteLogLikelihood": -3.449350708315,
           "hits": 0,
           "total": 136,
           "hitRate": 0
@@ -5681,7 +5682,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.848389618517,
+          "byteLogLikelihood": -4.849572676331,
           "hits": 0,
           "total": 184,
           "hitRate": 0
@@ -5690,7 +5691,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.848389618517,
+          "byteLogLikelihood": -4.849572676331,
           "hits": 0,
           "total": 184,
           "hitRate": 0
@@ -5775,7 +5776,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.33505338151,
+          "byteLogLikelihood": -4.333045829002,
           "hits": 0,
           "total": 202,
           "hitRate": 0
@@ -5905,7 +5906,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.209243802684,
+          "byteLogLikelihood": -4.214382613761,
           "hits": 0,
           "total": 176,
           "hitRate": 0
@@ -5923,7 +5924,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.209243802684,
+          "byteLogLikelihood": -4.214382613761,
           "hits": 0,
           "total": 176,
           "hitRate": 0
@@ -6023,6 +6024,15 @@
           "hitRate": 0.03333333333333333
         },
         {
+          "encoding": "ISO-8859-10",
+          "language": "is",
+          "confidence": 7,
+          "byteLogLikelihood": -4.717529149813,
+          "hits": 3,
+          "total": 120,
+          "hitRate": 0.025
+        },
+        {
           "encoding": "ISO-8859-3",
           "language": "mt",
           "confidence": 2,
@@ -6039,15 +6049,6 @@
           "hits": 1,
           "total": 120,
           "hitRate": 0.008333333333333333
-        },
-        {
-          "encoding": "ISO-8859-7",
-          "language": "el",
-          "confidence": 0,
-          "byteLogLikelihood": -4.689401143463,
-          "hits": 0,
-          "total": 120,
-          "hitRate": 0
         },
         {
           "encoding": "ISO-8859-8",
@@ -6165,7 +6166,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.349754587225,
+          "byteLogLikelihood": -4.399067900766,
           "hits": 0,
           "total": 216,
           "hitRate": 0
@@ -6183,7 +6184,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.349754587225,
+          "byteLogLikelihood": -4.399067900766,
           "hits": 0,
           "total": 216,
           "hitRate": 0
@@ -6286,7 +6287,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -2.654561516151,
+          "byteLogLikelihood": -2.673103171025,
           "hits": 0,
           "total": 132,
           "hitRate": 0
@@ -6304,7 +6305,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -2.654561516151,
+          "byteLogLikelihood": -2.673103171025,
           "hits": 0,
           "total": 132,
           "hitRate": 0
@@ -6416,7 +6417,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.106555532888,
+          "byteLogLikelihood": -3.058231515477,
           "hits": 0,
           "total": 200,
           "hitRate": 0
@@ -6443,7 +6444,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.106555532888,
+          "byteLogLikelihood": -3.058231515477,
           "hits": 0,
           "total": 200,
           "hitRate": 0
@@ -6555,7 +6556,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -2.654561516151,
+          "byteLogLikelihood": -2.673103171025,
           "hits": 0,
           "total": 228,
           "hitRate": 0
@@ -6573,7 +6574,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -2.654561516151,
+          "byteLogLikelihood": -2.673103171025,
           "hits": 0,
           "total": 228,
           "hitRate": 0
@@ -6815,7 +6816,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -2.654561516151,
+          "byteLogLikelihood": -2.673103171025,
           "hits": 0,
           "total": 151,
           "hitRate": 0
@@ -6833,7 +6834,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -2.654561516151,
+          "byteLogLikelihood": -2.673103171025,
           "hits": 0,
           "total": 151,
           "hitRate": 0
@@ -6945,7 +6946,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.154384602589,
+          "byteLogLikelihood": -4.175118709209,
           "hits": 0,
           "total": 114,
           "hitRate": 0
@@ -6972,7 +6973,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.154384602589,
+          "byteLogLikelihood": -4.175118709209,
           "hits": 0,
           "total": 114,
           "hitRate": 0
@@ -7057,7 +7058,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.017269736716,
+          "byteLogLikelihood": -2.990690350149,
           "hits": 0,
           "total": 143,
           "hitRate": 0
@@ -7084,7 +7085,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.017269736716,
+          "byteLogLikelihood": -2.990690350149,
           "hits": 0,
           "total": 143,
           "hitRate": 0
@@ -7205,7 +7206,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.876181596107,
+          "byteLogLikelihood": -3.896915702727,
           "hits": 0,
           "total": 136,
           "hitRate": 0
@@ -7232,7 +7233,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.876181596107,
+          "byteLogLikelihood": -3.896915702727,
           "hits": 0,
           "total": 136,
           "hitRate": 0
@@ -7266,7 +7267,7 @@
         "encoding": "ISO-8859-7",
         "language": "el",
         "confidence": 51,
-        "byteLogLikelihood": -3.435199502,
+        "byteLogLikelihood": -3.423668208814,
         "hits": 23,
         "total": 134,
         "hitRate": 0.17164179104477612
@@ -7281,7 +7282,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 51,
-          "byteLogLikelihood": -3.435199502,
+          "byteLogLikelihood": -3.423668208814,
           "hits": 23,
           "total": 134,
           "hitRate": 0.17164179104477612
@@ -7290,7 +7291,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 51,
-          "byteLogLikelihood": -3.435199502,
+          "byteLogLikelihood": -3.423668208814,
           "hits": 23,
           "total": 134,
           "hitRate": 0.17164179104477612
@@ -7492,7 +7493,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.216966174066,
+          "byteLogLikelihood": -4.198049967981,
           "hits": 0,
           "total": 134,
           "hitRate": 0
@@ -7501,7 +7502,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.216966174066,
+          "byteLogLikelihood": -4.198049967981,
           "hits": 0,
           "total": 134,
           "hitRate": 0
@@ -7559,7 +7560,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 2,
-          "byteLogLikelihood": -3.981926233577,
+          "byteLogLikelihood": -3.995580702348,
           "hits": 1,
           "total": 102,
           "hitRate": 0.00980392156862745
@@ -7568,7 +7569,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 2,
-          "byteLogLikelihood": -3.981926233577,
+          "byteLogLikelihood": -3.995580702348,
           "hits": 1,
           "total": 102,
           "hitRate": 0.00980392156862745
@@ -7864,7 +7865,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.41969872812,
+          "byteLogLikelihood": -4.46901204166,
           "hits": 0,
           "total": 120,
           "hitRate": 0
@@ -7891,7 +7892,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.41969872812,
+          "byteLogLikelihood": -4.46901204166,
           "hits": 0,
           "total": 120,
           "hitRate": 0
@@ -7913,7 +7914,7 @@
         "language": "lt"
       },
       "predicted": {
-        "encoding": "windows-1257",
+        "encoding": "ISO-8859-13",
         "language": "lt",
         "confidence": 34,
         "byteLogLikelihood": -3.200530207132,
@@ -7921,14 +7922,14 @@
         "total": 173,
         "hitRate": 0.11560693641618497
       },
-      "encodingExact": true,
-      "encodingEquivalent": false,
+      "encodingExact": false,
+      "encodingEquivalent": true,
       "encodingCorrect": true,
       "languageCorrect": true,
       "tiedAtTop": 2,
       "candidates": [
         {
-          "encoding": "windows-1257",
+          "encoding": "ISO-8859-13",
           "language": "lt",
           "confidence": 34,
           "byteLogLikelihood": -3.200530207132,
@@ -7937,7 +7938,7 @@
           "hitRate": 0.11560693641618497
         },
         {
-          "encoding": "ISO-8859-13",
+          "encoding": "windows-1257",
           "language": "lt",
           "confidence": 34,
           "byteLogLikelihood": -3.200530207132,
@@ -7985,7 +7986,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.472500251122,
+          "byteLogLikelihood": -4.427440823818,
           "hits": 0,
           "total": 173,
           "hitRate": 0
@@ -8012,7 +8013,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.472500251122,
+          "byteLogLikelihood": -4.427440823818,
           "hits": 0,
           "total": 173,
           "hitRate": 0
@@ -8097,7 +8098,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.703260469986,
+          "byteLogLikelihood": -3.705322890216,
           "hits": 0,
           "total": 170,
           "hitRate": 0
@@ -8124,7 +8125,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -3.703260469986,
+          "byteLogLikelihood": -3.705322890216,
           "hits": 0,
           "total": 170,
           "hitRate": 0
@@ -8263,7 +8264,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.428592570712,
+          "byteLogLikelihood": -4.42646658402,
           "hits": 0,
           "total": 125,
           "hitRate": 0
@@ -8272,7 +8273,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.428592570712,
+          "byteLogLikelihood": -4.42646658402,
           "hits": 0,
           "total": 125,
           "hitRate": 0
@@ -8505,7 +8506,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.148248171081,
+          "byteLogLikelihood": -4.153386982158,
           "hits": 0,
           "total": 177,
           "hitRate": 0
@@ -8523,7 +8524,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.148248171081,
+          "byteLogLikelihood": -4.153386982158,
           "hits": 0,
           "total": 177,
           "hitRate": 0
@@ -8626,7 +8627,7 @@
           "encoding": "ISO-8859-7",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.300043808736,
+          "byteLogLikelihood": -4.309274120379,
           "hits": 0,
           "total": 169,
           "hitRate": 0
@@ -8644,7 +8645,7 @@
           "encoding": "windows-1253",
           "language": "el",
           "confidence": 0,
-          "byteLogLikelihood": -4.300043808736,
+          "byteLogLikelihood": -4.309274120379,
           "hits": 0,
           "total": 169,
           "hitRate": 0

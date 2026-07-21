@@ -10,6 +10,9 @@ import { prepareSBCSModels, scoreSBCS, trigrams } from './sbcs-scoring';
 const preparedModels = prepareSBCSModels(
   generatedSBCSModels as readonly GeneratedSBCSModel[],
 );
+const reversedPreparedModels = prepareSBCSModels(
+  [...(generatedSBCSModels as readonly GeneratedSBCSModel[])].reverse(),
+);
 
 function context(input: Uint8Array): Context {
   const byteStats = Array<number>(256).fill(0);
@@ -78,4 +81,24 @@ describe('shared SBCS scoring', () => {
       });
     }
   });
+
+  it.each([
+    ['windows-1252/en/test/community-garden.bin', 'ISO-8859-1'],
+    ['windows-1250/cs/test/community-garden.bin', 'ISO-8859-2'],
+    ['windows-1253/el/test/community-garden.bin', 'ISO-8859-7'],
+    ['windows-1255/he/test/community-garden.bin', 'ISO-8859-8'],
+    ['windows-1254/tr/test/community-garden.bin', 'ISO-8859-9'],
+    ['windows-1257/lt/test/community-garden.bin', 'ISO-8859-13'],
+  ])(
+    'keeps the canonical byte-equivalent result for %s when models are reordered',
+    (fixture, expected) => {
+      const input = fs.readFileSync(
+        path.join(__dirname, '../../corpus/generated', fixture),
+      );
+      expect(scoreSBCS(input, preparedModels)[0].encoding).toBe(expected);
+      expect(scoreSBCS(input, reversedPreparedModels)[0].encoding).toBe(
+        expected,
+      );
+    },
+  );
 });
