@@ -45,5 +45,11 @@ reports every held-out test document, while `models:verify` checks
 reproducibility and fails if any encoding or language result is incorrect. A
 different encoding label is accepted only when both encodings decode the actual
 held-out bytes identically; the report distinguishes these byte-equivalent
-results from exact matches. CP949 is excluded because its multibyte recogniser
-requires character frequency data rather than byte trigrams.
+results from exact matches.
+
+For multibyte encodings, the structural parsers identify valid raw code units
+and the compiler selects the 128 most frequent units from the training split.
+Runtime confidence is the structurally valid proportion of input code units
+covered by that generated model. Shift_JIS, EUC-JP, Big5, EUC-KR, and GB18030
+use this path. CP949 remains in the corpus but is excluded from the runtime
+models until its extended byte sequences have a dedicated parser.

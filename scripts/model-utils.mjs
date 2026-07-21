@@ -7,6 +7,8 @@ import {
   scoreSBCS,
   trigrams,
 } from '../src/encoding/sbcs-scoring.ts';
+import { big5, euc_jp, euc_kr, gb_18030, sjis } from '../src/encoding/mbcs.ts';
+import { scoreMBCS } from '../src/encoding/mbcs-scoring.ts';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const corpus = join(root, 'corpus');
@@ -162,7 +164,7 @@ function byteEquivalent(buffer, leftEncoding, rightEncoding) {
 function compileSingleByteModels() {
   const models = [];
   for (const encoding of manifest.encodings) {
-    if (encoding.name === 'CP949') continue;
+    if (encoding.family === 'multibyte') continue;
 
     const byteMap = byteMapFor(encoding.iconv);
     const languages = encoding.languages.map((language) => {
@@ -190,10 +192,88 @@ function compileSingleByteModels() {
   return models;
 }
 
+const multibyteRecognisers = new Map([
+  ['Shift_JIS', new sjis()],
+  ['Big5', new big5()],
+  ['EUC-JP', new euc_jp()],
+  ['EUC-KR', new euc_kr()],
+  ['GB18030', new gb_18030()],
+]);
+
+function detectorContext(buffer) {
+  const byteStats = Array(256).fill(0);
+  for (const byte of buffer) byteStats[byte] += 1;
+  return {
+    byteStats,
+    c1Bytes: buffer.some((byte) => byte >= 0x80 && byte <= 0x9f),
+    rawInput: buffer,
+    rawLen: buffer.length,
+    inputBytes: buffer,
+    inputLen: buffer.length,
+  };
+}
+
+function compileMultibyteModels() {
+  return manifest.encodings
+    .filter(
+      (encoding) =>
+        encoding.family === 'multibyte' && encoding.runtime !== false,
+    )
+    .map((encoding) => {
+      const recogniser = multibyteRecognisers.get(encoding.name);
+      if (!recogniser) {
+        throw new Error(`Missing multibyte recogniser: ${encoding.name}`);
+      }
+      if (encoding.languages.length !== 1) {
+        throw new Error(
+          `Expected one language for multibyte model: ${encoding.name}`,
+        );
+      }
+      const language = encoding.languages[0];
+      const frequencies = new Map();
+      let total = 0;
+      for (const row of corpusIndex.filter(
+        (candidate) =>
+          candidate.encoding === encoding.name &&
+          candidate.language === language &&
+          candidate.split === 'train',
+      )) {
+        const buffer = readFileSync(join(generatedCorpus, row.path));
+        const statistics = recogniser.statistics(detectorContext(buffer));
+        if (statistics.invalidCharacters !== 0) {
+          throw new Error(
+            `${encoding.name}/${language}/${row.document} has invalid multibyte characters`,
+          );
+        }
+        for (const value of statistics.multibyteCharacters) {
+          frequencies.set(value, (frequencies.get(value) ?? 0) + 1);
+          total += 1;
+        }
+      }
+      if (total === 0) {
+        throw new Error(`Empty multibyte model: ${encoding.name}/${language}`);
+      }
+      return {
+        encoding: encoding.name,
+        language,
+        total,
+        commonCharacters: [...frequencies]
+          .sort(
+            ([left, leftCount], [right, rightCount]) =>
+              rightCount - leftCount || left - right,
+          )
+          .slice(0, 128)
+          .map(([value]) => value)
+          .sort((left, right) => left - right),
+      };
+    });
+}
+
 function evaluate(models) {
   const preparedModels = prepareSBCSModels(models);
+  const modelNames = new Set(models.map((model) => model.encoding));
   const tests = corpusIndex.filter(
-    (row) => row.split === 'test' && row.encoding !== 'CP949',
+    (row) => row.split === 'test' && modelNames.has(row.encoding),
   );
   const results = tests.map((test) => {
     const buffer = readFileSync(join(generatedCorpus, test.path));
@@ -243,6 +323,52 @@ function evaluate(models) {
   };
 }
 
+function evaluateMultibyte(models) {
+  const tests = corpusIndex.filter(
+    (row) =>
+      row.split === 'test' &&
+      models.some((model) => model.encoding === row.encoding),
+  );
+  const results = tests.map((test) => {
+    const buffer = readFileSync(join(generatedCorpus, test.path));
+    const candidates = models
+      .map((model) => {
+        const recogniser = multibyteRecognisers.get(model.encoding);
+        const score = scoreMBCS(
+          recogniser.statistics(detectorContext(buffer)),
+          model,
+        );
+        return {
+          encoding: model.encoding,
+          language: model.language,
+          ...score,
+        };
+      })
+      .sort(
+        (left, right) =>
+          right.confidence - left.confidence ||
+          left.encoding.localeCompare(right.encoding),
+      );
+    return {
+      expected: { encoding: test.encoding, language: test.language },
+      predicted: candidates[0],
+      encodingCorrect: candidates[0].encoding === test.encoding,
+      languageCorrect: candidates[0].language === test.language,
+      candidates,
+    };
+  });
+  return {
+    summary: {
+      tests: results.length,
+      encodingCorrect: results.filter((result) => result.encodingCorrect)
+        .length,
+      languageCorrect: results.filter((result) => result.languageCorrect)
+        .length,
+    },
+    results,
+  };
+}
+
 function javascriptString(value) {
   return `'${value.replaceAll('\\', '\\\\').replaceAll("'", "\\'")}'`;
 }
@@ -251,9 +377,10 @@ function hex(value, width) {
   return `0x${value.toString(16).padStart(width, '0')}`;
 }
 
-function serializeModels(models) {
+function serializeModels(models, multibyteModels) {
   const lines = [
     '// Generated by npm run models:build. Do not edit manually.',
+    "import type { GeneratedMBCSModel } from './types';",
     '',
     'export const generatedSBCSModels = [',
   ];
@@ -307,18 +434,47 @@ function serializeModels(models) {
     lines.push('  },');
   }
   lines.push('] as const;', '');
+  lines.push(
+    'export const generatedMBCSModels: readonly GeneratedMBCSModel[] = [',
+  );
+  for (const model of multibyteModels) {
+    lines.push('  {');
+    lines.push(`    encoding: ${javascriptString(model.encoding)},`);
+    lines.push(`    language: ${javascriptString(model.language)},`);
+    lines.push(`    total: ${model.total},`);
+    lines.push('    commonCharacters: [');
+    for (let index = 0; index < model.commonCharacters.length; index += 6) {
+      lines.push(
+        `      ${model.commonCharacters
+          .slice(index, index + 6)
+          .map((value) => hex(value, 8))
+          .join(', ')},`,
+      );
+    }
+    lines.push('    ],');
+    lines.push('  },');
+  }
+  lines.push('];', '');
   return lines.join('\n');
 }
 
 export function compileModels() {
   const models = compileSingleByteModels();
-  return { models, report: evaluate(models) };
+  const multibyteModels = compileMultibyteModels();
+  return {
+    models,
+    multibyteModels,
+    report: {
+      ...evaluate(models),
+      multibyte: evaluateMultibyte(multibyteModels),
+    },
+  };
 }
 
 export function buildModels(modelPath, evaluationPath) {
-  const { models, report } = compileModels();
+  const { models, multibyteModels, report } = compileModels();
   mkdirSync(dirname(modelPath), { recursive: true });
   mkdirSync(dirname(evaluationPath), { recursive: true });
-  writeFileSync(modelPath, serializeModels(models));
+  writeFileSync(modelPath, serializeModels(models, multibyteModels));
   writeFileSync(evaluationPath, `${JSON.stringify(report, null, 2)}\n`);
 }

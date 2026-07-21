@@ -8687,5 +8687,304 @@
         }
       ]
     }
-  ]
+  ],
+  "multibyte": {
+    "summary": {
+      "tests": 5,
+      "encodingCorrect": 5,
+      "languageCorrect": 5
+    },
+    "results": [
+      {
+        "expected": {
+          "encoding": "Big5",
+          "language": "zh"
+        },
+        "predicted": {
+          "encoding": "Big5",
+          "language": "zh",
+          "confidence": 0.31,
+          "hits": 16,
+          "multibyteCharacters": 52,
+          "invalidCharacters": 0
+        },
+        "encodingCorrect": true,
+        "languageCorrect": true,
+        "candidates": [
+          {
+            "encoding": "Big5",
+            "language": "zh",
+            "confidence": 0.31,
+            "hits": 16,
+            "multibyteCharacters": 52,
+            "invalidCharacters": 0
+          },
+          {
+            "encoding": "EUC-JP",
+            "language": "ja",
+            "confidence": 0,
+            "hits": 0,
+            "multibyteCharacters": 27,
+            "invalidCharacters": 25
+          },
+          {
+            "encoding": "EUC-KR",
+            "language": "ko",
+            "confidence": 0,
+            "hits": 1,
+            "multibyteCharacters": 27,
+            "invalidCharacters": 25
+          },
+          {
+            "encoding": "GB18030",
+            "language": "zh",
+            "confidence": 0,
+            "hits": 0,
+            "multibyteCharacters": 52,
+            "invalidCharacters": 0
+          },
+          {
+            "encoding": "Shift_JIS",
+            "language": "ja",
+            "confidence": 0,
+            "hits": 0,
+            "multibyteCharacters": 13,
+            "invalidCharacters": 1
+          }
+        ]
+      },
+      {
+        "expected": {
+          "encoding": "EUC-JP",
+          "language": "ja"
+        },
+        "predicted": {
+          "encoding": "EUC-JP",
+          "language": "ja",
+          "confidence": 0.67,
+          "hits": 42,
+          "multibyteCharacters": 63,
+          "invalidCharacters": 0
+        },
+        "encodingCorrect": true,
+        "languageCorrect": true,
+        "candidates": [
+          {
+            "encoding": "EUC-JP",
+            "language": "ja",
+            "confidence": 0.67,
+            "hits": 42,
+            "multibyteCharacters": 63,
+            "invalidCharacters": 0
+          },
+          {
+            "encoding": "GB18030",
+            "language": "zh",
+            "confidence": 0.1,
+            "hits": 6,
+            "multibyteCharacters": 63,
+            "invalidCharacters": 0
+          },
+          {
+            "encoding": "EUC-KR",
+            "language": "ko",
+            "confidence": 0.03,
+            "hits": 2,
+            "multibyteCharacters": 63,
+            "invalidCharacters": 0
+          },
+          {
+            "encoding": "Big5",
+            "language": "zh",
+            "confidence": 0,
+            "hits": 0,
+            "multibyteCharacters": 63,
+            "invalidCharacters": 0
+          },
+          {
+            "encoding": "Shift_JIS",
+            "language": "ja",
+            "confidence": 0,
+            "hits": 0,
+            "multibyteCharacters": 21,
+            "invalidCharacters": 1
+          }
+        ]
+      },
+      {
+        "expected": {
+          "encoding": "EUC-KR",
+          "language": "ko"
+        },
+        "predicted": {
+          "encoding": "EUC-KR",
+          "language": "ko",
+          "confidence": 0.59,
+          "hits": 41,
+          "multibyteCharacters": 69,
+          "invalidCharacters": 0
+        },
+        "encodingCorrect": true,
+        "languageCorrect": true,
+        "candidates": [
+          {
+            "encoding": "EUC-KR",
+            "language": "ko",
+            "confidence": 0.59,
+            "hits": 41,
+            "multibyteCharacters": 69,
+            "invalidCharacters": 0
+          },
+          {
+            "encoding": "GB18030",
+            "language": "zh",
+            "confidence": 0.03,
+            "hits": 2,
+            "multibyteCharacters": 69,
+            "invalidCharacters": 0
+          },
+          {
+            "encoding": "Big5",
+            "language": "zh",
+            "confidence": 0.01,
+            "hits": 1,
+            "multibyteCharacters": 69,
+            "invalidCharacters": 0
+          },
+          {
+            "encoding": "EUC-JP",
+            "language": "ja",
+            "confidence": 0.01,
+            "hits": 1,
+            "multibyteCharacters": 69,
+            "invalidCharacters": 0
+          },
+          {
+            "encoding": "Shift_JIS",
+            "language": "ja",
+            "confidence": 0,
+            "hits": 0,
+            "multibyteCharacters": 12,
+            "invalidCharacters": 7
+          }
+        ]
+      },
+      {
+        "expected": {
+          "encoding": "GB18030",
+          "language": "zh"
+        },
+        "predicted": {
+          "encoding": "GB18030",
+          "language": "zh",
+          "confidence": 0.33,
+          "hits": 17,
+          "multibyteCharacters": 52,
+          "invalidCharacters": 0
+        },
+        "encodingCorrect": true,
+        "languageCorrect": true,
+        "candidates": [
+          {
+            "encoding": "GB18030",
+            "language": "zh",
+            "confidence": 0.33,
+            "hits": 17,
+            "multibyteCharacters": 52,
+            "invalidCharacters": 0
+          },
+          {
+            "encoding": "Big5",
+            "language": "zh",
+            "confidence": 0.02,
+            "hits": 1,
+            "multibyteCharacters": 52,
+            "invalidCharacters": 0
+          },
+          {
+            "encoding": "EUC-JP",
+            "language": "ja",
+            "confidence": 0,
+            "hits": 4,
+            "multibyteCharacters": 40,
+            "invalidCharacters": 7
+          },
+          {
+            "encoding": "EUC-KR",
+            "language": "ko",
+            "confidence": 0,
+            "hits": 1,
+            "multibyteCharacters": 40,
+            "invalidCharacters": 7
+          },
+          {
+            "encoding": "Shift_JIS",
+            "language": "ja",
+            "confidence": 0,
+            "hits": 0,
+            "multibyteCharacters": 14,
+            "invalidCharacters": 0
+          }
+        ]
+      },
+      {
+        "expected": {
+          "encoding": "Shift_JIS",
+          "language": "ja"
+        },
+        "predicted": {
+          "encoding": "Shift_JIS",
+          "language": "ja",
+          "confidence": 0.67,
+          "hits": 42,
+          "multibyteCharacters": 63,
+          "invalidCharacters": 0
+        },
+        "encodingCorrect": true,
+        "languageCorrect": true,
+        "candidates": [
+          {
+            "encoding": "Shift_JIS",
+            "language": "ja",
+            "confidence": 0.67,
+            "hits": 42,
+            "multibyteCharacters": 63,
+            "invalidCharacters": 0
+          },
+          {
+            "encoding": "Big5",
+            "language": "zh",
+            "confidence": 0,
+            "hits": 0,
+            "multibyteCharacters": 63,
+            "invalidCharacters": 0
+          },
+          {
+            "encoding": "EUC-JP",
+            "language": "ja",
+            "confidence": 0,
+            "hits": 0,
+            "multibyteCharacters": 3,
+            "invalidCharacters": 48
+          },
+          {
+            "encoding": "EUC-KR",
+            "language": "ko",
+            "confidence": 0,
+            "hits": 0,
+            "multibyteCharacters": 3,
+            "invalidCharacters": 48
+          },
+          {
+            "encoding": "GB18030",
+            "language": "zh",
+            "confidence": 0,
+            "hits": 0,
+            "multibyteCharacters": 63,
+            "invalidCharacters": 0
+          }
+        ]
+      }
+    ]
+  }
 }

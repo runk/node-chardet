@@ -16,3 +16,10 @@ export interface GeneratedSBCSModel {
   readonly byteMap: readonly number[];
   readonly languages: readonly GeneratedSBCSLanguage[];
 }
+
+export interface GeneratedMBCSModel {
+  readonly encoding: EncodingName;
+  readonly language: string;
+  readonly total: number;
+  readonly commonCharacters: readonly number[];
+}

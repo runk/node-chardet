@@ -15,12 +15,24 @@ try {
   if (!readFileSync(rebuiltModel).equals(readFileSync(generatedModel))) {
     throw new Error('Generated detector models are out of date');
   }
+  const evaluation = JSON.parse(readFileSync(rebuiltEvaluation, 'utf8'));
   if (
     !readFileSync(rebuiltEvaluation).equals(readFileSync(generatedEvaluation))
   ) {
     throw new Error('Generated model evaluation is out of date');
   }
-  const evaluation = JSON.parse(readFileSync(rebuiltEvaluation, 'utf8'));
+  if (
+    evaluation.multibyte.summary.encodingCorrect !==
+      evaluation.multibyte.summary.tests ||
+    evaluation.multibyte.summary.languageCorrect !==
+      evaluation.multibyte.summary.tests
+  ) {
+    throw new Error(
+      `Multibyte model evaluation failed: ${evaluation.multibyte.summary.encodingCorrect}/` +
+        `${evaluation.multibyte.summary.tests} encodings, ${evaluation.multibyte.summary.languageCorrect}/` +
+        `${evaluation.multibyte.summary.tests} languages`,
+    );
+  }
   if (
     evaluation.summary.encodingCorrect !== evaluation.summary.tests ||
     evaluation.summary.languageCorrect !== evaluation.summary.tests
