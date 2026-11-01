@@ -42,7 +42,7 @@
     "test": "test"
   },
   "devDependencies": {
-    "@types/node": "^24.0.0",
+    "@types/node": "^26.0.0",
     "@vitest/coverage-v8": "^4.1.9",
     "prettier": "^3.0.0",
     "semantic-release": "^25.0.0",
